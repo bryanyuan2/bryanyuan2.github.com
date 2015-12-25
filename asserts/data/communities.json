@@ -1,0 +1,39 @@
+[
+  {
+    "name": "g0v Summit 2014",
+    "link": "http://summit.g0v.tw/",
+    "date": "Nov 2014",
+    "image": "asserts/images/community/comm_g0v.png",
+    "width": "",
+    "height": "",
+    "position": "Program Assistant",
+    "description": "Coordinated speaker and visiting scholar, arranged whole day event and multiple-track session."
+  },
+  {
+    "name": "COSCUP 2012",
+    "link": "http://coscup.org/2012/zh-tw/",
+    "date": "Feb 2012 - Aug 2012",
+    "image": "asserts/images/community/comm_coscup.png",
+    "width": "",
+    "height": "",
+    "position": "Attendee Team Lead 2012",
+    "description": "Organized administration team of 8 members to host conference over 1000+ attendee, supervising registration, attendee analytics, and administrative functions by conducting online coordination meetings."
+  },
+  {
+    "name": "Mozilla Taiwan Community",
+    "link": "https://moztw.org/",
+    "date": "Sep 2009",
+    "image": "asserts/images/community/comm_moztw.png",
+    "width": "",
+    "height": "",
+    "position": "Community Member",
+    "description": [
+      {
+        "text": "Localized addons.mozilla.org (AMO) and Firefox Sync in Traditional Chinese."
+      },
+      {
+        "text": "Conducted campus promotion and activities for Firefox 4 and arranged internal affairs-work."
+      }
+    ]
+  }
+]

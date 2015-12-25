@@ -1,0 +1,21 @@
+[
+  {
+    "date": "2011 – 2013",
+    "degree": "M.S., Computer Science",
+    "school": "Yuan Ze University",
+    "lab": "Intelligent Information Service Research Lab",
+    "lablink": "http://iisr.csie.ncu.edu.tw/",
+    "honors": [
+	    {
+	    	"title": "2011 Outstanding TA Award",
+	    	"link": "http://tec.yzu.edu.tw/web/news/?method=detail&aid=1075"
+	    }
+    ],
+    "description": "Focus on Machine Learning and Information Retrieval. Data Mining / Bioinformatics / Computational Biology / Agile Software Development"
+  },
+  {
+    "date": "2007 – 2011",
+    "degree": "B.S., Computer Science",
+    "school": "Yuan Ze University"
+  }
+]

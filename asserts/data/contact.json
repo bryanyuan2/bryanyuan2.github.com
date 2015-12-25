@@ -1,0 +1,37 @@
+[
+  {
+    "type": "email",
+    "icon": "asserts/images/icons/email.png",
+    "width": "32",
+    "height": "32",
+    "link": "mailto:bryanyuan2@gmail.com"
+  },
+  {
+    "type": "linkedin",
+    "icon": "asserts/images/icons/linkedin.png",
+    "width": "32",
+    "height": "32",
+    "link": "http://tw.linkedin.com/in/bryanyuan2/"
+  },
+  {
+    "type": "github",
+    "icon": "asserts/images/icons/github.png",
+    "width": "32",
+    "height": "32",
+    "link": "https://github.com/bryanyuan2"
+  },
+  {
+    "type": "facebook",
+    "icon": "asserts/images/icons/facebook.png",
+    "width": "32",
+    "height": "32",
+    "link": "http://www.facebook.com/bryanyuan2"
+  },
+  {
+    "type": "flickr",
+    "icon": "asserts/images/icons/flickr.png",
+    "width": "32",
+    "height": "32",
+    "link": "http://www.flickr.com/photos/bryanyuan2"
+  }
+]

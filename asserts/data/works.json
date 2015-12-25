@@ -1,0 +1,106 @@
+[
+  {
+    "corp": "Yahoo!",
+    "url": "http://tw.yahoo.com/",
+    "logo": "asserts/images/experience/yahoo_logo.png",
+    "width": "200",
+    "height": "56",
+    "date": "Sep 2014 - Present",
+    "position": "Software Engineer",
+    "org": "Search Engineering",
+    "experence": [
+      {
+        "description": "Involved in vertical search FE platform migration, migrated 37 global vertical search markets include mobile and tablet devices experience."
+      },
+      {
+        "description": "Archived Q4 2014 web search monetization goal for U.S. market, improved SYC (search.yahoo.com), YHS (yahoo partner search) and search international markets for various features optimization."
+      },
+      {
+        "description": "Well-collaboration with US, UK, HK, Australia and India team, communicated with PM, QE and editorials various departments."
+      }
+    ]
+  },
+  {
+    "corp": "Taiwan Mobile Innovation",
+    "url": "http://tmi.vc/",
+    "logo": "asserts/images/experience/tmi_logo.png",
+    "width": "170",
+    "height": "90",
+    "date": "July 2013 - Aug 2013",
+    "position": "Startups",
+    "positionurl": "",
+    "org": "",
+    "orgurl": "",
+    "experence": [
+      {
+        "description": "Built synchronous mechanism for auction from Yahoo/eBay/Ruten to Facebook page, and integrated Facebook Insights API and embed.ly statistics in business report."
+      },
+      {
+        "description": "Served 90+ users within 19 active Facebook Pages and synced over 7000+ products for business marketing."
+      }
+    ],
+    "media": [
+      {
+        "title": "[Meet創業之星] 自動化同步新品，網路賣家行銷工具－Pagineer",
+        "source": "數位時代",
+        "link": "http://www.bnext.com.tw/article/view/id/29319"
+      },
+      {
+        "title": "Pagineer 團隊 讓你的網拍商品同步Facebook更容易!",
+        "source": "台灣創意工場",
+        "link": "http://tmi.vc/pagineer/"
+      },
+      {
+        "title": "[軟體出英雄] 鄭鈞元×陳柏宇×鐘冠傑──雅虎看好的校園新勢力",
+        "source": "數位時代雜誌第237期 201402",
+        "link": "http://www.bnext.com.tw/article/view/id/31106"
+      }
+    ]
+  },
+  {
+    "corp": "Yahoo!",
+    "url": "http://tw.yahoo.com/",
+    "logo": "asserts/images/experience/yahoo_logo.png",
+    "width": "200",
+    "height": "56",
+    "date": "July 2012 - Aug 2012",
+    "position": "Intern",
+    "org": "Search Engineering",
+    "experence": [
+      {
+        "description": "Built content-based search suggestions from various corpus, and combined time-based queries recommendation mechanism for News, Movies and Answers verticals."
+      },
+      {
+        "description": "Adopted FP-growth association rules for candidate queries, constructed alternative search assist as bucket experiment."
+      }
+    ]
+  },
+  {
+    "corp": "Institute of Information Science, Academia Sinica",
+    "url": "http://www.iis.sinica.edu.tw/",
+    "logo": "asserts/images/experience/iis_sinica_logo.png",
+    "width": "80",
+    "height": "80",
+    "date": "Feb 2009 - Aug 2011",
+    "position": "Intern",
+    "org": "Digital Archive Architecture Laboratory",
+    "experence": [
+      {
+        "description": "Contributed online image search application based on CCH (Contrast Context Histogram), established architectural feature-based search engine for Taiwan's historic buildings."
+      },
+      {
+        "description": "Assisted video streaming platform and transferred to Chinese Television System (CTS); adopted Kaltura video platform as editorial backend."
+      },
+      {
+        "description": "Built WASIGHT.COM, a DAVEART-liked social network for design academy students. Involved in frontend and backend system during development."
+      }
+    ],
+    "media": [
+      {
+        "title": "影音與圖像的萬花筒：VCenter與iPicBox成果專訪",
+        "source": "數位典藏與學習電子報",
+        "link": "http://newsletter.teldap.tw/news/read_topstory.php?nid=3581&lid=384"
+      }
+    ]
+  }
+]

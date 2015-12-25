@@ -1,0 +1,42 @@
+[
+  {
+    "name": "react",
+    "url": "https://facebook.github.io/react/",
+    "img": "asserts/images/tech/react.png"
+  },
+  {
+    "name": "browserify",
+    "url": "http://browserify.org/",
+    "img": "asserts/images/tech/browserify.png"
+  },
+  {
+    "name": "bower",
+    "url": "http://bower.io/",
+    "img": "asserts/images/tech/bower.png"
+  },
+  {
+    "name": "bootstrap",
+    "url": "http://getbootstrap.com/",
+    "img": "asserts/images/tech/bootstrap.png"
+  },
+  {
+    "name": "jquery",
+    "url": "https://jquery.com/",
+    "img": "asserts/images/tech/jquery.png"
+  },
+  {
+    "name": "gulpjs",
+    "url": "http://gulpjs.com/",
+    "img": "asserts/images/tech/gulp.png"
+  },
+  {
+    "name": "npmjs",
+    "url": "https://www.npmjs.com/",
+    "img": "asserts/images/tech/npm.png"
+  },
+  {
+    "name": "github",
+    "url": "https://github.com/",
+    "img": "asserts/images/tech/github.png"
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Opinionoted",
+    "date": "Nov 2015",
+    "from": "Girls in Tech Taiwan x Facebook Hack for a Cause",
+    "teamwork": true,
+    "image": "asserts/images/projects/opinionoted.jpg",
+    "width": "280",
+    "height": "145",
+    "description": [
+      {
+        "text": "Presented topic similarity between you and your friends in D3.js by fetching and analyzed Facebook feed"
+      }
+    ],
+    "github": "https://github.com/bryanyuan2/fb6likes"
+  },
+  {
+    "name": "歐噴。豆知識",
+    "date": "Aug 2015",
+    "from": "Pixnet Hackathon 2015",
+    "teamwork": true,
+    "image": "asserts/images/projects/pixnet.jpg",
+    "width": "280",
+    "height": "145",
+    "description": [
+      {
+        "text": "Proposed adblocker-liked knowledge ads extension on chrome. User could select their interest topics for TW open data and random mapping the topics over ads."
+      },
+      {
+        "text": "Besides, we also provide leader board to show which topics get highest rating !"
+      }
+    ],
+    "github": "https://github.com/bryanyuan2/pixnet.hackathon.2015",
+    "speakerdeck": "https://speakerdeck.com/bryanyuan2/ou-pen-dou-zhi-shi-pixnet-hackathon-2015",
+    "store": "https://chrome.google.com/webstore/detail/%E6%AD%90%E5%99%B4%E8%B1%86%E7%9F%A5%E8%AD%98/jgkidmplccofmhbdmogcncnlogaliidp?hl=zh-TW"
+  },
+  {
+    "name": "Baidu Captain Planet",
+    "link": "http://baiduhackday.duapp.com/",
+    "date": "July 2013",
+    "from": "Baidu Open Cloud Hackathon 2013 Taipei",
+    "teamwork": true,
+    "image": "asserts/images/projects/baidu_captain_planet.jpg",
+    "width": "280",
+    "height": "145",
+    "description": [
+      {
+        "text": "Analyzed Facebook Checkins and customized compuating score for EPI (Environmental Pollution Index) based on Baidu App Engine."
+      }
+    ],
+    "github": "https://github.com/bryanyuan2/baidu.hackathon.taipei.2013",
+    "speakerdeck": "https://speakerdeck.com/bryanyuan2/baidu-hackathon-taipei-2013-captain-1"
+  },
+  {
+    "name": "Chewing in the Cloud",
+    "date": "Aug 2010 - Dec 2010",
+    "from": "CHT Open Source Software Competition 2010",
+    "teamwork": true,
+    "description": [
+      {
+        "text": "Modified the priority of choosing Chinese words candidates based on Chewing Input Method."
+      }
+    ],
+    "github": "http://code.google.com/p/citc/"
+  },
+  {
+    "name": "Go! Plurk",
+    "link" : "http://goplurk.cse.tw/",
+    "date": "Jun 2009 - Sep 2009",
+    "from": "Information Retrieval final project",
+    "teamwork": true,
+    "image": "asserts/images/projects/goplurk.jpg",
+    "width": "280",
+    "height": "145",
+    "description": [
+      {
+        "text": "Analyzed over 4000+ Plurk user accounts and classified topics based on Bayes classification."
+      }
+    ],
+    "media": [
+      {
+        "title": "GoPlurk! 噗浪「興趣分析機」，看看你是哪種噗浪人！ - 重灌狂人",
+        "link": "https://briian.com/6331/goplurk.html"
+      }
+    ]
+  }
+]

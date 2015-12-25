@@ -1,0 +1,14 @@
+{
+  "name": "react-typeahead",
+  "homepage": "https://github.com/fmoo/react-typeahead",
+  "version": "1.1.5",
+  "_release": "1.1.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.1.5",
+    "commit": "d1b903a0074b6fb9477be0b571bcfd2bb9a96553"
+  },
+  "_source": "git://github.com/fmoo/react-typeahead.git",
+  "_target": "1.1.5",
+  "_originalSource": "react-typeahead"
+}

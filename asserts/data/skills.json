@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Proficient",
+    "items": [
+      {
+        "name": "Python"
+      },
+      {
+        "name": "PHP"
+      }
+    ]
+  },
+  {
+    "title": "Intermediate",
+    "items": [
+      {
+        "name": "Javascript"
+      },
+      {
+        "name": "MySQL"
+      }
+    ]
+  },
+  {
+    "title": "Platform",
+    "items": [
+      {
+        "name": "Heroku"
+      }
+    ]
+  },
+  {
+    "title": "Research Interests",
+    "items": [
+      {
+        "name": "Information Retrieval"
+      },
+      {
+        "name": "Data Mining"
+      },
+      {
+        "name": "Opinion Mining"
+      },
+      {
+        "name": "Search Intent Mining"
+      }
+    ]
+  }
+]
