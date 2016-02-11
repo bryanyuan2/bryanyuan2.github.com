@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react'),
     LoadJSON = require('./../mixins').LoadJSON;
 
@@ -12,6 +14,10 @@ var Community = React.createClass({
       key: 0
     };
   },
+  shouldComponentUpdate: function() {
+    // shouldComponentUpdate: function(nextProps, nextState)
+    return false;
+  },
   render: function () {
     return (
       <div>
@@ -20,7 +26,7 @@ var Community = React.createClass({
             <p>{this.props.community.date}</p>
           </div>
           <div className="span8">
-              <div className="text_title"><a target="_blank" href={this.props.community.link}>{this.props.community.name}</a></div>
+              <div className="textTitle"><a target="_blank" href={this.props.community.link}>{this.props.community.name}</a></div>
               <div className="text_description">{this.props.community.position}</div>
               <div className="text_description">{this.props.community.description}</div>
           </div>
@@ -42,8 +48,8 @@ var CommunitiesContainer = React.createClass({
       communities.push(<Community community={community} key={index} />);
     });
     return (
-      <div>
-        <h2>Community</h2>
+      <div id="regionCommunities">
+        <h2 id="setCommunities">Communities</h2>
         <hr />
         {communities}
         <br />

@@ -1,3 +1,5 @@
+"use strict";
+
 var Mixins = {
   LoadJSON : {
     getInitialState: function() {
@@ -13,6 +15,6 @@ var Mixins = {
         this.loadData();
     },
   }
-}
+};
 
 module.exports = Mixins;

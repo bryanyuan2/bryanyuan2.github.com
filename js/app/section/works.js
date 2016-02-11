@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react'),
     LoadJSON = require('./../mixins').LoadJSON;
 
@@ -11,6 +13,10 @@ var Work = React.createClass({
       work: {},
       key: 0
     };
+  },
+  shouldComponentUpdate: function() {
+    // shouldComponentUpdate: function(nextProps, nextState)
+    return false;
   },
   render: function() {
     var description = [],
@@ -60,8 +66,8 @@ var WorksContainer = React.createClass({
       works.push(<Work work={work} key={index} />);
     });
     return(
-      <div>
-        <h2>Work experence</h2>
+      <div id="regionExperence">
+        <h2 id="setExperence">Work experence</h2>
         <hr />
         {works}
         <br />

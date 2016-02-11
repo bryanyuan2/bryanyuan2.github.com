@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react'),
     TeamWork = require('./../teamwork'),
     LoadJSON = require('./../mixins').LoadJSON;
@@ -13,6 +15,10 @@ var Project = React.createClass({
       key: 0
     };
   },
+  shouldComponentUpdate: function() {
+    // shouldComponentUpdate: function(nextProps, nextState)
+    return false;
+  },
   render: function() {
     var description = [];
     this.props.project.description.forEach(function(content) {
@@ -25,11 +31,10 @@ var Project = React.createClass({
         </div>
         <div className="span7">
           <blockquote>
-          <div className="text_title">
+          <div className="textTitle">
             {this.props.project.link && <a href={this.props.project.link} target="_blank"> {this.props.project.name} </a>}
             {!this.props.project.link && this.props.project.name}
-            <span className="fs-16"> - {this.props.project.from}</span>
-            &nbsp;
+            <span className="fs-16"> - {this.props.project.from} </span>
             <TeamWork teamwork={this.props.project.teamwork} />
           </div>
           <div className="text_description">{description}</div>
@@ -57,8 +62,8 @@ var ProjectsContainer = React.createClass({
       projects.push(<Project project={project} key={index} />);
     });
     return(
-      <div>
-        <h2>Projects</h2>
+      <div id="regionProjects">
+        <h2 id="setProjects">Projects</h2>
         <hr />
         {projects}
         <br />

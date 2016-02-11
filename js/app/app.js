@@ -1,7 +1,8 @@
+"use strict";
+
 /* require */
 var React = require('react'),
     Router = require('react-router'),
-    DefaultRoute = Router.DefaultRoute,
     Route = Router.Route;
 
 /* section */
@@ -49,8 +50,9 @@ $(document).ready(function() {
   var parallax = function parallax(){
       var scrolled = $(window).scrollTop();
       $('.header_bg').css('height', (jumboHeight - scrolled) + 'px');
-  }
-  $(window).scroll(function(e){
+  };
+  $(window).scroll(function(){
+      // $(window).scroll(function(e){
       parallax();
       $(".header_title").css("opacity", header_title_opacity/$(window).scrollTop());
       if ($(window).scrollTop()<=0) {

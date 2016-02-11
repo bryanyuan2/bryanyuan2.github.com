@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react'),
     TeamWork = require('./../teamwork'),
     LoadJSON = require('./../mixins').LoadJSON;
@@ -12,6 +14,10 @@ var Award = React.createClass({
       award: {},
       key: 0
     };
+  },
+  shouldComponentUpdate: function() {
+    // shouldComponentUpdate: function(nextProps, nextState)
+    return false;
   },
   render: function() {
     var media = [],
@@ -32,8 +38,7 @@ var Award = React.createClass({
         </div>
         <div className="span7">
           <blockquote>
-            <span className="text_title" dangerouslySetInnerHTML={{__html: this.props.award.title}} />
-            &nbsp;
+            <span className="textTitle" dangerouslySetInnerHTML={{__html: this.props.award.title}} />
             <TeamWork teamwork={this.props.award.teamwork} />
             <div className="text_description">{this.props.award.description}</div>
             <div className="github_url"><a target="_blank" href={this.props.award.github}>{this.props.award.github}</a></div>
@@ -64,8 +69,8 @@ var AwardsContainer = React.createClass({
       awards.push(<Award award={award} key={index} />);
     });
     return(
-      <div>
-        <h2>Awards</h2>
+      <div id="regionAwards">
+        <h2 id="setAwards">Awards</h2>
         <hr />
         {awards}
         <br />

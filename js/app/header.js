@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react'),
     LoadJSON = require('./mixins').LoadJSON;
 
@@ -13,7 +15,7 @@ var HeaderContainer = React.createClass({
   },
   render: function() {
     return(
-      <div>
+      <div id="regionHeader">
         <div className="header_bg"></div>
         <div className="jumbotron">
           <h1 className="header_title">{this.state.data.title}</h1>

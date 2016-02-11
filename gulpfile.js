@@ -8,13 +8,17 @@ var gulp = require('gulp'),
     streamify = require('gulp-streamify'),
     less = require('gulp-less'),
     cssmin = require('gulp-minify-css'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    nightwatch = require('gulp-nightwatch'),
+    jshint = require('gulp-jshint'),
+    react = require('gulp-react'),
+    cache = require('gulp-cached');
 
 var paths = {
-  css:['./asserts/css/app.less'],
-  js: ['./js/app/*.js', './js/app/section/*.js'],
-  app_js: ['./js/app/app.js'],
-  index: ['./index.html']
+    css:['./asserts/css/app.less'],
+    js: ['./js/app/*.js', './js/app/section/*.js'],
+    app_js: ['./js/app/app.js'],
+    index: ['./index.html']
 };
 
 gulp.task('clean', function(done) {
@@ -59,4 +63,28 @@ gulp.task('watch', function() {
   gulp.watch(paths.js, ['js']);
 });
 
-gulp.task('default', ['css', 'js', 'connect', 'watch']);
+gulp.task('jshint', function() {
+  return gulp.src(paths.js)
+    .pipe(cache('jshint'))
+    .pipe(react())
+    .on('error', function(err) {
+      console.error('JSX ERROR in ' + err.fileName);
+      console.error(err.message);
+      this.end();
+    })
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish'));
+});
+
+gulp.task('nightwatch', function() {
+  gulp.src('')
+    .pipe(nightwatch({
+      configFile: 'nightwatch.json'
+    }));
+});
+
+/* default */
+gulp.task('default', ['css', 'js', 'jshint', 'connect', 'watch']);
+
+/* java -jar selenium-server-standalone-2.51.0.jar */
+gulp.task('test', ['nightwatch']);

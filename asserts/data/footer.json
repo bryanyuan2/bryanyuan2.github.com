@@ -25,12 +25,12 @@
     "img": "asserts/images/tech/jquery.png"
   },
   {
-    "name": "gulpjs",
+    "name": "gulp",
     "url": "http://gulpjs.com/",
     "img": "asserts/images/tech/gulp.png"
   },
   {
-    "name": "npmjs",
+    "name": "npm",
     "url": "https://www.npmjs.com/",
     "img": "asserts/images/tech/npm.png"
   },
@@ -38,5 +38,15 @@
     "name": "github",
     "url": "https://github.com/",
     "img": "asserts/images/tech/github.png"
+  },
+  {
+    "name": "nightwatch",
+    "url": "http://nightwatchjs.org/",
+    "img": "asserts/images/tech/nightwatch.png"
+  },
+  {
+    "name": "jshint",
+    "url": "http://jshint.com/",
+    "img": "asserts/images/tech/jshint.png"
   }
 ]

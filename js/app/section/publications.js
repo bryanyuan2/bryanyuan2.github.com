@@ -1,6 +1,7 @@
+"use strict";
+
 var React = require('react'),
-    LoadJSON = require('./../mixins').LoadJSON,
-    htmlencode = require('htmlencode');
+    LoadJSON = require('./../mixins').LoadJSON;
 
 var Publication = React.createClass({
   propTypes: {
@@ -12,6 +13,10 @@ var Publication = React.createClass({
       publication: {},
       key: 0
     };
+  },
+  shouldComponentUpdate: function() {
+    // shouldComponentUpdate: function(nextProps, nextState)
+    return false;
   },
   render: function() {
     return (
@@ -39,8 +44,8 @@ var PublicationsContainer = React.createClass({
       publications.push(<Publication publication={publication} key={index} />);
     });
     return(
-      <div>
-        <h2>Publications</h2>
+      <div id="regionPublications">
+        <h2 id="setPublications">Publications</h2>
         <hr />
         {publications}
         <br />

@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react'),
     LoadJSON = require('./../mixins').LoadJSON;
 
@@ -11,6 +13,10 @@ var Contact = React.createClass({
       contact: {},
       key: 0
     };
+  },
+  shouldComponentUpdate: function() {
+    // shouldComponentUpdate: function(nextProps, nextState)
+    return false;
   },
   render: function() {
     return (
@@ -29,7 +35,7 @@ var ContactsContainer = React.createClass({
       contacts.push(<Contact contact={contact} key={index} />);
     });
     return(
-      <div>
+      <div id="regionContacts">
         <div>Download Curriculum vita <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a></div>
         <hr />
         <div className="row header_icons_section">

@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react'),
     LoadJSON = require('./../mixins').LoadJSON;
 
@@ -11,6 +13,10 @@ var Skill = React.createClass({
       skill: {},
       key: 0
     };
+  },
+  shouldComponentUpdate: function() {
+    // shouldComponentUpdate: function(nextProps, nextState)
+    return false;
   },
   render: function() {
     var items = [];
@@ -38,8 +44,8 @@ var SkillsContainer = React.createClass({
       skills.push(<Skill skill={skill} key={index} />);
     });
     return(
-      <div>
-      <h2>Skills</h2>
+      <div id="regionSkills">
+      <h2 id="setSkills">Skills</h2>
       <hr />
       {skills}
       <br />

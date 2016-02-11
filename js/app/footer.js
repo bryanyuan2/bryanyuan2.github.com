@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react'),
     LoadJSON = require('./mixins').LoadJSON;
 
@@ -11,6 +13,10 @@ var Pack = React.createClass({
       items: {},
       key: 0
     };
+  },
+  shouldComponentUpdate: function() {
+    // shouldComponentUpdate: function(nextProps, nextState)
+    return false;
   },
   render: function() {
     return (
@@ -30,7 +36,7 @@ var FooterContainer = React.createClass({
       packages.push(<Pack items={item} key={index} />);
     });
     return(
-      <div className="footer">
+      <div id="regionFooter">
             Powered by 
             {packages}
             <br />

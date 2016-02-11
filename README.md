@@ -7,13 +7,15 @@
 
 ### Built with
 
-- [Facebook React](http://facebook.github.io/react/)
+- [React](http://facebook.github.io/react/)
 - [jQuery](http://jquery.com/)
-- [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
-- [npmjs](http://www.npmjs.com/)
-- [glupjs](http://gulpjs.com/)
-- [bower](http://bower.io/)
+- [Bootstrap](http://twitter.github.com/bootstrap/)
+- [npm](http://www.npmjs.com/)
+- [glup](http://gulpjs.com/)
+- [Bower](http://bower.io/)
 - [browserify](http://browserify.org/)
+- [Nightwatch](http://nightwatchjs.org/)
+- [JSHint](http://jshint.com/)
 
 ### License
 
