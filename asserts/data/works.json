@@ -18,6 +18,13 @@
       {
         "description": "Well-collaboration with US, UK, HK, Australia and India team, communicated with PM, QE and editorials various departments."
       }
+    ],
+    "product": [
+      {
+        "title": "yahoo search",
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/yahoo.jpg",
+        "link": "https://search.yahoo.com"
+      }
     ]
   },
   {
@@ -54,6 +61,13 @@
         "title": "[軟體出英雄] 鄭鈞元×陳柏宇×鐘冠傑──雅虎看好的校園新勢力",
         "source": "數位時代雜誌第237期 201402",
         "link": "http://www.bnext.com.tw/article/view/id/31106"
+      }
+    ],
+    "product": [
+      {
+        "title": "pagineer",
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/pagineer.jpg",
+        "link": "http://pagineer.herokuapp.com/"
       }
     ]
   },
@@ -105,13 +119,13 @@
     "product": [
       {
         "title": "ipicbox",
-        "img": "",
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/ipicbox.jpg",
         "link": "http://ipicbox.tw"
       },
       {
         "title": "wasight",
-        "img": "",
-        "link": "http://ipicbox.tw"
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/wasight.jpg",
+        "link": "http://wasight.tw"
       }
     ]
   }

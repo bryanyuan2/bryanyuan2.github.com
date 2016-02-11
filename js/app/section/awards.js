@@ -23,7 +23,7 @@ var Award = React.createClass({
     var media = [],
         media_content = "";
     if (this.props.award.media) {
-      media.push('<div class="reference">');
+      media.push('<div class="refMedia">');
       this.props.award.media.forEach(function(content) {
         media.push('<li><a target="_blank" href=' + content.link + '>' + content.title + ' - ' + content.source + '</a></li>');
       });

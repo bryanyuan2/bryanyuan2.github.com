@@ -21,18 +21,32 @@ var Work = React.createClass({
   render: function() {
     var description = [],
         media = [],
-        media_content = [];
+        media_content = [],
+        product = [],
+        product_content = [];
+
     this.props.work.experence.forEach(function(content) {
       description.push(content.description);
     });
+
     if (this.props.work.media) {
-      media.push('<div class="reference">');
-      this.props.work.media.forEach(function(content) {
-        media.push('<li><a target="_blank" href=' + content.link + '>' + content.title + ' - ' + content.source + '</a></li>');
+      media.push('<div class="refMedia">');
+      this.props.work.media.forEach(function(info) {
+        media.push('<li><a target="_blank" href=' + info.link + '>' + info.title + ' - ' + info.source + '</a></li>');
       });
       media.push('</div>');
     }
+
+    if (this.props.work.product) {
+      product.push('<div class="refItem">');
+      this.props.work.product.forEach(function(info) {
+        product.push('<a href="' + info.link + '" target="_blank"><img class="refProd" src=' + info.img + ' alt=' + info.title + '/></a>');
+      });
+      product.push('</div>');
+    }
+
     media_content = media.join(" ");
+    product_content = product.join(" ");
 
     return (
       <div className="row-fluid">
@@ -48,6 +62,7 @@ var Work = React.createClass({
             </ul>
             <br />
             <div dangerouslySetInnerHTML={{__html: media_content}} />
+            <div dangerouslySetInnerHTML={{__html: product_content}} />
           </blockquote>
         </div>
         <div className="span2 img_span">
