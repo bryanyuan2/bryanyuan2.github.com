@@ -4,7 +4,8 @@
   "description": "bryanyuan2 Curriculum Vitae",
   "main": "index.html",
   "scripts": {
-    "start": "npm install && gulp",
+    "start": "npm install && bower install",
+    "go": "gulp",
     "test": "jest"
   },
   "repository": {
@@ -41,7 +42,8 @@
     "nodemw": "0.7.3",
     "phantomjs": "~1.9.7-10",
     "reactify": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "bower": "^1.7.2"
   },
   "dependencies": {
     "react": "^0.14.7",
