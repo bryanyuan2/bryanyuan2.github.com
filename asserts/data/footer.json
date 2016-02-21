@@ -48,5 +48,10 @@
     "name": "jshint",
     "url": "http://jshint.com/",
     "img": "asserts/images/tech/jshint.png"
+  },
+  {
+    "name": "flowtype",
+    "url": "http://flowtype.org/",
+    "img": "asserts/images/tech/flowtype.png"
   }
 ]
