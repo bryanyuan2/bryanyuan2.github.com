@@ -15,7 +15,7 @@ var wikiEnUrl = "https://en.wikipedia.org/wiki/",
       results: 'tt-menu',
       listItem: 'tt-suggestion'
     },
-    typeheadPlaceHolder = "Search some keywords, dude ? ",
+    typeheadPlaceHolder = "Search some keywords here ?",
     wikiDDTagColor = "#4099FF",
     blockedBorderHL = "#EEEEEE",
     blockedBorder = "border-left-color";
