@@ -694,7 +694,7 @@ var CompNavInfoContainer = React.createClass({displayName: "CompNavInfoContainer
                 onOptionSelected: this.updateDirectDisplay})
             ), 
             React.createElement("span", {id: "regionResume"}, 
-              React.createElement("span", null, "or Download Curriculum vita ", React.createElement("a", {target: "_blank", href: "https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf"}, "here"))
+              React.createElement("span", null, "or download Curriculum vita ", React.createElement("a", {target: "_blank", href: "https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf"}, "here"))
             )
           ), 
           React.createElement("div", {id: "regionContacts", className: "span3"}, 

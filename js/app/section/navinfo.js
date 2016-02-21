@@ -243,7 +243,7 @@ var CompNavInfoContainer = React.createClass({
                 onOptionSelected={this.updateDirectDisplay} />
             </span>
             <span id="regionResume">
-              <span>or Download Curriculum vita <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a></span>
+              <span>or download Curriculum vita <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a></span>
             </span>
           </div>
           <div id="regionContacts" className="span3">
