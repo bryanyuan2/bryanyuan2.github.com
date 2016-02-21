@@ -214,5 +214,15 @@
       {"name": "Work experence", "hl": "hl-projects-opendata"}
     ],
     "enable": true
+  },
+  {
+    "name": "中研院數位典藏計畫",
+    "wiki": {
+      "zh": "中研院數位典藏計畫"
+    },
+    "tag": [
+      {"name": "Work experence", "hl": "hl-work-experence-sinica"}
+    ],
+    "enable": true
   }
 ]
