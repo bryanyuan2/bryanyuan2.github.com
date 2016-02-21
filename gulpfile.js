@@ -12,7 +12,8 @@ var gulp = require('gulp'),
     nightwatch = require('gulp-nightwatch'),
     jshint = require('gulp-jshint'),
     react = require('gulp-react'),
-    cache = require('gulp-cached');
+    cache = require('gulp-cached'),
+    flow = require('gulp-flowtype');
 
 var paths = {
     css:['./asserts/css/*.less'],
@@ -30,7 +31,7 @@ gulp.task('js', ['clean'], function() {
     .transform(reactify)
     .bundle()
     .pipe(source('bundle.js'))
-    //.pipe(streamify(uglify()))
+    .pipe(streamify(uglify()))
     .pipe(gulp.dest('./js/build'));
 });
 
@@ -76,6 +77,20 @@ gulp.task('jshint', function() {
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
+gulp.task('typecheck', function() {
+  return gulp.src(paths.app_js)
+    .pipe(flow({
+        all: false,
+        weak: false,
+        declarations: './declarations',
+        killFlow: false,
+        beep: true,
+        abort: false
+    }))
+    .pipe(react({ stripTypes: true }))
+    // Strip Flow type annotations before compiling
+});
+
 gulp.task('nightwatch', function() {
   gulp.src('')
     .pipe(nightwatch({
@@ -84,7 +99,7 @@ gulp.task('nightwatch', function() {
 });
 
 /* default */
-gulp.task('default', ['css', 'js', 'jshint', 'connect', 'watch']);
+gulp.task('default', ['css', 'typecheck', 'jshint', 'js', 'connect', 'watch']);
 
 /* java -jar selenium-server-standalone-2.51.0.jar */
 gulp.task('test', ['nightwatch']);
