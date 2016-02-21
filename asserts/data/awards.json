@@ -1,5 +1,6 @@
 [
   {
+    "hl": "hl-awards-yahoo",
     "date": "Nov 2013",
     "title": "Yahoo! Hack Taiwan 2013 Second Place",
     "teamwork": true,
@@ -37,6 +38,7 @@
     ]
   },
   {
+    "hl": "hl-awards-firefox",
     "date": "Jan 2013",
     "title": "Mozilla Firefox OS App Day 2013 Second Place",
     "teamwork": true,
@@ -61,6 +63,7 @@
     ]
   },
   {
+    "hl": "hl-awards-yahoo",
     "date": "Oct 2012",
     "title": "Yahoo! Open Hack Day 2012 Second Place & <br/>Yahoo! Open Hack Day 2012 The Most Potential Award",
     "teamwork": true,

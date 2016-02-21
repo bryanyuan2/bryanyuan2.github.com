@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Yuan Ze University",
+    "wiki": {
+      "en": "Yuan Ze University"
+    },
+    "tag": [
+      {"name": "Education", "hl": "hl-education-yzu"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Bioinformatics",
+    "wiki": {
+      "en": "Bioinformatics"
+    },
+    "tag": [
+      {"name": "Education", "hl": "hl-education-yzu"}
+    ],
+    "enable": true
+  },
+
+  {
+    "name": "Yahoo!",
+    "wiki": {
+      "en": "Yahoo!"
+    },
+    "tag": [
+      {"name": "Work experence", "hl": "hl-work-experence-yahoo"},
+      {"name": "Awards", "hl": "hl-awards-yahoo"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Academia Sinica",
+    "wiki": {
+      "en": "Academia Sinica"
+    },
+    "tag": [
+      {"name": "Work experence", "hl": "hl-work-experence-sinica"}
+    ],
+    "enable": true
+  },
+
+  
+  {
+    "name": "Python",
+    "wiki": {
+      "en": "Python"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-proficient"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "PHP",
+    "wiki": {
+      "en": "PHP"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-proficient"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "JavaScript",
+    "wiki": {
+      "en": "JavaScript"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-intermediate"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Intention mining",
+    "wiki": {
+      "en": "Intention mining"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-research"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Sentiment analysis",
+    "wiki": {
+      "en": "Sentiment analysis"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-research"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "MySQL",
+    "wiki": {
+      "en": "MySQL"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-intermediate"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Information retrieval",
+    "wiki": {
+      "en": "Information retrieval"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-research"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Data mining",
+    "wiki": {
+      "en": "Data mining"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-research"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Heroku",
+    "wiki": {
+      "en": "Heroku"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills"}
+    ],
+    "enable": true
+  },
+
+  {
+    "name": "Hackathon",
+    "wiki": {
+      "en": "Hackathon"
+    },
+    "tag": [
+      {"name": "Projects", "hl": "hl-projects-hackathon"}
+    ],
+    "enable": true
+  },
+
+  {
+    "name": "MozTW",
+    "wiki": {
+      "zh": "MozTW"
+    },
+    "tag": [
+      {"name": "Communities", "hl": "hl-communities-moztw"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "COSCUP",
+    "wiki": {
+      "en": "COSCUP"
+    },
+    "tag": [
+      {"name": "Communities", "hl": "hl-communities-coscup"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "g0v 零時政府",
+    "wiki": {
+      "zh": "g0v 零時政府"
+    },
+    "tag": [
+      {"name": "Communities", "hl": "hl-communities-g0v"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Startup company",
+    "wiki": {
+      "en": "Startup company"
+    },
+    "tag": [
+      {"name": "Work experence", "hl": "hl-work-experence-tmi"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Open source",
+    "wiki": {
+      "en": "Open source"
+    },
+    "tag": [
+      {"name": "Work experence", "hl": "hl-projects-opensource"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Plurk",
+    "wiki": {
+      "en": "Plurk"
+    },
+    "tag": [
+      {"name": "Work experence", "hl": "hl-projects-plurk"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Open data",
+    "wiki": {
+      "en": "Open data"
+    },
+    "tag": [
+      {"name": "Work experence", "hl": "hl-projects-opendata"}
+    ],
+    "enable": true
+  }
+]

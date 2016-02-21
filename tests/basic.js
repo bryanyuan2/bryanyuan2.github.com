@@ -13,7 +13,9 @@ module.exports = {
         browser
             .url('http://localhost:3000/')
             .assert.visible('#regionHeader')
+            .assert.visible('#regionSearchBox')
             .assert.visible('#regionContacts')
+            .assert.visible('#regionResume')
             .assert.visible('#regionEducation')
             .assert.visible('#regionSkills')
             .assert.visible('#regionExperence')

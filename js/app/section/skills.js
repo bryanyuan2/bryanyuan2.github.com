@@ -25,11 +25,13 @@ var Skill = React.createClass({
     });
     return (
       <div className="row-fluid">
-        <div className="span3 fs-16">
+        <div className="span2 fs-16">
           <p>{this.props.skill.title}</p>
         </div>
         <div className="span8 fs-16">
-          <blockquote>{items.join(", ")}</blockquote>
+          <blockquote className={this.props.skill.hl}>
+            {items.join(", ")}
+          </blockquote>
         </div>
       </div>
     );

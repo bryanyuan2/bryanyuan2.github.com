@@ -40,7 +40,7 @@ var Work = React.createClass({
     if (this.props.work.product) {
       product.push('<div class="refItem">');
       this.props.work.product.forEach(function(info) {
-        product.push('<a href="' + info.link + '" target="_blank"><img class="refProd" src=' + info.img + ' alt=' + info.title + '/></a>');
+        product.push('<a href="' + info.link + '" target="_blank"><img class="refProd" src=' + info.img + ' alt=' + info.title + '/>' + '<span class="refTitle">' + info.title + '</span>' + '</a>');
       });
       product.push('</div>');
     }
@@ -54,7 +54,7 @@ var Work = React.createClass({
           <p>{this.props.work.date}</p>
         </div>
         <div className="span8">
-          <blockquote>
+          <blockquote className={this.props.work.hl} >
             <div className="text_experience"><a target="_blank" href={this.props.work.url}>{this.props.work.corp}</a></div>
             <div className="text_description">{this.props.work.position}, {this.props.work.org}</div>
             <ul className="text_description">

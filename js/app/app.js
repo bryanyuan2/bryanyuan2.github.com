@@ -2,12 +2,17 @@
 
 /* require */
 var React = require('react'),
-    Router = require('react-router'),
-    Route = Router.Route;
+    ReactDOM = require('react-dom'),
+    ReactRouter = require('react-router'),
+    Router = ReactRouter.Router,
+    Route = ReactRouter.Route,
+    IndexRoute = require('react-router').IndexRoute,
+    HashHistory = require('react-router/lib/HashHistory');
+
 
 /* section */
 var CompHeader = require('./header'),
-    CompContact = require('./section/contact'),
+    CompNavInfo = require('./section/navinfo'),
     CompEducations = require('./section/educations'),
     CompSkills = require('./section/skills'),
     CompWorks = require('./section/works'),
@@ -17,13 +22,15 @@ var CompHeader = require('./header'),
     CompPublications = require('./section/publications'),
     CompFooter = require('./footer');
 
+var navInfo = ["asserts/data/directdisplay.json", "asserts/data/contact.json"];
+
 var App = React.createClass({
   render: function () {
     return (
       <div>
         <CompHeader url="asserts/data/commons.json" />
         <div className="container">
-          <CompContact url="asserts/data/contact.json" />
+          <CompNavInfo url={navInfo} />
           <CompEducations url="asserts/data/educations.json" />
           <CompSkills url="asserts/data/skills.json" />
           <CompWorks url="asserts/data/works.json" />
@@ -39,9 +46,11 @@ var App = React.createClass({
 });
 
 var routes = (
-  <Route handler={App}>
+  <Route path='/'>
+    <IndexRoute component={App} />
   </Route>
 );
+
 
 /* customize js */
 $(document).ready(function() {
@@ -52,7 +61,6 @@ $(document).ready(function() {
       $('.header_bg').css('height', (jumboHeight - scrolled) + 'px');
   };
   $(window).scroll(function(){
-      // $(window).scroll(function(e){
       parallax();
       $(".header_title").css("opacity", header_title_opacity/$(window).scrollTop());
       if ($(window).scrollTop()<=0) {
@@ -61,6 +69,4 @@ $(document).ready(function() {
   });
 });
 
-Router.run(routes, function (Handler) {
-  React.render(<Handler/>, document.body);
-});
+ReactDOM.render(<Router history={HashHistory}>{routes}</Router>, document.getElementById('container'));

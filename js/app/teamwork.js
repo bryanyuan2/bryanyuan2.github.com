@@ -2,6 +2,7 @@
 
 var React = require('react');
 
+
 var TeamworkContainer = React.createClass({
   shouldComponentUpdate: function() {
     // shouldComponentUpdate: function(nextProps, nextState)

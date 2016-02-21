@@ -1,5 +1,6 @@
 [
   {
+    "hl": "hl-projects-hackathon hl-projects-opensource",
     "name": "Opinionoted",
     "date": "Nov 2015",
     "from": "Girls in Tech Taiwan x Facebook Hack for a Cause",
@@ -15,6 +16,7 @@
     "github": "https://github.com/bryanyuan2/fb6likes"
   },
   {
+    "hl": "hl-projects-hackathon hl-projects-opensource hl-projects-opendata",
     "name": "歐噴。豆知識",
     "date": "Aug 2015",
     "from": "Pixnet Hackathon 2015",
@@ -35,6 +37,7 @@
     "store": "https://chrome.google.com/webstore/detail/%E6%AD%90%E5%99%B4%E8%B1%86%E7%9F%A5%E8%AD%98/jgkidmplccofmhbdmogcncnlogaliidp?hl=zh-TW"
   },
   {
+    "hl": "hl-projects-hackathon hl-projects-opensource",
     "name": "Baidu Captain Planet",
     "link": "http://baiduhackday.duapp.com/",
     "date": "July 2013",
@@ -52,6 +55,7 @@
     "speakerdeck": "https://speakerdeck.com/bryanyuan2/baidu-hackathon-taipei-2013-captain-1"
   },
   {
+    "hl": "hl-projects-opensource",
     "name": "Chewing in the Cloud",
     "date": "Aug 2010 - Dec 2010",
     "from": "CHT Open Source Software Competition 2010",
@@ -64,6 +68,7 @@
     "github": "http://code.google.com/p/citc/"
   },
   {
+    "hl": "hl-projects-hackathon hl-projects-opensource hl-projects-plurk",
     "name": "Go! Plurk",
     "link" : "http://goplurk.cse.tw/",
     "date": "Jun 2009 - Sep 2009",

@@ -30,7 +30,7 @@ var Project = React.createClass({
           <p>{this.props.project.date}</p>
         </div>
         <div className="span7">
-          <blockquote>
+          <blockquote className={this.props.project.hl}>
           <div className="textTitle">
             {this.props.project.link && <a href={this.props.project.link} target="_blank"> {this.props.project.name} </a>}
             {!this.props.project.link && this.props.project.name}

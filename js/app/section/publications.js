@@ -25,11 +25,13 @@ var Publication = React.createClass({
           <p>{this.props.publication.date}</p>
         </div>
         <div className="span10">
+          <blockquote className={this.props.publication.hl}>
             <p>
               “<a target="_blank" href={this.props.publication.link}>{this.props.publication.name}</a>”<br />
               {this.props.publication.publication}<br />
               <i dangerouslySetInnerHTML={{__html: this.props.publication.authors}} />
             </p>
+          </blockquote>
         </div>
       </div>
     );

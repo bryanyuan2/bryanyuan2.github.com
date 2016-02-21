@@ -4,6 +4,7 @@ var React = require('react'),
     LoadJSON = require('./../mixins').LoadJSON;
 
 var Education = React.createClass({
+  honors: [],
   propTypes: {
     education: React.PropTypes.object,
     key: React.PropTypes.number
@@ -18,24 +19,28 @@ var Education = React.createClass({
     // shouldComponentUpdate: function(nextProps, nextState)
     return false;
   },
-  render: function() {
-    var honors = [];
+  componentWillMount: function() {
     if (this.props.education.honors) {
-      this.props.education.honors.forEach(function(content) {
-        honors.push('<strong>Honors</strong>: <a target="_blank" href="' + content.link + '">' + content.title + '</a>');
-      });
+        var that = this;
+        this.props.education.honors.forEach(function(content) {
+          that.honors.push('<strong>Honors</strong>: <a target="_blank" href="' + content.link + '">' + content.title + '</a>');
+        });
     }
+  },
+  render: function() {
     return (
       <div className="row-fluid">
         <div className="span2">
           <p>{this.props.education.date}</p>
         </div>
         <div className="span10">
-          <p><strong>{this.props.education.degree}, <i>{this.props.education.school}</i></strong> - <a target="_blank" href="http://iisr.csie.ncu.edu.tw/">{this.props.education.lab}</a></p>
-          <ol>
-            { this.props.education.honors && <li dangerouslySetInnerHTML={{__html: honors}} />}
-            { this.props.education.description && <li>{this.props.education.description}</li>}
-          </ol>
+          <blockquote className={this.props.education.hl}>
+            <p><strong>{this.props.education.degree}, <i>{this.props.education.school}</i></strong> - <a target="_blank" href="http://iisr.csie.ncu.edu.tw/">{this.props.education.lab}</a></p>
+            <ol>
+              { this.props.education.honors && <li dangerouslySetInnerHTML={{__html: this.honors}} />}
+              { this.props.education.description && <li>{this.props.education.description}</li>}
+            </ol>
+          </blockquote>
         </div>
       </div>
     );

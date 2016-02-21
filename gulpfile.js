@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     cache = require('gulp-cached');
 
 var paths = {
-    css:['./asserts/css/app.less'],
+    css:['./asserts/css/*.less'],
     js: ['./js/app/*.js', './js/app/section/*.js'],
     app_js: ['./js/app/app.js'],
     index: ['./index.html']
@@ -30,7 +30,7 @@ gulp.task('js', ['clean'], function() {
     .transform(reactify)
     .bundle()
     .pipe(source('bundle.js'))
-    .pipe(streamify(uglify()))
+    //.pipe(streamify(uglify()))
     .pipe(gulp.dest('./js/build'));
 });
 

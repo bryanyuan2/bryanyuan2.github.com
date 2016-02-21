@@ -1,5 +1,6 @@
 [
   {
+    "hl": "hl-communities-g0v",
     "name": "g0v Summit 2014",
     "link": "http://summit.g0v.tw/",
     "date": "Nov 2014",
@@ -7,9 +8,14 @@
     "width": "",
     "height": "",
     "position": "Program Assistant",
-    "description": "Coordinated speaker and visiting scholar, arranged whole day event and multiple-track session."
+    "description": [
+      {
+        "text": "Coordinated speaker and visiting scholar, arranged whole day event and multiple-track session."
+      }
+    ]
   },
   {
+    "hl": "hl-communities-coscup",
     "name": "COSCUP 2012",
     "link": "http://coscup.org/2012/zh-tw/",
     "date": "Feb 2012 - Aug 2012",
@@ -17,9 +23,14 @@
     "width": "",
     "height": "",
     "position": "Attendee Team Lead 2012",
-    "description": "Organized administration team of 8 members to host conference over 1000+ attendee, supervising registration, attendee analytics, and administrative functions by conducting online coordination meetings."
+    "description": [
+      {
+        "text": "Organized administration team of 8 members to host conference over 1000+ attendee, supervising registration, attendee analytics, and administrative functions by conducting online coordination meetings."
+      }
+    ]
   },
   {
+    "hl": "hl-communities-moztw",
     "name": "Mozilla Taiwan Community",
     "link": "https://moztw.org/",
     "date": "Sep 2009",

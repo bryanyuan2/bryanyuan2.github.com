@@ -37,7 +37,7 @@ var Award = React.createClass({
           <p>{this.props.award.date}</p>
         </div>
         <div className="span7">
-          <blockquote>
+          <blockquote className={this.props.award.hl}>
             <span className="textTitle" dangerouslySetInnerHTML={{__html: this.props.award.title}} />
             <TeamWork teamwork={this.props.award.teamwork} />
             <div className="text_description">{this.props.award.description}</div>

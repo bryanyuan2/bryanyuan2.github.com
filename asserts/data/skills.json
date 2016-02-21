@@ -1,5 +1,6 @@
 [
   {
+    "hl": "hl-skills-proficient",
     "title": "Proficient",
     "items": [
       {
@@ -11,6 +12,7 @@
     ]
   },
   {
+    "hl": "hl-skills-intermediate",
     "title": "Intermediate",
     "items": [
       {
@@ -22,6 +24,7 @@
     ]
   },
   {
+    "hl": "hl-skills-platform",
     "title": "Platform",
     "items": [
       {
@@ -30,6 +33,7 @@
     ]
   },
   {
+    "hl": "hl-skills-research",
     "title": "Research Interests",
     "items": [
       {

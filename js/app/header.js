@@ -23,10 +23,12 @@ var HeaderContainer = React.createClass({
         <a target="_blank" href={this.state.data.facebook}>
           <img width="160" height="160" className="header_avatar img-circle" src={this.state.data.avatar} alt="avatar" />
         </a>
+
+
         <div id="linkedin_nav">
         <a target="_blank" href={this.state.data.linkedin}>
           <img src={this.state.data.linkedinImg} alt={this.state.data.linkedAlt} />
-          <div class="test_content">{this.state.data.linkedText}</div>
+          <div className="test_content">{this.state.data.linkedText}</div>
         </a>
       </div>
       </div>
