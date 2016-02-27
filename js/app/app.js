@@ -7,8 +7,7 @@ var React = require('react'),
     Router = ReactRouter.Router,
     Route = ReactRouter.Route,
     IndexRoute = require('react-router').IndexRoute,
-    HashHistory = require('react-router/lib/HashHistory');
-
+    browserHistory = require('react-router/lib/browserHistory');
 
 /* section */
 var CompHeader = require('./header'),
@@ -22,15 +21,13 @@ var CompHeader = require('./header'),
     CompPublications = require('./section/publications'),
     CompFooter = require('./footer');
 
-var navInfo = ["asserts/data/directdisplay.json", "asserts/data/contact.json"];
-
 var App = React.createClass({
   render: function () {
     return (
       <div>
         <CompHeader url="asserts/data/commons.json" />
         <div className="container">
-          <CompNavInfo url={navInfo} />
+          <CompNavInfo url={["asserts/data/directdisplay.json", "asserts/data/contact.json"]} />
           <CompEducations url="asserts/data/educations.json" />
           <CompSkills url="asserts/data/skills.json" />
           <CompWorks url="asserts/data/works.json" />
@@ -69,4 +66,4 @@ $(document).ready(function() {
   });
 });
 
-ReactDOM.render(<Router history={HashHistory}>{routes}</Router>, document.getElementById('container'));
+ReactDOM.render(<Router history={browserHistory}>{routes}</Router>, document.getElementById('container'));
