@@ -24,7 +24,6 @@ var HeaderContainer = React.createClass({
           <img width="160" height="160" className="header_avatar img-circle" src={this.state.data.avatar} alt="avatar" />
         </a>
 
-
         <div id="linkedin_nav">
         <a target="_blank" href={this.state.data.linkedin}>
           <img src={this.state.data.linkedinImg} alt={this.state.data.linkedAlt} />
