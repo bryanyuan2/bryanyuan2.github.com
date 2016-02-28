@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm install && bower install",
     "go": "gulp",
-    "test": "mocha --compilers .:tests/unit/utils/compiler.js --require tests/unit/utils/dom.js  tests/unit/*.js"
+    "test": "./node_modules/.bin/mocha --compilers .:tests/unit/utils/compiler.js --require tests/unit/utils/dom.js  tests/unit/*.js"
   },
   "repository": {
     "type": "git",
