@@ -1,5 +1,7 @@
+language: node_js
+node_js:
+  - "0.10"
 install:
   - npm install
-  - npm install gulp -g
   - npm install mocha -g
 script: "npm run test"
