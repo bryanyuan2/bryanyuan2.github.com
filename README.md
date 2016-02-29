@@ -30,10 +30,10 @@
 
 
 [build-status-badge]: https://travis-ci.org/bryanyuan2/bryanyuan2.github.com.svg
-[build-status-link]: https://travis-ci.org/bryanyuan2/bryanyuan2.github.io
+[build-status-link]: https://travis-ci.org/bryanyuan2/bryanyuan2.github.com
 
-[dependency-badge]: https://david-dm.org/bryanyuan2/bryanyuan2.github.io.svg
-[dependency-link]: https://david-dm.org/bryanyuan2/bryanyuan2.github.io
+[dependency-badge]: https://david-dm.org/bryanyuan2/bryanyuan2.github.com.svg
+[dependency-link]: https://david-dm.org/bryanyuan2/bryanyuan2.github.com
 
-[coveralls-badge]: https://coveralls.io/repos/bryanyuan2/bryanyuan2.github.io/badge.svg?branch=master&service=github
-[coveralls-link]: https://coveralls.io/github/bryanyuan2/bryanyuan2.github.io?branch=master
+[coveralls-badge]: https://coveralls.io/repos/bryanyuan2/bryanyuan2.github.com/badge.svg?branch=master&service=github
+[coveralls-link]: https://coveralls.io/github/bryanyuan2/bryanyuan2.github.com?branch=master
