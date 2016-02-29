@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm install && bower install",
     "go": "gulp",
-    "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha -- -R spec"
+    "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha -- -R spec --recursive"
   },
   "repository": {
     "type": "git",
