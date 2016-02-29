@@ -13,20 +13,32 @@
 
 ### Built with
 
-- [React](http://facebook.github.io/react/)
-- [jQuery](http://jquery.com/)
-- [Bootstrap](http://twitter.github.com/bootstrap/)
+> Package Management
 - [npm](http://www.npmjs.com/)
-- [glup](http://gulpjs.com/)
 - [Bower](http://bower.io/)
-- [browserify](http://browserify.org/)
-- [Nightwatch](http://nightwatchjs.org/)
+
+> Automatmation
+- [glup](http://gulpjs.com/)
+
+> Code Quality
 - [JSHint](http://jshint.com/)
+
+>  Front End
+- [Bootstrap](http://twitter.github.com/bootstrap/)
+- [jQuery](http://jquery.com/)
+- [React](http://facebook.github.io/react/)
+- [browserify](http://browserify.org/)
+
+> Test Related
+- [Mocha](https://mochajs.org/)
+- [Chai](http://chaijs.com/)
+- [Nightwatch](http://nightwatchjs.org/)
+- [PhantomJS](http://phantomjs.org/)
+
 
 ### License
 
 >  [MIT](http://opensource.org/licenses/MIT) © [Bryan Cheng](http://bryanyuan2.github.io)
-
 
 
 [build-status-badge]: https://travis-ci.org/bryanyuan2/bryanyuan2.github.com.svg
