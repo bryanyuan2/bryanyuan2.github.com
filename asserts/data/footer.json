@@ -73,5 +73,10 @@
     "name": "phantomjs",
     "url": "http://phantomjs.org/",
     "img": "asserts/images/tech/phantomjs.png"
+  },
+  {
+    "name": "coveralls",
+    "url": "https://coveralls.io",
+    "img": "asserts/images/tech/coveralls.png"
   }
 ]
