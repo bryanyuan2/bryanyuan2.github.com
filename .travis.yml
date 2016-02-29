@@ -4,4 +4,7 @@ node_js:
 install:
   - npm install
   - npm install mocha -g
-script: "npm run test"
+script:
+  - npm run-script test
+  - npm run-script cov
+after_script: "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
