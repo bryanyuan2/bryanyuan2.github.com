@@ -13,7 +13,9 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     react = require('gulp-react'),
     cache = require('gulp-cached'),
-    flow = require('gulp-flowtype');
+    flow = require('gulp-flowtype'),
+    replace = require('gulp-replace'),
+    buildDate = require('gulp-build-date');
 
 var paths = {
     css:['./asserts/css/*.less'],
@@ -21,6 +23,10 @@ var paths = {
     app_js: ['./js/app/app.js'],
     index: ['./index.html']
 };
+
+// date
+var date = new Date();
+var targetDate = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
 
 gulp.task('clean', function(done) {
   del(['./js/build/*.js'], done);
@@ -98,8 +104,17 @@ gulp.task('nightwatch', function() {
     }));
 });
 
+
+gulp.task('ver-footer', function(){
+  gulp.src(['js/app/footer.js'])
+    .pipe(replace(/\%ver_replacement\%/g, targetDate))
+    .pipe(rename("js/app/footer-ver.js"))
+    .pipe(gulp.dest('./'));
+});
+
+
 /* default */
-gulp.task('default', ['css', 'typecheck', 'jshint', 'js', 'connect', 'watch']);
+gulp.task('default', ['css', 'typecheck', 'jshint', 'ver-footer', 'js', 'connect', 'watch']);
 
 /* java -jar selenium-server-standalone-2.51.0.jar */
 gulp.task('test', ['nightwatch']);

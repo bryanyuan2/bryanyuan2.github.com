@@ -19,7 +19,7 @@ var CompHeader = require('./header'),
     CompProjects = require('./section/projects'),
     CompCommunities = require('./section/communities'),
     CompPublications = require('./section/publications'),
-    CompFooter = require('./footer');
+    CompFooter = require('./footer-ver');
 
 var App = React.createClass({
   render: function () {
