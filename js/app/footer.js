@@ -20,7 +20,7 @@ var Pack = React.createClass({
   },
   render: function() {
     return (
-      <a target="_blank" href={this.props.items.url}><img src={this.props.items.img} /></a>
+      <a target="_blank" href={this.props.items.url}><img className="footerImg" src={this.props.items.img} /></a>
     );
   }
 });
@@ -37,6 +37,7 @@ var FooterContainer = React.createClass({
     });
     return(
       <div id="regionFooter">
+            <hr />
             Powered by 
             {packages}
             <br />
