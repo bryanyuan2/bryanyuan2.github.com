@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm install && bower install",
     "go": "gulp",
-    "test": "./node_modules/.bin/mocha --compilers .:tests/unit/utils/compiler.js --require tests/unit/utils/dom.js  tests/unit/*.js"
+    "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -42,10 +42,12 @@
     "htmlencode": "0.0.4",
     "istanbul": "^0.4.2",
     "jest": "^0.1.40",
+    "jscoverage": "^0.6.0",
     "jsdom": "^8.0.4",
     "jshint": "^2.9.1",
     "jshint-stylish": "^2.1.0",
     "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.2.0",
     "nightwatch": "~0.5.31",
     "nodemw": "0.7.3",
     "phantomjs": "~1.9.7-10",
