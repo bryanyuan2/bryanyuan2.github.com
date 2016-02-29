@@ -48,6 +48,7 @@
     "mocha-lcov-reporter": "^1.2.0",
     "nightwatch": "~0.5.31",
     "nodemw": "0.7.3",
+    "npm-check": "^4.1.4",
     "phantomjs": "~1.9.7-10",
     "react-addons-test-utils": "^0.14.7",
     "react-testutils-additions": "^0.16.1",
