@@ -14,7 +14,7 @@ var compTitle = 'Awards';
 
 describe('compoent awards section', function(){
   before(function(done){
-    compAwardsSection = ReactTestUtils.renderIntoDocument(<AwardsContainer />);
+    compAwardsSection = ReactTestUtils.renderIntoDocument(<AwardsContainer url="../../asserts/data/awards.json" />);
     done();
   });
 

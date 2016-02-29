@@ -1,6 +1,7 @@
 "use strict";
 
 var React = require('react');
+var $ = require('jquery');
 
 var Mixins = {
   LoadJSON : {
