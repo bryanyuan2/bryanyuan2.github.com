@@ -53,5 +53,25 @@
     "name": "flowtype",
     "url": "http://flowtype.org/",
     "img": "asserts/images/tech/flowtype.png"
+  },
+  {
+    "name": "travis-ci",
+    "url": "http://travis-ci.org/",
+    "img": "asserts/images/tech/travis.png"
+  },
+  {
+    "name": "mocha",
+    "url": "https://mochajs.org",
+    "img": "asserts/images/tech/mocha.png"
+  },
+  {
+    "name": "chai",
+    "url": "http://chaijs.com/",
+    "img": "asserts/images/tech/chai.png"
+  },
+  {
+    "name": "phantomjs",
+    "url": "http://phantomjs.org/",
+    "img": "asserts/images/tech/phantomjs.png"
   }
 ]

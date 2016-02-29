@@ -23,7 +23,7 @@
 > Code Quality
 - [JSHint](http://jshint.com/)
 
->  Front End
+> Front End
 - [Bootstrap](http://twitter.github.com/bootstrap/)
 - [jQuery](http://jquery.com/)
 - [React](http://facebook.github.io/react/)
