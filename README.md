@@ -29,7 +29,7 @@
 
 
 
-[build-status-badge]: https://travis-ci.org/bryanyuan2/bryanyuan2.github.io.svg
+[build-status-badge]: https://travis-ci.org/bryanyuan2/bryanyuan2.github.com.svg
 [build-status-link]: https://travis-ci.org/bryanyuan2/bryanyuan2.github.io
 
 [dependency-badge]: https://david-dm.org/bryanyuan2/bryanyuan2.github.io.svg
