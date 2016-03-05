@@ -38,7 +38,7 @@ var FooterContainer = React.createClass({
     return(
       <div id='regionFooter'>
             <hr />
-            <span className='footerVer'><i>Ver.2016/2/29</i>. </span>
+            <span className='footerVer'><i>Ver.2016/3/5</i>. </span>
             Powered by 
             {packages}
             <br />

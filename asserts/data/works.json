@@ -20,6 +20,23 @@
         "description": "Well-collaboration with US, UK, HK, Australia and India team, communicated with PM, QE and editorials various departments."
       }
     ],
+    "media": [
+      {
+        "title": "Mozilla switching default Firefox search engine to Yahoo",
+        "source": "The Next Web",
+        "link": "http://thenextweb.com/apps/2014/11/19/mozilla-switching-default-firefox-search-engine-yahoo"
+      },
+      {
+        "title": "Yahoo Will Soon Become The Default Search Engine In Firefox",
+        "source": "TechCrunch",
+        "link": "http://techcrunch.com/2014/11/19/mozilla-partners-with-yahoo-which-will-become-the-default-search-engine-in-firefox-next-month"
+      },
+      {
+        "title": "A New Yahoo Search Experience for Firefox Users in U.S.",
+        "source": "The Mozilla Blog",
+        "link": "https://blog.mozilla.org/blog/2015/11/11/a-new-yahoo-search-experience-for-firefox-users-in-u-s"
+      }
+    ],
     "product": [
       {
         "title": "Yahoo Search",
