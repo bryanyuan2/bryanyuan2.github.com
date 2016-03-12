@@ -42,6 +42,11 @@
         "title": "Yahoo Search",
         "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/yahoo.jpg",
         "link": "https://search.yahoo.com"
+      },
+      {
+        "title": "Mozilla Firefox Search",
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/monaco.jpg",
+        "link": "https://search.yahoo.com/yhs/search?p=big%20hero%206&ei=UTF-8&hspart=mozilla&hsimp=yhs-009&fr=chrf-yff44&type=yff44"
       }
     ]
   },
