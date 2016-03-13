@@ -43,7 +43,7 @@ var Award = React.createClass({
             <div className="text-desc">{this.props.award.description}</div>
             <div className="github_url"><a target="_blank" href={this.props.award.github}>{this.props.award.github}</a></div>
             <br />
-            <div>
+            <div className="text-btn-group">
               { this.props.award.hackr && <a target="_blank" href={this.props.award.hackr} className="btn btn-default btn-sm block-btn" type="button">hackr</a> }
               { this.props.award.speakerdeck && <a target="_blank" href={this.props.award.speakerdeck} className="btn btn-default btn-sm block-btn" type="button">speakerdeck</a> }
               { this.props.award.store && <a target="_blank" href={this.props.award.store} className="btn btn-default btn-sm block-btn" type="button">chrome store</a> }

@@ -40,7 +40,7 @@ var Project = React.createClass({
           <div className="text-desc">{description}</div>
           { this.props.project.github && <div className="github-url"><a target="_blank" href={this.props.project.github}>{this.props.project.github}</a></div> }
           <br />
-          <div>
+          <div classNmae="text-btn-group">
             { this.props.project.speakerdeck && <a target="_blank" href={this.props.project.speakerdeck} className="btn btn-default btn-sm block-btn" type="button">speakerdeck</a> }
             { this.props.project.store && <a target="_blank" href={this.props.project.store} className="btn btn-default btn-sm block-btn" type="button">chrome store</a> }
           </div>
