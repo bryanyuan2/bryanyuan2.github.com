@@ -10,7 +10,7 @@ var TeamworkContainer = React.createClass({
   },
   render: function() {
     return (
-      <span className="label label-info">Teamwork</span>
+      <span className="label label-info label-teamwork">Teamwork</span>
     );
   }
 });

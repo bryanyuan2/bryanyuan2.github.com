@@ -30,7 +30,7 @@ var Work = React.createClass({
     });
 
     if (this.props.work.media) {
-      media.push('<div class="refMedia">');
+      media.push('<div class="text-media">');
       this.props.work.media.forEach(function(info) {
         media.push('<li><a target="_blank" href=' + info.link + '>' + info.title + ' - ' + info.source + '</a></li>');
       });
@@ -38,9 +38,9 @@ var Work = React.createClass({
     }
 
     if (this.props.work.product) {
-      product.push('<div class="refItem">');
+      product.push('<div class="text-ref-set">');
       this.props.work.product.forEach(function(info) {
-        product.push('<a href="' + info.link + '" target="_blank"><img class="refProd" src=' + info.img + ' alt=' + info.title + '/>' + '<span class="refTitle">' + info.title + '</span>' + '</a>');
+        product.push('<a href="' + info.link + '" target="_blank"><img class="text-ref-icon" src=' + info.img + ' alt=' + info.title + '/>' + '<span class="text-ref-title">' + info.title + '</span>' + '</a>');
       });
       product.push('</div>');
     }
@@ -49,15 +49,15 @@ var Work = React.createClass({
     product_content = product.join(" ");
 
     return (
-      <div className="row-fluid">
-        <div className="span2">
+      <div className="row">
+        <div className="col-md-2 text-date">
           <p>{this.props.work.date}</p>
         </div>
-        <div className="span8">
+        <div className="col-md-8">
           <blockquote className={this.props.work.hl} >
-            <div className="text_experience"><a target="_blank" href={this.props.work.url}>{this.props.work.corp}</a></div>
-            <div className="text_description">{this.props.work.position}, {this.props.work.org}</div>
-            <ul className="text_description">
+            <div className="text-experience"><a target="_blank" href={this.props.work.url}>{this.props.work.corp}</a></div>
+            <div className="text-desc">{this.props.work.position}, {this.props.work.org}</div>
+            <ul className="text-desc">
               <span className="description">{description}</span>
             </ul>
             <br />
@@ -65,7 +65,7 @@ var Work = React.createClass({
             <div dangerouslySetInnerHTML={{__html: product_content}} />
           </blockquote>
         </div>
-        <div className="span2 img_span">
+        <div className="col-md-2 text-img-pure">
           <img id={this.props.work.corp} width={this.props.work.width} height={this.props.work.height} src={this.props.work.logo} alt={this.props.work.logoalt} />
         </div>
       </div>
@@ -81,8 +81,8 @@ var WorksContainer = React.createClass({
       works.push(<Work work={work} key={index} />);
     });
     return(
-      <div id="regionExperence">
-        <h2 id="setExperence">Work experence</h2>
+      <div id="region-experence">
+        <h2 id="set-experence">Work experence</h2>
         <hr />
         {works}
         <br />

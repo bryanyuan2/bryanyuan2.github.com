@@ -20,11 +20,11 @@ var Publication = React.createClass({
   },
   render: function() {
     return (
-      <div className="row-fluid">
-        <div className="span2">
+      <div className="row">
+        <div className="col-md-2 text-date">
           <p>{this.props.publication.date}</p>
         </div>
-        <div className="span10">
+        <div className="col-md-10">
           <blockquote className={this.props.publication.hl}>
             <p>
               “<a target="_blank" href={this.props.publication.link}>{this.props.publication.name}</a>”<br />
@@ -46,8 +46,8 @@ var PublicationsContainer = React.createClass({
       publications.push(<Publication publication={publication} key={index} />);
     });
     return(
-      <div id="regionPublications">
-        <h2 id="setPublications">Publications</h2>
+      <div id="region-publications">
+        <h2 id="set-publications">Publications</h2>
         <hr />
         {publications}
         <br />

@@ -55,13 +55,13 @@ $(document).ready(function() {
   var jumboHeight = $('.jumbotron').outerHeight();
   var parallax = function parallax(){
       var scrolled = $(window).scrollTop();
-      $('.header_bg').css('height', (jumboHeight - scrolled) + 'px');
+      $('.header-bg').css('height', (jumboHeight - scrolled) + 'px');
   };
   $(window).scroll(function(){
       parallax();
-      $(".header_title").css("opacity", header_title_opacity/$(window).scrollTop());
+      $(".header-title").css("opacity", header_title_opacity/$(window).scrollTop());
       if ($(window).scrollTop()<=0) {
-        $(".header_title").css("opacity", 1);
+        $(".header-title").css("opacity", 1);
       }
   });
 });

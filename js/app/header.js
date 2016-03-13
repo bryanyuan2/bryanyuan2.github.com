@@ -15,16 +15,16 @@ var HeaderContainer = React.createClass({
   },
   render: function() {
     return(
-      <div id="regionHeader">
-        <div className="header_bg"></div>
+      <div id="region-header">
+        <div className="header-bg"></div>
         <div className="jumbotron">
-          <h1 className="header_title">{this.state.data.title}</h1>
+          <h1 className="header-title">{this.state.data.title}</h1>
         </div>
         <a target="_blank" href={this.state.data.facebook}>
-          <img width="160" height="160" className="header_avatar img-circle" src={this.state.data.avatar} alt="avatar" />
+          <img width="160" height="160" className="header-avatar img-circle" src={this.state.data.avatar} alt="avatar" />
         </a>
 
-        <div id="linkedin_nav">
+        <div id="linkedin-nav">
         <a target="_blank" href={this.state.data.linkedin}>
           <img src={this.state.data.linkedinImg} alt={this.state.data.linkedAlt} />
           <div className="test_content">{this.state.data.linkedText}</div>

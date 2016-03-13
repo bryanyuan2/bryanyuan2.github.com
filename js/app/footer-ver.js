@@ -20,7 +20,7 @@ var Pack = React.createClass({
   },
   render: function() {
     return (
-      <a target="_blank" href={this.props.items.url}><img className="footerImg" src={this.props.items.img} /></a>
+      <a target="_blank" href={this.props.items.url}><img className="footer-img" src={this.props.items.img} /></a>
     );
   }
 });
@@ -36,9 +36,9 @@ var FooterContainer = React.createClass({
       packages.push(<Pack items={item} key={index} />);
     });
     return(
-      <div id='regionFooter'>
+      <div id='region-footer'>
             <hr />
-            <span className='footerVer'><i>Ver.2016/3/5</i>. </span>
+            <span className='footer-ver'><i>Ver.2016/3/13</i>. </span>
             Powered by 
             {packages}
             <br />

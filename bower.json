@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "bootstrap-css-only": "2.3.2",
+    "bootstrap-css-only": "3.3.6",
     "jquery.easing": "~1.3.1"
   }
 }

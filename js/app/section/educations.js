@@ -29,11 +29,11 @@ var Education = React.createClass({
   },
   render: function() {
     return (
-      <div className="row-fluid">
-        <div className="span2">
+      <div className="row">
+        <div className="col-md-2 text-date">
           <p>{this.props.education.date}</p>
         </div>
-        <div className="span10">
+        <div className="col-md-10">
           <blockquote className={this.props.education.hl}>
             <p><strong>{this.props.education.degree}, <i>{this.props.education.school}</i></strong> - <a target="_blank" href="http://iisr.csie.ncu.edu.tw/">{this.props.education.lab}</a></p>
             <ol>
@@ -55,8 +55,8 @@ var EducationsContainer = React.createClass({
       educations.push(<Education education={education} key={index} />);
     });
     return(
-      <div id="regionEducation">
-        <h2 id="setEducation">Education</h2>
+      <div id="region-education">
+        <h2 id="set-education">Education</h2>
         <hr />
         {educations}
         <br />

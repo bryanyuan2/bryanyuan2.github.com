@@ -53,7 +53,7 @@ var DirectDisplayTag = React.createClass({
     }
     tags_content = tags.join(" ");
     return (
-      <span onClick={this.handleClick} className="DDtags" dangerouslySetInnerHTML={{__html: tags_content}} />
+      <span onClick={this.handleClick} className="dd-tags" dangerouslySetInnerHTML={{__html: tags_content}} />
     );
   }
 });
@@ -103,7 +103,7 @@ var DirectDisplay = React.createClass({
     }
   },
   componentWillUpdate: function() {
-    $(".directDisplayContent").show();
+    $(".direct-display-content").show();
   },
   componentDidUpdate: function() {
     this.ddTags = [];
@@ -128,7 +128,7 @@ var DirectDisplay = React.createClass({
       for (var element in content) {
         if (content[element].extract.length > wikiDescTrunc) {
           this.descContent = truncate(content[element].extract, wikiDescTrunc);
-          descReadMore = "eleShow";
+          descReadMore = "dd-read-more";
         } else {
           this.descContent = content[element].extract;
         }
@@ -139,7 +139,7 @@ var DirectDisplay = React.createClass({
       this.descContent = "";
     }
     return (
-      <div className="directDisplayContent">
+      <div className="direct-display-content">
         <div className="loadingShowCls showit">
           <h4>{descTitle}</h4>
           {this.descContent}
@@ -199,7 +199,7 @@ var CompNavInfoContainer = React.createClass({
     return item.name;
   },
   componentDidMount: function() {
-    $(".directDisplayContent").hide();
+    $(".direct-display-content").hide();
   },
   render: function() {
     var searchAssistsObj = [];
@@ -227,10 +227,10 @@ var CompNavInfoContainer = React.createClass({
     }
 
     return(
-      <div id="regionNavInfo">
-        <div className="row-fluid">
-          <div className="span7">
-            <span id="regionSearchBox">
+      <div id="region-nav-info">
+        <div className="row">
+          <div className="col-md-7">
+            <span id="region-searchBox">
               <Typeahead
                 customClasses={typeaheadClass}
                 defaultClassNames={false}
@@ -242,16 +242,16 @@ var CompNavInfoContainer = React.createClass({
                 highlight={true}
                 onOptionSelected={this.updateDirectDisplay} />
             </span>
-            <span id="regionResume">
+            <span id="region-resume">
               <span>or download Curriculum vita <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a></span>
             </span>
           </div>
-          <div id="regionContacts" className="span3">
+          <div id="region-contacts" className="col-md-3">
             <span className="row header_icons_section">{contacts}</span>
           </div>
         </div>
         <hr />
-        <div id="regionDirectDisplay">
+        <div id="dd-group">
             <DirectDisplay wiki={this.state.wiki} intl={this.state.intl} target={this.state.target} tag={this.state.tag} />
         </div>
       </div>

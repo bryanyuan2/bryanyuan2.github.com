@@ -27,19 +27,19 @@ var Community = React.createClass({
     
     return (
       <div>
-        <div className="row-fluid">
-          <div className="span2">
+        <div className="row">
+          <div className="col-md-2 text-date">
             <p>{this.props.community.date}</p>
           </div>
 
-          <div className="span8">
+          <div className="col-md-8">
             <blockquote className={this.props.community.hl}>
-              <div className="textTitle"><a target="_blank" href={this.props.community.link}>{this.props.community.name}</a></div>
-              <div className="text_description">{this.props.community.position}</div>
-              <div className="text_description">{description}</div>
+              <div className="text-title"><a target="_blank" href={this.props.community.link}>{this.props.community.name}</a></div>
+              <div className="text-desc">{this.props.community.position}</div>
+              <div className="text-desc">{description}</div>
             </blockquote>
           </div>
-          <div className="span2 img_span">
+          <div className="col-md-2 text-img-pure">
             <img src={this.props.community.image} alt={this.props.community.name} />
           </div>
         </div>
@@ -57,8 +57,8 @@ var CommunitiesContainer = React.createClass({
       communities.push(<Community community={community} key={index} />);
     });
     return (
-      <div id="regionCommunities">
-        <h2 id="setCommunities">Communities</h2>
+      <div id="region-communities">
+        <h2 id="set-communities">Communities</h2>
         <hr />
         {communities}
         <br />

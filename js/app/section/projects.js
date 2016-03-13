@@ -25,29 +25,29 @@ var Project = React.createClass({
       description.push(content.text);
     });
     return (
-      <div className="row-fluid">
-        <div className="span2">
+      <div className="row">
+        <div className="col-md-2 text-date">
           <p>{this.props.project.date}</p>
         </div>
-        <div className="span7">
+        <div className="col-md-7">
           <blockquote className={this.props.project.hl}>
-          <div className="textTitle">
+          <div className="text-title">
             {this.props.project.link && <a href={this.props.project.link} target="_blank"> {this.props.project.name} </a>}
             {!this.props.project.link && this.props.project.name}
             <span className="fs-16"> - {this.props.project.from} </span>
             <TeamWork teamwork={this.props.project.teamwork} />
           </div>
-          <div className="text_description">{description}</div>
-          { this.props.project.github && <div className="github_url"><a target="_blank" href={this.props.project.github}>{this.props.project.github}</a></div> }
+          <div className="text-desc">{description}</div>
+          { this.props.project.github && <div className="github-url"><a target="_blank" href={this.props.project.github}>{this.props.project.github}</a></div> }
           <br />
           <div>
-            { this.props.project.speakerdeck && <a target="_blank" href={this.props.project.speakerdeck} className="btn btn-small " type="button">speakerdeck</a> }
-            { this.props.project.store && <a target="_blank" href={this.props.project.store} className="btn btn-small " type="button">chrome store</a> }
+            { this.props.project.speakerdeck && <a target="_blank" href={this.props.project.speakerdeck} className="btn btn-default btn-sm block-btn" type="button">speakerdeck</a> }
+            { this.props.project.store && <a target="_blank" href={this.props.project.store} className="btn btn-default btn-sm block-btn" type="button">chrome store</a> }
           </div>
           </blockquote>
         </div>
-        <div className="span3 pb-18">
-          { this.props.project.image && <a target="_blank" href="#"><img width={this.props.project.width} height={this.props.project.height} className="img-rounded data_img" src={this.props.project.image} alt={this.props.project.name} /></a> }
+        <div className="col-md-3 pb-18">
+          { this.props.project.image && <a target="_blank" href="#"><img width={this.props.project.width} height={this.props.project.height} className="img-rounded text-img" src={this.props.project.image} alt={this.props.project.name} /></a> }
         </div>
       </div>
     );
@@ -62,8 +62,8 @@ var ProjectsContainer = React.createClass({
       projects.push(<Project project={project} key={index} />);
     });
     return(
-      <div id="regionProjects">
-        <h2 id="setProjects">Projects</h2>
+      <div id="region-projects">
+        <h2 id="set-projects">Projects</h2>
         <hr />
         {projects}
         <br />

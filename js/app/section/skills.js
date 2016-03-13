@@ -24,11 +24,11 @@ var Skill = React.createClass({
       items.push(content.name);
     });
     return (
-      <div className="row-fluid">
-        <div className="span2 fs-16">
+      <div className="row">
+        <div className="col-md-2 fs-16 text-date">
           <p>{this.props.skill.title}</p>
         </div>
-        <div className="span8 fs-16">
+        <div className="col-md-8 fs-16">
           <blockquote className={this.props.skill.hl}>
             {items.join(", ")}
           </blockquote>
@@ -46,8 +46,8 @@ var SkillsContainer = React.createClass({
       skills.push(<Skill skill={skill} key={index} />);
     });
     return(
-      <div id="regionSkills">
-      <h2 id="setSkills">Skills</h2>
+      <div id="region-skills">
+      <h2 id="set-skills">Skills</h2>
       <hr />
       {skills}
       <br />
