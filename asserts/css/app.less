@@ -26,7 +26,13 @@ ol { list-style-type: disc; }
 .pb-18 { padding-bottom: 18px; }
 .fs-16 { font-size: @fs-ms; }
 
-.container { margin-top: 80px; }
+.container {
+  margin-top: 80px;
+  max-width: 100%;
+   /* This will remove the outer padding, and push content edge to edge */
+   padding-right: 0;
+   padding-left: 0;
+}
 .label { vertical-align: middle; }
 
 /* header */
