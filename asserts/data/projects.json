@@ -13,6 +13,12 @@
         "text": "Presented topic similarity between you and your friends in D3.js by fetching and analyzed Facebook feed"
       }
     ],
+    "media": [
+      {
+        "title": "FB x GIT Hack For A Cause 12小時公益黑客松",
+        "link": "https://github.com/bryanyuan2/FBxGIT/blob/master/README.md"
+      }
+    ],
     "github": "https://github.com/bryanyuan2/fb6likes"
   },
   {
