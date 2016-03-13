@@ -41,7 +41,7 @@ var Award = React.createClass({
             <span className="text-title" dangerouslySetInnerHTML={{__html: this.props.award.title}} />
             <TeamWork teamwork={this.props.award.teamwork} />
             <div className="text-desc">{this.props.award.description}</div>
-            <div className="github_url"><a target="_blank" href={this.props.award.github}>{this.props.award.github}</a></div>
+            <div className="github-url"><a target="_blank" href={this.props.award.github}>{this.props.award.github}</a></div>
             <br />
             <div className="text-btn-group">
               { this.props.award.hackr && <a target="_blank" href={this.props.award.hackr} className="btn btn-default btn-sm block-btn" type="button">hackr</a> }
