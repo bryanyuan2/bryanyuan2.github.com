@@ -9,9 +9,9 @@ var testUtilsAdditions = require("react-testutils-additions");
 
 var expect = require('chai').expect;
 var compHeaderSection;
-var compHeaderTitle = "header_title";
-var compLinkedinNav = "linkedin_nav";
-var compHeaderBg = "header_bg";
+var compHeaderTitle = "header-title";
+var compLinkedinNav = "linkedin-nav";
+var compHeaderBg = "header-bg";
 
 describe('compoent header section', function(){
   before(function(done){

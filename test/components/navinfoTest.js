@@ -9,10 +9,10 @@ var testUtilsAdditions = require("react-testutils-additions");
 
 var expect = require('chai').expect;
 var compNavinfoSection;
-var compRegionName = "regionNavInfo";
-var compRegionSBName = "regionSearchBox";
-var compRegionResumeName = "regionResume";
-var compContactsRegionName = "regionContacts";
+var compRegionName = "region-navInfo";
+var compRegionSBName = "region-searchBox";
+var compRegionResumeName = "region-resume";
+var compContactsRegionName = "region-contacts";
 
 describe('compoent navinfo section', function(){
   before(function(done){

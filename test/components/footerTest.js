@@ -9,7 +9,7 @@ var testUtilsAdditions = require("react-testutils-additions");
 
 var expect = require('chai').expect;
 var compFooterSection;
-var compRegionName = 'regionFooter';
+var compRegionName = 'region-footer';
 
 describe('compoent footer section', function(){
   before(function(done){

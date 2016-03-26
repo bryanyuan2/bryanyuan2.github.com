@@ -9,7 +9,7 @@ var testUtilsAdditions = require("react-testutils-additions");
 
 var expect = require('chai').expect;
 var compEducationsSection;
-var compRegionName = 'regionEducation';
+var compRegionName = 'region-education';
 var compTitle = 'Education';
 
 describe('compoent educations section', function(){
