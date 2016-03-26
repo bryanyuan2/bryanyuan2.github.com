@@ -15,7 +15,8 @@ var gulp = require('gulp'),
     cache = require('gulp-cached'),
     flow = require('gulp-flowtype'),
     replace = require('gulp-replace'),
-    buildDate = require('gulp-build-date');
+    buildDate = require('gulp-build-date'),
+    notify = require("gulp-notify");
 
 var paths = {
     css:['./asserts/css/*.less'],
@@ -38,7 +39,8 @@ gulp.task('js', ['clean'], function() {
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(streamify(uglify()))
-    .pipe(gulp.dest('./js/build'));
+    .pipe(gulp.dest('./js/build'))
+    .pipe(notify("Gulp.js restarted"));
 });
 
 gulp.task('css', function () {

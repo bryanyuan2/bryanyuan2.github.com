@@ -48,7 +48,6 @@ var routes = (
   </Route>
 );
 
-
 /* customize js */
 $(document).ready(function() {
   var header_title_opacity = 16;
