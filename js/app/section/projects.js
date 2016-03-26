@@ -63,7 +63,7 @@ var ProjectsContainer = React.createClass({
     });
     return(
       <div id="region-projects">
-        <h2 id="set-projects">Projects</h2>
+        <h2 className="set-title" id="set-projects">Projects</h2>
         <hr />
         {projects}
         <br />

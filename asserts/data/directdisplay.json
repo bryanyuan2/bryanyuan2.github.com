@@ -41,99 +41,6 @@
     ],
     "enable": true
   },
-
-  
-  {
-    "name": "Python",
-    "wiki": {
-      "en": "Python"
-    },
-    "tag": [
-      {"name": "Skills", "hl": "hl-skills-proficient"}
-    ],
-    "enable": true
-  },
-  {
-    "name": "PHP",
-    "wiki": {
-      "en": "PHP"
-    },
-    "tag": [
-      {"name": "Skills", "hl": "hl-skills-proficient"}
-    ],
-    "enable": true
-  },
-  {
-    "name": "JavaScript",
-    "wiki": {
-      "en": "JavaScript"
-    },
-    "tag": [
-      {"name": "Skills", "hl": "hl-skills-intermediate"}
-    ],
-    "enable": true
-  },
-  {
-    "name": "Intention mining",
-    "wiki": {
-      "en": "Intention mining"
-    },
-    "tag": [
-      {"name": "Skills", "hl": "hl-skills-research"}
-    ],
-    "enable": true
-  },
-  {
-    "name": "Sentiment analysis",
-    "wiki": {
-      "en": "Sentiment analysis"
-    },
-    "tag": [
-      {"name": "Skills", "hl": "hl-skills-research"}
-    ],
-    "enable": true
-  },
-  {
-    "name": "MySQL",
-    "wiki": {
-      "en": "MySQL"
-    },
-    "tag": [
-      {"name": "Skills", "hl": "hl-skills-intermediate"}
-    ],
-    "enable": true
-  },
-  {
-    "name": "Information retrieval",
-    "wiki": {
-      "en": "Information retrieval"
-    },
-    "tag": [
-      {"name": "Skills", "hl": "hl-skills-research"}
-    ],
-    "enable": true
-  },
-  {
-    "name": "Data mining",
-    "wiki": {
-      "en": "Data mining"
-    },
-    "tag": [
-      {"name": "Skills", "hl": "hl-skills-research"}
-    ],
-    "enable": true
-  },
-  {
-    "name": "Heroku",
-    "wiki": {
-      "en": "Heroku"
-    },
-    "tag": [
-      {"name": "Skills", "hl": "hl-skills"}
-    ],
-    "enable": true
-  },
-
   {
     "name": "Hackathon",
     "wiki": {
@@ -186,9 +93,9 @@
     "enable": true
   },
   {
-    "name": "Open source",
+    "name": "Open-source software",
     "wiki": {
-      "en": "Open source"
+      "en": "Open-source software"
     },
     "tag": [
       {"name": "Work experence", "hl": "hl-projects-opensource"}
@@ -222,6 +129,226 @@
     },
     "tag": [
       {"name": "Work experence", "hl": "hl-work-experence-sinica"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Python",
+    "wiki": {
+      "en": "Python"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-backend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Flask (web framework)",
+    "wiki": {
+      "en": "Flask (web framework)"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-backend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "PHP",
+    "wiki": {
+      "en": "PHP"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-backend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "PHPUnit",
+    "wiki": {
+      "en": "PHPUnit"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-backend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "JavaScript",
+    "wiki": {
+      "en": "JavaScript"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-frontend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "jQuery",
+    "wiki": {
+      "en": "jQuery"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-frontend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Browserify",
+    "wiki": {
+      "en": "Browserify"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-frontend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "JSHint",
+    "wiki": {
+      "en": "JSHint"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-frontend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Bower (software)",
+    "wiki": {
+      "en": "Bower (software)"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-frontend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Npm (software)",
+    "wiki": {
+      "en": "Npm (software)"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-frontend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Bootstrap (front-end_framework)",
+    "wiki": {
+      "en": "Bootstrap (front-end_framework)"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-frontend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "HTML",
+    "wiki": {
+      "en": "HTML"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-frontend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "CSS",
+    "wiki": {
+      "en": "CSS"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-frontend"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Intention mining",
+    "wiki": {
+      "en": "Intention mining"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-research"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Sentiment analysis",
+    "wiki": {
+      "en": "Sentiment analysis"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-research"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Information retrieval",
+    "wiki": {
+      "en": "Information retrieval"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-research"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Data mining",
+    "wiki": {
+      "en": "Data mining"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-research"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Heroku",
+    "wiki": {
+      "en": "Heroku"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-platfrom"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "GitHub",
+    "wiki": {
+      "en": "GitHub"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-platfrom"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Travis CI",
+    "wiki": {
+      "en": "Travis CI"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-platfrom"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Continuous delivery",
+    "wiki": {
+      "en": "Continuous delivery"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-platfrom"}
+    ],
+    "enable": true
+  },
+  {
+    "name": "Continuous integration",
+    "wiki": {
+      "en": "Continuous integration"
+    },
+    "tag": [
+      {"name": "Skills", "hl": "hl-skills-platfrom"}
     ],
     "enable": true
   }

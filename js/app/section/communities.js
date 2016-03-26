@@ -19,12 +19,11 @@ var Community = React.createClass({
     return false;
   },
   render: function () {
-    
     var description = [];
     this.props.community.description.forEach(function(content) {
       description.push(content.text);
     });
-    
+
     return (
       <div>
         <div className="row">
@@ -58,7 +57,7 @@ var CommunitiesContainer = React.createClass({
     });
     return (
       <div id="region-communities">
-        <h2 id="set-communities">Communities</h2>
+        <h2 className="set-title" id="set-communities">Communities</h2>
         <hr />
         {communities}
         <br />

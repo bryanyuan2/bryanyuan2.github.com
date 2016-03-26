@@ -1,35 +1,43 @@
 [
   {
-    "hl": "hl-skills-proficient",
-    "title": "Proficient",
+    "hl": "hl-skills-frontend",
+    "title": "Frontend Skills",
     "items": [
-      {
-        "name": "Python"
-      },
-      {
-        "name": "PHP"
-      }
+      { "name": "JavaScript" },
+      { "name": "jQuery" },
+      { "name": "React"  },
+      { "name": "HTML/CSS"  },
+      { "name": "Bootstrap"  },
+      { "name": "npm"  },
+      { "name": "Bower"  },
+      { "name": "glup.js"  },
+      { "name": "JSHint"  },
+      { "name": "Browserify"  },
+      { "name": "Mocha"  },
+      { "name": "Chai"  },
+      { "name": "Jest"  }
     ]
   },
   {
-    "hl": "hl-skills-intermediate",
-    "title": "Intermediate",
+    "hl": "hl-skills-backend",
+    "title": "Backend Skills",
     "items": [
-      {
-        "name": "Javascript"
-      },
-      {
-        "name": "MySQL"
-      }
+      { "name": "PHP" },
+      { "name": "PHPUnit" },
+      { "name": "Python"  },
+      { "name": "Flask"  }
     ]
   },
   {
     "hl": "hl-skills-platform",
     "title": "Platform",
     "items": [
-      {
-        "name": "Heroku"
-      }
+      { "name": "Heroku" },
+      { "name": "GitHub" },
+      { "name": "Travis CI" },
+      { "name": "Coveralls" },
+      { "name": "Continuous delivery" },
+      { "name": "Continuous integration" }
     ]
   },
   {

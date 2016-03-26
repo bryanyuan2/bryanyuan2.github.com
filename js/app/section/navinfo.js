@@ -16,7 +16,7 @@ var wikiEnUrl = "https://en.wikipedia.org/wiki/",
       listItem: 'tt-suggestion'
     },
     typeheadPlaceHolder = "Search some keywords here ?",
-    wikiDDTagColor = "#4099FF",
+    wikiDDTagColor = "#55ACEE",
     blockedBorderHL = "#EEEEEE",
     blockedBorder = "border-left-color";
 

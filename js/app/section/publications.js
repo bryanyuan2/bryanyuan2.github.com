@@ -47,7 +47,7 @@ var PublicationsContainer = React.createClass({
     });
     return(
       <div id="region-publications">
-        <h2 id="set-publications">Publications</h2>
+        <h2 className="set-title" id="set-publications">Publications</h2>
         <hr />
         {publications}
         <br />

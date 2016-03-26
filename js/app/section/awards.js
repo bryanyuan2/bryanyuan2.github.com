@@ -70,7 +70,7 @@ var AwardsContainer = React.createClass({
     });
     return(
       <div id="region-awards">
-        <h2 id="set-awards">Awards</h2>
+        <h2 className="set-title" id="set-awards">Awards</h2>
         <hr />
         {awards}
         <br />

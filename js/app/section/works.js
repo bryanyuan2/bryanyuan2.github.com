@@ -82,7 +82,7 @@ var WorksContainer = React.createClass({
     });
     return(
       <div id="region-experence">
-        <h2 id="set-experence">Work experence</h2>
+        <h2 className="set-title" id="set-experence">Work experence</h2>
         <hr />
         {works}
         <br />

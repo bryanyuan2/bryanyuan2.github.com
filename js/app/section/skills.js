@@ -47,7 +47,7 @@ var SkillsContainer = React.createClass({
     });
     return(
       <div id="region-skills">
-      <h2 id="set-skills">Skills</h2>
+      <h2 className="set-title" id="set-skills">Skills</h2>
       <hr />
       {skills}
       <br />
