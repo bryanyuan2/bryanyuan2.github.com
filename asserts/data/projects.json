@@ -32,10 +32,7 @@
     "height": "145",
     "description": [
       {
-        "text": "Proposed adblocker-liked knowledge ads extension on chrome. User could select their interest topics for TW open data and random mapping the topics over ads."
-      },
-      {
-        "text": "Besides, we also provide leader board to show which topics get highest rating !"
+        "text": "Proposed adblocker-liked ads extension. User could select their interests open data topics and show knowledge overlap on ads."
       }
     ],
     "github": "https://github.com/bryanyuan2/pixnet.hackathon.2015",
