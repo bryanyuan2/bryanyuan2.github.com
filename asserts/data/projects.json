@@ -10,7 +10,7 @@
     "height": "145",
     "description": [
       {
-        "text": "Presented topic similarity between you and your friends in D3.js by fetching and analyzed Facebook feed"
+        "text": "Analyzed interested similarity between your posts and your friend's by fetching Facebook public timeline"
       }
     ],
     "media": [
