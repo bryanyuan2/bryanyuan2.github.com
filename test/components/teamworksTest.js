@@ -5,14 +5,14 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var ReactTestUtils = require('react-addons-test-utils');
 var TeamworkContainer = require("../../js/app/teamwork.js");
-var testUtilsAdditions = require("react-testutils-additions");
+var testUtils = React.addons.TestUtils;
 
 var expect = require('chai').expect;
 var compTeamworkSection;
 
 describe('compoent teamwork section', function(){
   before(function(done){
-    compTeamworkSection = ReactTestUtils.renderIntoDocument(<TeamworkContainer />);
+    compTeamworkSection = testUtils.renderIntoDocument(<TeamworkContainer />);
     done();
   });
 

@@ -3,7 +3,6 @@
 
 var React = require('react/addons');
 var ReactDOM = require('react-dom');
-var ReactTestUtils = require('react-addons-test-utils');
 var AwardsContainer = require("../../js/app/section/awards.js");
 var testUtils = React.addons.TestUtils;
 

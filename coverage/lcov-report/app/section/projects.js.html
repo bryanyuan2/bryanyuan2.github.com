@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/section/projects.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/section/</a> projects.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.86% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>13/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>12/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.86% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/14</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+&nbsp;
+var React = require('react'),
+    TeamWork = require('./../teamwork'),
+    LoadJSON = require('./../mixins').LoadJSON;
+&nbsp;
+var Project = React.createClass({
+  propTypes: {
+    project: React.PropTypes.object,
+    key: React.PropTypes.number
+  },
+  getDefaultProps: function() {
+    return {
+      project: {},
+      key: 0
+    };
+  },
+  shouldComponentUpdate: <span class="fstat-no" title="function not covered" >function() {</span>
+    // shouldComponentUpdate: function(nextProps, nextState)
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+  },
+  render: function() {
+    var description = [];
+    this.props.project.description.forEach(function(content) {
+      description.push(content.text);
+    });
+    return (
+      &lt;div className="row"&gt;
+        &lt;div className="col-md-2 text-date"&gt;
+          &lt;p&gt;{this.props.project.date}&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="col-md-7"&gt;
+          &lt;blockquote className={this.props.project.hl}&gt;
+          &lt;div className="text-title"&gt;
+            {this.props.project.link &amp;&amp; &lt;a href={this.props.project.link} target="_blank"&gt; {this.props.project.name} &lt;/a&gt;}
+            {!this.props.project.link &amp;&amp; this.props.project.name}
+            &lt;span className="fs-16"&gt; - {this.props.project.from} &lt;/span&gt;
+            &lt;TeamWork teamwork={this.props.project.teamwork} /&gt;
+          &lt;/div&gt;
+          &lt;div className="text-desc"&gt;{description}&lt;/div&gt;
+          { this.props.project.github &amp;&amp; &lt;div className="github-url"&gt;&lt;a target="_blank" href={this.props.project.github}&gt;{this.props.project.github}&lt;/a&gt;&lt;/div&gt; }
+          &lt;br /&gt;
+          &lt;div classNmae="text-btn-group"&gt;
+            { this.props.project.speakerdeck &amp;&amp; &lt;a target="_blank" href={this.props.project.speakerdeck} className="btn btn-default btn-sm block-btn" type="button"&gt;speakerdeck&lt;/a&gt; }
+            { this.props.project.store &amp;&amp; &lt;a target="_blank" href={this.props.project.store} className="btn btn-default btn-sm block-btn" type="button"&gt;chrome store&lt;/a&gt; }
+          &lt;/div&gt;
+          &lt;/blockquote&gt;
+        &lt;/div&gt;
+        &lt;div className="col-md-3 pb-18"&gt;
+          { this.props.project.image &amp;&amp; &lt;a target="_blank" href="#"&gt;&lt;img width={this.props.project.width} height={this.props.project.height} className="img-rounded text-img" src={this.props.project.image} alt={this.props.project.name} /&gt;&lt;/a&gt; }
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+});
+&nbsp;
+var ProjectsContainer = React.createClass({
+  mixins: [LoadJSON],
+  render: function() {
+    var projects = [];
+    this.state.data.forEach(function(project, index) {
+      projects.push(&lt;Project project={project} key={index} /&gt;);
+    });
+    return(
+      &lt;div id="region-projects"&gt;
+        &lt;h2 className="set-title" id="set-projects"&gt;Projects&lt;/h2&gt;
+        &lt;hr /&gt;
+        {projects}
+        &lt;br /&gt;
+      &lt;/div&gt;
+    );
+  }
+});
+&nbsp;
+module.exports = ProjectsContainer;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Apr 03 2016 18:52:33 GMT+0800 (CST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
