@@ -3,7 +3,7 @@
  
 [![Build Status][build-status-badge]][build-status-link]
 [![dependency][dependency-badge]][dependency-link]
-[![coverage][coveralls-badge]][coveralls-link]
+[![Coverage Status](https://coveralls.io/repos/github/bryanyuan2/bryanyuan2.github.com/badge.svg?branch=master)](https://coveralls.io/github/bryanyuan2/bryanyuan2.github.com?branch=master)
 
 #### Setup
 
@@ -46,6 +46,3 @@
 
 [dependency-badge]: https://david-dm.org/bryanyuan2/bryanyuan2.github.com.svg
 [dependency-link]: https://david-dm.org/bryanyuan2/bryanyuan2.github.com
-
-[coveralls-badge]: https://coveralls.io/repos/bryanyuan2/bryanyuan2.github.com/badge.svg?branch=master&service=github
-[coveralls-link]: https://coveralls.io/github/bryanyuan2/bryanyuan2.github.com?branch=master
