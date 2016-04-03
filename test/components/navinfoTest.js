@@ -1,4 +1,4 @@
-/*jshint -W030 */
+/* jshint -W030 */
 "use strict";
 
 var React = require('react');

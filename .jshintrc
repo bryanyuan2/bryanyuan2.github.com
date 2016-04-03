@@ -87,7 +87,7 @@
     // Custom Globals
     "globals": {
         "require": false,
-        "$": false,
-        "es5": false
+        "$": true,
+        "es5": true
     } // additional predefined global variables
 }
