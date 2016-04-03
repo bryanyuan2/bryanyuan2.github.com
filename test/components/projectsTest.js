@@ -17,6 +17,7 @@ describe('compoent projects section', function(){
   before(function(done){
     compProjectsSection = testUtils.renderIntoDocument(<ProjectsContainer />);
     compProjectsSection.setState({data: projectsJson});
+    compProjectsSection.setState({data: projectsJson, test: 'testUpdateState'});
     done();
   });
 

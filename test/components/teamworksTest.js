@@ -2,7 +2,6 @@
 "use strict";
 
 var React = require('react');
-var ReactDOM = require('react-dom');
 var TeamworkContainer = require("../../js/app/teamwork.js");
 var testUtils = React.addons.TestUtils;
 
@@ -12,6 +11,7 @@ var compTeamworkSection;
 describe('compoent teamwork section', function(){
   before(function(done){
     compTeamworkSection = testUtils.renderIntoDocument(<TeamworkContainer />);
+    compTeamworkSection.setState({test: 'testUpdateState'});
     done();
   });
 

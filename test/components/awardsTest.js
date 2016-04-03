@@ -17,6 +17,7 @@ describe('compoent awards section', function(){
   before(function(done){
     compAwardsSection = testUtils.renderIntoDocument(<AwardsContainer />);
     compAwardsSection.setState({data: awardsJson});
+    compAwardsSection.setState({data: awardsJson, test: 'testUpdateState'});
     done();
   });
 

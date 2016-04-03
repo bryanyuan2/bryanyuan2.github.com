@@ -17,6 +17,7 @@ describe('compoent works section', function(){
   before(function(done){
     compWorksSection = testUtils.renderIntoDocument(<WorksContainer />);
     compWorksSection.setState({data: worksJson});
+    compWorksSection.setState({data: worksJson, test: 'testUpdateState'});
     done();
   });
 

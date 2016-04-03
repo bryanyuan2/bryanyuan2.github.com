@@ -17,6 +17,7 @@ describe('compoent communities section', function(){
   before(function(done){
     compCommunitiesSection = testUtils.renderIntoDocument(<CommunitiesContainer />);
     compCommunitiesSection.setState({data: communitiesJson});
+    compCommunitiesSection.setState({data: communitiesJson, test: 'testUpdateState'});
     done();
   });
 

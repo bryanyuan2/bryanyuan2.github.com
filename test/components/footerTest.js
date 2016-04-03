@@ -17,6 +17,7 @@ describe('compoent footer section', function(){
   before(function(done){
     compFooterSection = testUtils.renderIntoDocument(<FooterContainer />);
     compFooterSection.setState({data: footerJson});
+    compFooterSection.setState({data: footerJson, test: 'testUpdateState'});
     done();
   });
 

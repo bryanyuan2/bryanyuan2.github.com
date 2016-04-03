@@ -21,6 +21,7 @@ describe('compoent navinfo section', function(){
   before(function(done){
     compNavinfoSection = testUtils.renderIntoDocument(<CompNavInfoContainer />);
     compNavinfoSection.setState({data: directDisplayJson, subData: contactJson});
+    compNavinfoSection.setState({data: directDisplayJson, subData: contactJson, test: 'testUpdateState'});
     done();
   });
 

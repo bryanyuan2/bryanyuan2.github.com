@@ -17,6 +17,7 @@ describe('compoent publications section', function(){
   before(function(done){
     compPublicationsSection = testUtils.renderIntoDocument(<PublicationsContainer />);
     compPublicationsSection.setState({data: publicationsJson});
+    compPublicationsSection.setState({data: publicationsJson, test: 'testUpdateState'});
     done();
   });
 

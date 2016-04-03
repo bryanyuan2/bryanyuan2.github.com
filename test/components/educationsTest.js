@@ -17,6 +17,7 @@ describe('compoent educations section', function(){
   before(function(done){
     compEducationsSection = testUtils.renderIntoDocument(<EducationsContainer />);
     compEducationsSection.setState({data: educationsJson});
+    compEducationsSection.setState({data: educationsJson, test: 'testUpdateState'});
     done();
   });
 
