@@ -70,11 +70,12 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "lodash": "^4.7.0",
+    "nightwatch": "^0.5.36",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0",
     "react-typeahead": "^1.1.5",
-    "truncate": "^2.0.0",
-    "nightwatch": "^0.5.36"
+    "truncate": "^2.0.0"
   }
 }

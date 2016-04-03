@@ -3,7 +3,9 @@
 var React = require('react'),
     LoadJSON = require('./../mixins').LoadJSON,
     Typeahead = require('react-typeahead').Typeahead,
-    truncate = require('truncate');
+    truncate = require('truncate'),
+    _ = require('lodash'),
+    $ = require('jquery');
 
 var wikiEnUrl = "https://en.wikipedia.org/wiki/",
     wikiZhUrl = "https://zh.wikipedia.org/wiki/",
@@ -210,10 +212,14 @@ var CompNavInfoContainer = React.createClass({
     for (var item in searchAssist) {
       if(searchAssist.hasOwnProperty(item)) {
         var saSubSet = {};
-        saSubSet.name = searchAssist[item].name;
-        saSubSet.wiki = searchAssist[item].wiki.en || searchAssist[item].wiki.zh;
-        saSubSet.intl = searchAssist[item].wiki.en !== undefined ? "en" : "zh";
-        saSubSet.tag = searchAssist[item].tag;
+        var target = searchAssist[item];
+        var getWikiEn = _.get(target, ['wiki', 'en']);
+        var getWikiZh = _.get(target, ['wiki', 'zh']);
+
+        saSubSet.name = _.get(target, ['name']);
+        saSubSet.wiki = getWikiEn ? getWikiEn : getWikiZh;
+        saSubSet.intl = getWikiEn ? "en" : "zh";
+        saSubSet.tag = _.get(target, ['tag']);
         searchAssistsObj.push(saSubSet);
       }
     }
