@@ -3,9 +3,9 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ReactTestUtils = require('react-addons-test-utils');
 var CompNavInfoContainer = require("../../js/app/section/navinfo.js");
 var testUtilsAdditions = require("react-testutils-additions");
+var testUtils = React.addons.TestUtils;
 
 var expect = require('chai').expect;
 var compNavinfoSection;
@@ -16,7 +16,7 @@ var compContactsRegionName = "region-contacts";
 
 describe('compoent navinfo section', function(){
   before(function(done){
-    compNavinfoSection = ReactTestUtils.renderIntoDocument(<CompNavInfoContainer />);
+    compNavinfoSection = testUtils.renderIntoDocument(<CompNavInfoContainer />);
     done();
   });
 

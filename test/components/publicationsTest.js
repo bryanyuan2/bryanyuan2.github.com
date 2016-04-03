@@ -3,7 +3,6 @@
 
 var React = require('react/addons');
 var ReactDOM = require('react-dom');
-var ReactTestUtils = require('react-addons-test-utils');
 var PublicationsContainer = require("../../js/app/section/publications.js");
 var testUtils = React.addons.TestUtils;
 
