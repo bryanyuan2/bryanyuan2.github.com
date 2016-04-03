@@ -4,7 +4,8 @@ var React = require('react'),
     LoadJSON = require('./../mixins').LoadJSON,
     Typeahead = require('react-typeahead').Typeahead,
     truncate = require('truncate'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    $ = require('jquery');
 
 var wikiEnUrl = "https://en.wikipedia.org/wiki/",
     wikiZhUrl = "https://zh.wikipedia.org/wiki/",
@@ -40,7 +41,7 @@ var DirectDisplayTag = React.createClass({
 
     $("body").animate({
       scrollTop: $("." + targetClass).offset().top
-    }, 800, 'easeInOutQuad');
+    }, 800);
 
   },
   render: function() {
