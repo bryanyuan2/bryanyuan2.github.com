@@ -17,6 +17,7 @@ describe('compoent skills section', function(){
   before(function(done){
     compSkillsSection = testUtils.renderIntoDocument(<SkillsContainer />);
     compSkillsSection.setState({data: skillsJson});
+    compSkillsSection.setState({data: skillsJson, test: 'testUpdateState'});
     done();
   });
 
