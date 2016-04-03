@@ -1,20 +1,22 @@
 /*jshint -W030 */
 "use strict";
 
-var React = require('react');
+var React = require('react/addons');
 var ReactDOM = require('react-dom');
 var ReactTestUtils = require('react-addons-test-utils');
 var SkillsContainer = require("../../js/app/section/skills.js");
-var testUtilsAdditions = require("react-testutils-additions");
+var testUtils = React.addons.TestUtils;
 
 var expect = require('chai').expect;
 var compSkillsSection;
 var compRegionName = 'region-skills';
 var compTitle = 'Skills';
+var skillsJson = require('./../../asserts/data/skills.json');
 
 describe('compoent skills section', function(){
   before(function(done){
-    compSkillsSection = ReactTestUtils.renderIntoDocument(<SkillsContainer />);
+    compSkillsSection = testUtils.renderIntoDocument(<SkillsContainer />);
+    compSkillsSection.setState({data: skillsJson});
     done();
   });
 
@@ -23,10 +25,10 @@ describe('compoent skills section', function(){
   });
 
   it('container region should be rendered', function () {
-    expect(ReactDOM.findDOMNode(testUtilsAdditions.findRenderedDOMComponentWithId(compSkillsSection, compRegionName))).to.exist;
+    expect(ReactDOM.findDOMNode(testUtils.findRenderedDOMComponentWithId(compSkillsSection, compRegionName))).to.exist;
   });
 
   it('title should be rendered', function () {
-    expect(ReactDOM.findDOMNode(ReactTestUtils.findRenderedDOMComponentWithTag(compSkillsSection, 'h2')).textContent).to.equal(compTitle);
+    expect(ReactDOM.findDOMNode(testUtils.findRenderedDOMComponentWithTag(compSkillsSection, 'h2')).textContent).to.equal(compTitle);
   });
 });

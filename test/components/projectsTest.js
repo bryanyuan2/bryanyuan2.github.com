@@ -3,18 +3,19 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ReactTestUtils = require('react-addons-test-utils');
 var ProjectsContainer = require("../../js/app/section/projects.js");
-var testUtilsAdditions = require("react-testutils-additions");
+var testUtils = React.addons.TestUtils;
 
 var expect = require('chai').expect;
 var compProjectsSection;
 var compRegionName = 'region-projects';
 var compTitle = 'Projects';
+var projectsJson = require('./../../asserts/data/projects.json');
 
 describe('compoent projects section', function(){
   before(function(done){
-    compProjectsSection = ReactTestUtils.renderIntoDocument(<ProjectsContainer />);
+    compProjectsSection = testUtils.renderIntoDocument(<ProjectsContainer />);
+    compProjectsSection.setState({data: projectsJson});
     done();
   });
 
@@ -23,10 +24,10 @@ describe('compoent projects section', function(){
   });
 
   it('container region should be rendered', function () {
-    expect(ReactDOM.findDOMNode(testUtilsAdditions.findRenderedDOMComponentWithId(compProjectsSection, compRegionName))).to.exist;
+    expect(ReactDOM.findDOMNode(testUtils.findRenderedDOMComponentWithId(compProjectsSection, compRegionName))).to.exist;
   });
 
   it('title should be rendered', function () {
-    expect(ReactDOM.findDOMNode(ReactTestUtils.findRenderedDOMComponentWithTag(compProjectsSection, 'h2')).textContent).to.equal(compTitle);
+    expect(ReactDOM.findDOMNode(testUtils.findRenderedDOMComponentWithTag(compProjectsSection, 'h2')).textContent).to.equal(compTitle);
   });
 });

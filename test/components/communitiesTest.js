@@ -1,20 +1,21 @@
 /*jshint -W030 */
 "use strict";
 
-var React = require('react');
+var React = require('react/addons');
 var ReactDOM = require('react-dom');
-var ReactTestUtils = require('react-addons-test-utils');
 var CommunitiesContainer = require("../../js/app/section/communities.js");
-var testUtilsAdditions = require("react-testutils-additions");
+var testUtils = React.addons.TestUtils;
 
 var expect = require('chai').expect;
 var compCommunitiesSection;
 var compRegionName = 'region-communities';
 var compTitle = 'Communities';
+var communitiesJson = require('./../../asserts/data/communities.json');
 
 describe('compoent communities section', function(){
   before(function(done){
-    compCommunitiesSection = ReactTestUtils.renderIntoDocument(<CommunitiesContainer />);
+    compCommunitiesSection = testUtils.renderIntoDocument(<CommunitiesContainer />);
+    compCommunitiesSection.setState({data: communitiesJson});
     done();
   });
 
@@ -23,11 +24,11 @@ describe('compoent communities section', function(){
   });
 
   it('container region should be rendered', function () {
-    expect(ReactDOM.findDOMNode(testUtilsAdditions.findRenderedDOMComponentWithId(compCommunitiesSection, compRegionName))).to.exist;
+    expect(ReactDOM.findDOMNode(testUtils.findRenderedDOMComponentWithId(compCommunitiesSection, compRegionName))).to.exist;
   });
 
   it('title should be rendered', function () {
-    expect(ReactDOM.findDOMNode(ReactTestUtils.findRenderedDOMComponentWithTag(compCommunitiesSection, 'h2')).textContent).to.equal(compTitle);
+    expect(ReactDOM.findDOMNode(testUtils.findRenderedDOMComponentWithTag(compCommunitiesSection, 'h2')).textContent).to.equal(compTitle);
   });
 
 });
