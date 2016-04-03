@@ -6,14 +6,17 @@ var ReactDOM = require('react-dom');
 var ReactTestUtils = require('react-addons-test-utils');
 var FooterContainer = require("../../js/app/footer.js");
 var testUtilsAdditions = require("react-testutils-additions");
+var testUtils = React.addons.TestUtils;
 
 var expect = require('chai').expect;
 var compFooterSection;
 var compRegionName = 'region-footer';
+var footerJson = require('./../../asserts/data/footer.json');
 
 describe('compoent footer section', function(){
   before(function(done){
-    compFooterSection = ReactTestUtils.renderIntoDocument(<FooterContainer />);
+    compFooterSection = testUtils.renderIntoDocument(<FooterContainer />);
+    compFooterSection.setState({data: footerJson});
     done();
   });
 

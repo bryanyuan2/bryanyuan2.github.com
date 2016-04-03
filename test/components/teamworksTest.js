@@ -3,7 +3,6 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ReactTestUtils = require('react-addons-test-utils');
 var TeamworkContainer = require("../../js/app/teamwork.js");
 var testUtils = React.addons.TestUtils;
 

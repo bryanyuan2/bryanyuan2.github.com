@@ -13,14 +13,17 @@ var compRegionName = "region-navInfo";
 var compRegionSBName = "region-searchBox";
 var compRegionResumeName = "region-resume";
 var compContactsRegionName = "region-contacts";
+var directDisplayJson = require('./../../asserts/data/directdisplay.json');
+var contactJson = require('./../../asserts/data/contact.json');
 
 describe('compoent navinfo section', function(){
   before(function(done){
     compNavinfoSection = testUtils.renderIntoDocument(<CompNavInfoContainer />);
+    compNavinfoSection.setState({data: directDisplayJson, subData: contactJson});
     done();
   });
 
-  /*
+
   it('should be rendered', function () {
     expect(compNavinfoSection).to.exist;
   });
@@ -40,6 +43,5 @@ describe('compoent navinfo section', function(){
   it('region contacts should be rendered', function () {
     expect(ReactDOM.findDOMNode(testUtilsAdditions.findRenderedDOMComponentWithId(compNavinfoSection, compContactsRegionName))).to.exist;
   });
-  */
 
 });

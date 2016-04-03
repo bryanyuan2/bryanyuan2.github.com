@@ -4,6 +4,7 @@
 var React = require('react/addons');
 var ReactDOM = require('react-dom');
 var SkillsContainer = require("../../js/app/section/skills.js");
+var testUtilsAdditions = require("react-testutils-additions");
 var testUtils = React.addons.TestUtils;
 
 var expect = require('chai').expect;
@@ -24,7 +25,7 @@ describe('compoent skills section', function(){
   });
 
   it('container region should be rendered', function () {
-    expect(ReactDOM.findDOMNode(testUtils.findRenderedDOMComponentWithId(compSkillsSection, compRegionName))).to.exist;
+    expect(ReactDOM.findDOMNode(testUtilsAdditions.findRenderedDOMComponentWithId(compSkillsSection, compRegionName))).to.exist;
   });
 
   it('title should be rendered', function () {

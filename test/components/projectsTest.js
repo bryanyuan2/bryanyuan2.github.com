@@ -4,6 +4,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var ProjectsContainer = require("../../js/app/section/projects.js");
+var testUtilsAdditions = require("react-testutils-additions");
 var testUtils = React.addons.TestUtils;
 
 var expect = require('chai').expect;
@@ -24,7 +25,7 @@ describe('compoent projects section', function(){
   });
 
   it('container region should be rendered', function () {
-    expect(ReactDOM.findDOMNode(testUtils.findRenderedDOMComponentWithId(compProjectsSection, compRegionName))).to.exist;
+    expect(ReactDOM.findDOMNode(testUtilsAdditions.findRenderedDOMComponentWithId(compProjectsSection, compRegionName))).to.exist;
   });
 
   it('title should be rendered', function () {

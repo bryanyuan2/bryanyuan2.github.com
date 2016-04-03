@@ -4,6 +4,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var HeaderContainer = require("../../js/app/header.js");
+var testUtilsAdditions = require("react-testutils-additions");
 var testUtils = React.addons.TestUtils;
 
 var expect = require('chai').expect;
@@ -31,6 +32,6 @@ describe('compoent header section', function(){
   });
 
   it('linkedin nav should be rendered', function () {
-    expect(ReactDOM.findDOMNode(testUtils.findRenderedDOMComponentWithId(compHeaderSection, compLinkedinNav))).to.exist;
+    expect(ReactDOM.findDOMNode(testUtilsAdditions.findRenderedDOMComponentWithId(compHeaderSection, compLinkedinNav))).to.exist;
   });
 });
