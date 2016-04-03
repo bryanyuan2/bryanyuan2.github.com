@@ -4,8 +4,7 @@ var React = require('react'),
     LoadJSON = require('./../mixins').LoadJSON,
     Typeahead = require('react-typeahead').Typeahead,
     truncate = require('truncate'),
-    _ = require('lodash'),
-    $ = require('jquery');
+    _ = require('lodash');
 
 var wikiEnUrl = "https://en.wikipedia.org/wiki/",
     wikiZhUrl = "https://zh.wikipedia.org/wiki/",
