@@ -3,7 +3,6 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ReactTestUtils = require('react-addons-test-utils');
 var FooterContainer = require("../../js/app/footer.js");
 var testUtilsAdditions = require("react-testutils-additions");
 var testUtils = React.addons.TestUtils;
