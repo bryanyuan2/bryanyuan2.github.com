@@ -2,6 +2,7 @@
 @fs-ms: 16px;
 @fs-s: 14px;
 @fs-c: #FFFFFF;
+@twitter-blue: #55ACEE;
 @ff-n: 'Open Sans', sans-serif;
 @ff-ref: Georgia, serif;
 @bg-gray-dark: #DCDCDC;
@@ -11,6 +12,18 @@
   border-radius: @radius;
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
+}
+
+.search-algo() {
+  display: inline-block;
+  font-size: 14px;
+  height: 200px;
+  padding: 6px 6px 6px 6px;
+  margin-right: 12px;
+  vertical-align: top;
+  white-space: initial;
+  overflow: hidden;
+  border:#cccccc 1px solid;
 }
 
 body {
@@ -115,23 +128,20 @@ blockquote {
   list-style-type: disc;
 }
 
-.direct-display-content {
-  border: 1px solid @bg-gray-dark;
-  min-height: 200px;
-  padding: 6px 12px 6px 12px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.algo .dd {
+  width: 400px;
   background-repeat: no-repeat;
   background-position: right bottom;
   background-image: url("../images/common/wikipedia.png");
-  .text-corner;
+  .text-corner(3px);
+  .search-algo();
 }
 
-.dd-tags {
+.algo .dd-tags {
   margin-bottom: 12px;
 }
 
-.dd-tags div{
+.algo .dd-tags div{
   background-color: @bg-gray-light;
   padding: 2px 6px 2px 6px;
   margin-right: 8px;
@@ -139,7 +149,7 @@ blockquote {
   .text-corner;
 }
 
-.dd-tags:hover {
+.algo .dd-tags:hover {
   cursor: pointer;
 }
 
@@ -291,9 +301,68 @@ blockquote {
 
 .set-title {
   padding-left: 12px;
-  border-left: 8px solid  #55ACEE;
+  border-left: 8px solid @twitter-blue;
 }
 
 .label-info {
-  background-color: #55ACEE;
+  background-color: @twitter-blue;
+}
+
+#nav-btn {
+  height: 42px;
+  margin-left: 12px;
+}
+
+.search-btn {
+  background-color: @twitter-blue;
+  border-color: @twitter-blue;
+  color: #FFFFFF;
+}
+
+.resume-btn {
+  background-color: @twitter-blue;
+  border-color: @twitter-blue;
+}
+
+.search-btn-text {
+  margin-left: 6px;
+}
+
+.ib {
+  display: inline-block;
+}
+
+/* search-container */
+.search-container {
+    margin: 12px 0 24px 0;
+}
+
+.algo {
+    position: relative;
+    white-space: nowrap;
+}
+
+.algo .search-item{
+    width: 220px;
+    cursor: pointer;
+    .text-corner(3px);
+    .search-algo();
+}
+
+.algo .search-item:hover{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-color: #888888;
+}
+
+.algo .title {
+    font-weight: 700;
+    display: block;
+    padding-top: 2px;
+    text-decoration: underline;
+}
+
+.algo .content {
+    display: block;
 }

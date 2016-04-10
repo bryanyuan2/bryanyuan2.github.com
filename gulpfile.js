@@ -38,7 +38,7 @@ gulp.task('js', ['clean'], function() {
     .transform(reactify)
     .bundle()
     .pipe(source('bundle.js'))
-    .pipe(streamify(uglify()))
+    //.pipe(streamify(uglify()))
     .pipe(gulp.dest('./js/build'))
     .pipe(notify("Gulp.js restarted"));
 });

@@ -7,13 +7,14 @@ var React = require('react'),
     _ = require('lodash'),
     $ = require('jquery');
 
+/* dd */
 var wikiEnUrl = "https://en.wikipedia.org/wiki/",
     wikiZhUrl = "https://zh.wikipedia.org/wiki/",
     wikiDescEnUrl = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=",
     wikiDescZhUrl = "https://zh.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=",
-    wikiDescTrunc = 512,
+    wikiDescTrunc = 128,
     typeaheadClass = {
-      input: 'tt-query searchBox',
+      input: 'tt-query search-box',
       results: 'tt-menu',
       listItem: 'tt-suggestion'
     },
@@ -21,6 +22,42 @@ var wikiEnUrl = "https://en.wikipedia.org/wiki/",
     wikiDDTagColor = "#55ACEE",
     blockedBorderHL = "#EEEEEE",
     blockedBorder = "border-left-color";
+
+
+/* search */
+var searchDomain = "http://localhost:8080/api/search/query/",
+    searchHeader = {
+      "Accept" : "application/json; charset=utf-8",
+      "Content-Type": "application/javascript; charset=utf-8",
+      "Access-Control-Allow-Origin" : "*"
+    },
+    searchOpts = {
+      limit: 5
+    };
+
+var Contact = React.createClass({
+  propTypes: {
+    contact: React.PropTypes.object,
+    key: React.PropTypes.number
+  },
+  getDefaultProps: function() {
+    return {
+      contact: {},
+      key: 0
+    };
+  },
+  shouldComponentUpdate: function() {
+    // shouldComponentUpdate: function(nextProps, nextState)
+    return false;
+  },
+  render: function() {
+    return (
+        <a target="_blank" href={this.props.contact.link}>
+          <img width={this.props.contact.width} height={this.props.contact.height} className="header_icons" src={this.props.contact.icon} alt={this.props.contact.type} />
+        </a>
+    );
+  }
+});
 
 var DirectDisplayTag = React.createClass({
   propTypes: {
@@ -67,9 +104,9 @@ var DirectDisplay = React.createClass({
     wiki: React.PropTypes.string,
     tag: React.PropTypes.object
   },
-  ddTags: [],
-  ddHl: [],
-  descContent: "",
+  tags: [],
+  highlight: [],
+  content: "",
   getInitialState: function() {
     return {
       loading: false,
@@ -92,28 +129,23 @@ var DirectDisplay = React.createClass({
 
     if (nextProps.target !== 'default') {
       /* blocked by loading */
-      $(".showit").hide();
       this.setState({ loading: true }, function(){
         $.ajax({
           url: targetAbsUrl,
           dataType: "jsonp"
         }).done(function( descResult ) {
           this.setState({ ajaxContents: descResult, loading: false });
-          $(".showit").fadeIn();
         }.bind(this));
       });
     }
   },
-  componentWillUpdate: function() {
-    $(".direct-display-content").show();
-  },
   componentDidUpdate: function() {
-    this.ddTags = [];
-    this.ddHl = [];
+    this.tags = [];
+    this.highlight = [];
     for(var key in this.props.tag) {
       if(this.props.tag.hasOwnProperty(key)) {
-          this.ddTags.push(this.props.tag[key].name);
-          this.ddHl.push(this.props.tag[key].hl);
+          this.tags.push(this.props.tag[key].name);
+          this.highlight.push(this.props.tag[key].hl);
       }
     }
   },
@@ -129,27 +161,27 @@ var DirectDisplay = React.createClass({
       var content = this.state.ajaxContents.query.pages;
       for (var element in content) {
         if (content[element].extract.length > wikiDescTrunc) {
-          this.descContent = truncate(content[element].extract, wikiDescTrunc);
+          this.content = truncate(content[element].extract, wikiDescTrunc);
           descReadMore = "dd-read-more";
         } else {
-          this.descContent = content[element].extract;
+          this.content = content[element].extract;
         }
       }
     }
 
     if (this.state.loading) {
-      this.descContent = "";
+      this.content = "";
     }
     return (
-      <div className="direct-display-content">
-        <div className="loadingShowCls showit">
+      <div className="dd">
+        <div className="showit">
           <h4>{descTitle}</h4>
-          {this.descContent}
+          {this.content}
           <span className={descReadMore}>
             <a href={wikiReadMoreUrl} target="_blank">Read more</a>
           </span>
           <h4>Related section(s)</h4>
-          <DirectDisplayTag text={this.ddTags} hl={this.ddHl} />
+          <DirectDisplayTag text={this.tags} hl={this.highlight} />
         </div>
       </div>
     );
@@ -157,26 +189,102 @@ var DirectDisplay = React.createClass({
 });
 
 
-var Contact = React.createClass({
+var SearchResultBox = React.createClass({
   propTypes: {
-    contact: React.PropTypes.object,
-    key: React.PropTypes.number
+    result: React.PropTypes.object
   },
   getDefaultProps: function() {
     return {
-      contact: {},
-      key: 0
+      result: {}
     };
   },
-  shouldComponentUpdate: function() {
-    // shouldComponentUpdate: function(nextProps, nextState)
-    return false;
-  },
+  render: function() {
+    //console.log("search result", this.props.result);
+    var title = _.get(this.props, ['result', '_source', 'title'], ''),
+        url = _.get(this.props, ['result', '_source', 'url'], '#'),
+        content = _.get(this.props, ['result', '_source', 'content'], ''),
+        abstract = content ? content.substr(0, 64) + ' ...' : '',
+        media = _.get(this.props, ['result', '_source', 'media'], ''),
+        mediaUrl = _.get(this.props, ['result', '_source', 'mediaUrl'], '#');
+
+    return (
+      <div className="search-item">
+          <span className="title"><a target="_blank" href={url}>{title}</a></span>
+          <span className="media"><a target="_blank" href={mediaUrl}>{media}</a></span>
+          <span className="content">{abstract}</span>
+      </div>
+    );
+  }
+});
+
+var ZRP = React.createClass({
   render: function() {
     return (
-        <a target="_blank" href={this.props.contact.link}>
-          <img width={this.props.contact.width} height={this.props.contact.height} className="header_icons" src={this.props.contact.icon} alt={this.props.contact.type} />
-        </a>
+      <div className="zrp">
+      </div>
+    );
+  }
+});
+
+var SearchResult = React.createClass({
+  getInitialState: function() {
+    return {
+      result: {},
+      isSearch: false
+    };
+  },
+  propTypes: {
+    // algo
+    result: React.PropTypes.object,
+    // dd
+    target: React.PropTypes.string,
+    intl: React.PropTypes.string,
+    wiki: React.PropTypes.string,
+    tag: React.PropTypes.object
+  },
+  getDefaultProps: function() {
+    return {
+      result: {},
+      target: "default",
+      intl: "en",
+      tag: {}
+    };
+  },
+  componentWillReceiveProps: function(nextProps) {
+    console.log("nextProps", nextProps);
+    this.setState({
+      result: nextProps.result,
+      isSearch: true
+    });
+  },
+  render: function() {
+    var algo = [],
+        isZrp = true;
+
+    if (this.props.wiki) {
+      // dd
+      algo.push(<DirectDisplay wiki={this.props.wiki} intl={this.props.intl} target={this.props.target} tag={this.props.tag}  />);
+      isZrp = false;
+    }
+
+    // check this.state.result is not empty object
+    if (Object.keys(this.state.result).length !== 0) {
+      // algo
+      this.state.result.forEach(function(result, index) {
+        algo.push(<SearchResultBox result={result} key={index} />);
+        isZrp = false;
+      });
+    }
+
+    if (this.state.isSearch === true && isZrp){
+      // zrp
+      algo.push(<ZRP />);
+    }
+
+    return (
+        <div>
+          {algo}
+        </div>
     );
   }
 });
@@ -186,6 +294,7 @@ var CompNavInfoContainer = React.createClass({
   getInitialState: function() {
     return {
       target: "default",
+      algo: {},
       tag: {}
     };
   },
@@ -195,40 +304,65 @@ var CompNavInfoContainer = React.createClass({
       intl: item.intl,
       wiki: item.wiki,
       tag: item.tag
+    }, function(){
+      $(".search-btn").trigger("click");
     });
   },
   directDisplayOption: function(item) {
     return item.name;
   },
   componentDidMount: function() {
-    $(".direct-display-content").hide();
+    var that = this;
+
+    /* search box */
+    $(".search-box").on('keydown', function(e) {
+      if(e.which === 13) {
+        $(".search-btn").trigger( "click" );
+      }
+    });
+
+    $(".search-btn").click(function(){
+      var url = searchDomain + encodeURIComponent($("input").val());
+      console.log("search backend = ", url);
+      $.ajax({
+        url: url,
+        data: searchOpts,
+        headers: searchHeader
+      }).done(function( algo ) {
+        console.log("algo", algo);
+        that.setState({
+          algo: algo
+        });
+      }.bind(that));
+    });
   },
   render: function() {
-    var searchAssistsObj = [];
 
-    var searchAssist = this.state.data[0];
-    var contactInfo = this.state.subData && this.state.subData[0];
+    /* search assist */
+    var saAry = [],
+        saData = this.state.data[0];
 
-    for (var item in searchAssist) {
-      if(searchAssist.hasOwnProperty(item)) {
-        var saSubSet = {};
-        var target = searchAssist[item];
-        var getWikiEn = _.get(target, ['wiki', 'en']);
-        var getWikiZh = _.get(target, ['wiki', 'zh']);
+    for (var item in saData) {
+      if(saData.hasOwnProperty(item)) {
+        var saSubSet = {},
+            target = saData[item],
+            getWikiEn = _.get(target, ['wiki', 'en']),
+            getWikiZh = _.get(target, ['wiki', 'zh']);
 
         saSubSet.name = _.get(target, ['name']);
         saSubSet.wiki = getWikiEn ? getWikiEn : getWikiZh;
         saSubSet.intl = getWikiEn ? "en" : "zh";
         saSubSet.tag = _.get(target, ['tag']);
-        searchAssistsObj.push(saSubSet);
+        saAry.push(saSubSet);
       }
     }
 
-    console.log("contactInfo = ", contactInfo);
-    var contacts = [];
-    for (var info in contactInfo) {
-      if(contactInfo.hasOwnProperty(info)) {
-        contacts.push(<Contact contact={contactInfo[info]} key={info} />);
+    /* contact */
+    var contactData = this.state.subData && this.state.subData[0],
+        contacts = [];
+    for (var info in contactData) {
+      if(contactData.hasOwnProperty(info)) {
+        contacts.push(<Contact contact={contactData[info]} key={info} />);
       }
     }
 
@@ -236,29 +370,39 @@ var CompNavInfoContainer = React.createClass({
       <div id="region-nav-info">
         <div className="row">
           <div className="col-md-7">
-            <span id="region-searchBox">
+            <span id="region-searchBox" className="ib">
               <Typeahead
                 customClasses={typeaheadClass}
                 defaultClassNames={false}
                 placeholder={typeheadPlaceHolder}
-                options={searchAssistsObj}
+                options={saAry}
                 filterOption='name'
                 displayOption={this.directDisplayOption}
                 maxVisible={10}
                 highlight={true}
                 onOptionSelected={this.updateDirectDisplay} />
             </span>
-            <span id="region-resume">
-              <span>or download Curriculum vita <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a></span>
+            <span className="ib">
+              <button type="button" id="nav-btn" className="btn search-btn">
+                <span className="glyphicon glyphicon-search"></span>
+                <span className="search-btn-text">Search</span>
+              </button>
             </span>
+            <div id="region-resume">
+              <span>Download Curriculum vita <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a></span>
+            </div>
           </div>
           <div id="region-contacts" className="col-md-3">
             <span className="row header_icons_section">{contacts}</span>
           </div>
         </div>
         <hr />
-        <div id="dd-group">
-            <DirectDisplay wiki={this.state.wiki} intl={this.state.intl} target={this.state.target} tag={this.state.tag} />
+        <div id="region-searchresult">
+          <div className="search-container">
+            <div className="algo">
+              <SearchResult result={this.state.algo} wiki={this.state.wiki} intl={this.state.intl} target={this.state.target} tag={this.state.tag}  />
+            </div>
+          </div>
         </div>
       </div>
     );
