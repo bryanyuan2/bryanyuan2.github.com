@@ -157,6 +157,10 @@ var CompNavInfoContainer = React.createClass({
         <div className="row">
           <div className="col-md-7">
             <span id="region-searchBox" className="ib">
+              <div className="set-search">
+                <i className="set-icon glyphicon glyphicon-search"></i>
+                powered by Elasticsearch
+              </div>
               <Typeahead customClasses={typeaheadClass}
                          defaultClassNames={false}
                          placeholder={typeheadPlaceHolder}
@@ -176,7 +180,9 @@ var CompNavInfoContainer = React.createClass({
               </button>
             </span>
             <div id="region-resume">
-              <span>Download Curriculum vita <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a></span>
+              <span><i className="set-icon glyphicon glyphicon-tag"></i>
+                Download my resume <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a>
+              </span>
             </div>
           </div>
           <div id="region-contacts" className="col-md-3">
