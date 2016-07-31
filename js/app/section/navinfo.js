@@ -1,39 +1,33 @@
 "use strict";
 
 var React = require('react'),
-    LoadJSON = require('./../mixins').LoadJSON,
+    LoadJSON = require('./../utils/mixins').LoadJSON,
     Typeahead = require('react-typeahead').Typeahead,
-    truncate = require('truncate'),
     _ = require('lodash'),
-    $ = require('jquery');
+    $ = require('jquery'),
+    SearchResult = require('./../search/searchresult'),
+    config = require('./../config/env.json')[process.env.NODE_ENV || 'development'];
 
-/* dd */
-var wikiEnUrl = "https://en.wikipedia.org/wiki/",
-    wikiZhUrl = "https://zh.wikipedia.org/wiki/",
-    wikiDescEnUrl = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=",
-    wikiDescZhUrl = "https://zh.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=",
-    wikiDescTrunc = 128,
-    typeaheadClass = {
-      input: 'tt-query search-box',
-      results: 'tt-menu',
-      listItem: 'tt-suggestion'
-    },
-    typeheadPlaceHolder = "Search some keywords here ?",
-    wikiDDTagColor = "#55ACEE",
-    blockedBorderHL = "#EEEEEE",
-    blockedBorder = "border-left-color";
-
-
-/* search */
-var searchDomain = "http://localhost:8080/api/search/query/",
-    searchHeader = {
+var algoObj = {
+  "searchDomain": config.SEARCH_API.DOMAIN + "/api/search/query/",
+  "searchHeader": {
       "Accept" : "application/json; charset=utf-8",
       "Content-Type": "application/javascript; charset=utf-8",
       "Access-Control-Allow-Origin" : "*"
     },
-    searchOpts = {
-      limit: 5
-    };
+  "searchOpts": {
+      "limit": 10
+  },
+  "searchTimeout": 2000
+};
+
+/* typeahead */
+var typeaheadClass = {
+      input: 'tt-query search-box',
+      results: 'tt-menu',
+      listItem: 'tt-suggestion'
+    },
+    typeheadPlaceHolder = "Search some keywords here ?";
 
 var Contact = React.createClass({
   propTypes: {
@@ -59,257 +53,41 @@ var Contact = React.createClass({
   }
 });
 
-var DirectDisplayTag = React.createClass({
-  propTypes: {
-    text: React.PropTypes.string,
-    hl: React.PropTypes.string
-  },
-  handleClick: function(event) {
-    var hlAry = this.props.hl;
-    var targetClass = event.target.id.replace("__", "");
-
-    $("blockquote").css(blockedBorder, blockedBorderHL);
-
-    for (var item in hlAry) {
-      if (hlAry.hasOwnProperty(item)) {
-        $("." + hlAry[item]).css(blockedBorder, wikiDDTagColor);
-      }
-    }
-
-    $("body").animate({
-      scrollTop: $("." + targetClass).offset().top
-    }, 800);
-
-  },
-  render: function() {
-    var text = this.props.text;
-    var tags = [];
-    var tags_content = "";
-    for (var item in this.props.hl) {
-      if(this.props.hl.hasOwnProperty(item)) {
-        tags.push('<div class="ddAnchor" id="__' + this.props.hl[item] + '">' + text[item] + '</div>');
-      }
-    }
-    tags_content = tags.join(" ");
-    return (
-      <span onClick={this.handleClick} className="dd-tags" dangerouslySetInnerHTML={{__html: tags_content}} />
-    );
-  }
-});
-
-var DirectDisplay = React.createClass({
-  propTypes: {
-    target: React.PropTypes.string,
-    intl: React.PropTypes.string,
-    wiki: React.PropTypes.string,
-    tag: React.PropTypes.object
-  },
-  tags: [],
-  highlight: [],
-  content: "",
-  getInitialState: function() {
-    return {
-      loading: false,
-      ajaxContents: ""
-    };
-  },
-  getDefaultProps: function() {
-    return {
-      target: "default",
-      intl: "en",
-      tag: {}
-    };
-  },
-  shouldComponentUpdate: function(nextProps, nextState) {
-    return nextState.loading !== this.state.loading;
-  },
-  componentWillReceiveProps: function(nextProps) {
-    var targetAbsUrl = nextProps.intl === 'en' ? wikiDescEnUrl: wikiDescZhUrl;
-    targetAbsUrl = targetAbsUrl + encodeURIComponent(nextProps.target);
-
-    if (nextProps.target !== 'default') {
-      /* blocked by loading */
-      this.setState({ loading: true }, function(){
-        $.ajax({
-          url: targetAbsUrl,
-          dataType: "jsonp"
-        }).done(function( descResult ) {
-          this.setState({ ajaxContents: descResult, loading: false });
-        }.bind(this));
-      });
-    }
-  },
-  componentDidUpdate: function() {
-    this.tags = [];
-    this.highlight = [];
-    for(var key in this.props.tag) {
-      if(this.props.tag.hasOwnProperty(key)) {
-          this.tags.push(this.props.tag[key].name);
-          this.highlight.push(this.props.tag[key].hl);
-      }
-    }
-  },
-  render: function () {
-    var descReadMore = "eleHidden",
-        wikiReadMoreUrl  = (this.props.intl === 'en') ? wikiEnUrl : wikiZhUrl,
-        descTitle = (this.props.target !== "default") ? this.props.target : "";
-
-    wikiReadMoreUrl = wikiReadMoreUrl + this.props.target;
-
-    // get wiki description content
-    if (this.state.ajaxContents.query && this.state.ajaxContents.query.pages) {
-      var content = this.state.ajaxContents.query.pages;
-      for (var element in content) {
-        if (content[element].extract.length > wikiDescTrunc) {
-          this.content = truncate(content[element].extract, wikiDescTrunc);
-          descReadMore = "dd-read-more";
-        } else {
-          this.content = content[element].extract;
-        }
-      }
-    }
-
-    if (this.state.loading) {
-      this.content = "";
-    }
-    return (
-      <div className="dd">
-        <div className="showit">
-          <h4>{descTitle}</h4>
-          {this.content}
-          <span className={descReadMore}>
-            <a href={wikiReadMoreUrl} target="_blank">Read more</a>
-          </span>
-          <h4>Related section(s)</h4>
-          <DirectDisplayTag text={this.tags} hl={this.highlight} />
-        </div>
-      </div>
-    );
-  }
-});
-
-
-var SearchResultBox = React.createClass({
-  propTypes: {
-    result: React.PropTypes.object
-  },
-  getDefaultProps: function() {
-    return {
-      result: {}
-    };
-  },
-  render: function() {
-    //console.log("search result", this.props.result);
-    var title = _.get(this.props, ['result', '_source', 'title'], ''),
-        url = _.get(this.props, ['result', '_source', 'url'], '#'),
-        content = _.get(this.props, ['result', '_source', 'content'], ''),
-        abstract = content ? content.substr(0, 64) + ' ...' : '',
-        media = _.get(this.props, ['result', '_source', 'media'], ''),
-        mediaUrl = _.get(this.props, ['result', '_source', 'mediaUrl'], '#');
-
-    return (
-      <div className="search-item">
-          <span className="title"><a target="_blank" href={url}>{title}</a></span>
-          <span className="media"><a target="_blank" href={mediaUrl}>{media}</a></span>
-          <span className="content">{abstract}</span>
-      </div>
-    );
-  }
-});
-
-var ZRP = React.createClass({
-  render: function() {
-    return (
-      <div className="zrp">
-      </div>
-    );
-  }
-});
-
-var SearchResult = React.createClass({
-  getInitialState: function() {
-    return {
-      result: {},
-      isSearch: false
-    };
-  },
-  propTypes: {
-    // algo
-    result: React.PropTypes.object,
-    // dd
-    target: React.PropTypes.string,
-    intl: React.PropTypes.string,
-    wiki: React.PropTypes.string,
-    tag: React.PropTypes.object
-  },
-  getDefaultProps: function() {
-    return {
-      result: {},
-      target: "default",
-      intl: "en",
-      tag: {}
-    };
-  },
-  componentWillReceiveProps: function(nextProps) {
-    console.log("nextProps", nextProps);
-    this.setState({
-      result: nextProps.result,
-      isSearch: true
-    });
-  },
-  render: function() {
-    var algo = [],
-        isZrp = true;
-
-    if (this.props.wiki) {
-      // dd
-      algo.push(<DirectDisplay wiki={this.props.wiki} intl={this.props.intl} target={this.props.target} tag={this.props.tag}  />);
-      isZrp = false;
-    }
-
-    // check this.state.result is not empty object
-    if (Object.keys(this.state.result).length !== 0) {
-      // algo
-      this.state.result.forEach(function(result, index) {
-        algo.push(<SearchResultBox result={result} key={index} />);
-        isZrp = false;
-      });
-    }
-
-    if (this.state.isSearch === true && isZrp){
-      // zrp
-      algo.push(<ZRP />);
-    }
-
-    return (
-        <div>
-          {algo}
-        </div>
-    );
-  }
-});
-
 var CompNavInfoContainer = React.createClass({
   mixins: [LoadJSON],
   getInitialState: function() {
     return {
-      target: "default",
+      ddStatus: 'ok',
+      ddTarget: "default",
+      ddTag: {},
       algo: {},
-      tag: {}
+      algoStatus: "ok"
     };
   },
   updateDirectDisplay: function(item) {
+    console.log("item", item);
     this.setState({
-      target: item.name,
-      intl: item.intl,
-      wiki: item.wiki,
-      tag: item.tag
+      ddStatus: 'ok',
+      ddTarget: item.name,
+      ddIntl: item.intl,
+      ddWiki: item.wiki,
+      ddTag: item.tag
     }, function(){
       $(".search-btn").trigger("click");
     });
   },
   directDisplayOption: function(item) {
     return item.name;
+  },
+  onKeyDown: function(e) {
+    if(e.which === 13) {
+        console.log("on key down");
+        this.setState({
+          ddStatus: 'ok'
+        }, function(){
+          $(".search-btn").trigger("click");
+        });
+      }
   },
   componentDidMount: function() {
     var that = this;
@@ -322,15 +100,23 @@ var CompNavInfoContainer = React.createClass({
     });
 
     $(".search-btn").click(function(){
-      var url = searchDomain + encodeURIComponent($("input").val());
+      console.log("input", $("input").val());
+      var url = algoObj.searchDomain + encodeURI($("input").val());
       console.log("search backend = ", url);
       $.ajax({
         url: url,
-        data: searchOpts,
-        headers: searchHeader
+        data: algoObj.searchOpts,
+        headers: algoObj.searchHeader,
+        timeout: algoObj.searchTimeout
+      }).fail(function() {
+        that.setState({
+          algoStatus: "error",
+          query: $("input").val()
+        });
       }).done(function( algo ) {
         console.log("algo", algo);
         that.setState({
+          query: $("input").val(),
           algo: algo
         });
       }.bind(that));
@@ -344,16 +130,16 @@ var CompNavInfoContainer = React.createClass({
 
     for (var item in saData) {
       if(saData.hasOwnProperty(item)) {
-        var saSubSet = {},
-            target = saData[item],
+        var target = saData[item],
             getWikiEn = _.get(target, ['wiki', 'en']),
             getWikiZh = _.get(target, ['wiki', 'zh']);
 
-        saSubSet.name = _.get(target, ['name']);
-        saSubSet.wiki = getWikiEn ? getWikiEn : getWikiZh;
-        saSubSet.intl = getWikiEn ? "en" : "zh";
-        saSubSet.tag = _.get(target, ['tag']);
-        saAry.push(saSubSet);
+        saAry.push({
+          "name": _.get(target, ['name']),
+          "wiki": getWikiEn ? getWikiEn : getWikiZh,
+          "intl": getWikiEn ? "en" : "zh",
+          "tag": _.get(target, ['tag'])
+        });
       }
     }
 
@@ -371,16 +157,17 @@ var CompNavInfoContainer = React.createClass({
         <div className="row">
           <div className="col-md-7">
             <span id="region-searchBox" className="ib">
-              <Typeahead
-                customClasses={typeaheadClass}
-                defaultClassNames={false}
-                placeholder={typeheadPlaceHolder}
-                options={saAry}
-                filterOption='name'
-                displayOption={this.directDisplayOption}
-                maxVisible={10}
-                highlight={true}
-                onOptionSelected={this.updateDirectDisplay} />
+              <Typeahead customClasses={typeaheadClass}
+                         defaultClassNames={false}
+                         placeholder={typeheadPlaceHolder}
+                         options={saAry}
+                         filterOption='name'
+                         displayOption={this.directDisplayOption}
+                         maxVisible={10}
+                         highlight={true}
+                         onKeyDown={this.onKeyDown}
+                         onOptionSelected={this.updateDirectDisplay}
+                         />
             </span>
             <span className="ib">
               <button type="button" id="nav-btn" className="btn search-btn">
@@ -400,7 +187,15 @@ var CompNavInfoContainer = React.createClass({
         <div id="region-searchresult">
           <div className="search-container">
             <div className="algo">
-              <SearchResult result={this.state.algo} wiki={this.state.wiki} intl={this.state.intl} target={this.state.target} tag={this.state.tag}  />
+              <SearchResult algoStatus={this.state.algoStatus}
+                            algoResult={this.state.algo}
+                            query={this.state.query}
+                            ddWiki={this.state.ddWiki}
+                            ddIntl={this.state.ddIntl}
+                            ddTarget={this.state.ddTarget}
+                            ddTag={this.state.ddTag}
+                            ddStatus={this.state.ddStatus}
+              />
             </div>
           </div>
         </div>

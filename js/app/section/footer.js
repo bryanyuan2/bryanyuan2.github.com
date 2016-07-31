@@ -1,7 +1,7 @@
 "use strict";
 
 var React = require('react'),
-    LoadJSON = require('./mixins').LoadJSON;
+    LoadJSON = require('./utils/mixins').LoadJSON;
 
 var Pack = React.createClass({
   propTypes: {
@@ -38,7 +38,7 @@ var FooterContainer = React.createClass({
     return(
       <div id='region-footer'>
             <hr />
-            <span className='footer-ver'><i>Ver.2016/4/10</i>. </span>
+            <span className='footer-ver'><i>Ver.%ver_replacement%</i>. </span>
             Powered by 
             {packages}
             <br />

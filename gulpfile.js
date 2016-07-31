@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     browserify = require('browserify'),
+    envify = require('envify/custom'),
     del = require('del'),
     reactify = require('reactify'),
     source = require('vinyl-source-stream'),
@@ -16,13 +17,27 @@ var gulp = require('gulp'),
     flow = require('gulp-flowtype'),
     replace = require('gulp-replace'),
     buildDate = require('gulp-build-date'),
-    notify = require("gulp-notify");
+    notify = require("gulp-notify"),
+    minimist = require('minimist'),
+    gulpif = require('gulp-if');
 
 var paths = {
     css:['./asserts/css/*.less'],
-    js: ['./js/app/*.js', './js/app/section/*.js', './test/components/*.js'],
+    js: [ './js/app/*.js',
+          './js/app/components/*.js',
+          './js/app/config/*.js',
+          './js/app/search/*.js',
+          './js/app/section/*.js',
+          './js/app/untls/*.js'
+    ],
     app_js: ['./js/app/app.js'],
     index: ['./index.html']
+};
+
+var options = minimist(process.argv.slice(2), knownOptions);
+var knownOptions = {
+  string: 'env',
+  default: { env: process.env.NODE_ENV || 'production' }
 };
 
 // date
@@ -34,11 +49,20 @@ gulp.task('clean', function(done) {
 });
 
 gulp.task('js', ['clean'], function() {
+  var senv = 'production',
+      isUglify = true;
+  if (options.env === 'development') {
+    senv = 'development'
+    isUglify = false;
+  }
   browserify(paths.app_js)
+    .transform(envify({
+      NODE_ENV: senv
+    }))
     .transform(reactify)
     .bundle()
     .pipe(source('bundle.js'))
-    //.pipe(streamify(uglify()))
+    .pipe(gulpif(isUglify, streamify(uglify())))
     .pipe(gulp.dest('./js/build'))
     .pipe(notify("Gulp.js restarted"));
 });

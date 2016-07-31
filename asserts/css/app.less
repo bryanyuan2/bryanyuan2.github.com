@@ -14,11 +14,15 @@
   -moz-border-radius: @radius;
 }
 
+.text-btn-group {
+  margin-top: 12px;
+}
+
 .search-algo() {
   display: inline-block;
   font-size: 14px;
   height: 200px;
-  padding: 6px 6px 6px 6px;
+  padding: 6px;
   margin-right: 12px;
   vertical-align: top;
   white-space: initial;
@@ -128,6 +132,10 @@ blockquote {
   list-style-type: disc;
 }
 
+.algo {
+  overflow-x: scroll;
+}
+
 .algo .dd {
   width: 400px;
   background-repeat: no-repeat;
@@ -135,6 +143,10 @@ blockquote {
   background-image: url("../images/common/wikipedia.png");
   .text-corner(3px);
   .search-algo();
+}
+
+.algo .dd.fit {
+  width: 100%;
 }
 
 .algo .dd-tags {
@@ -191,10 +203,9 @@ blockquote {
 
 /* customize bootstrap */
 .label-teamwork {
-  font-size: @fs-ms;
   font-weight: 400;
   padding: 2px 10px;
-  margin-left: 6px;
+  margin-right: 3px;
 }
 
 /* footer */
@@ -294,9 +305,10 @@ blockquote {
   margin-bottom: 12px !important;
   margin-right: 6px;
 }
-
-.github-url {
-  word-wrap: break-word;
+.block-btn:hover,
+.block-btn:visited,
+.block-btn:active {
+  background-color: #FFF;
 }
 
 .set-title {
@@ -312,6 +324,15 @@ blockquote {
   height: 42px;
   margin-left: 12px;
 }
+
+#nav-btn:hover {
+  color: #FFF;
+  border-color: #ccc;
+}
+#nav-btn:visited {
+  color: #FFF;
+}
+
 
 .search-btn {
   background-color: @twitter-blue;
@@ -333,8 +354,10 @@ blockquote {
 }
 
 /* search-container */
+
 .search-container {
     margin: 12px 0 24px 0;
+    overflow-x: hidden;
 }
 
 .algo {
@@ -343,7 +366,7 @@ blockquote {
 }
 
 .algo .search-item{
-    width: 220px;
+    width: 218px;
     cursor: pointer;
     .text-corner(3px);
     .search-algo();
@@ -356,6 +379,16 @@ blockquote {
     border-color: #888888;
 }
 
+.algo .search-error {
+  font-size: 18px;
+  padding: 6px;
+}
+
+.algo .search-hint {
+  font-size: 14px;
+  padding: 6px;
+}
+
 .algo .title {
     font-weight: 700;
     display: block;
@@ -365,4 +398,34 @@ blockquote {
 
 .algo .content {
     display: block;
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 60px;
+  cursor: pointer;
+  line-height: 60px;
+  color: @twitter-blue;
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 1px solid #ccc;
+}
+.box.boxPrev {
+  left: 0;
+}
+.box.boxPrev::before {
+  content: "◀";
+}
+.box.boxNext {
+  float: right;
+  right: 0;
+}
+.box.boxNext::before {
+  content: "▶";
 }

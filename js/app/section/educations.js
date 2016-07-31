@@ -1,7 +1,8 @@
 "use strict";
 
 var React = require('react'),
-    LoadJSON = require('./../mixins').LoadJSON;
+    LoadJSON = require('./../utils/mixins').LoadJSON,
+    SectionHeader = require('./../component/sectionheader');
 
 var Education = React.createClass({
   honors: [],
@@ -56,7 +57,7 @@ var EducationsContainer = React.createClass({
     });
     return(
       <div id="region-education">
-        <h2 className="set-title" id="set-education">Education</h2>
+        <SectionHeader setID="education" text="Education" />
         <hr />
         {educations}
         <br />

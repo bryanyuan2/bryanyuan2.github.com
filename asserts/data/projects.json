@@ -87,8 +87,19 @@
     ],
     "media": [
       {
-        "title": "GoPlurk! 噗浪「興趣分析機」，看看你是哪種噗浪人！ - 重灌狂人",
-        "link": "https://briian.com/6331/goplurk.html"
+        "title": "GoPlurk! 噗浪「興趣分析機」，看看你是哪種噗浪人！",
+        "link": "https://briian.com/6331/goplurk.html",
+        "source": "重灌狂人"
+      },
+      {
+        "title": "元智資工系師生開發GO! Plurk 成績斐然",
+        "link": "http://web2.yzu.edu.tw/e_news/558/10_new02.html",
+        "source": "元智電子報"
+      },
+      {
+        "title": "「Go!Plurk」 分析你的噗浪興趣比例",
+        "link": "http://mag.udn.com/mag/digital/storypage.jsp?f_MAIN_ID=319&f_SUB_ID=2941&f_ART_ID=199431",
+        "source": "聯合新聞網"
       }
     ]
   }

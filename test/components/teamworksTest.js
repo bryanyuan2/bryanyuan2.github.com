@@ -2,7 +2,7 @@
 "use strict";
 
 var React = require('react');
-var TeamworkContainer = require("../../js/app/teamwork.js");
+var TeamworkContainer = require("../../js/app/subcomponent/teamwork.js");
 var testUtils = React.addons.TestUtils;
 
 var expect = require('chai').expect;

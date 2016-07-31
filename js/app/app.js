@@ -10,7 +10,7 @@ var React = require('react'),
     browserHistory = require('react-router/lib/browserHistory');
 
 /* section */
-var CompHeader = require('./header'),
+var CompHeader = require('./section/header'),
     CompNavInfo = require('./section/navinfo'),
     CompEducations = require('./section/educations'),
     CompSkills = require('./section/skills'),
@@ -19,7 +19,7 @@ var CompHeader = require('./header'),
     CompProjects = require('./section/projects'),
     CompCommunities = require('./section/communities'),
     CompPublications = require('./section/publications'),
-    CompFooter = require('./footer-ver');
+    CompFooter = require('./section/footer-ver');
 
 var App = React.createClass({
   render: function () {

@@ -1,9 +1,13 @@
 "use strict";
 
 var React = require('react'),
-    LoadJSON = require('./../mixins').LoadJSON;
+    LoadJSON = require('./../utils/mixins').LoadJSON,
+    MediaList = require('./../component/medialist'),
+    SectionHeader = require('./../component/sectionheader'),
+    PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var Work = React.createClass({
+  mixins: [PureRenderMixin],
   propTypes: {
     work: React.PropTypes.object,
     key: React.PropTypes.number
@@ -14,28 +18,14 @@ var Work = React.createClass({
       key: 0
     };
   },
-  shouldComponentUpdate: function() {
-    // shouldComponentUpdate: function(nextProps, nextState)
-    return false;
-  },
   render: function() {
     var description = [],
-        media = [],
-        media_content = [],
         product = [],
         product_content = [];
 
     this.props.work.experence.forEach(function(content) {
       description.push(content.description);
     });
-
-    if (this.props.work.media) {
-      media.push('<div class="text-media">');
-      this.props.work.media.forEach(function(info) {
-        media.push('<li><a target="_blank" href=' + info.link + '>' + info.title + ' - ' + info.source + '</a></li>');
-      });
-      media.push('</div>');
-    }
 
     if (this.props.work.product) {
       product.push('<div class="text-ref-set">');
@@ -45,7 +35,6 @@ var Work = React.createClass({
       product.push('</div>');
     }
 
-    media_content = media.join(" ");
     product_content = product.join(" ");
 
     return (
@@ -61,7 +50,7 @@ var Work = React.createClass({
               <span className="description">{description}</span>
             </ul>
             <br />
-            <div dangerouslySetInnerHTML={{__html: media_content}} />
+            { this.props.work.media && <MediaList media={this.props.work.media} /> }
             <div dangerouslySetInnerHTML={{__html: product_content}} />
           </blockquote>
         </div>
@@ -82,7 +71,7 @@ var WorksContainer = React.createClass({
     });
     return(
       <div id="region-experence">
-        <h2 className="set-title" id="set-experence">Work experence</h2>
+        <SectionHeader setID="experence" text="Work experence" />
         <hr />
         {works}
         <br />
