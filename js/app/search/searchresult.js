@@ -128,7 +128,8 @@ var SearchResult = React.createClass({
     // zrp
     if (this.props.query !== '' &&
         this.props.algoStatus !== 'error' &&
-        this.state.searchAction === true) {
+        this.state.searchAction === true &&
+        Object.keys(this.props.algoResult).length === 0) {
       //algo.push(<ZRP query={this.props.query} />);
       algo.push(<ErrorHandler query={this.props.query} type="zrp" />);
     }
