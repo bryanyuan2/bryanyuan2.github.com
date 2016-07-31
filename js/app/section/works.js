@@ -19,12 +19,12 @@ var Work = React.createClass({
     };
   },
   render: function() {
-    var description = [],
+    var description = '',
         product = [],
         product_content = [];
 
     this.props.work.experence.forEach(function(content) {
-      description.push(content.description);
+      description += '<span>' + content.description + '</span>';
     });
 
     if (this.props.work.product) {
@@ -47,7 +47,7 @@ var Work = React.createClass({
             <div className="text-experience"><a target="_blank" href={this.props.work.url}>{this.props.work.corp}</a></div>
             <div className="text-desc">{this.props.work.position}, {this.props.work.org}</div>
             <ul className="text-desc">
-              <span className="description">{description}</span>
+              <div className="description" dangerouslySetInnerHTML={{__html: description}} />
             </ul>
             <br />
             { this.props.work.media && <MediaList media={this.props.work.media} /> }

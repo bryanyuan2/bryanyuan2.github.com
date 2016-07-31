@@ -18,9 +18,9 @@ var Community = React.createClass({
     };
   },
   render: function () {
-    var description = [];
+    var description = '';
     this.props.community.description.forEach(function(content) {
-      description.push(content.text);
+      description += '<span>' + content.text + '</span>';
     });
 
     return (
@@ -34,7 +34,9 @@ var Community = React.createClass({
             <blockquote className={this.props.community.hl}>
               <div className="text-title"><a target="_blank" href={this.props.community.link}>{this.props.community.name}</a></div>
               <div className="text-desc">{this.props.community.position}</div>
-              <div className="text-desc">{description}</div>
+              <ul className="text-desc">
+                <div className="description" dangerouslySetInnerHTML={{__html: description}} />
+              </ul>
             </blockquote>
           </div>
           <div className="col-md-2 text-img-pure">
