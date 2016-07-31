@@ -1,0 +1,231 @@
+{
+    "title": "Mozilla switching default Firefox search engine to Yahoo",
+    "description": "Mozilla has announced on its blog today that its default search engine will be changing to Yahoo for US customers.\nThe company stated on its blog that “Google has been the Firefox global search default since 2004. Our agreement came up for renewal this year, and we took this as an opportunity to review our competitive strategy and explore our options.”\nAfter evaluating partnerships, Mozilla said that one stood out from the rest: Yahoo.\nYahoo will become the default search engine for the US beginning in December, featuring an “enhanced Yahoo search experience.” In Russia, the default search engine will become Yandex and in China it will remain as Baidu.\nMozilla also noted that Yahoo will support “Do Not Track” preferences in Firefox, something the company had dropped support for earlier in the year.\nOn the choice of Yahoo, Mozilla simply said that the change marks the “ending our practice of having a single global default search provider” and the beginning of a “local and flexible approach to increase choice and innovation on the Web.”\nMarissa Mayer wrote on the Yahoo blog that the new partnership “helps to expand our reach in search and gives us an opportunity to work even more closely with Mozilla to find ways to innovate in search, communications, and digital content.” Mayer also indicated “future product integrations” could be in the pipeline.\nPreviously Google had been funding Mozilla in order to be the default search engine. Mozilla said that “while we have decided to not renew our agreement for global default placement, Google will continue to be a pre-installed search option.”\nWhat’s not clear is if users with the default search engine selected will be automatically migrated to the new default of Yahoo, or prompted to make the choice.\nThe company also noted that Google will still power the Safe Browsing and Geolocation components of Firefox.\nMozilla said that the browser now features 61 search providers pre-installed with Firefox regardless of region.",
+    "date": "2014-11-19",
+    "media": "The Next Web",
+    "mediaUrl": "http://thenextweb.com",
+    "url": "http://thenextweb.com/apps/2014/11/19/mozilla-switching-default-firefox-search-engine-yahoo/",
+    "lang": "en-us"
+},
+{
+    "title": "Yahoo Will Soon Become The Default Search Engine In Firefox",
+    "description": "Starting in December, Firefox will use Yahoo as its default search engine in the United States on mobile and desktop. As a part of this five-year deal, Yahoo will also launch a new search experience for Firefox users in the U.S., which should go live at the same time Firefox makes the switch away from Google.\nThe new search experience will feature “a clean, modern and immersive design that reflects input from the Mozilla team.” Here is what that will look like:\nIn Russia, Mozilla will use Yandex Search and in China, it will use Baidu as the default. Google, DuckDuckGo and a number of other local search engines will remain as built-in alternatives.\nThe Mozilla Foundation has long made most of its money through its search partnership with Google, which has always been the default in Firefox. Indeed, in 2012 — the last year we have data from — 88% of Mozilla’s income came from Google. That contract with Google was set to expire this year, though, and it look like either Yahoo made an offer Mozilla couldn’t refuse or Google decided to walk away from the deal.\nDefault-“Google has been the Firefox global search default since 2004. Our agreement came up for renewal this year, and we took this as an opportunity to review our competitive strategy and explore our options,” said Chris Beard, Mozilla’s CEO in a statement today. “We are excited to partner with Yahoo to bring a new, re-imagined Yahoo search experience to Firefox users in the U.S. featuring the best of the Web, and to explore new innovative search and content experiences together.”\nLikewise, Yahoo’s CEO Marissa Mayer today noted that she believes that “search is an area of investment, opportunity and growth for us. This partnership helps to expand our reach in search and also gives us an opportunity to work closely with Mozilla to find ways to innovate more broadly in search, communications, and digital content.”\nYahoo Search, in its current form, is powered by Microsoft Bing, of course, though the company heavily modifies the results it gets from Microsoft, both in terms of layout and ranking. There have long been rumors that Yahoo could end this deal and bring back its own search engine, but that seems unlikely given the investment the company would have to make after it dismantled its old search engine infrastructure.\nThis partnership with Firefox will surely give Yahoo — and Microsoft — a stronger presence in the search market, however. While Firefox usage has declined over the last few years, it still accounts for at least 15% of the U.S. browser market. Yahoo currently owns about 10% of the U.S. search engine market. Switching the default back to Google only takes a few seconds, but most users will likely stick with the default.",
+    "date": "2014-11-19",
+    "media": "TechCrunch",
+    "mediaUrl": "https://techcrunch.com",
+    "url": "https://techcrunch.com/2014/11/19/mozilla-partners-with-yahoo-which-will-become-the-default-search-engine-in-firefox-next-month/",
+    "lang": "en-us"
+},
+{
+    "title": "A New Yahoo Search Experience for Firefox Users in U.S.",
+    "description": "Today, we are excited that Firefox users in the U.S. will see a new, improved, innovative and fun experience on Yahoo Search. A year ago we entered into a strategic partnership with Yahoo to be the default search experience for Firefox users in the U.S. We ended our practice of having a single global default search provider for Firefox because we wanted to encourage growth in search, provide users with local choices and promote innovation in the space.\nWe have accomplished a lot over the last year. We worked closely with Yahoo to improve the search experience for our U.S. users. And, while we tend to be an opinionated and passionate project, Yahoo has been collaborative and flexible as we’ve provided continual feedback. Ultimately, these advances in the experience improve the competitive landscape for search which is good for our users.\nFirefox users in the U.S. can try this exclusive new search experience in the Firefox Awesome bar on Windows, Mac and Linux. Yahoo Search has been redesigned to surface relevant, actionable answers and display images and videos up front so that you can browse, find and discover more about your queries. You can learn more about the new Yahoo Search experience here.",
+    "date": "2015-11-11",
+    "media": "blog.mozilla.org",
+    "mediaUrl": "https://blog.mozilla.org",
+    "url": "https://blog.mozilla.org/blog/2015/11/11/a-new-yahoo-search-experience-for-firefox-users-in-u-s/",
+    "lang": "en-us"
+},
+{
+    "title": "【Meet創業之星】 自動化同步新品，網路賣家行銷工具－Pagineer",
+    "description": "Hackathon(駭客松)活動近年來在台灣開發圈掀起一股熱潮，吸引了各行各業具有想法、熱情及創意的工程師、設計師參與。推出 Pagineer 服務的這組團隊，便是參加去年 Yahoo Open Hack Day 2012 活動，拿到第二名的成績外，也同時獲得台灣創意工場的最佳投資獎。自此萌生將點子商業化的創業想法，於今年推出適用於網拍賣家的行銷工具。\n來自元智大學資管系鄭鈞元及資工系林冠丞，倆人從研究所的同學，變成組隊參賽的夥伴。鄭鈞元開心的說：「沒想到第一次參加就獲得第二名的好成績！」獲得大會的肯定，也讓倆人想嘗試創業的計畫更加確立。鄭鈞元說明，Pagineer是從當初發想許多的點子中，認為較具有商業效益，因而作為創業題目。\nPagineer能自動同步網拍賣家所發佈的新品到Facebook粉絲團，不失為提供賣家在行銷推廣商品上一個相當省力的工具。如此一來，無論是自營網購平台的PM，或是個人網拍賣家都能更簡單自行管理。\n舉例來說，當賣家在Yahoo!奇摩拍賣、eBay、淘寶網等商城上架後，需要賴以Facebook粉絲團推廣，Pagineer便可自動同步轉發。賣家若想進一步編輯商品頁面，也可使用Pagineer的編輯後台，套用文字樣版或自訂文字，做個人化的設定與管理。\n「我們發現許多賣家在購物平台與粉絲團之間，無法有效整合行銷訊息，」鄭鈞元說。然而現在透過Pagineer的整合，賣家便可輕鬆進行商品的行銷規劃。除了上架機制，Pagineer也提供了Facebook洞察報告、頁面及商品點擊率、消費者的區域分布等資料。賣家若按照行銷計畫排程發佈，可透過每日寄發的電子郵件中，得知新品的發佈狀態，以及後續的統計分析，在管理上也就更加得心應手。\n目前在市面上提供網路賣家的行銷工具選擇甚多，但Pagineer透過底層技術端的整合，力求協助台灣賣家發揮最有效的應用。團隊的下一步計畫，將持續整合網路上散布的曝光管道，如微博、Twitter等社群媒體，並針對需求提供客製化的服務，打造成為賣家行銷管理的集中平台，讓網路賣家的行銷力更升級！",
+    "date": "2013-09-14",
+    "media": "數位時代",
+    "mediaUrl": "http://www.bnext.com.tw/",
+    "url": "http://www.bnext.com.tw/article/view/id/29319",
+    "lang": "zh-tw"
+},
+{
+    "title": "Pagineer 團隊 讓你的網拍商品同步Facebook更容易!",
+    "description": "不管是Yahoo!奇摩拍賣、eBay還是淘寶的網拍賣家，往往想要利用社群經營低成本導入銷售流量，光是產品上架與 Facebook 專頁管理就讓賣家們分身乏術！不過由 Yahoo Open Hack Day 2012 獲得TMI台灣創意工場最佳投資獎的Pagineer 團隊推出的網拍商品同步Facebook新服務，就能幫賣家們解決這項惱人的工作流程！\nPagineer 網路拍賣同步Facebook服務\n在近年來，社群網路在近幾年用超快的速度夾帶強大的使用黏著性，Facebook 已成為多數人每天上網必須瀏覽的網路服務之一，而網路拍賣業者也逐漸會在社群網絡上，建立品牌粉絲專頁；一方面有效推拍賣商品，另一方面經營自家品牌網路行銷。在我們觀察網路拍賣市場中，非個人拍賣使用者所建立的 Facebook 專頁的比例非常高，但也必須花費額外的人力將商品同步到 Facebook 專頁比例非常高，但賣家必須重複將銷售資訊在社群網站上發佈，在使用流程與易用性也較為匱乏。\nPagineer 是一個拍賣自動同步服務，解決一般使用者在網路拍賣平台上架後，自動同步上架商品到粉絲專頁上的同步工具。目前支援Yahoo!奇摩拍賣、淘寶網、eBay 網路拍賣平台，只需要簡單設定三個步驟，即可解決使用者同步拍賣商品與 Facebook 專頁問題，於介面設計上，我們希望讓使用者以最短最簡單的使用流程，立刻實現同步指定的 Facebook 專頁。Pagineer 開發團隊\nPagineer  團隊是由 Yahoo Open Hack Day 2012 獲得台灣創意工場最佳投資獎的一群學生團隊所組成，研發團隊成員分別為鄭鈞元 (Bryan)、林冠丞 (Ken)、吳季恩 (Jason)，同時也是元智大學資訊工程學系的學長學弟，目前部分成員已畢業，並全力打造 Pagineer 線上拍賣同步服務。\n\n去年賽後，我們組成了一個小型的 startup 團隊，想要把參賽作品做成商業產品，但我們立刻發現要完成 hackathon 參賽作品與實際網路產品間，在完整度與細節是相差很大的；hackathon 往往要在 3 分鐘內吸引到評審目光，就有機會獲得青睞；但實際產品卻需要經過使用者的使用測試後，才會對產品有所意見回饋。\n\n在經過幾次產品 prototype 的嘗試後，我們鎖定網路拍賣平台的使用者，解決日常會碰到的使用問題，而 Pagineer 這個想法也慢慢成形。\n我們非常專注在開發賣場同步功能，讓使用者所上架的商品能立即同步到 Facebook 專頁上，我們設計了一套文字樣板系統，讓使用者除了可以輕鬆套用範例文字外，也可以客製化自己的同步文字形式。\n在開發系統過程中，我們發現使用者需要的不僅僅是單純自動同步的服務，事後分析與統計資訊對於使用者也非常重要。除了基本在系統面整合了 Facebook 洞察報告 (Facebook Insights)，讓使用者能洞悉各篇同步貼文的回饋狀態（如讚與留言數），我們也深度整合 bit.ly 短網址服務，分析使用者點擊行為並讓 Pagineer 使用者，輕鬆掌握每日點擊次數與全球使用者分布位置。\n我們希望能讓使用者透過 Pagineer 輕鬆達到上架拍賣商品後，立刻同步到 Facebook 專頁。除了減少經營拍賣平台的人力與時間開銷，也能用我們提供的完整洞察報告與使用者分析，更完整地掌握目標客群與銷售方向。\nPagineer 同步服務: http://pagineer.in\nPagineer 粉絲專頁: Pagineer Facebook Page",
+    "date": "2013-03-02",
+    "media": "台灣創意工場 blog",
+    "mediaUrl": "http://tmi.vc",
+    "url": "http://tmi.vc/pagineer/",
+    "lang": "zh-tw"
+},
+{
+    "title": "【軟體出英雄】 鄭鈞元×陳柏宇×鐘冠傑──雅虎看好的校園新勢力",
+    "description": "[237期雜誌精選] \n由雅虎舉辦的程式競賽Hack Day，總是吸引許多已成名的創業家前往試試身手，在眾多好手中，有個學生團隊卻連續兩年打入前三強，更獲得創意工場TMI矚目投資。更難得的是，他們不是來自台清交名校，而是元智大學資工系的學生團隊。\n\n這個年輕團隊由元智資工研究所的學長鄭鈞元，帶領兩位大三的學弟陳柏宇、鐘冠傑，打造協助賣家同步網站和粉絲團的工具，獲得雅虎 Hack Day亞軍和TMI最佳投資獎。曾在雅虎實習的鄭鈞元，對於網路軟體產業充滿了憧憬和期待。\n「最興奮的是可以和很多創業前輩交流，」他們心中的「偶像」不是比爾蓋茲、賈伯斯，而是新創團隊POP、噗浪創辦人雲惟彬，「他們超強，做的東西很酷！」30世代創業家已經成為20出頭的年輕人典範。他們不再把王永慶、郭台銘當偶像，找到了20世代全然不同的成功樣貌。雖然他們現在的成果會隨著考研究所、當兵而停滯一段時間，但在準備好的未來，將為台灣軟體產業注入一股新力量。",
+    "date": "2014-02-25",
+    "media": "數位時代",
+    "mediaUrl": "http://www.bnext.com.tw/",
+    "url": "http://www.bnext.com.tw/article/view/id/31106",
+    "lang": "zh-tw"
+},
+{
+    "title": "影音與圖像的萬花筒：VCenter與iPicBox成果專訪",
+    "description": "對於「數位原住民」來說，上YouTube看影音、到無名看美圖，似乎是每天必備的例行公事。您知道數位典藏與數位學習國家型科技計畫，也研發了功能優異的VCenter與iPicBox平台，提供強大的影音與圖片分享服務嗎？數位典藏與學習電子報非常榮幸能夠邀請到中央研究院資訊科技創新研究中心—數位典藏技術發展組(DAAL, http://daal.iis.sinica.edu.tw/)的王祥安先生、王喻正先生、鄭鈞元先生，由第一線平台管理者的觀點，和讀者分享如何透過資訊科技活化典藏與學習成果！\n資訊技術服務，開通典藏任督二脈\n如果您是從一期計畫就在典藏單位服務的「骨灰級」讀者，對於數位典藏技術發展團隊一定不陌生。王祥安先生表示，在中央研究院資訊科學研究所諸位老師的苦心研發之下，例如影像檢索、聲音檢索、古漢字構形、3D環物等先進技術，早已不再是科幻電影中的夢想。透過技術發展團隊的服務，典藏單位更是能夠跨越技術的藩籬，完成諸如典藏網站與資料庫建置、典藏資料管理等諸多任務。\n\n而在國家型計畫邁入第二期之後，數位技術研發與整合計畫更肩負開通典藏任督二脈的任務。數位典藏與數位學習國家型科技計畫成果媒材屬性十分多元，影音即是極重要的構成。透過技術發展團隊的努力，持續開發各種軟體服務機制，讓典藏單位除了本身資料庫與網站以外，更能夠透過契合時代潮流與社會需求的影音與圖像管理平台，和大眾分享計畫成果。\n\n運用影音平台、拓展典藏可能性\n在最近幾年，無論是享譽全球的YouTube、或是稱霸華人世界的土豆網，他們的共同點就是網友可以在此搜尋、欣賞影音。而VCenter，即是技術研發團隊為典藏單位與社會大眾所開發的影音平台。透過VCenter，典藏內容─影音分享平台─社會大眾之間的資訊串流橋樑得以建立，典藏單位也可省下自行建置線上影音平台所耗費的成本。\n由於典藏單位內容來源、品質甚至性質，和一般社會大眾自拍影音不甚相同，因此VCenter必須提供更高規格的服務，方能滿足典藏單位需求。例如VCenter就提供「專案管理平台」，只要經過申請核准，VCenter即可提供FTP批次大量上傳服務，讓具有影音內容的典藏單位，可以迅速上傳影音資料。典藏單位也能運用VCenter的Web Service，透過幾個簡單步驟內，便能在典藏單位自身的網站內呈現已經上傳的影音內容。而透過清楚的智財權資訊，典藏單位也可以透過創用CC等條款放心分享數位內容，加速數位資源的擴散與應用。\n透過影音平台，資訊傳播更為便利，這是由本國家型計畫總計畫辦公室製作之客家委員會成果介紹\nVCenter另一項貼心服務，即是可輕易上手的浮水印與字幕編輯系統。以往運用影音剪輯軟體，由於尚有轉檔工序，使得字幕剪輯作業花費時間較多。透過字幕編輯功能，只要您會中文輸入就可以將字幕融入影片當中，操作門檻低、十分容易上手。\n不知道讀者是否曾經接觸過較晚期的新聞典藏影音，這些典藏內容組成往往是一整天的電視台新聞播報，在長達數小時的影片中，要「撈」出時間僅為一至二分的單則新聞，雖非大海撈針，但也是相當痛苦而浩大的工程。透過VCenter所提供的影音書籤點標記，您可以在一支長影音中，標記出您認為重要的分段點，如此便能迅速取得所需要的資訊。\n總結VCenter的特色，我們可以發現除了內容以典藏影音為主之外，VCenter還是一個提供友善技術服務的影音平台。不過，目前網路所流傳的各種資訊中，相片仍為主流，技術發展團隊也特別開發了「iPicBox」圖像分享平台，拓展在影像平台的知名度與社會參與。\n由圖像分享，擴大社會參與\n從網際網路開始盛行之初，就已經有網友願意在無遠弗屆的網路世界中，和素未謀面的網友分享個人照片。和影音平台相較之下，網路相簿更是一項歷久彌新的服務。王喻正先生特別從網路使用者的行為，來和讀者分析為何網路相簿平台會比影音平台還要多：由於照相裝置的普及，無論是數位相機、手機，這些個人化的影像工具都能協助網路使用者快速且大量製造影像，並且加以上傳、散佈。相較之下，影音無論是拍攝、後製的困難度，都要高於靜態數位圖像，也因此在數位影音世界中，受大眾歡迎的影音仍以「經過嚴謹製作的有版權內容」為主，自拍影片雖然也很受歡迎，但瀏覽次數總和仍少於上述性質(尤其是商業化)的作品。也由於「拍照」是件很容易的事情，信手拈來、人人都可為作者，所以網友上傳侵權照片的可能性，雖然無法完全排除，但會較上傳侵權影音為低。\n和本土的無名、國際通用的Flickr、Picasa等影音平台相較之下，iPicBox又有什麼獨到之處？與本國家型計畫具有專業色彩、深受歡迎的「數位島嶼」相較，09年成軍的iPicBox，在內容產生與訴求對象方面更為貼近一般網友，同樣都是由一般網友貢獻本身攝影記錄。而和一般商業性網路相簿相較之下，王喻正先生表示，iPicBox比別人做得更多的一點，是「原始圖檔保存功能」。一般網路相簿在管理使用者圖檔時，幾乎都會進行壓縮作業以利維護與上傳、下載速度。即使有高解析度圖檔管理功能，也都會透過會員付費制度以價制量，「羊毛出在羊身上」的道理是逃不掉的。但iPicBox會替使用者儲存上傳原始大小檔案，往後如果其他人對於同張圖片有合理使用需求，只要加入會員，便可在相簿上直接下載高解析度圖檔，不用再苦苦email往返追蹤，頗能節省使用者的時間與心神。\n與VCenter相較之下，iPicBox在內容構成方面雖然少了些許典藏味，但是技術發展團隊卻提出新的構想。因為網路使用者所貢獻的圖片包羅萬象，其中不少都能研析出與典藏之間的關鏈，未來技術發展團隊將會針對網友所貢獻影像之關鍵字，找出在典藏內容當中相對應的成果。例如某網友上傳一個主題關鍵字為淡水的相簿，系統就會自動產生數位典藏與數位學習國家型科技計畫中與淡水相關的成果，讓瀏覽iPicBox時除了欣賞網友上傳的美圖之外，更能夠在系統協助下發生「資訊偶遇」，親近國家型計畫成果！透過這類軟性方式，典藏與文化內容，將可在更輕鬆的情境中進入網友生活，擴大社會參與。\n影音與圖像的萬花筒\n儘管才剛剛起步，現階段VCenter與iPicBox，一季已經有五萬人次的瀏覽量，並且透過導入Open ID概念，降低使用門檻、讓更多人可以輕鬆一探究竟。研發團隊也正在致力於VCenter與iPicBox行動版本的開發作業，未來您在智慧型手機上，也將可以欣賞各類影音與圖像的典藏內容。\n有句數位學習乃至於產業界人士，在製作課程簡報時的至理名言如是說：「文不如表，表不如圖，圖不如影片，影片不如演給你看。」數位資訊科技的蓬勃發展，讓知識的生產與展示發生了徹底的革新。VCenter與iPicBox，即是國家型計畫新穎的典藏成果展示平台，您何不瀏覽這兩個網站、與我們一同走進影音與圖像的萬花筒呢？\n運用iPiBox內建的相簿分享器，您可以在blog上快速分享每一個重要時刻，這是2009年本國家型計畫參加國際授權展展前記者會活動剪影",
+    "date": "",
+    "media": "數位典藏與學習電子報",
+    "mediaUrl": "http://newsletter.teldap.tw",
+    "url": "http://newsletter.teldap.tw/news/read_topstory.php?nid=3581&lid=384",
+    "lang": "zh-tw"
+},
+{
+    "title": "Yahoo Hack Taiwan: It’s a Wrap!",
+    "description": "Congratulations to all the hackers who participated in Yahoo Hack Taiwan last month. Over 200 developers and designers were chosen from more than 700 applicants to participate in this year’s event. Hackers divided into 56 teams to create a diverse array of apps. As with all other Yahoo Hack events, Yahoo Hack Taiwan provided plenty of hospitality, including good food, drinks, ping pong, and other details that kept the energy at a high level.\nYahoo Hack Taiwan rounds out a whirlwind year for Yahoo Hack events that have happened in London, Beijing, Tel Aviv, Hyderabad, and Sunnyvale. We’d like to thank all of the people involved in making Yahoo Hack Taiwan possible, including the organizers, judges, and of course, the hackers.\nUntil next time!",
+    "date": "2013-12-10",
+    "media": "Yahoo Developer Network",
+    "mediaUrl": "http://yahoodevelopers.tumblr.com",
+    "url": "http://yahoodevelopers.tumblr.com/post/69592034200/yahoo-hack-taiwan-its-a-wrap",
+    "lang": "en-us"
+},
+{
+    "title": "2013 Yahoo Hack Taiwan展現「使用者經驗為核心」價值",
+    "description": "年度網路開發盛事Yahoo Hack Taiwan 2013，於日前(11/3)圓滿落幕！今年報名人數達200組共近700人，與去年相比成長一倍，創歷史新高，在24小時不斷電的活動中，56組隊伍、逾兩百名網路開發好手，挑戰24小時打造完美結合程式開發及使用者介面(UI)/經驗(UX)設計的創新作品，競逐價值超過百萬的獎項與育成投資機會，用創新驚豔全球，展現台灣軟實力！\n綜觀此次活動，大多數的參賽作品皆注重使用者介面/經驗設計，回歸使用者需求，挖掘並解決日常生活中所遇到的問題，開發提升便利性的多元應用程式；並凸顯直覺、簡單、便利的設計趨勢。作品「Good Lock」讓使用者在忙錄或會議時刻，自動鎖定與控制訊息通知功能，輔以便利的使用者介面，獲得評審一致青睞，勇奪冠軍。去年獲得第二名及TMI最佳投資獎的團隊今年再獲佳績，作品「YA TAIKO!」將日常生活中制式地郵件刪除經驗，搭配類似太鼓達人遊戲的設計，其互動性及娛樂性博得滿堂喝采，讓刪除信件變有趣，榮獲第二名。本屆活動也針對使用者經驗設計趨勢特別增設最佳設計獎，以媒合青年志工和需就醫照護關懷老人的網路平台「iOlder」奪下大獎。\n開發x創新x設計 24小時碰撞出驚艷大作，2大開發趨勢再啓台灣科技創意新動能\n針對本屆活動成果，Yahoo亞太區電子商務研發工程部副總裁林振德表示：「這次活動的精彩成果顯示出台灣開發環境的蓬勃發展，及Yahoo Hack Taiwan 活動的指標意義。這次開發作品幾乎都以使用者經驗洞察為出發點，並以更直覺化、簡單與友善的介面設計貼近使用者。許多作品令人驚艷，具體展現台灣科技實力及創新能力。」\n趨勢1: 「使用者經驗為核心」程式開發完美結合使用者介面與經驗設計\n抱持著以使用者為核心的理念，Yahoo Hack Taiwan 2013不僅將UI/UX列為活動的重點評比項目，更首度邀請Yahoo UI/UX設計師坐鎮活動現場，提供參賽者最專業與即時的協助。而此次作品亦凸顯此趨勢，所有參賽隊伍更注重產品介面設計與使用者使用經驗，且以直覺、簡單和便利的設計，更貼近使用者需求。\n趨勢2: 跨界開發、互動遊戲化\n此次多數作品更多元化整合運用各類開放APIs，像是結合相片、地理位置和資訊的開發應用；另外，文化部與台北市政府的參與以及獎項提供，也讓不少開發者創作出優質的藝文相關應用程式。而此次作品亦高度展現互動性，部分作品不約而同透過遊戲化的回饋或積點機制，結合社群功能，大幅提升使用者黏著度。活動網站：http://survey.bnext.com.tw/events/2013yahoo/index.html\nYahoo開發者社群 (YDN)：http://developer.yahoo.com/\n【關於Yahoo Hack Day】\nYahoo Hack Day是邀請網路開發者組隊參與的創意競賽，在24小時活動期間，Yahoo無限量提供餐飲與啤酒，並邀請各式表演團體演出，讓參與者在輕鬆氣氛下，提出富創意的想法並加以實踐；活動結束後由各組發表成果，再由評審票選優勝隊伍。Yahoo Hack Day曾於美國加州、英國倫敦、印度邦加羅爾等地舉辦，均引起熱烈迴響。",
+    "date": "2013-11-06",
+    "media": "數位時代",
+    "mediaUrl": "http://www.bnext.com.tw",
+    "url": "http://www.bnext.com.tw/article/view/id/29936",
+    "lang": "zh-tw"
+},
+{
+    "title": "2013 Yahoo Hack Taiwan展現「使用者經驗為核心」價值 開放技術 ＋「直覺、簡單、便利」設計 跨界開發玩創意",
+    "description": "2013/11/04－年度網路開發盛事Yahoo Hack Taiwan 2013，已於昨日(11/3)圓滿落幕！今年報名人數達200組共近700人，與去年相比成長一倍，創歷史新高，在24小時不斷電的活動中，56組隊伍、逾兩百名網路開發好手，挑戰24小時打造完美結合程式開發及使用者介面(UI)/經驗(UX)設計的創新作品，競逐價值超過百萬的獎項與育成投資機會，用創新驚豔全球，展現台灣軟實力！\n綜觀此次活動，大多數的參賽作品皆注重使用者介面/經驗設計，回歸使用者需求，挖掘並解決日常生活中所遇到的問題，開發提升便利性的多元應用程式；並凸顯直覺、簡單、便利的設計趨勢。作品「Good Lock」讓使用者在忙錄或會議時刻，自動鎖定與控制訊息通知功能，輔以便利的使用者介面，獲得評審一致青睞，勇奪冠軍。去年獲得第二名及TMI最佳投資獎的團隊今年再獲佳績，作品「YA TAIKO!」將日常生活中制式地郵件刪除經驗，搭配類似太鼓達人遊戲的設計，其互動性及娛樂性博得滿堂喝采，讓刪除信件變有趣，榮獲第二名。本屆活動也針對使用者經驗設計趨勢特別增設最佳設計獎，以媒合青年志工和需就醫照護關懷老人的網路平台「iOlder」奪下大獎。\n開發x創新x設計24小時碰撞出驚艷大作，2大開發趨勢再啓台灣科技創意新動能 針對本屆活動成果，Yahoo亞太區電子商務研發工程部副總裁林振德表示：「這次活動的精彩成果顯示出台灣開發環境的蓬勃發展，及Yahoo Hack Taiwan活動的指標意義。這次開發作品幾乎都以使用者經驗洞察為出發點，並以更直覺化、簡單與友善的介面設計貼近使用者。許多作品令人驚艷，具體展現台灣科技實力及創新能力。」\n趨勢1:「使用者經驗為核心」程式開發完美結合使用者介面與經驗設計 抱持著以使用者為核心的理念，Yahoo Hack Taiwan 2013不僅將UI/UX列為活動的重點評比項目，更首度邀請Yahoo UI/UX設計師坐鎮活動現場，提供參賽者最專業與即時的協助。而此次作品亦凸顯此趨勢，所有參賽隊伍更注重產品介面設計與使用者使用經驗，且以直覺、簡單和便利的設計，更貼近使用者需求。\n趨勢2:跨界開發、互動遊戲化 此次多數作品更多元化整合運用各類開放APIs，像是結合相片、地理位置和資訊的開發應用；另外，文化部與台北市政府的參與以及獎項提供，也讓不少開發者創作出優質的藝文相關應用程式。而此次作品亦高度展現互動性，部分作品不約而同透過遊戲化的回饋或積點機制，結合社群功能，大幅提升使用者黏著度。\n詳情請參閱活動網站：http://survey.bnext.com.tw/events/2013yahoo/index.html Yahoo開發者社群(YDN)：http://developer.yahoo.com/",
+    "date": "2013-11-05",
+    "media": "中時電子報",
+    "mediaUrl": "http://www.chinatimes.com",
+    "url": "http://www.chinatimes.com/realtimenews/2013-Yahoo-Hack-Taiwan%E5%B1%95%E7%8F%BE%E3%80%8C%E4%BD%BF%E7%94%A8%E8%80%85%E7%B6%93%E9%A9%97%E7%82%BA%E6%A0%B8%E5%BF%83%E3%80%8D%E5%83%B9%E5%80%BC-%E9%96%8B%E6%94%BE%E6%8A%80%E8%A1%93-%EF%BC%8B%E3%80%8C%E7%9B%B4%E8%A6%BA%E3%80%81%E7%B0%A1%E5%96%AE%E3%80%81%E4%BE%BF%E5%88%A9%E3%80%8D%E8%A8%AD%E8%A8%88-%E8%B7%A8%E7%95%8C%E9%96%8B%E7%99%BC%E7%8E%A9%E5%89%B5%E6%84%8F-20131105002238-260412",
+    "lang": "zh-tw"
+},
+{
+    "title": "Yahoo Hack Taiwan 2013 圓滿落幕",
+    "description": "今年的Yahoo Hack Taiwan 2013 在11/3正式落幕，這次的盛會也讓我們看到台灣科技的潛力，不僅參加的人數比起去年多了一倍，也有越來越多實力堅強的團隊能夠在短時間內打造出一定水準的產品，競逐投資育成的機會，展現台灣軟體實力！\n還記得去年TMI所投資的Ya!Hook嗎？Ya!Hook團隊也是2012年Yahoo Hack Day 後TMI所投資的團隊，現在已經成功打開創業之路，幫助網路賣家經營粉絲團。今年他們又組隊完成了另一個產品-Ya!Taiko，拿下了第二名的獎項。\nYa!Taiko希望幫助使用Yahoo奇摩電子信箱的朋友們透過類似玩太鼓達人的方式把刪除垃圾信件這件事情變得有趣。\n安裝Ya!Taiko後，只要按一下開始鍵，就會有許多太鼓達人的拍點圖示從螢幕左邊滑出，每一個圖示頭上都會有每一風垃圾信件的主旨名稱，如果你想要把這封信刪除，只要像玩太鼓達人一樣，用滑鼠點一下左邊的白色大圓點，就可以快速又有趣的刪除垃圾郵件。\n等遊戲結束後，Ya!Taiko還會幫你統計你的成績，你可以和過去的紀錄比較，也可以分享到社群網站上和朋友炫耀。\n詳細的玩法可以參考這支影片\n另一個今年得到TMI創新獎的產品是DuDuBox，DUDUBOX 提供使用者自選Yahoo奇摩的各式生活資訊，取代一陳不變的手機來電嘟嘟聲，當手機有人來電時，就會自動播報一則新聞、一篇笑話、購物優惠或是天氣預報，讓接電話變得更有趣。\n除此之外，因為在接電話前，你可以聽到一些有趣的資訊，因此還可以為你增加聊天的話題，讓宅男們不再覺得講電話是一件可怕的事情！\n除了商業面之外，此次技術最厲害的團隊非「萌典宇宙反應爐」莫屬，也是這次比賽的冠軍。萌典是一個漢字搜尋的視覺化資料庫，透過萌典，使用者只要輸入想要查詢的繁體中文字，萌典就會幫連上教育部、中研院等政府所公布的官方資料。\n舉例來說，只要輸入「萌」這個字，萌典不僅會告訴你「萌」的字音、字義以及相似的字型，還會告訴你有關「萌」的詞語也會將和「萌」有關的地點顯示在地圖上，一次解決所有問題，不用再開許多視窗就可以了解一切。\n這次的活動，大部分的團隊都偏向使用者介面/經驗設計導向，事實上，從剛開始的參賽者資格篩選就可以看出這次的團隊組成大部分都以偏設計居多。好的技術也需要從使用者需求出發，看到了這麼多團隊努力付出，相信未來台灣會更有創新的潛力！",
+    "date": "2013-11-27",
+    "media": "台灣創意工場",
+    "mediaUrl": "http://tmi.vc",
+    "url": "http://tmi.vc/yahoo-hack-taiwan-2013-圓滿落幕/",
+    "lang": "zh-tw"
+},
+{
+    "title": "1/26 Firefox OS App Days 活動花絮",
+    "description": "本月最夯！首度與全球 24 個國家及地區同步舉行的行動 App 開發日已順利在 1 月 26 日圓滿結束！活動從一開始的報名狀況就十分火熱，預設的 30 報名人次不到兩天就一掃而空，在緊急加開人數與活動現場空間的考量下，活動採提案遴選制，活動總報名共 90 人，而當天現場共有 43 名開發者出席。一整天的內容非常精彩，到底有多豐富？讓我們跟著活動花絮看下去！\n上午 9:30 報到結束，活動準備開始囉！\n活動正式開始，主持人開場並介紹由 Firefox OS 開發工程師組成，陣容強大的 Mentor 群~ 準備開始認自己的 Mentor 囉！\n來看看 App Days 特製影片，你想要哪一種 Web？\n首先，是由開發工程師 Tim 帶來的精彩演講：認識 Firefox OS 和認識 Firefox OS 模擬器\n參賽者與講師間的問答互動！\n在短暫的休息過後緊接著第二場演講，由工程師 Kan-Ru Chen（ 講題：Apps Marketplace）、Evelyn Hung （Web APIs）以及 Yuren Ju (開發者工具＆ Web App 範本）用接力賽的方式為在場的參賽者演講，為下午的開發實作做準備。\n在中午一小時的休息後，下午是實作與 Demo 的時間，各組皆有開發工程師做 Mentor 協助，現場更貼心準備音樂、飲料、零料、咖啡、下午茶等糧食補給，讓開發者用腦的同時肚子也要飽飽才行！\n在幾個小時的開發中，若開發者隨時有問題，Mentor 隨時都能提供協助。\n在倒數的時鐘下，時間來到了 Demo 準備，登記 Demo 的組數非常踴躍，當天共有 15 組報名 Demo。",
+    "date": "2013-01-31",
+    "media": "Mozilla 部落格",
+    "mediaUrl": "http://blog.mozilla.com.tw",
+    "url": "http://blog.mozilla.com.tw/posts/1846/126-firefox-os-app-days-%E6%B4%BB%E5%8B%95%E8%8A%B1%E7%B5%AE",
+    "lang": "zh-tw"
+},
+{
+    "title": "Firefox OS App Days 得獎專訪 – 第二名 Battery Fox",
+    "description": "Q: App 構想來由\n在賽前研究 MozillaWiki 上 WebAPI 的 Battery Status API，原本想說做個電源管理工具，但似乎又顯得太過枯燥乏味，如果能夠將充電的過程做成一個遊戲，讓這簡單的動作成為有趣的體驗…於是 Battery Fox 的最初構想出現了，一個透過充電進行育成的戀愛養成遊戲！\nQ: App 使用到的技術\n最主要是 Battery \nAPI；後來加入了成就系統，透過充電即可完成不同的成就，於通知列閃出，這部分使用了 Notification API；介面則使用 jQuery Mobile，以及在不同電量時，發出音效用到的 HTML5 audio。\nQ: 參加 Firefox OS App Days 的原因與心得\n新奇，Firefox OS App 最吸引我的就是不用再學習新語言，而是熟悉的 Web 開發。參加這次活動讓我見識到了台灣 App 開發者的創意以及技術，尤其能在這麼短時間內，做出完成度極高又富有創意的 App。\n而這也考驗了團隊開發時的工作分配，畢竟要在短時間內開發完成，妥善的分配非常重要，我們用了 GitHub 做版本控制，這讓程式開發速度變得更容易掌控。",
+    "date": "2013-02-07",
+    "media": "Mozilla 部落格",
+    "mediaUrl": "http://blog.mozilla.com.tw",
+    "url": "http://blog.mozilla.com.tw/posts/1927/firefox-os-app-days-%E5%BE%97%E7%8D%8E%E5%B0%88%E8%A8%AA-%E7%AC%AC%E4%BA%8C%E5%90%8D-battery-fox",
+    "lang": "zh-tw"
+},
+{
+    "title": "Yahoo! Open Hack Taiwan 2012",
+    "description": "Taiwan was abuzz this past weekend as YDN and Yahoo! Taiwan kicked off Yahoo! Open Hack with Taiwan's developer community. The two-day event brought developers from Taiwan and other parts of Asia together to engage in two packed days of learning and hacking. Taking place October 20-21, Open Hack Taiwan set a new record for attendance and participation for the event, with 62 teams and 216 developers.\nStarting with a series of technical workshops, Open Hack Taiwan culminated with a non-stop 24-hour coding competition. Developers were encouraged to build their applications across multiple devices with Open Source technologies and tools including Yahoo!s Mojito API as well as Taipei City Governments open data API.\nHackers teamed up to turn their ideas into working prototypes in just one day with mobilization, socialization and localization common attributes of many of the hacks at Yahoo! Open Hack Taiwan. There was no shortage of ideas for hacks, and we saw a diverse range of apps for photos, mapping, traffic, gaming, and even KPOP memes. You can check out all the hacks on the Open Hack Taiwan HackTrackr.\nThe overall winning hack was Y! Meme News by team EXY. Student team Ya!hooK won the second prize as well as the special prize for the most potential award sponsored by TMI. This is the first time that Yahoo! Taiwan partnered with Taipei City Government and TMI, a Taiwan-based VC company.\nCongratulations to all of the developers who participated in Open Hack Taiwan 2012! You can find photos from the event on our Open Hack Taiwan Flickr set and relive the hacks on HackTrackr. Until next time, ??!",
+    "date": "2012-10-24",
+    "media": "Yahoo Developer Network",
+    "mediaUrl": "https://developer.yahoo.com",
+    "url": "https://developer.yahoo.com/blogs/ydn/yahoo-open-hack-taiwan-2012-53921.html",
+    "lang": "en-us"
+},
+{
+    "title": "Yahoo! Open Hack 【Ya!hook】獲TMI台灣創意工場50萬投資大獎",
+    "description": "社群+在地化受歡迎 從使用者經驗出發整合Yahoo!奇摩相關資訊豐富社群平台\n新創團隊Level Up  TMI台灣創意工場期望以Acqui-Hire創新創業育成模式\n由Yahoo! 奇摩所舉辦的網路開發競賽「2012 Yahoo!奇摩創意日(Open Hack Day)」於上週末(20、21日)圓滿落幕！從2008年首度在台舉辦，已成為台灣網路圈一大盛事，參賽者必須在兩天一夜有限時間內，開發出獨具創意的作品。今年TMI台灣創意工場提供了將近總價值約50萬台幣金額的創業投資機會特別大獎，以創業投資育成角度進駐讓整個活動有更多商業價值，也吸引更多好手參加，一開放報名即迅速爆滿，本屆集結共62組決賽隊伍，227名網路開發高手同台競技，戰況激烈！\n【Ya!hook】創意源自Yahoo！+Facebook拿下雙料大獎\n　本次競賽作品，可看出『行動化』、『社群化』與『在地化』三大開發趨勢。一組作品名為「Ya!hook」的學生隊伍「大大安安幾歲住哪」獲得TMI台灣創意工場的投資機會大獎，這支隊伍是由分別是來自元智大學資訊工程所碩二的鄭鈞元、林冠丞，以及台灣大學資訊網路與多媒體研究所碩一的吳季恩所組成的三人小團隊，他們的作品提供了一個透過Yahoo APIs的服務在Google Chrome上擴展豐富Facebook打卡地點及活動頁面資訊的技術服務 (作品介紹：http://www.youtube.com/watch?v=azaM_HHyBvE&feature=youtu.be)，TMI台灣創意工場團隊評論這支隊伍的作品：「IDEA相當簡單清楚，從自身的使用經驗出發，將 Yahoo!奇摩天氣、地圖、生活+等相關服務資訊整合社群網站Facebook，讓使用者在享受社群互動時，也能輕鬆搜尋所需資訊，實際解決Facebook上資料不夠完整的問題，除了整個作品具有潛在的發展機會，同時這個團隊也相當具有豐富創意及執行力，這也正符合TMI台灣創意工場對於創業團隊的期望。」因此他們的亮眼表現不僅獲得了TMI台灣創意工場所提供的育成計畫投資機會，若得獎隊伍同意投資條件，將會以總價值約新台幣50萬元的投資入股團隊！\nTMI台灣創意工場推出多元創新的創業育成模式\n　雖然這次活動TMI創新工場所選出的獲勝隊伍都是即將面臨畢業生涯壓力的新鮮人，但這三位學生卻沒因此打算放棄，反而規畫要將作品以更全面完整的方式執行完成，並且TMI創意工場也提出以更彈性的條件，讓這樣優秀的團隊有機會在育成中心開發產品並獲得創業經驗，成為真正的種子創業家。\n2012年2月成立至今的TMI台灣創意工場創業育成中心，在台灣創業市場也以新創模式期望以國外盛行的Acqui-Hire(由acquire和hire這兩字組成，收購人才) 概念尋找合適的創業團隊，過去這種方式被成熟應用於國際企業收購，例如蘋果公司過去曾收購一家位於舊金山的HTML5開發商Particle公司，也因此獲得Particle公司的使用者介面工程師、創意技術專家等專業團隊，而這樣的例子在矽谷的創業市場不勝枚舉。由於目前台灣育成中心往往面臨的狀況是制度僵化，實際執行效益不佳，因此希望能藉由這樣創新模式在TMI多樣專業背景團隊的協助下，可以在初期創業階段能彈性調整方向並獲得資源，將更有機會推開海外市場大門！而且創業團隊在創業項目獲得有益價值之後，還有機會挑戰新的創業項目，累積連續創業經驗，這也是許多網路募資神話團隊通常會有的經歷。\n目前尋找以5人以下技術為主的小型創業團隊，創業1.5年以上，且目前有產品在運作，同時也想挑戰海外市場。當然這些條件之外，對這樣的育成條件有興趣的話，也還是歡迎與我們I聯繫！\n關於TMI台灣創意工場\n創立於2012年的TMI台灣創意工場，旨在投資網路與行動應用創業初期的團隊及扶植有潛力的新創事業。TMI團隊整合了不同的專業背景，包含對網路新創事業有高度熱忱的創業家、在科技業歷練的實業家與具有豐富創投經驗的投資者，協助創業團隊在各種市場中成功地擴張、茁壯。我們非常期望與行動應用、新創網路服務與電子商務領域的創業者合作。\n官方網站：http://tmi.vc/\n與我們連繫：hi@tmi.vc",
+    "date": "2012-10-31",
+    "media": "台灣創意工場",
+    "mediaUrl": "http://tmi.vc",
+    "url": "http://tmi.vc/yahoo-open-hack-%E3%80%90yahook%E3%80%91%E7%8D%B2tmi%E5%8F%B0%E7%81%A3%E5%89%B5%E6%84%8F%E5%B7%A5%E5%A0%B450%E8%90%AC%E6%8A%95%E8%B3%87%E5%A4%A7%E7%8D%8E/",
+    "lang": "zh-tw"
+},
+{
+    "title": "唯一學生作品「Ya！hook」　成競賽最大贏家",
+    "description": "〔即時新聞／綜合報導〕網路開發競賽「2012 Yahoo！奇摩創意日」集結共62組決賽隊伍，227名網路開發高手同台競技，最後冠軍隊伍以作品「歪新聞」脫穎而出，勇奪新台幣25萬元首獎，而獲獎團隊內唯一的學生組則以作品「Ya！hook」同時奪下第二名以及今年首設的「最佳投資價值獎」，成為最大贏家。\n因應智慧型手機使用率越趨普及，本次參賽作品高達9成以上皆為行動化整合應用服務，「社群與照片分享」結合「適地性」服務更是今年社群開發應用的大熱門。\n冠軍隊伍的「歪新聞」結合雲端運算與社群風潮展現創意，以奇摩新聞與社群API，將創意與新聞、社群應用聯結，讓網友在社群網站分享奇摩新聞時，另外還可依新聞標題搭配自己個人化的圖示，擄獲評審目光。\n第二名作品「Ya！hook」，這群學生從自己的使用經驗出發，整合社群網站與奇摩天氣、地圖、生活+等相關服務資訊，讓使用者在享受社群互動時，也能輕鬆搜尋所需資訊。\n發揮現今社群結合生活的精神，網路開發者們的無限創意，也將為台灣網路產業帶來前所未有的動能。",
+    "date": "2012-10-30",
+    "media": "自由時報",
+    "mediaUrl": "http://news.ltn.com.tw",
+    "url": "http://news.ltn.com.tw/news/life/breakingnews/716211",
+    "lang": "zh-tw"
+},
+{
+    "title": "「歪新聞」奪雅虎奇摩Open Hack冠軍，25萬元大獎入袋",
+    "description": "開發團隊喜愛的限時競賽活動「Yahoo奇摩創意日(Open Hack)」活動，今年度首度攜手台北市政府、TMI台灣創意工場，集結共62組決賽隊伍、227名網路開發高手同台競技，較上屆激增6成，最後奪得首獎新台幣25萬元的作品為「歪新聞」，第二名的「Ya!hook」更是同時奪下今年首設的「最佳投資價值獎」。\n圖說:歪新聞團隊名稱很有趣--離職者聯盟，成員包括王啟恩、劉力仁、陳暉鈞、黃士旗。\n雅虎亞太區技術研發工程部副總裁林振德表示：「綜觀此次作品，可看出『行動化』、『社群化』與『在地化』三大開發趨勢。另外，具有在地化特色的API深受開發者青睞，如雅虎奇摩的生活+ API、台北市政府公開資訊等，結合社群分享與適地性服務，衍生出許多令人驚艷的相關應用。」\n\nOpen Hack是邀請網路開發者組隊參與的創意競賽，在24小時活動期間，雅虎提供餐飲與啤酒，並邀請各式表演團體演出，讓參與者在輕鬆氣氛下，提出富創意的想法並加以實踐；活動結束後由各組發表限時2分鐘的成果介紹，再由評審票選優勝隊伍。Open Hack活動曾於美國加州、英國倫敦、印度邦加羅爾等地舉辦，台灣則在2008年、2009年舉辦。\n圖說:「Ya!hook」團隊是唯一得獎的學生團隊，鄭鈞元、林冠丞、吳季恩三人現為碩士班學生。\n今年度冠軍「歪新聞」藉由Yahoo!奇摩新聞與社群API，將創意與新聞、社群應用聯結，讓網友在社群網站分享Yahoo!奇摩新聞時，可依新聞標題搭配自己個人化的圖示，不僅增加網友閱讀及分享的興趣，並可進一步創造個人化的互動訊息與瀏覽體驗。第二名得主以作品「Ya!hook」奪下，開發者從自己的使用經驗出發，整合社群網站與Yahoo!奇摩天氣、地圖、生活+等相關服務資訊，讓使用者在享受社群互動時，也能輕鬆搜尋所需資訊。",
+    "date": "2012-11-01",
+    "media": "數位時代",
+    "mediaUrl": "http://www.bnext.com.tw/",
+    "url": "http://www.bnext.com.tw/article/view/id/25232",
+    "lang": "zh-tw"
+},
+{
+    "title": "【 活動公告 】 賀!100學年度「優秀教學助理」獲獎名單出爐",
+    "description": "為肯定研究生教學助理對大學部學生教育之貢獻，特舉辦優秀教學助理選拔專案。經由本校教師代表組成之審查委員會評審之後，結果已經出爐，得獎名單如下表。每位得獎優秀教學助理將獲頒發獎金$5,000元及獎狀乙紙，並於助教工作坊公開表揚及經驗分享，以為全校教學助理學習楷模。",
+    "date": "2012-05-03",
+    "media": "元智教學卓越中心",
+    "mediaUrl": "http://tec.yzu.edu.tw",
+    "url": "http://tec.yzu.edu.tw/web/news/?method=detail&aid=1075",
+    "lang": "zh-tw"
+},
+{
+    "title": "元智資工系師生開發GO! Plurk 成績斐然",
+    "description": "近幾個月，”你噗了沒”，已經成了一種流行文化。這裡的噗，指的是噗浪(Plurk, www.plurk.com)，也就是一種個人的微型網誌。與傳統網誌(Blog)相異之處在於，Plurk的發文門檻低，不需要長篇大論，即使只是一句非常自我的碎碎念，也可以馬上”噗”給噗友看，說不定會引起原本的朋友與路過的網友極大的共鳴。因此，Plurk的互動性大大提高。到目前為止，噗浪已經發展為跨越年齡的一種共同文化。連一向給人嚴肅印象的政治人物，如謝長廷(www.plurk.com/frankcthsieh)，林益世(www.plurk.com/linyishih0819)，事業忙碌的演藝人員如許茹芸(www.plurk.com/ValenH)，郭采潔(www.plurk.com/amberkuo)等等，都成了噗浪客。而且他們都是親自下海哦！不是像以往在Blog上，多半由助理代筆。因此更印證噗浪短小輕薄發文容易的特性。連最忙碌的人，也可以很方便地發表想法與網友互動哦！\n然而，在這樣的平台上，要分析一位噗友的興趣卻不是一件容易的事。目前的作法只能進入該噗友的網頁，逐篇閱讀該噗友的發言。元智大學資工系三位同學李宜謙 (www.plurk.com/drken)，鄭鈞元(www.plurk.com/bryanyuan2)以及李昕，在修習”網際網路資訊探勘與檢索”課程時，把課堂上學習到的”語意分析技術”結合改良的”快速貝氏分類演算法”，用以開發分析噗浪客興趣的服務Go! Plurk (http://www.drken.pro/plurk/)。只要你輸入欲查詢的噗浪客代號，Go! Plurk就會分析出他各項興趣的比例，喜歡發表音樂、運動、或亂聊的噗一目了然， 如圖一。\n  在著名的部落客”不來恩” (www.plurk.com/briian)的推廣下，在短短兩天內吸引了超過萬名的噗浪使用者。本身也是愛好者，並經常與學生以噗浪互動的資工系指導教授蔡宗翰(www.plurk.com/Richard_King)表示，Go! Plurk可以滿足一般人想瞭解朋友興趣的好奇心。分析使用者記錄後可知，大部分使用者都是查詢自己好友，與設計時的預期相符。至於開發Go! Plurk服務的三位同學則表示，未來還要改進分析技術，並持續推出更有趣的Plurk分析服務，請大家拭目以待。\n相關報導\n不來恩的Go! Plurk教學 http://briian.com/?p=6331\nUDN的新聞報導http://mag.udn.com/mag/digital/storypage.jsp?f_MAIN_ID=319&f_SUB_ID=2941&f_ART_ID=199431",
+    "date": "",
+    "media": "元智電子報",
+    "url": "http://web2.yzu.edu.tw/e_news/558/10_new02.html",
+    "lang": "zh-tw"
+},
+{
+    "title": "GoPlurk! 噗浪「興趣分析機」，看看你是哪種噗浪人！",
+    "description": "下面這網站是個很有趣的小應用，上面說是元智大學資工系某學生的「YZUCSE 網際網路資訊探勘與檢索期末專題」，我們可以直接在「興趣分析機」上面輸入自己的噗浪帳號，如「briian」，按下〔Search〕按鈕後，便會分析你曾經發表過的噗浪文內容，把關鍵字挑出來作個簡單的分析，看看你是哪種噗浪人。\n不過實際上這網站上面並沒有講太多細節，資料怎麼分析的也不太清楚，但看起來還是挺好玩的。可以看出大家平常都在噗浪上聊些什麼，像我就是「聊天」佔了20%、「美食」佔了10%，可是「科技+宅」卻只佔了6.19%，明顯不符合我的形象啊...呵，不過「運動」佔了0%倒是挺精準的。\n網站名稱：GoPlurk! Plurk興趣分析機\n網站網址：http://www.drken.pro/plurk/\n使用方法：\n第1步  打開GoPlurk!網站後請輸入你的查詢的噗浪帳號，如「briian」或你自己的帳號，再按下〔search〕按鈕。\n第2步  過個幾秒鐘，分析完之後會用圓餅圖的方式呈現你的屬性，我猜一般人應該都是聊天比較多吧？呵～",
+    "date": "2009-06-16",
+    "media": "重灌狂人",
+    "mediaUrl": "https://briian.com",
+    "url": "https://briian.com/6331/goplurk.html",
+    "lang": "zh-tw"
+},
+{
+    "title": "「Go!Plurk」 分析你的噗浪興趣比例",
+    "description": "相信根據媒體前陣子大幅度地報導之後，台灣應該也有不少人也都在玩噗浪了吧？也因此像「Go!Plurk」這樣的分析機就陸續地被開發出來 (就連部落格觀察網站中也開始加進噗浪力 (Plurk Effect)統計項目了！)。\n在小編日常生活幾近沉溺於噗浪 (Plurk)之中後，每天大概會為了維持卡馬值 (Karma，雖然衝到100似乎也不能做什麼，但還是會莫名其妙想看他每天一點一點地上升)，導致於原本有在持續關注的推特 (Twitter)則逐漸有被冷落的跡象…\n\n相信根據媒體前陣子大幅度地報導之後，台灣應該也有不少人也都在玩噗浪了吧？也因此像「Go!Plurk」這樣的分析機就陸續地被開發出來 (就連部落格觀察網站中也開始加進噗浪力 (Plurk Effect)統計項目了！)。\n想知道你的噗浪帳號興趣分析結果如何嗎？先連上「Go!Plurk」，然後再將自己的噗浪帳號輸入之後就能得到分析結果喔！",
+    "date": "2009-06-16",
+    "media": "聯合新聞網",
+    "mediaUrl": "http://mag.udn.com",
+    "url": "http://mag.udn.com/mag/digital/storypage.jsp?f_MAIN_ID=319&f_SUB_ID=2941&f_ART_ID=199431",
+    "lang": "zh-tw"
+},
+{
+    "title": "FB x GIT Hack For A Cause 12小時公益黑客松",
+    "description": "這次活動認識很多厲害的新朋友，謝謝 Janes S. 邀請，寫寫參與 FB x GIT Hack For A Cause 一些想法跟記錄\n事情如何發生\n會報名其實是個意外，在 Facebook 朋友的貼文中看到 FB x GIT Hack For A Cause 黑客松，跟同事討論組隊報名。其中一個誘因是初賽有 Facebook Puzzle，因為同事們也都是工程師，對解題都躍躍欲試，就報名了。\n說在前面\n這幾年參加過各樣 Hackathon，從很多地方能「親身體會」到這次主辦單位的用心，從場地、晚宴、食物（包括啤酒、冰淇淋、還有宵夜）、工作人員協助、Facebook 官方的技術支援，這些完全是高水準演出，覺得是台灣近年來最友善舒適的駭客松。\n從活動到組隊\n在活動前，我們這組其實有腦力激盪出幾個點子，但也沒什麼把握，決定當天隨機應變。意外的是，主辦方在活動開始後，要求每組都要有男、女隊員組成，要讓所有工程師當下補足自己的隊員，算是活動一個亮點 XD 台灣 CS 圈子說小很小，在幾分鐘的交流，找到兩位合拍的女生，是我們某位組員的大學學妹，大家聊完覺得對拍就決定同組了。\n決定題目\n當然，12 小時 Hackathon 就是當場要蹦出一個大家都買單的點子。 那天，大家快速跑了一次 brainstorming，說明自己的想法；接著投票，決定自己支持誰的想法，或是放棄自己的提案；最後收斂各自想法，表達自己想做的作品雛形。真的很快，我們約花 30 分鐘確認方向跟主題，大家就分工往成品邁進。\n我們做了什麼\nOpinionoted 是我們最後的成品。使用者可以搜尋特定的關鍵字，我們從 Facebook 的動態貼文中，用距離遠近的視覺化概念，表達自己與朋友間談論特定話題的相似度。\n火力十足的官方技術支援\nFacebook 的技術支援火力非常強，我們這次部分成員雖有 Facebook Web API 的使用經驗，不過距離現在也相隔一兩年，要在 12 小時內從零到有搭建，非常有挑戰性。感謝 Daniel Schafer、Brian Weng 與 Jocelin Ho 的技術支援，從確認我們能從朋友的動態貼文撈出什麼，不能獲得什麼資訊，讓我們能快速確定 Opinionoted 的基本架構，讓技術落差能無縫接軌。\n最大的敵人是時間，最強的夥伴是隊友\n基本上，時間非常吃緊，尤其在天亮前腦袋近乎放空狀態，那個時間點，大家跟 Walking Dead 很像，但要隨時拉回備戰狀態，同時要幫程式開發切停損點，把 Demo 流程順過，讓作品在最好的狀態；也必須在短短的幾分鐘內，把作品的亮點讓所有人知道，才不會照成進入 QA 時間，聽眾對你要解決什麼問題、你們作了什麼東西都不清楚。 在強大的隊友支持，我幾乎是攏員的狀態，幫忙修 defect 跟協助接應不暇的工作\n拉回公益的本質\n在 12 小時的賽程後，主辦方邀請 Mobile Accessibility 講師 Young Feng，帶工程師了解手機協助工具開發對視障朋友的重要性，除實際 Demo 如何透過協助工具來操作手機，實質幫助非常大，也是在公益駭客松收益良多的地方。\n美中不足\n緊鑼密補的行程，重頭戲還是在 Live Demo，可惜的是這次沒有「嚴格」規定時間，雖是口頭約定，但實際上是時間超過了，並沒有強迫參賽隊伍停止發表，進入 QA 時間，覺得有些可惜 XD\n點評令人驚艷\n發表得獎隊伍前，Facebook 評審群在前台，逐一點評各組的亮點、他們覺得表現不錯的地方，這讓我非常買單 XD 讓參賽者覺得在選出優勝名次外，自己的努力有備評審們肯定。",
+    "date": "2015-11-22",
+    "media": "",
+    "url": "https://github.com/bryanyuan2/FBxGIT/blob/master/README.md",
+    "lang": "zh-tw"
+},
+{
+    "title": "YA!hook - Yahoo Open Hack Day 2012 參賽經驗分享",
+    "description": "睽違近 3 年的 Yahoo Open Hack Day，今年又再度開戰，今年一看訊息公布後，二話不說就立刻點了報名。這次直接揪同實驗室的同學、學弟參賽，除了比較熟習彼此開發模式，溝通成本也比較少。\n在比賽前一天晚上，其實根本就沒有睡，在狀態很糟的情況下完成了報到手續，面對接下來 24 小時馬拉松式的作戰。\n在第一天早上，如同往年， Yahoo! 內部有精采的技術議程分享，今年主打的是 Mojito，這是 NodeJS MVC Framework，開發者可以用 Javascript 流暢的打造網站服務，除了前後端程式語言一致，也有減少溝通成本等好處。也有遠道從美國來的工程師分享歷年 Open Hack Day 獲獎作品的特色，與評分的重點，讓我們能專注在這些點上開發程式。\n我們開發專案叫 Ya!hook，是一個 Google Chrome extension，可以讓原本 Facebook 空乏的打卡頁面搖身一變，變得豐富實用。\n一開始的想法是，在 Facebook 的打卡頁面上，對使用者有用的資訊寥寥無幾，我們就想結合 Yahoo! 生活+ 的資訊，自動在畫面上，補足哪些該出現的資料。像是鼎泰豐，就會秀出 Yahoo! 生活+ 上的店家資訊、食評、圖片、附近店家、同類型店家。另外我們也使用了台北市政府的停車資訊，直接把最近的停車場拉出來。 比較特別的是，如果打卡頁面是電影院的話，就直接拉了 Yahoo! 電影的時刻表，我自己覺得超級實用。\n另外，我們也想在 Facebook 的活動頁面上，幫使用者加上活動當天天氣資訊，這塊的功能其實撰寫很快，把打卡頁面處理的架構，稍做修改就行了。\n而專案中有使用到的 Yahoo! 的 API 或服務，分別是 Yahoo! Maps API, Yahoo! Weather API, Yahoo! 生活+ API (但其實有很多是我們想要但是 API 沒有提供到，我們就直接爬網站) 與 Yahoo! 電影的資料。\n在程式的前端直接使用了 jQuery 解決，但後端程式我們不想碰觸流量、安全上面的議題，就直接選了 Google App Engine 為開發平台，用我們隊友都共同熟悉的 Python 來撰寫。\n這次的比賽也嘗試了新的挑戰，是 Git 版本控制系統直接實戰 ，我自己對 Git 其實不太純熟，只簡單知道 push 與 pull 這類的基本指令，但這個比賽十分看重分工、協調、版本控管的細節，最後甚至都希望是直接在 repo 上看到 commit 的原始碼。幸好！我們這組的神手學弟，對 Git 指令簡直如數家珍，一首包辦 commit 與 merge branch 的教學工作，實戰磨練讓我是進步神速阿。\n在我們約完成八成程式，發現這樣是沒辦法在短短 2 分鐘內，吸引到評審的目光，於是我們就想開始來些炫技了，過程中我們是了幾種開場特效，最後選定用類似拼圖的效果，把 Ya! 跟 hook 分別組合起來。\n比賽過程中，無限供應的零食、飲料，是我對 Yahoo! 這家公司的第一印象，在工程師的福利真的沒話說。另外一點，留宿過夜的經驗真的很讚，明明是凌晨三、四點，當完正想倒頭就睡的時候，看到根本沒有參賽者有任何睡意，天啊，大家根本就拼了！在毫無意識的狀態下，撐到了早上，工作人員立刻緊接早操活動，也讓頭腦清醒了一點。\n最後的 DEMO 評審過程，大概是最難忘的參賽經驗了，評審找了創投界、學界、產業界的大咖人物，作為評審。工作人員嚴格執行了 2 分鐘的切畫面規範，後面倒數的計時讓人十分不安，提醒效果十足。參賽隊伍的報告者一次 6 位準備，依序切換畫面、計時。\n觀摩別人的發表過程，也吸收經驗彌補自己的不足。讓我印象尤其深刻的「台灣中央政府預算－全民稽核系統」與「Search Bingo」根本就是神作，這些前端效果做得出神入化。\n在最後，我們期待頂多勾上佳作就萬幸了，連得獎要說什麼都沒有準備好，在主持人宣布我們這組拿到台灣創意工場，「最佳投資價值獎」與「第二名」時，當下根本嚇傻了，我還打了暗號給認識的工作人員說「該怎麼辦」，整個連氣勢都沒了。\n參與這類型的比賽，真的是難得經驗，一方面認識各地聚集的高手外，把自己的想法實作出來，跟同一領域的朋友一起分享，絕對是對工程師是很大的吸引力，這次參賽的作品可以參考 Yahoo hacktrackr。\n如果您對我們的專案有興趣，歡迎大家 fork 來玩玩看！",
+    "date": "2012-11-06",
+    "media": "自由軟體鑄造場",
+    "mediaUrl": "http://www.openfoundry.org",
+    "url": "http://www.openfoundry.org/tw/news/8852?task=view",
+    "lang": "zh-tw"
+},
+{
+    "title": "跳出舒適圈，Yahoo! 黑客松 24 小時榨出你的腦力極限",
+    "description": "今年在 COSCUP 開源人年會上以「拆政府，原地重建」聲名大噪的 g0v 零時政府（註一），成立起源得從 2012 年「Yahoo! Open Hack Day」說起，三位台大資工系系友三天內寫出「政府預算視覺量表」，在活動中一戰成名，慷慨激昂的鬥志並未隨著拿到競賽的佳作獎項而消聲匿跡，反而更加凝聚，是年年底，他們組成如今我們都已熟悉的 g0v 零時政府，承襲 Yahoo 參賽的經驗，並且利用獲獎獎金，召開「第零次動員戡亂黑客松」，以自己的方式繼續「駭」政府。\n催生了這樣一支激勵人心的團隊，Yahoo! Open Hack Day，究竟是什麼樣的活動呢？它是各路程式高手雲集的地方，組隊成軍彼此競合，在 24 小時內從發想點子到實踐，不眠不休不斷電，零食、搖滾樂與腦力激盪相伴，最後將一天一夜的精華濃縮成 2 分鐘，上台發表成果。這樣的活動形式就是「駭客馬拉松」，結合「Hack」+「Marathon」兩字，在國外早已風行多年，Facebook、微軟等大企業都爭相舉辦，從中發掘人才。\n運用 Open API 讓生活變得更好\nYahoo! 台灣也在這幾年陸陸續續舉辦了幾場黑客松（又譯為「駭客松」）活動，今年的名稱由往年的 Yahoo! Open Hack Day 改為「Yahoo! Hack Taiwan（註二），規則也略有改變，相較以往只針對開發者，本屆主辦單位要求團隊最好包含 UI/UX 設計師，兼顧技術與使用者經驗設計。而幾年來比賽始終不變的，便是鼓勵以 Open API 設計出便利實用的點子。\n本文開頭提到的 g0v 零時政府因不滿「經濟動能推升方案」廣告而發想創作的「政府總預算視覺量表」，利用政府公開的預算資料，將密密麻麻的數字與表格，轉化為清楚直覺的圖表，公僕到底怎麼花我們的納稅錢，終於一清二楚的呈現在人民眼前。這是運用 Open Data 的絕佳案例，無疑也是黑客松宗旨的實踐。\n除了孕育出 g0v 零時政府以外，去年 Yahoo! Open Hack Day 冠亞軍分別頒給兩組運用 Yahoo! Open API 作出實用瀏覽器附加元件「歪新聞」以及「Ya!hook」的團隊。它們都是將 Yahoo! 既有的豐富資訊，發揮創意並與現有服務結合，在 24 小時內作出可行的 app 或網站。\n為何參加黑客松\n很多人剛開始參加黑客松或許是因為新鮮有趣，於是呼朋引伴報名。在這 24 小時內必須充分展現團隊合作，儘管強調氣氛歡樂，但緊繃的時間是不折不扣的默契反應大考驗，曾參與過 Yahoo 等企業舉辦的多場黑客松，Polydice 創辦人 Lawrance 的心得（註三）恰如其分地描寫出比賽的宗旨：\n事實上，Hackathon 活動短短的時間裡，考驗大家的就是專案管理能力，有限的資源、有限的人數、有限的時間內，要能達成上台 demo 的目標，實際上就是在考驗大家有沒有辦法進行有效率的取捨。\n此外，黑客松也是「自我檢視」的時機。寫程式、溝通以及解決問題的能力，有可能因為短時間而被逼出來，但更可能發現自己平時未能察覺的盲點，此時團隊成員之間的合作與幫助相形之下更顯重要。\n其實比賽較勁是其次，黑客松更重要的意義是先前提到的團隊合作，以及與陌生人的交流。所有參與者都是開發者出身，但彼此未曾相逢。他們藉著各式各樣的黑客松活動在同一時空聚集，本來是陌生人，因為有了這個場合而有了接觸的機會。有些人就是因為參與 Yahoo! Hack Day 而找到志同道合的創業夥伴。\n黑客松結束以後，有些人正如上述在這裡找到工作夥伴，也有些團隊在這之中建立革命情感而走向創業之路，有些純屬玩票結束過後返回各自的工作崗位。從表面上看，這 24 小時宛如一場愉快熱血的嘉年華，誠如 Lawrence 的形容，諸如黑客松的活動，實為跳脫舒適圈，挑戰自我的機會，更有甚者，造就人生的意外插曲，像是 Lawrence 與團隊成員擦出創業火花，或者 g0v 這類「鍵盤革命」組織的誕生，時至今日已在社會上發揮實質影響力。「黑客」的意義，不就在此？",
+    "date": "2013-10-15",
+    "media": "自由軟體鑄造場",
+    "mediaUrl": "http://www.openfoundry.org",
+    "url": "http://www.openfoundry.org/tw/news/9087?task=view",
+    "lang": "zh-tw"
+},
+{
+    "title": "2012 Yahoo!奇摩 Open Hack 獲獎作品發表會",
+    "description": "今天是 2012 Yahoo!奇摩 Open Hack 得獎團隊的作品發表會，由得獎的六組團隊上台發表他們的參賽作品。\n開放資訊（Open Data）在這次活動扮演的角色\n除了使用多項熱門開放 API，如 YUI（使用者介面函式庫）、YQL（資料庫查詢語言）及 Yahoo!開發者社群（YDN）首度開放的 Mojito 技術等 API 之外，參與 2012 Yahoo!奇摩 Open Hack 的六十多組團隊中有 23 組使用了台北市政府的開放資料（Open Data），台北市資訊局主任秘書張郁慧女士在致辭時也提到目前市政府開放資料的發展狀況，她說目前台北市政府已經開放共計 155 項的資料，總共被使用超過 80 萬次。她也表示其實民間對於該如何運用這些開放資訊，比政府部門有更多的想法，像這次獲獎的六組團隊中就有四組運用了政府資訊。\n而代表台灣創意工場（TMI）出席的噗浪共同創辦人 Alvin Woon 也表示政府資料透明化是國際趨勢。以台灣創意工廠為例，他們過去八個多月投資的六團隊中，就有兩組的服務與政府開放資料相關。\n以下就是今天的得獎作品發表（按照上台順序）：\n歪新聞（Yahoo! Meme News）：第一名\n大家有沒有這種經驗？當我們轉貼 Yahoo! 奇摩新聞到 Facebook 時，縮圖往往只有一個紫色的「Y!」圖片，一群前 Yahoo!奇摩員工組成的團隊為了解決這個問題，設計了一個 Google Chrome Extension「【歪】新聞 Meme News」，讓使用者位新聞配圖後分享到 Facebook 上，而且讀者從 Facebook 點擊連結連回新聞網頁後，原本沒有圖片的新聞內容就會出現經過「歪新聞」編輯後的圖片。\nYa!hook：第二名暨最佳投資價值獎\n得獎隊伍中唯一的學生團隊，他們的作品同樣是以 Google Chrome Extension「Ya!hook」呈現。他們想要解決的是 Facebook 打卡資訊頁面上東西太少的問題，於是他們從 Yahoo!奇摩天氣、地圖、生活+、電影的 API，並結合台北市停車資訊，串起關連資訊。\n舉例來說，使用者只需要在 Facebook 的搜尋欄位中輸入餐廳資訊，就能從 Facebook 打卡資訊頁面上看到除了地址之外的資訊如評價、實際和路線規劃等等。\nWikiIngredients：佳作\n由 Polydice mobile team 組成的團隊「Appvangers」做出了一個 iPhone app「WikiIngredients」，結合了維基百科、Yahoo!知識+ /美食 API、Instagram，運用 IQ Engines 做圖像辨識，讓使用者可以透過 iPhone 的相機拍攝食材，找出相關資訊。\n使用者先用 iPhone 相機拍攝食材，交由 IQ Engines 進行辨識，將辨識（英文）結果翻譯成中文後，綜合維基百科、Yahoo!知識+、愛料理 API、Instagram 上的資訊匯集成搜尋結果（Instagram 的部份是搜尋英文標籤）。他們表示這個 app 還在調整中，大家未來很有可能在 App Store 看到它。\nNext Stop：佳作\n由 Polydice 的 web team 設計出來的 web app，將使用者 Facebook 朋友們最常打卡的地方整理出來，整合台北市政府的 open data，將其標準化後秀出各種餐廳、旅館、停車場、公廁等資訊。不過他們表示，由於資料的格式問題，轉換資料耗費了他們很多心力。\n關於資料格式問題，台北市政府資訊局組長陳志明表示他們已經著手處理資料格式問題，會逐漸將資料格式轉換成較新的格式。\n全民審預算（TW Budget）：佳作\n得獎團隊「Fill it please」表示，由於參賽前發生了行政院經濟動能推升方案廣告的事件，導致他們改變計畫，決定做一個應用來讓網友檢視政府預算。\n「全民審預算」將全國的稅收支出情形視覺化，並且加入線上稽核預算增/刪、表達意見等功能。我們繳的稅花在各項預算的比例、政府各部門掌控的預算金額多寡、變動情形等，透過視覺化後一目了然。\n再次心跳（Refresh Bpm）：佳作暨台北邁向 2016 世界設計之都特別獎\n製作團隊「F5」結合了 Yahoo!Flickr、觀光局 open data，並且運用了 YQL（Yahoo! Query Language，資料庫查詢語言），擷取出使用者在 Flickr 上為照片加上的文字，作為「情緒視覺化」的運用，以時間軸方式呈現各地區人們的「情緒色彩」。\n值得注意的是，得獎隊伍中其實並沒有每一隊都用到 Yahoo!奇摩或是 Yahoo! 的 API。而除了技術的展現，我們在這次的 Yahoo!奇摩 Open Hack 參賽者的作品中看見了科技之外的公共參與精神與人文關懷。\n後記\n台北市文化局設計之都規劃師黃芝瑩小姐表示明年台北市將會交件參與 2016 世界設計之都選拔，文化局希望能透過更多像 Yahoo! Open Hack 這類的活動，鼓勵程式設計師們將程式設計與都市生活結合，為台北市帶來更多好點子。\n我們在會後與台北市資訊局主任秘書張女士聊了一下市政府 Open Data 的發展情形，看來目前除了持續開放資料之外，還必須進行部分資料格式的轉換。不過顯然政府對於開放某些資料還有疑慮（例如各地的犯罪發率，這個顯然會有影響房價的可能，如要開放的話勢必會面臨某些壓力），此外部分資料的開放還有賴中央政府的政策制定。\n希望政府能夠持續改善、制定開放資料的相關政策，讓這些資料可以更加有效地被用來改善我們的生活。",
+    "date": "2012-10-30",
+    "media": "INSIDE",
+    "mediaUrl": "http://www.inside.com.tw",
+    "url": "http://www.inside.com.tw/2012/10/30/2012-yahoo-kimo-open-hack-demo-show",
+    "lang": "zh-tw"
+},
+{
+    "title": "",
+    "description": "",
+    "date": "",
+    "media": "",
+    "url": "",
+    "lang": ""
+}

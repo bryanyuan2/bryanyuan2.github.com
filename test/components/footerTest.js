@@ -3,9 +3,9 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var FooterContainer = require("../../js/app/footer.js");
+var FooterContainer = require("../../js/app/section/footer.js");
 var testUtilsAdditions = require("react-testutils-additions");
-var testUtils = React.addons.TestUtils;
+var testUtils = require('react-addons-test-utils');
 
 var expect = require('chai').expect;
 var compFooterSection;

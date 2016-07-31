@@ -1,9 +1,12 @@
 "use strict";
 
 var React = require('react'),
-    LoadJSON = require('./../mixins').LoadJSON;
+    LoadJSON = require('./../utils/mixins').LoadJSON,
+    SectionHeader = require('./../component/sectionheader'),
+    PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var Publication = React.createClass({
+  mixins: [PureRenderMixin],
   propTypes: {
     publication: React.PropTypes.object,
     key: React.PropTypes.number
@@ -13,10 +16,6 @@ var Publication = React.createClass({
       publication: {},
       key: 0
     };
-  },
-  shouldComponentUpdate: function() {
-    // shouldComponentUpdate: function(nextProps, nextState)
-    return false;
   },
   render: function() {
     return (
@@ -47,7 +46,7 @@ var PublicationsContainer = React.createClass({
     });
     return(
       <div id="region-publications">
-        <h2 className="set-title" id="set-publications">Publications</h2>
+        <SectionHeader setID="publications" text="Publications" />
         <hr />
         {publications}
         <br />

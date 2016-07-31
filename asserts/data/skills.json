@@ -4,18 +4,8 @@
     "title": "Frontend Skills",
     "items": [
       { "name": "JavaScript" },
-      { "name": "jQuery" },
       { "name": "React"  },
-      { "name": "HTML/CSS"  },
-      { "name": "Bootstrap"  },
-      { "name": "npm"  },
-      { "name": "Bower"  },
-      { "name": "glup.js"  },
-      { "name": "JSHint"  },
-      { "name": "Browserify"  },
-      { "name": "Mocha"  },
-      { "name": "Chai"  },
-      { "name": "Jest"  }
+      { "name": "HTML/CSS" }
     ]
   },
   {
@@ -23,9 +13,8 @@
     "title": "Backend Skills",
     "items": [
       { "name": "PHP" },
-      { "name": "PHPUnit" },
-      { "name": "Python"  },
-      { "name": "Flask"  }
+      { "name": "Python" },
+      { "name": "Elasticsearch" }
     ]
   },
   {
@@ -34,8 +23,6 @@
     "items": [
       { "name": "Heroku" },
       { "name": "GitHub" },
-      { "name": "Travis CI" },
-      { "name": "Coveralls" },
       { "name": "Continuous delivery" },
       { "name": "Continuous integration" }
     ]
@@ -44,18 +31,9 @@
     "hl": "hl-skills-research",
     "title": "Research Interests",
     "items": [
-      {
-        "name": "Information Retrieval"
-      },
-      {
-        "name": "Data Mining"
-      },
-      {
-        "name": "Opinion Mining"
-      },
-      {
-        "name": "Search Intent Mining"
-      }
+      { "name": "Information Retrieval" },
+      { "name": "Data Mining" },
+      { "name": "Opinion Mining" }
     ]
   }
 ]

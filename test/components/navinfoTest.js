@@ -5,7 +5,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var CompNavInfoContainer = require("../../js/app/section/navinfo.js");
 var testUtilsAdditions = require("react-testutils-additions");
-var testUtils = React.addons.TestUtils;
+var testUtils = require('react-addons-test-utils');
 var jsdom = require('jsdom');
 
 var expect = require('chai').expect;

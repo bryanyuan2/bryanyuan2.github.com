@@ -1,161 +1,33 @@
 "use strict";
 
 var React = require('react'),
-    LoadJSON = require('./../mixins').LoadJSON,
+    LoadJSON = require('./../utils/mixins').LoadJSON,
     Typeahead = require('react-typeahead').Typeahead,
-    truncate = require('truncate'),
     _ = require('lodash'),
-    $ = require('jquery');
+    $ = require('jquery'),
+    SearchResult = require('./../search/searchresult'),
+    config = require('./../config/env.json')[process.env.NODE_ENV || 'development'];
 
-var wikiEnUrl = "https://en.wikipedia.org/wiki/",
-    wikiZhUrl = "https://zh.wikipedia.org/wiki/",
-    wikiDescEnUrl = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=",
-    wikiDescZhUrl = "https://zh.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=",
-    wikiDescTrunc = 512,
-    typeaheadClass = {
-      input: 'tt-query searchBox',
+var algoObj = {
+  "searchDomain": config.SEARCH_API.DOMAIN + "/api/search/query/",
+  "searchHeader": {
+      "Accept" : "application/json; charset=utf-8",
+      "Content-Type": "application/javascript; charset=utf-8",
+      "Access-Control-Allow-Origin" : "*"
+    },
+  "searchOpts": {
+      "limit": 10
+  },
+  "searchTimeout": 2000
+};
+
+/* typeahead */
+var typeaheadClass = {
+      input: 'tt-query search-box',
       results: 'tt-menu',
       listItem: 'tt-suggestion'
     },
-    typeheadPlaceHolder = "Search some keywords here ?",
-    wikiDDTagColor = "#55ACEE",
-    blockedBorderHL = "#EEEEEE",
-    blockedBorder = "border-left-color";
-
-var DirectDisplayTag = React.createClass({
-  propTypes: {
-    text: React.PropTypes.string,
-    hl: React.PropTypes.string
-  },
-  handleClick: function(event) {
-    var hlAry = this.props.hl;
-    var targetClass = event.target.id.replace("__", "");
-
-    $("blockquote").css(blockedBorder, blockedBorderHL);
-
-    for (var item in hlAry) {
-      if (hlAry.hasOwnProperty(item)) {
-        $("." + hlAry[item]).css(blockedBorder, wikiDDTagColor);
-      }
-    }
-
-    $("body").animate({
-      scrollTop: $("." + targetClass).offset().top
-    }, 800);
-
-  },
-  render: function() {
-    var text = this.props.text;
-    var tags = [];
-    var tags_content = "";
-    for (var item in this.props.hl) {
-      if(this.props.hl.hasOwnProperty(item)) {
-        tags.push('<div class="ddAnchor" id="__' + this.props.hl[item] + '">' + text[item] + '</div>');
-      }
-    }
-    tags_content = tags.join(" ");
-    return (
-      <span onClick={this.handleClick} className="dd-tags" dangerouslySetInnerHTML={{__html: tags_content}} />
-    );
-  }
-});
-
-var DirectDisplay = React.createClass({
-  propTypes: {
-    target: React.PropTypes.string,
-    intl: React.PropTypes.string,
-    wiki: React.PropTypes.string,
-    tag: React.PropTypes.object
-  },
-  ddTags: [],
-  ddHl: [],
-  descContent: "",
-  getInitialState: function() {
-    return {
-      loading: false,
-      ajaxContents: ""
-    };
-  },
-  getDefaultProps: function() {
-    return {
-      target: "default",
-      intl: "en",
-      tag: {}
-    };
-  },
-  shouldComponentUpdate: function(nextProps, nextState) {
-    return nextState.loading !== this.state.loading;
-  },
-  componentWillReceiveProps: function(nextProps) {
-    var targetAbsUrl = nextProps.intl === 'en' ? wikiDescEnUrl: wikiDescZhUrl;
-    targetAbsUrl = targetAbsUrl + encodeURIComponent(nextProps.target);
-
-    if (nextProps.target !== 'default') {
-      /* blocked by loading */
-      $(".showit").hide();
-      this.setState({ loading: true }, function(){
-        $.ajax({
-          url: targetAbsUrl,
-          dataType: "jsonp"
-        }).done(function( descResult ) {
-          this.setState({ ajaxContents: descResult, loading: false });
-          $(".showit").fadeIn();
-        }.bind(this));
-      });
-    }
-  },
-  componentWillUpdate: function() {
-    $(".direct-display-content").show();
-  },
-  componentDidUpdate: function() {
-    this.ddTags = [];
-    this.ddHl = [];
-    for(var key in this.props.tag) {
-      if(this.props.tag.hasOwnProperty(key)) {
-          this.ddTags.push(this.props.tag[key].name);
-          this.ddHl.push(this.props.tag[key].hl);
-      }
-    }
-  },
-  render: function () {
-    var descReadMore = "eleHidden",
-        wikiReadMoreUrl  = (this.props.intl === 'en') ? wikiEnUrl : wikiZhUrl,
-        descTitle = (this.props.target !== "default") ? this.props.target : "";
-
-    wikiReadMoreUrl = wikiReadMoreUrl + this.props.target;
-
-    // get wiki description content
-    if (this.state.ajaxContents.query && this.state.ajaxContents.query.pages) {
-      var content = this.state.ajaxContents.query.pages;
-      for (var element in content) {
-        if (content[element].extract.length > wikiDescTrunc) {
-          this.descContent = truncate(content[element].extract, wikiDescTrunc);
-          descReadMore = "dd-read-more";
-        } else {
-          this.descContent = content[element].extract;
-        }
-      }
-    }
-
-    if (this.state.loading) {
-      this.descContent = "";
-    }
-    return (
-      <div className="direct-display-content">
-        <div className="loadingShowCls showit">
-          <h4>{descTitle}</h4>
-          {this.descContent}
-          <span className={descReadMore}>
-            <a href={wikiReadMoreUrl} target="_blank">Read more</a>
-          </span>
-          <h4>Related section(s)</h4>
-          <DirectDisplayTag text={this.ddTags} hl={this.ddHl} />
-        </div>
-      </div>
-    );
-  }
-});
-
+    typeheadPlaceHolder = "Search some keywords here ?";
 
 var Contact = React.createClass({
   propTypes: {
@@ -185,50 +57,98 @@ var CompNavInfoContainer = React.createClass({
   mixins: [LoadJSON],
   getInitialState: function() {
     return {
-      target: "default",
-      tag: {}
+      ddStatus: 'ok',
+      ddTarget: "default",
+      ddTag: {},
+      algo: {},
+      algoStatus: "ok"
     };
   },
   updateDirectDisplay: function(item) {
+    console.log("item", item);
     this.setState({
-      target: item.name,
-      intl: item.intl,
-      wiki: item.wiki,
-      tag: item.tag
+      ddStatus: 'ok',
+      ddTarget: item.name,
+      ddIntl: item.intl,
+      ddWiki: item.wiki,
+      ddTag: item.tag
+    }, function(){
+      $(".search-btn").trigger("click");
     });
   },
   directDisplayOption: function(item) {
     return item.name;
   },
+  onKeyDown: function(e) {
+    if(e.which === 13) {
+        console.log("on key down");
+        this.setState({
+          ddStatus: 'ok'
+        }, function(){
+          $(".search-btn").trigger("click");
+        });
+      }
+  },
   componentDidMount: function() {
-    $(".direct-display-content").hide();
+    var that = this;
+
+    /* search box */
+    $(".search-box").on('keydown', function(e) {
+      if(e.which === 13) {
+        $(".search-btn").trigger( "click" );
+      }
+    });
+
+    $(".search-btn").click(function(){
+      console.log("input", $("input").val());
+      var url = algoObj.searchDomain + encodeURI($("input").val());
+      console.log("search backend = ", url);
+      $.ajax({
+        url: url,
+        data: algoObj.searchOpts,
+        headers: algoObj.searchHeader,
+        timeout: algoObj.searchTimeout
+      }).fail(function() {
+        that.setState({
+          algoStatus: "error",
+          query: $("input").val()
+        });
+      }).done(function( algo ) {
+        console.log("algo", algo);
+        that.setState({
+          query: $("input").val(),
+          algo: algo
+        });
+      }.bind(that));
+    });
   },
   render: function() {
-    var searchAssistsObj = [];
 
-    var searchAssist = this.state.data[0];
-    var contactInfo = this.state.subData && this.state.subData[0];
+    /* search assist */
+    var saAry = [],
+        saData = this.state.data[0];
 
-    for (var item in searchAssist) {
-      if(searchAssist.hasOwnProperty(item)) {
-        var saSubSet = {};
-        var target = searchAssist[item];
-        var getWikiEn = _.get(target, ['wiki', 'en']);
-        var getWikiZh = _.get(target, ['wiki', 'zh']);
+    for (var item in saData) {
+      if(saData.hasOwnProperty(item)) {
+        var target = saData[item],
+            getWikiEn = _.get(target, ['wiki', 'en']),
+            getWikiZh = _.get(target, ['wiki', 'zh']);
 
-        saSubSet.name = _.get(target, ['name']);
-        saSubSet.wiki = getWikiEn ? getWikiEn : getWikiZh;
-        saSubSet.intl = getWikiEn ? "en" : "zh";
-        saSubSet.tag = _.get(target, ['tag']);
-        searchAssistsObj.push(saSubSet);
+        saAry.push({
+          "name": _.get(target, ['name']),
+          "wiki": getWikiEn ? getWikiEn : getWikiZh,
+          "intl": getWikiEn ? "en" : "zh",
+          "tag": _.get(target, ['tag'])
+        });
       }
     }
 
-    console.log("contactInfo = ", contactInfo);
-    var contacts = [];
-    for (var info in contactInfo) {
-      if(contactInfo.hasOwnProperty(info)) {
-        contacts.push(<Contact contact={contactInfo[info]} key={info} />);
+    /* contact */
+    var contactData = this.state.subData && this.state.subData[0],
+        contacts = [];
+    for (var info in contactData) {
+      if(contactData.hasOwnProperty(info)) {
+        contacts.push(<Contact contact={contactData[info]} key={info} />);
       }
     }
 
@@ -236,29 +156,48 @@ var CompNavInfoContainer = React.createClass({
       <div id="region-nav-info">
         <div className="row">
           <div className="col-md-7">
-            <span id="region-searchBox">
-              <Typeahead
-                customClasses={typeaheadClass}
-                defaultClassNames={false}
-                placeholder={typeheadPlaceHolder}
-                options={searchAssistsObj}
-                filterOption='name'
-                displayOption={this.directDisplayOption}
-                maxVisible={10}
-                highlight={true}
-                onOptionSelected={this.updateDirectDisplay} />
+            <span id="region-searchBox" className="ib">
+              <Typeahead customClasses={typeaheadClass}
+                         defaultClassNames={false}
+                         placeholder={typeheadPlaceHolder}
+                         options={saAry}
+                         filterOption='name'
+                         displayOption={this.directDisplayOption}
+                         maxVisible={10}
+                         highlight={true}
+                         onKeyDown={this.onKeyDown}
+                         onOptionSelected={this.updateDirectDisplay}
+                         />
             </span>
-            <span id="region-resume">
-              <span>or download Curriculum vita <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a></span>
+            <span className="ib">
+              <button type="button" id="nav-btn" className="btn search-btn">
+                <span className="glyphicon glyphicon-search"></span>
+                <span className="search-btn-text">Search</span>
+              </button>
             </span>
+            <div id="region-resume">
+              <span>Download Curriculum vita <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a></span>
+            </div>
           </div>
           <div id="region-contacts" className="col-md-3">
             <span className="row header_icons_section">{contacts}</span>
           </div>
         </div>
         <hr />
-        <div id="dd-group">
-            <DirectDisplay wiki={this.state.wiki} intl={this.state.intl} target={this.state.target} tag={this.state.tag} />
+        <div id="region-searchresult">
+          <div className="search-container">
+            <div className="algo">
+              <SearchResult algoStatus={this.state.algoStatus}
+                            algoResult={this.state.algo}
+                            query={this.state.query}
+                            ddWiki={this.state.ddWiki}
+                            ddIntl={this.state.ddIntl}
+                            ddTarget={this.state.ddTarget}
+                            ddTag={this.state.ddTag}
+                            ddStatus={this.state.ddStatus}
+              />
+            </div>
+          </div>
         </div>
       </div>
     );

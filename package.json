@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "npm install && bower install",
-    "go": "gulp",
+    "dev": "gulp --env development",
+    "prod": "gulp --env production",
     "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha -- -R spec --recursive",
     "cov": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov --require babel-core/register ./node_modules/.bin/mocha ./test/components/*.js",
     "func": "nightwatch.js"
@@ -64,17 +65,22 @@
     "npm-check": "^4.1.4",
     "nyc": "^5.6.0",
     "phantomjs": "~1.9.7-10",
-    "react-addons-test-utils": "^0.14.7",
-    "react-testutils-additions": "^0.16.1",
+    "react-addons-test-utils": "^15.0.0",
+    "react-testutils-additions": "^15.0.0",
     "react-tools": "^0.13.3",
     "reactify": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "envify": "^3.4.1",
+    "gulp-if": "^2.0.1",
     "lodash": "^4.7.0",
+    "minimist": "^1.2.0",
     "nightwatch": "^0.5.36",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
+    "react": "^15.3.0",
+    "react-addons": "^0.9.1-deprecated",
+    "react-addons-pure-render-mixin": "^15.2.1",
+    "react-dom": "^15.0.0",
     "react-router": "^2.0.0",
     "react-typeahead": "^1.1.5",
     "truncate": "^2.0.0"

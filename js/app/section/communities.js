@@ -1,9 +1,12 @@
 "use strict";
 
 var React = require('react'),
-    LoadJSON = require('./../mixins').LoadJSON;
+    LoadJSON = require('./../utils/mixins').LoadJSON,
+    SectionHeader = require('./../component/sectionheader'),
+    PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var Community = React.createClass({
+  mixins: [PureRenderMixin],
   propTypes: {
     community: React.PropTypes.object,
     key: React.PropTypes.number
@@ -13,10 +16,6 @@ var Community = React.createClass({
       community: {},
       key: 0
     };
-  },
-  shouldComponentUpdate: function() {
-    // shouldComponentUpdate: function(nextProps, nextState)
-    return false;
   },
   render: function () {
     var description = [];
@@ -57,7 +56,7 @@ var CommunitiesContainer = React.createClass({
     });
     return (
       <div id="region-communities">
-        <h2 className="set-title" id="set-communities">Communities</h2>
+        <SectionHeader setID="communities" text="Communities" />
         <hr />
         {communities}
         <br />

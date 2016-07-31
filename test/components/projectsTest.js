@@ -5,7 +5,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var ProjectsContainer = require("../../js/app/section/projects.js");
 var testUtilsAdditions = require("react-testutils-additions");
-var testUtils = React.addons.TestUtils;
+var testUtils = require('react-addons-test-utils');
 
 var expect = require('chai').expect;
 var compProjectsSection;

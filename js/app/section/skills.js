@@ -1,9 +1,12 @@
 "use strict";
 
 var React = require('react'),
-    LoadJSON = require('./../mixins').LoadJSON;
+    LoadJSON = require('./../utils/mixins').LoadJSON,
+    SectionHeader = require('./../component/sectionheader'),
+    PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var Skill = React.createClass({
+  mixins: [PureRenderMixin],
   propTypes: {
     skill: React.PropTypes.object,
     key: React.PropTypes.number
@@ -13,10 +16,6 @@ var Skill = React.createClass({
       skill: {},
       key: 0
     };
-  },
-  shouldComponentUpdate: function() {
-    // shouldComponentUpdate: function(nextProps, nextState)
-    return false;
   },
   render: function() {
     var items = [];
@@ -47,7 +46,7 @@ var SkillsContainer = React.createClass({
     });
     return(
       <div id="region-skills">
-      <h2 className="set-title" id="set-skills">Skills</h2>
+      <SectionHeader setID="skills" text="Skills" />
       <hr />
       {skills}
       <br />

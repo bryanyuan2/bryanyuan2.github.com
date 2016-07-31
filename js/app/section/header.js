@@ -1,7 +1,7 @@
 "use strict";
 
 var React = require('react'),
-    LoadJSON = require('./mixins').LoadJSON;
+    LoadJSON = require('./../utils/mixins').LoadJSON;
 
 var HeaderContainer = React.createClass({
   mixins: [LoadJSON],

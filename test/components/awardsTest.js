@@ -1,11 +1,11 @@
 /*jshint -W030 */
 "use strict";
 
-var React = require('react/addons');
+var React = require('react');
 var ReactDOM = require('react-dom');
 var AwardsContainer = require("../../js/app/section/awards.js");
 var testUtilsAdditions = require("react-testutils-additions");
-var testUtils = React.addons.TestUtils;
+var testUtils = require('react-addons-test-utils');
 
 var expect = require('chai').expect;
 var compAwardsSection;

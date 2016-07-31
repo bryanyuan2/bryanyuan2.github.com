@@ -1,10 +1,16 @@
 "use strict";
 
 var React = require('react'),
-    TeamWork = require('./../teamwork'),
-    LoadJSON = require('./../mixins').LoadJSON;
+    TeamWork = require('./../component/teamwork'),
+    MediaList = require('./../component/medialist'),
+    InfoBar = require('./../component/infobar'),
+    SectionHeader = require('./../component/sectionheader'),
+    _ = require('lodash'),
+    LoadJSON = require('./../utils/mixins').LoadJSON,
+    PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var Project = React.createClass({
+  mixins: [PureRenderMixin],
   propTypes: {
     project: React.PropTypes.object,
     key: React.PropTypes.number
@@ -15,15 +21,18 @@ var Project = React.createClass({
       key: 0
     };
   },
-  shouldComponentUpdate: function() {
-    // shouldComponentUpdate: function(nextProps, nextState)
-    return false;
-  },
   render: function() {
     var description = [];
     this.props.project.description.forEach(function(content) {
       description.push(content.text);
     });
+
+    var infobarAry = {
+      "speakerdeck": _.get(this.props, ['project', 'speakerdeck']),
+      "store": _.get(this.props, ['project', 'store']),
+      "github": _.get(this.props, ['project', 'github']),
+    };
+
     return (
       <div className="row">
         <div className="col-md-2 text-date">
@@ -35,15 +44,14 @@ var Project = React.createClass({
             {this.props.project.link && <a href={this.props.project.link} target="_blank"> {this.props.project.name} </a>}
             {!this.props.project.link && this.props.project.name}
             <span className="fs-16"> - {this.props.project.from} </span>
+          </div>
+          <div className="text-desc">
             <TeamWork teamwork={this.props.project.teamwork} />
+            {description}
           </div>
-          <div className="text-desc">{description}</div>
-          { this.props.project.github && <div className="github-url"><a target="_blank" href={this.props.project.github}>{this.props.project.github}</a></div> }
+          <InfoBar info={infobarAry} />
           <br />
-          <div classNmae="text-btn-group">
-            { this.props.project.speakerdeck && <a target="_blank" href={this.props.project.speakerdeck} className="btn btn-default btn-sm block-btn" type="button">speakerdeck</a> }
-            { this.props.project.store && <a target="_blank" href={this.props.project.store} className="btn btn-default btn-sm block-btn" type="button">chrome store</a> }
-          </div>
+          { this.props.project.media && <MediaList media={this.props.project.media} /> }
           </blockquote>
         </div>
         <div className="col-md-3 pb-18">
@@ -63,7 +71,7 @@ var ProjectsContainer = React.createClass({
     });
     return(
       <div id="region-projects">
-        <h2 className="set-title" id="set-projects">Projects</h2>
+        <SectionHeader setID="projects" text="Projects" />
         <hr />
         {projects}
         <br />
