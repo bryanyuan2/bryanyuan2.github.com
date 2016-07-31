@@ -3,9 +3,9 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var HeaderContainer = require("../../js/app/header.js");
+var HeaderContainer = require("../../js/app/section/header.js");
 var testUtilsAdditions = require("react-testutils-additions");
-var testUtils = React.addons.TestUtils;
+var testUtils = require('react-addons-test-utils');
 
 var expect = require('chai').expect;
 var compHeaderSection;
