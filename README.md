@@ -5,6 +5,8 @@
 [![dependency][dependency-badge]][dependency-link]
 [![Coverage Status](https://coveralls.io/repos/github/bryanyuan2/bryanyuan2.github.com/badge.svg?branch=master)](https://coveralls.io/github/bryanyuan2/bryanyuan2.github.com?branch=master)
 
+(https://updown.io/zmu6)[https://updown.io/zmu6]
+
 #### Setup
 
 - `npm install`
