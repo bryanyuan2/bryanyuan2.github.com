@@ -3,6 +3,7 @@ node_js:
   - "4.2.2"
 install:
   - npm install
+  - npm install bower -g
   - npm install mocha -g
 script:
   - npm run-script test
