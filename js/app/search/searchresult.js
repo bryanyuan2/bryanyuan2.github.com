@@ -1,7 +1,6 @@
 "use strict";
 
 var React = require('react'),
-    truncate = require('truncate'),
     _ = require('lodash'),
     $ = require('jquery'),
     DirectDisplay = require('./directdisplay');
@@ -30,31 +29,6 @@ var SearchResultBox = React.createClass({
           <span className="media"><a target="_blank" href={mediaUrl}>{media}</a></span>
           <span className="content">{abstract}</span>
       </div>
-    );
-  }
-});
-
-var NavBox = React.createClass({
-  propTypes: {
-    arrow: React.PropTypes.string
-  },
-  getDefaultProps: function() {
-    return {
-      arrow: ""
-    };
-  },
-  render: function() {
-    var classType = "box box" + this.props.arrow;
-    return (
-      <div className={classType}></div>
-    );
-  }
-});
-
-var ZRP = React.createClass({
-  render: function() {
-    return (
-      <div className="zrp">no article was found</div>
     );
   }
 });
@@ -118,12 +92,6 @@ var SearchResult = React.createClass({
         isZrp = false;
       });
     }
-
-    // navigation
-    /*if (algoLength + wikiLength > 5) {
-      algo.push(<NavBox arrow="Prev" />);
-      algo.push(<NavBox arrow="Next" />);
-    }*/
 
     // zrp
     if (this.props.query !== '' &&
