@@ -13,18 +13,7 @@
     "title": "Backend Skills",
     "items": [
       { "name": "PHP" },
-      { "name": "Python" },
-      { "name": "Elasticsearch" }
-    ]
-  },
-  {
-    "hl": "hl-skills-platform",
-    "title": "Platform",
-    "items": [
-      { "name": "Heroku" },
-      { "name": "GitHub" },
-      { "name": "Continuous delivery" },
-      { "name": "Continuous integration" }
+      { "name": "Python" }
     ]
   },
   {

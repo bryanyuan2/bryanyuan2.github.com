@@ -21,6 +21,13 @@ var algoObj = {
   "searchTimeout": 2000
 };
 
+var FaPaperPlane = require('react-icons/lib/fa/paper-plane'),
+    FaGithub = require('react-icons/lib/fa/github'),
+    FaLinkedin = require('react-icons/lib/fa/linkedin'),
+    FaFacebook = require('react-icons/lib/fa/facebook'),
+    FaFlickr = require('react-icons/lib/fa/flickr'),
+    FaBookmark = require('react-icons/lib/fa/bookmark');
+
 /* typeahead */
 var typeaheadClass = {
       input: 'tt-query search-box',
@@ -45,9 +52,26 @@ var Contact = React.createClass({
     return false;
   },
   render: function() {
+    var getType = this.props.contact.type,
+        btn;
+
+    if (getType === 'email') {
+      btn = <FaPaperPlane size="18" />;
+    } else if (getType === 'linkedin') {
+      btn = <FaLinkedin size="18" />;
+    } else if (getType === 'github') {
+      btn = <FaGithub size="18" />;
+    } else if (getType === 'facebook') {
+      btn = <FaFacebook size="18" />;
+    } else if (getType === 'flickr') {
+      btn = <FaFlickr size="18" />;
+    } else if (getType === 'bookmarks') {
+      btn = <FaBookmark size="18" />;
+    } 
+
     return (
         <a target="_blank" href={this.props.contact.link}>
-          <img width={this.props.contact.width} height={this.props.contact.height} className="header_icons" src={this.props.contact.icon} alt={this.props.contact.type} />
+          <button type="button" className={this.props.contact.cls} >{btn} {getType}</button>
         </a>
     );
   }
@@ -155,12 +179,11 @@ var CompNavInfoContainer = React.createClass({
     return(
       <div id="region-nav-info">
         <div className="row">
-          <div className="col-md-7">
+          <div id="region-contacts" className="col-md-10">
+            <span className="row header_icons_section">{contacts}</span>
+          </div>
+          <div className="col-md-5">
             <span id="region-searchBox" className="ib">
-              <div className="set-search">
-                <i className="set-icon glyphicon glyphicon-search"></i>
-                powered by Elasticsearch
-              </div>
               <Typeahead customClasses={typeaheadClass}
                          defaultClassNames={false}
                          placeholder={typeheadPlaceHolder}
@@ -184,9 +207,6 @@ var CompNavInfoContainer = React.createClass({
                 Download my resume <a target="_blank" href="https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf">here</a>
               </span>
             </div>
-          </div>
-          <div id="region-contacts" className="col-md-3">
-            <span className="row header_icons_section">{contacts}</span>
           </div>
         </div>
         <hr />

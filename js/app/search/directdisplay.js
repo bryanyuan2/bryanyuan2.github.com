@@ -2,7 +2,6 @@
 
 var React = require('react'),
     truncate = require('truncate'),
-    _ = require('lodash'),
     $ = require('jquery');
 
 var wikiObj = {
