@@ -16,13 +16,13 @@ var SearchResultBox = React.createClass({
     };
   },
   render: function() {
-    //console.log("search result", this.props.result);
-    var title = _.get(this.props, ['result', '_source', 'title'], ''),
-        url = _.get(this.props, ['result', '_source', 'url'], '#'),
-        description = _.get(this.props, ['result', '_source', 'description'], ''),
+    // console.log("this.props.result", this.props.result);
+    var title = _.get(this.props, ['result', 'title'], ''),
+        url = _.get(this.props, ['result', 'url'], '#'),
+        description = _.get(this.props, ['result', 'description'], ''),
         abstract = description ? description.substr(0, 64) + ' ...' : '',
-        media = _.get(this.props, ['result', '_source', 'media'], ''),
-        mediaUrl = _.get(this.props, ['result', '_source', 'mediaUrl'], '#');
+        media = _.get(this.props, ['result', 'media'], ''),
+        mediaUrl = _.get(this.props, ['result', 'mediaUrl'], '#');
 
     return (
       <div className="search-item">

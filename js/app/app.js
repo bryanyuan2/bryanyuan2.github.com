@@ -28,13 +28,13 @@ var App = React.createClass({
         <CompHeader url="asserts/data/commons.json" />
         <div className="container">
           <CompNavInfo url={["asserts/data/directdisplay.json", "asserts/data/contact.json"]} />
-          <CompEducations url="asserts/data/educations.json" />
           <CompSkills url="asserts/data/skills.json" />
           <CompWorks url="asserts/data/works.json" />
           <CompAwards url="asserts/data/awards.json" />
           <CompProjects url="asserts/data/projects.json" />
           <CompCommunities url="asserts/data/communities.json" />
           <CompPublications url="asserts/data/publications.json" />
+          <CompEducations url="asserts/data/educations.json" />
           <CompFooter url="asserts/data/footer.json" />
         </div>
       </div>
