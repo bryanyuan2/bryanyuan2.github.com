@@ -1,17 +1,17 @@
 /*jshint -W030 */
 "use strict";
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var EducationsContainer = require("../../js/app/section/educations.js");
-var testUtilsAdditions = require("react-testutils-additions");
-var testUtils = require('react-addons-test-utils');
+var React = require('react'),
+    ReactDOM = require('react-dom'),
+    EducationsContainer = require("../../js/app/section/educations.js"),
+    testUtilsAdditions = require("react-testutils-additions"),
+    testUtils = require('react-addons-test-utils'),
+    expect = require('chai').expect;
 
-var expect = require('chai').expect;
-var compEducationsSection;
-var compRegionName = 'region-education';
-var compTitle = 'Education';
-var educationsJson = require('./../../asserts/data/educations.json');
+var compEducationsSection,
+    compRegionName = 'region-education',
+    compTitle = 'Education',
+    educationsJson = require('./../../asserts/data/educations.json');
 
 describe('compoent educations section', function(){
   before(function(done){

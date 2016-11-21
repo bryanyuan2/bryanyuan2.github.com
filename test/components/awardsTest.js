@@ -1,17 +1,17 @@
 /*jshint -W030 */
 "use strict";
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var AwardsContainer = require("../../js/app/section/awards.js");
-var testUtilsAdditions = require("react-testutils-additions");
-var testUtils = require('react-addons-test-utils');
+var React = require('react'),
+    ReactDOM = require('react-dom'),
+    AwardsContainer = require("../../js/app/section/awards.js"),
+    testUtilsAdditions = require("react-testutils-additions"),
+    testUtils = require('react-addons-test-utils'),
+    expect = require('chai').expect;
 
-var expect = require('chai').expect;
-var compAwardsSection;
-var compRegionName = 'region-awards';
-var compTitle = 'Awards';
-var awardsJson = require('./../../asserts/data/awards.json');
+var compAwardsSection,
+    compRegionName = 'region-awards',
+    compTitle = 'Awards',
+    awardsJson = require('./../../asserts/data/awards.json');
 
 describe('compoent awards section', function(){
   before(function(done){

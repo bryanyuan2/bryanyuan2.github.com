@@ -71,7 +71,7 @@ var WorksContainer = React.createClass({
     });
     return(
       <div id="region-experence">
-        <SectionHeader setID="experence" text="Work experence" />
+        <SectionHeader setID="experence" text="Work experience" />
         <hr />
         {works}
         <br />
