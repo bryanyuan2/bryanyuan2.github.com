@@ -1,17 +1,17 @@
 /*jshint -W030 */
 "use strict";
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var CommunitiesContainer = require("../../js/app/section/communities.js");
-var testUtilsAdditions = require("react-testutils-additions");
-var testUtils = require('react-addons-test-utils');
+var React = require('react'),
+    ReactDOM = require('react-dom'),
+    CommunitiesContainer = require("../../js/app/section/communities.js"),
+    testUtilsAdditions = require("react-testutils-additions"),
+    testUtils = require('react-addons-test-utils'),
+    expect = require('chai').expect,
 
-var expect = require('chai').expect;
-var compCommunitiesSection;
-var compRegionName = 'region-communities';
-var compTitle = 'Communities';
-var communitiesJson = require('./../../asserts/data/communities.json');
+var compCommunitiesSection,
+    compRegionName = 'region-communities',
+    compTitle = 'Communities',
+    communitiesJson = require('./../../asserts/data/communities.json');
 
 describe('compoent communities section', function(){
   before(function(done){

@@ -5,15 +5,15 @@ var React = require('react'),
     $ = require('jquery');
 
 var wikiObj = {
-  "enUrl": "https://en.wikipedia.org/wiki/",
-  "zhUrl": "https://zh.wikipedia.org/wiki/",
-  "enDescUrl": "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=",
-  "zhDescUrl": "https://zh.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=",
-  "descLength": 128,
-  "tagColor": "#55ACEE",
-  "borderColor": "#EEEEEE",
-  "borderStyle": "border-left-color",
-  "scrollSpeed": 800
+    enUrl: "https://en.wikipedia.org/wiki/",
+    zhUrl: "https://zh.wikipedia.org/wiki/",
+    enDescUrl: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=",
+    zhDescUrl: "https://zh.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=",
+    descLength: 128,
+    tagColor: "#55ACEE",
+    borderColor: "#EEEEEE",
+    borderStyle: "border-left-color",
+    scrollSpeed: 800
 };
 
 var DirectDisplay = React.createClass({
