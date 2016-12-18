@@ -1,6 +1,6 @@
 [
  {
-    "hl": "hl-work-experence-yahoo",
+    "hl": "hl-work-experience-yahoo",
     "corp": "Yahoo!",
     "url": "http://tw.yahoo.com/",
     "logo": "asserts/images/experience/yahoo_logo.png",
@@ -9,7 +9,7 @@
     "date": "Sep 2014 - Present",
     "position": "Software Engineer",
     "org": "Search Engineering",
-    "experence": [
+    "experience": [
       {
         "description": "Migrated vertical search FE platform includes 37 global markets with diverse verticals domains include Yahoo media domain & Yahoo7 partnership."
       },
@@ -17,7 +17,12 @@
         "description": "Optimized user experience for Yahoo web search and Mozilla Firefox search engine, improved the display advertising and search content."
       },
       {
-        "description": "Won 2015 CEO Challenge Award and 2016 Bot Challenge 1st Place"
+        "description": "Internal Awards:",
+        "items": [
+          "2015 Yahoo CEO Challenge Award",
+          "2016 Yahoo Taiwan Bot Challenge 1st Place",
+          "2016 Yahoo Taiwan/Japan Joint Hackathon Best Remote Hack & Best Hacker Choice"
+        ]
       }
     ],
     "media": [
@@ -51,7 +56,7 @@
     ]
   },
   {
-    "hl": "hl-work-experence-tmi hl-work-experence",
+    "hl": "hl-work-experience-tmi hl-work-experience",
     "corp": "Taiwan Mobile Innovation",
     "url": "http://tmi.vc/",
     "logo": "asserts/images/experience/tmi_logo.png",
@@ -62,7 +67,7 @@
     "positionurl": "",
     "org": "",
     "orgurl": "",
-    "experence": [
+    "experience": [
       {
         "description": "Built synchronous mechanism for auction from Yahoo/eBay/Ruten to Facebook page, and integrated Facebook Insights API and embed.ly statistics in business report."
       },
@@ -96,7 +101,7 @@
     ]
   },
   {
-    "hl": "hl-work-experence-yahoo",
+    "hl": "hl-work-experience-yahoo",
     "corp": "Yahoo!",
     "url": "http://tw.yahoo.com/",
     "logo": "asserts/images/experience/yahoo_logo.png",
@@ -105,7 +110,7 @@
     "date": "July 2012 - Aug 2012",
     "position": "Intern",
     "org": "Search Engineering",
-    "experence": [
+    "experience": [
       {
         "description": "Built content-based search suggestions from various corpus, and combined time-based queries recommendation mechanism for News, Movies and Answers verticals."
       },
@@ -115,7 +120,7 @@
     ]
   },
   {
-    "hl": "hl-work-experence-sinica",
+    "hl": "hl-work-experience-sinica",
     "corp": "Institute of Information Science, Academia Sinica",
     "url": "http://www.iis.sinica.edu.tw/",
     "logo": "asserts/images/experience/iis_sinica_logo.png",
@@ -124,7 +129,7 @@
     "date": "Feb 2009 - Aug 2011",
     "position": "Intern",
     "org": "Digital Archive Architecture Laboratory",
-    "experence": [
+    "experience": [
       {
         "description": "Contributed online image search application based on CCH (Contrast Context Histogram), established architectural feature-based search engine for Taiwan's historic buildings."
       },

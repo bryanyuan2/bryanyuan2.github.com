@@ -26,7 +26,7 @@
       "en": "Yahoo!"
     },
     "tag": [
-      {"name": "Work experence", "hl": "hl-work-experence-yahoo"},
+      {"name": "Work experience", "hl": "hl-work-experience-yahoo"},
       {"name": "Awards", "hl": "hl-awards-yahoo"}
     ],
     "enable": true
@@ -37,7 +37,7 @@
       "en": "Academia Sinica"
     },
     "tag": [
-      {"name": "Work experence", "hl": "hl-work-experence-sinica"}
+      {"name": "Work experience", "hl": "hl-work-experience-sinica"}
     ],
     "enable": true
   },
@@ -88,7 +88,7 @@
       "en": "Startup company"
     },
     "tag": [
-      {"name": "Work experence", "hl": "hl-work-experence-tmi"}
+      {"name": "Work experience", "hl": "hl-work-experience-tmi"}
     ],
     "enable": true
   },
@@ -98,7 +98,7 @@
       "en": "Open-source software"
     },
     "tag": [
-      {"name": "Work experence", "hl": "hl-projects-opensource"}
+      {"name": "Work experience", "hl": "hl-projects-opensource"}
     ],
     "enable": true
   },
@@ -108,7 +108,7 @@
       "en": "Plurk"
     },
     "tag": [
-      {"name": "Work experence", "hl": "hl-projects-plurk"}
+      {"name": "Work experience", "hl": "hl-projects-plurk"}
     ],
     "enable": true
   },
@@ -118,7 +118,7 @@
       "en": "Open data"
     },
     "tag": [
-      {"name": "Work experence", "hl": "hl-projects-opendata"}
+      {"name": "Work experience", "hl": "hl-projects-opendata"}
     ],
     "enable": true
   },
@@ -128,7 +128,7 @@
       "zh": "中研院數位典藏計畫"
     },
     "tag": [
-      {"name": "Work experence", "hl": "hl-work-experence-sinica"}
+      {"name": "Work experience", "hl": "hl-work-experience-sinica"}
     ],
     "enable": true
   },
