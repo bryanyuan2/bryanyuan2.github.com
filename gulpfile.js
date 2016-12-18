@@ -132,9 +132,9 @@ gulp.task('nightwatch', function() {
 
 
 gulp.task('ver-footer', function(){
-  gulp.src(['js/app/footer.js'])
+  gulp.src(['js/app/section/footer.js'])
     .pipe(replace(/\%ver_replacement\%/g, targetDate))
-    .pipe(rename("js/app/footer-ver.js"))
+    .pipe(rename("js/app/section/footer-ver.js"))
     .pipe(gulp.dest('./'));
 });
 

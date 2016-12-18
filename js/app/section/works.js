@@ -23,8 +23,19 @@ var Work = React.createClass({
         product = [],
         product_content = [];
 
-    this.props.work.experence.forEach(function(content) {
-      description += '<span>' + content.description + '</span>';
+    this.props.work.experience.forEach(function(content) {
+      if (content.items) {
+        if (content.description) {
+          description += '<span>' + content.description + '</span>';  
+        }
+
+        content.items.forEach(function(item) {
+          description += '<span class="sub-items">' + item + '</span>';  
+        });     
+
+      } else if (content.description) {
+        description += '<span>' + content.description + '</span>';
+      }
     });
 
     if (this.props.work.product) {
@@ -70,8 +81,8 @@ var WorksContainer = React.createClass({
       works.push(<Work work={work} key={index} />);
     });
     return(
-      <div id="region-experence">
-        <SectionHeader setID="experence" text="Work experience" />
+      <div id="region-experience">
+        <SectionHeader setID="experience" text="Work experience" />
         <hr />
         {works}
         <br />

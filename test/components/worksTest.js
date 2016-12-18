@@ -9,8 +9,8 @@ var testUtils = require('react-addons-test-utils');
 
 var expect = require('chai').expect;
 var compWorksSection;
-var compRegionName = 'region-experence';
-var compTitle = 'Work experence';
+var compRegionName = 'region-experience';
+var compTitle = 'Work experience';
 var worksJson = require('./../../asserts/data/works.json');
 
 describe('compoent works section', function(){
