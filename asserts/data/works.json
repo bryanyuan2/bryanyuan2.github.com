@@ -11,13 +11,10 @@
     "org": "Search Engineering",
     "experience": [
       {
-        "description": "Migrated vertical search FE platform includes 37 global markets with diverse verticals domains include Yahoo media domain & Yahoo7 partnership."
+        "description": "Developer of Yahoo Web/Vertical Search for US and international markets, responsibility for quility, volume, ads monetization, and user experience on Yahoo search result page."
       },
       {
-        "description": "Optimized user experience for Yahoo web search and Mozilla Firefox search engine, improved the display advertising and search content."
-      },
-      {
-        "description": "Internal Awards:",
+        "description": "Yahoo internal awards:",
         "items": [
           "2015 Yahoo CEO Challenge Award",
           "2016 Yahoo Taiwan Bot Challenge 1st Place",
