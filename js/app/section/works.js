@@ -3,6 +3,7 @@
 var React = require('react'),
     LoadJSON = require('./../utils/mixins').LoadJSON,
     MediaList = require('./../component/medialist'),
+    AwardsList = require('./../component/awardslist'),
     SectionHeader = require('./../component/sectionheader'),
     PureRenderMixin = require('react-addons-pure-render-mixin');
 
@@ -60,6 +61,7 @@ var Work = React.createClass({
             <ul className="text-desc">
               <div className="description" dangerouslySetInnerHTML={{__html: description}} />
             </ul>
+            { this.props.work.awards && <AwardsList awards={this.props.work.awards} /> }
             <br />
             { this.props.work.media && <MediaList media={this.props.work.media} /> }
             <div dangerouslySetInnerHTML={{__html: product_content}} />

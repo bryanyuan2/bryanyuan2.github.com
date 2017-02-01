@@ -12,15 +12,12 @@
     "experience": [
       {
         "description": "Developer of Yahoo Web/Vertical Search for US and international markets, responsibility for quility, volume, ads monetization, and user experience on Yahoo search result page."
-      },
-      {
-        "description": "Yahoo internal awards:",
-        "items": [
-          "2015 Yahoo CEO Challenge Award",
-          "2016 Yahoo Taiwan Bot Challenge 1st Place",
-          "2016 Yahoo Taiwan/Japan Joint Hackathon Best Remote Hack & Best Hacker Choice"
-        ]
       }
+    ],
+    "awards": [
+      "2015 Yahoo CEO Challenge Award",
+      "2016 Yahoo Taiwan Bot Challenge 1st Place",
+      "2016 Yahoo Taiwan/Japan Joint Hackathon Best Remote Hack & Best Hacker Choice"
     ],
     "media": [
       {
