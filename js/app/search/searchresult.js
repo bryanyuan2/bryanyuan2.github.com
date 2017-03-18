@@ -2,7 +2,6 @@
 
 var React = require('react'),
     _ = require('lodash'),
-    $ = require('jquery'),
     DirectDisplay = require('./directdisplay');
 
 var SearchResultBox = React.createClass({

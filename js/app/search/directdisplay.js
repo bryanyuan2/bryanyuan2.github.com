@@ -137,9 +137,10 @@ var DDtag = React.createClass({
     }, wikiObj.scrollSpeed);
   },
   render: function() {
-    var text = this.props.text;
-    var tags = [];
-    var tagSet = "";
+    var text = this.props.text,
+        tags = [],
+        tagSet = "";
+
     for (var item in this.props.highlight) {
       if(this.props.highlight.hasOwnProperty(item)) {
         tags.push('<div class="ddAnchor" id="__' + this.props.highlight[item] + '">' + text[item] + '</div>');
