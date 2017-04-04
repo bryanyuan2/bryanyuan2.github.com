@@ -121,8 +121,8 @@ var DDtag = React.createClass({
   },
   handleClick: function(event) {
     console.log("event", event);
-    var hlAry = this.props.highlight;
-    var targetClass = event.target.id.replace("__", "");
+    var hlAry = this.props.highlight,
+        targetClass = event.target.id.replace("__", "");
 
     $("blockquote").css(wikiObj.borderStyle, wikiObj.borderColor);
 
@@ -137,9 +137,10 @@ var DDtag = React.createClass({
     }, wikiObj.scrollSpeed);
   },
   render: function() {
-    var text = this.props.text;
-    var tags = [];
-    var tagSet = "";
+    var text = this.props.text,
+        tags = [],
+        tagSet = "";
+
     for (var item in this.props.highlight) {
       if(this.props.highlight.hasOwnProperty(item)) {
         tags.push('<div class="ddAnchor" id="__' + this.props.highlight[item] + '">' + text[item] + '</div>');
