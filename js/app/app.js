@@ -50,8 +50,8 @@ var routes = (
 
 /* customize js */
 $(document).ready(function() {
-  var header_title_opacity = 16;
-  var jumboHeight = $('.jumbotron').outerHeight();
+  var header_title_opacity = 16,
+      jumboHeight = $('.jumbotron').outerHeight();
   var parallax = function parallax(){
       var scrolled = $(window).scrollTop();
       $('.header-bg').css('height', (jumboHeight - scrolled) + 'px');

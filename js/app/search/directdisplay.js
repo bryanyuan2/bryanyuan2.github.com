@@ -121,8 +121,8 @@ var DDtag = React.createClass({
   },
   handleClick: function(event) {
     console.log("event", event);
-    var hlAry = this.props.highlight;
-    var targetClass = event.target.id.replace("__", "");
+    var hlAry = this.props.highlight,
+        targetClass = event.target.id.replace("__", "");
 
     $("blockquote").css(wikiObj.borderStyle, wikiObj.borderColor);
 
