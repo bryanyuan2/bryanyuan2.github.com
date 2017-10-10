@@ -6,23 +6,23 @@ var React = require('react'),
 var awardsList = React.createClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        awards: React.PropTypes.object
+        awards: React.PropTypes.array
     },
     getDefaultProps: function() {
         return {
-          awards: {}
+            awards: []
         };
     },
     render: function() {
-        var awards = [];
-        var awards_content = "";
+        var awards = [],
+            awards_content = "";
 
         awards.push('Internal Awards');
 
         if (this.props.awards) {
-          this.props.awards.forEach(function(content) {
-            awards.push('<li>' + content + '</li>');
-          });
+            this.props.awards.forEach(function(content) {
+                awards.push('<li>' + content + '</li>');
+            });
         }
         awards_content = awards.join(" ");
         return (

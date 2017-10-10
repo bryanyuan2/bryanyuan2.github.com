@@ -22,7 +22,7 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if');
 
 var paths = {
-    css:['./asserts/css/*.less'],
+    css:['./asserts/css/src/*.less'],
     js: [ './js/app/*.js',
           './js/app/components/*.js',
           './js/app/config/*.js',
@@ -36,8 +36,8 @@ var paths = {
 
 var options = minimist(process.argv.slice(2), knownOptions);
 var knownOptions = {
-  string: 'env',
-  default: { env: process.env.NODE_ENV || 'production' }
+    string: 'env',
+    default: { env: process.env.NODE_ENV || 'production' }
 };
 
 // date
@@ -45,68 +45,70 @@ var date = new Date();
 var targetDate = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
 
 gulp.task('clean', function(done) {
-  del(['./js/build/*.js'], done);
+    del(['./js/build/*.js'], done);
 });
 
 gulp.task('js', ['clean'], function() {
-  var senv = 'production',
-      isUglify = true;
-  if (options.env === 'development') {
-    senv = 'development'
-    isUglify = false;
-  }
-  browserify(paths.app_js)
-    .transform(envify({
-      NODE_ENV: senv
+  
+    var senv = 'production',
+        isUglify = true;
+
+    if (options.env === 'development') {
+        senv = 'development'
+        isUglify = false;
+    }
+
+    browserify(paths.app_js).transform(envify({
+        NODE_ENV: senv
     }))
     .transform(reactify)
     .bundle()
     .pipe(source('bundle.js'))
-    .pipe(gulpif(isUglify, streamify(uglify())))
+    //.pipe(gulpif(isUglify, streamify(uglify())))
     .pipe(gulp.dest('./js/build'))
     .pipe(notify("Gulp.js restarted"));
 });
 
 gulp.task('css', function () {
-  gulp.src(paths.css)
-    .pipe(less())
-    .pipe(cssmin())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./asserts/css/'))
-    .pipe(connect.reload());
+    gulp.src(paths.css)
+        .pipe(less())
+        .pipe(cssmin())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('./asserts/css/min/'))
+        .pipe(connect.reload());
 });
 
 gulp.task('html', function () {
-  gulp.src(paths.index)
-    .pipe(connect.reload());
+    gulp.src(paths.index)
+        .pipe(connect.reload());
 });
 
 gulp.task('connect', function() {
-  connect.server({
-    port: 3000,
-    livereload: true
-  });
+    connect.server({
+        port: 3000,
+        livereload: true
+    });
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.index, ['html']);
-  gulp.watch(paths.css, ['css']);
-  gulp.watch(paths.js, ['js']);
+    gulp.watch(paths.index, ['html']);
+    gulp.watch(paths.css, ['css']);
+    gulp.watch(paths.js, ['js']);
 });
 
 gulp.task('jshint', function() {
-  return gulp.src(paths.js)
-    .pipe(cache('jshint'))
-    .pipe(react())
-    .on('error', function(err) {
-      console.error('JSX ERROR in ' + err.fileName);
-      console.error(err.message);
-      this.end();
-    })
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
+    return gulp.src(paths.js)
+            .pipe(cache('jshint'))
+            .pipe(react())
+            .on('error', function(err) {
+                console.error('JSX ERROR in ' + err.fileName);
+                console.error(err.message);
+                this.end();
+            })
+            .pipe(jshint())
+            .pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('typecheck', function() {
@@ -124,18 +126,17 @@ gulp.task('typecheck', function() {
 });
 
 gulp.task('nightwatch', function() {
-  gulp.src('')
-    .pipe(nightwatch({
-      configFile: 'nightwatch.json'
+    gulp.src('').pipe(nightwatch({
+        configFile: 'nightwatch.json'
     }));
 });
 
 
 gulp.task('ver-footer', function(){
-  gulp.src(['js/app/section/footer.js'])
-    .pipe(replace(/\%ver_replacement\%/g, targetDate))
-    .pipe(rename("js/app/section/footer-ver.js"))
-    .pipe(gulp.dest('./'));
+    gulp.src(['js/app/section/footer.js'])
+        .pipe(replace(/\%ver_replacement\%/g, targetDate))
+        .pipe(rename("js/app/section/footer-ver.js"))
+        .pipe(gulp.dest('./'));
 });
 
 

@@ -43,26 +43,9 @@ var App = React.createClass({
 });
 
 var routes = (
-  <Route path='/'>
-    <IndexRoute component={App} />
-  </Route>
+      <Route path='/'>
+        <IndexRoute component={App} />
+      </Route>
 );
-
-/* customize js */
-$(document).ready(function() {
-  var header_title_opacity = 16,
-      jumboHeight = $('.jumbotron').outerHeight();
-  var parallax = function parallax(){
-      var scrolled = $(window).scrollTop();
-      $('.header-bg').css('height', (jumboHeight - scrolled) + 'px');
-  };
-  $(window).scroll(function(){
-      parallax();
-      $(".header-title").css("opacity", header_title_opacity/$(window).scrollTop());
-      if ($(window).scrollTop()<=0) {
-        $(".header-title").css("opacity", 1);
-      }
-  });
-});
 
 ReactDOM.render(<Router history={browserHistory}>{routes}</Router>, document.getElementById('container'));
