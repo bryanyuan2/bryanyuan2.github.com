@@ -8,7 +8,7 @@
     "dev": "gulp --env development",
     "prod": "gulp --env production",
     "test": "istanbul test mocha -- -R spec --recursive",
-    "cov": "nyc --reporter=lcov --reporter=text-lcov --require babel-core/register mocha ./test/components/*.js"
+    "cov": "nyc --reporter=lcov --reporter=text-lcov --require babel-core/register mocha ./test/components/"
   },
   "repository": {
     "type": "git",
