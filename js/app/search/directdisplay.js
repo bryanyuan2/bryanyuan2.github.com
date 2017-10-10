@@ -55,11 +55,9 @@ var DirectDisplay = React.createClass({
         };
     },
     shouldComponentUpdate: function(nextProps, nextState) {
-        console.log('shouldComponentUpdate');
         return nextState.loading !== this.state.loading;
     },
     componentWillReceiveProps: function(nextProps) {
-        console.log('componentWillReceiveProps');
         var query = nextProps.target,
             host = (nextProps.intl === 'en' ? WIKI_URL.enDescUrl: WIKI_URL.zhDescUrl),
             targetAbsUrl = host + encodeURIComponent(query);
@@ -80,7 +78,6 @@ var DirectDisplay = React.createClass({
         }
     },
     componentDidUpdate: function() {
-        console.log('componentDidUpdate');
         this.tags = [];
         this.highlight = [];
         for(var key in this.props.tag) {
@@ -144,20 +141,17 @@ var DDtag = React.createClass({
         highlight: React.PropTypes.array
     },
     handleClick: function(event) {
-        console.log('event', event);
         var hlAry = this.props.highlight,
             targetClass = event.target.id.replace(DD_SETTING.placeHolder, '');
 
         $('blockquote').css(DD_SETTING.borderStyle, DD_SETTING.borderColor);
 
-        console.log('hlAry', hlAry);
         for (var item in hlAry) {
             if (hlAry.hasOwnProperty(item)) {
                 $('.' + hlAry[item]).css(DD_SETTING.borderStyle, DD_SETTING.tagColor);
             }
         }
 
-        console.log('==', $('.' + targetClass).offset().top);
         $('body').animate({
             scrollTop: $('.' + targetClass).offset().top
         }, DD_SETTING.scrollSpeed);

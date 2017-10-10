@@ -102,13 +102,11 @@ var CompNavInfoContainer = React.createClass({
     componentDidMount: function() {
         var that = this;
 
-        $(".search-box").on('keydown', function(e) {
+        $(".search-box").on('keyup', function(e) {
             if(e.which === 13) {
                 var query = $("input").val(),
                     url = SEARCH_CONF.domain + encodeURI(query);
 
-                console.log("search backend = ", url);
-                
                 $.ajax({
                     url: url,
                     data: SEARCH_CONF.opts,
@@ -122,8 +120,6 @@ var CompNavInfoContainer = React.createClass({
                         query: query
                     });
                 }).done(function(data) {
-                    console.log('data', data);
-
                     if (data && data.result !== '0') {
                         that.setState({
                             algo: {
@@ -150,7 +146,6 @@ var CompNavInfoContainer = React.createClass({
         var saAry = [],
             saData = (this.state.data && this.state.data[0]);
 
-        console.log('saData', saData);
         for (var item in saData) {
             if(saData.hasOwnProperty(item)) {
                 var target = saData[item],
