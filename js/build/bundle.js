@@ -495,7 +495,10 @@ var SearchResult = React.createClass({displayName: "SearchResult",
         }
 
         // algo
-        if (Object.keys(this.state.result).length) {
+        if (this.props.query === '') {
+            // default, do nothing
+        } else if (Object.keys(this.state.result).length) {
+            // algo
             this.state.result.forEach(function(result, index) {
                 algo.push(React.createElement(SearchResultBox, {result: result, key: index}));
             });
@@ -505,9 +508,8 @@ var SearchResult = React.createClass({displayName: "SearchResult",
             Object.keys(this.props.algo).length === 0) {
             // zrp
             algo.push(React.createElement(ErrorHandler, {query: this.props.query, type: "zrp"}));
-        } else if (this.props.status === 'error') {
-            // error
-            algo.push(React.createElement(ErrorHandler, {query: this.props.query, type: "404"}));
+        } else {
+            algo.push(React.createElement(ErrorHandler, {query: this.props.query, type: "zrp"}));
         }
 
         return (
