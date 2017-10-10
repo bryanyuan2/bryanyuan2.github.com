@@ -1,12 +1,18 @@
 [
- {
+  {
     "hl": "hl-work-experience-yahoo",
-    "corp": "Yahoo!",
-    "url": "http://tw.yahoo.com/",
-    "logo": "asserts/images/experience/yahoo_logo.png",
+    "corp": "Oath",
+    "alignCorp": "Yahoo!",
+    "url": "https://www.oath.com/",
+    "alignUrl": "http://tw.yahoo.com/",
+    "logo": [
+      "asserts/images/experience/oath_logo.png",
+      "asserts/images/experience/yahoo_logo.png"
+    ],
     "width": "200",
     "height": "56",
-    "date": "Sep 2014 - Present",
+    "date": "July 2017 - Present",
+    "alignDate": "Sep 2014 - Jun 2017",
     "position": "Software Engineer",
     "org": "Search Engineering",
     "experience": [
@@ -53,7 +59,9 @@
     "hl": "hl-work-experience-tmi hl-work-experience",
     "corp": "Taiwan Mobile Innovation",
     "url": "http://tmi.vc/",
-    "logo": "asserts/images/experience/tmi_logo.png",
+    "logo": [
+      "asserts/images/experience/tmi_logo.png"
+    ],
     "width": "170",
     "height": "90",
     "date": "July 2013 - Aug 2013",
@@ -98,7 +106,9 @@
     "hl": "hl-work-experience-yahoo",
     "corp": "Yahoo!",
     "url": "http://tw.yahoo.com/",
-    "logo": "asserts/images/experience/yahoo_logo.png",
+    "logo": [
+      "asserts/images/experience/yahoo_logo.png"
+    ],
     "width": "200",
     "height": "56",
     "date": "July 2012 - Aug 2012",
@@ -117,7 +127,9 @@
     "hl": "hl-work-experience-sinica",
     "corp": "Institute of Information Science, Academia Sinica",
     "url": "http://www.iis.sinica.edu.tw/",
-    "logo": "asserts/images/experience/iis_sinica_logo.png",
+    "logo": [
+      "asserts/images/experience/iis_sinica_logo.png"
+    ],
     "width": "80",
     "height": "80",
     "date": "Feb 2009 - Aug 2011",

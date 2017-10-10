@@ -11,11 +11,10 @@ var SectionHeader = React.createClass({
     },
     getDefaultProps: function() {
         return {
-          setID: {},
-          text: ""
+            setID: {},
+            text: ""
         };
     },
-
     render: function() {
         var id = this.props.setID ? "set-" + this.props.setID : "set"
         return (

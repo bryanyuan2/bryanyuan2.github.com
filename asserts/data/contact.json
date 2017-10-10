@@ -1,32 +1,42 @@
 [
   {
-    "type": "email",
+    "type": "Home",
+    "link": "#",
+    "cls": "active"
+  },
+  {
+    "type": "Resume",
+    "link": "https://github.com/bryanyuan2/bryanyuan2.resume/raw/master/ChengChunYuan_resume_v1.pdf",
+    "cls": ""
+  },
+  {
+    "type": "Email",
     "link": "mailto:bryanyuan2@gmail.com",
-    "cls": "btn btn-default"
+    "cls": ""
   },
   {
-    "type": "linkedin",
+    "type": "Linkedin",
     "link": "http://tw.linkedin.com/in/bryanyuan2/",
-    "cls": "btn btn-default"
+    "cls": ""
   },
   {
-    "type": "github",
+    "type": "Github",
     "link": "https://github.com/bryanyuan2",
-    "cls": "btn btn-default"
+    "cls": ""
   },
   {
-    "type": "facebook",
+    "type": "Facebook",
     "link": "http://www.facebook.com/bryanyuan2",
-    "cls": "btn btn-default"
+    "cls": ""
   },
   {
-    "type": "flickr",
+    "type": "Flickr",
     "link": "http://www.flickr.com/photos/bryanyuan2",
-    "cls": "btn btn-default"
+    "cls": ""
   },
   {
-    "type": "bookmarks",
+    "type": "Bookmarks",
     "link": "https://bryanyuan2-bookmarks.github.io",
-    "cls": "btn btn-info"
+    "cls": "highlight"
   }
 ]

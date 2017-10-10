@@ -6,21 +6,21 @@ var React = require('react'),
 var mediaList = React.createClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        media: React.PropTypes.object
+        media: React.PropTypes.array
     },
     getDefaultProps: function() {
         return {
-          media: {}
+            media: []
         };
     },
     render: function() {
-        var media = [];
-        var media_content = "";
+        var media = [],
+            media_content = "";
 
         if (this.props.media) {
-          this.props.media.forEach(function(content) {
-            media.push('<li><a target="_blank" href=' + content.link + '>' + content.title + ' - ' + content.source + '</a></li>');
-          });
+            this.props.media.forEach(function(content) {
+                media.push('<li><a target="_blank" href=' + content.link + '>' + content.title + ' - ' + content.source + '</a></li>');
+             });
         }
         media_content = media.join(" ");
         return (

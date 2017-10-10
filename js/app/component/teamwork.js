@@ -9,7 +9,7 @@ var TeamworkContainer = React.createClass({
         return (
             <span className="label label-info label-teamwork">Teamwork</span>
         );
-  }
+    }
 });
 
 module.exports = TeamworkContainer;

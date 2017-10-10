@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-  - "4.2.2"
+    - "4.2.2"
 install:
-  - npm install
-  - npm install mocha -g
+    - npm install
+    - npm install mocha -g
 script:
-  - npm run-script test
-  - npm run-script cov
+    - npm run-script test
+    - npm run-script cov
 after_script: "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
