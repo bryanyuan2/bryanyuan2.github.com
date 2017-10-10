@@ -272,11 +272,9 @@ var DirectDisplay = React.createClass({displayName: "DirectDisplay",
         };
     },
     shouldComponentUpdate: function(nextProps, nextState) {
-        console.log('shouldComponentUpdate');
         return nextState.loading !== this.state.loading;
     },
     componentWillReceiveProps: function(nextProps) {
-        console.log('componentWillReceiveProps');
         var query = nextProps.target,
             host = (nextProps.intl === 'en' ? WIKI_URL.enDescUrl: WIKI_URL.zhDescUrl),
             targetAbsUrl = host + encodeURIComponent(query);
@@ -297,7 +295,6 @@ var DirectDisplay = React.createClass({displayName: "DirectDisplay",
         }
     },
     componentDidUpdate: function() {
-        console.log('componentDidUpdate');
         this.tags = [];
         this.highlight = [];
         for(var key in this.props.tag) {
@@ -361,20 +358,17 @@ var DDtag = React.createClass({displayName: "DDtag",
         highlight: React.PropTypes.array
     },
     handleClick: function(event) {
-        console.log('event', event);
         var hlAry = this.props.highlight,
             targetClass = event.target.id.replace(DD_SETTING.placeHolder, '');
 
         $('blockquote').css(DD_SETTING.borderStyle, DD_SETTING.borderColor);
 
-        console.log('hlAry', hlAry);
         for (var item in hlAry) {
             if (hlAry.hasOwnProperty(item)) {
                 $('.' + hlAry[item]).css(DD_SETTING.borderStyle, DD_SETTING.tagColor);
             }
         }
 
-        console.log('==', $('.' + targetClass).offset().top);
         $('body').animate({
             scrollTop: $('.' + targetClass).offset().top
         }, DD_SETTING.scrollSpeed);
@@ -973,13 +967,11 @@ var CompNavInfoContainer = React.createClass({displayName: "CompNavInfoContainer
     componentDidMount: function() {
         var that = this;
 
-        $(".search-box").on('keydown', function(e) {
+        $(".search-box").on('keyup', function(e) {
             if(e.which === 13) {
                 var query = $("input").val(),
                     url = SEARCH_CONF.domain + encodeURI(query);
 
-                console.log("search backend = ", url);
-                
                 $.ajax({
                     url: url,
                     data: SEARCH_CONF.opts,
@@ -993,8 +985,6 @@ var CompNavInfoContainer = React.createClass({displayName: "CompNavInfoContainer
                         query: query
                     });
                 }).done(function(data) {
-                    console.log('data', data);
-
                     if (data && data.result !== '0') {
                         that.setState({
                             algo: {
@@ -1021,7 +1011,6 @@ var CompNavInfoContainer = React.createClass({displayName: "CompNavInfoContainer
         var saAry = [],
             saData = (this.state.data && this.state.data[0]);
 
-        console.log('saData', saData);
         for (var item in saData) {
             if(saData.hasOwnProperty(item)) {
                 var target = saData[item],
