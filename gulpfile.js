@@ -1,49 +1,49 @@
-var gulp = require('gulp'),
-    browserify = require('browserify'),
-    envify = require('envify/custom'),
-    del = require('del'),
-    reactify = require('reactify'),
-    babelify = require('babelify'),
-    source = require('vinyl-source-stream'),
-    uglify = require('gulp-uglify'),
-    connect = require('gulp-connect'),
-    streamify = require('gulp-streamify'),
-    less = require('gulp-less'),
-    cssmin = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    nightwatch = require('gulp-nightwatch'),
-    jshint = require('gulp-jshint'),
-    react = require('gulp-react'),
-    cache = require('gulp-cached'),
-    flow = require('gulp-flowtype'),
-    replace = require('gulp-replace'),
-    buildDate = require('gulp-build-date'),
-    notify = require("gulp-notify"),
-    minimist = require('minimist'),
-    gulpif = require('gulp-if');
+const gulp = require('gulp');
+const browserify = require('browserify');
+const envify = require('envify/custom');
+const del = require('del');
+const reactify = require('reactify');
+const babelify = require('babelify');
+const source = require('vinyl-source-stream');
+const uglify = require('gulp-uglify');
+const connect = require('gulp-connect');
+const streamify = require('gulp-streamify');
+const less = require('gulp-less');
+const cssmin = require('gulp-minify-css');
+const rename = require('gulp-rename');
+const nightwatch = require('gulp-nightwatch');
+const jshint = require('gulp-jshint');
+const react = require('gulp-react');
+const cache = require('gulp-cached');
+const flow = require('gulp-flowtype');
+const replace = require('gulp-replace');
+const buildDate = require('gulp-build-date');
+const notify = require('gulp-notify');
+const minimist = require('minimist');
+const gulpif = require('gulp-if');
 
-var paths = {
-    css:['./asserts/css/src/*.less'],
-    js: [ './js/app/*.js',
-          './js/app/component/*.js',
-          './js/app/config/*.js',
-          './js/app/search/*.js',
-          './js/app/section/*.js',
-          './js/app/untls/*.js'
+const paths = {
+    css: ['./asserts/css/src/*.less'],
+    js: ['./js/app/*.js',
+        './js/app/component/*.js',
+        './js/app/config/*.js',
+        './js/app/search/*.js',
+        './js/app/section/*.js',
+        './js/app/untls/*.js',
     ],
     app_js: ['./js/app/app.js'],
-    index: ['./index.html']
+    index: ['./index.html'],
 };
 
-var options = minimist(process.argv.slice(2), knownOptions);
+const options = minimist(process.argv.slice(2), knownOptions);
 var knownOptions = {
     string: 'env',
-    default: { env: process.env.NODE_ENV || 'production' }
+    default: {env: process.env.NODE_ENV || 'production'},
 };
 
 // date
-var date = new Date();
-var targetDate = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
+const date = new Date();
+const targetDate = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
 
 gulp.task('clean', function(done) {
     del(['./js/build/*.js'], done);
@@ -51,45 +51,45 @@ gulp.task('clean', function(done) {
 });
 
 gulp.task('js', gulp.series('clean', function(done) {
-    var senv = 'production',
-        isUglify = true;
+    let senv = 'production';
+    let isUglify = true;
 
     if (options.env === 'development') {
-        senv = 'development'
+        senv = 'development';
         isUglify = false;
     }
 
     browserify(paths.app_js).transform(envify({
-        NODE_ENV: senv
-    }))
+        NODE_ENV: senv,
+    }));
     browserify({
         entries: paths.app_js,
         debug: true,
-        transform: [reactify]
+        transform: [reactify],
     })
-    .transform(babelify)
-    .bundle()
-    .pipe(source('bundle.js'))
-    //.pipe(gulpif(isUglify, streamify(uglify())))
-    .pipe(gulp.dest('./js/build'))
-    .pipe(notify("Gulp.js restarted"));
+        .transform(babelify)
+        .bundle()
+        .pipe(source('bundle.js'))
+        // .pipe(gulpif(isUglify, streamify(uglify())))
+        .pipe(gulp.dest('./js/build'))
+        .pipe(notify('Gulp.js restarted'));
 
     done();
 }));
 
-gulp.task('css', function (done) {
+gulp.task('css', function(done) {
     gulp.src(paths.css)
         .pipe(less())
         .pipe(cssmin())
         .pipe(rename({
-            suffix: '.min'
+            suffix: '.min',
         }))
         .pipe(gulp.dest('./asserts/css/min/'))
         .pipe(connect.reload());
     done();
 });
 
-gulp.task('html', function (done) {
+gulp.task('html', function(done) {
     gulp.src(paths.index)
         .pipe(connect.reload());
     done();
@@ -98,7 +98,7 @@ gulp.task('html', function (done) {
 gulp.task('connect', function(done) {
     connect.server({
         port: 3000,
-        livereload: true
+        livereload: true,
     });
     done();
 });
@@ -113,43 +113,43 @@ gulp.task('watch', function(done) {
 
 gulp.task('jshint', function(done) {
     return gulp.src(paths.js)
-            .pipe(cache('jshint'))
-            .pipe(react())
-            .on('error', function(err) {
-                console.error('JSX ERROR in ' + err.fileName);
-                console.error(err.message);
-                this.end();
-            })
-            .pipe(jshint())
-            .pipe(jshint.reporter('jshint-stylish'));
+        .pipe(cache('jshint'))
+        .pipe(react())
+        .on('error', function(err) {
+            console.error('JSX ERROR in ' + err.fileName);
+            console.error(err.message);
+            this.end();
+        })
+        .pipe(jshint())
+        .pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('typecheck', function(done) {
-  return gulp.src(paths.app_js)
-    .pipe(flow({
-        all: false,
-        weak: false,
-        declarations: './declarations',
-        killFlow: false,
-        beep: true,
-        abort: false
-    }))
-    .pipe(react({ stripTypes: true }))
+    return gulp.src(paths.app_js)
+        .pipe(flow({
+            all: false,
+            weak: false,
+            declarations: './declarations',
+            killFlow: false,
+            beep: true,
+            abort: false,
+        }))
+        .pipe(react({stripTypes: true}));
     // Strip Flow type annotations before compiling
     done();
 });
 
 gulp.task('nightwatch', function() {
     gulp.src('').pipe(nightwatch({
-        configFile: 'nightwatch.json'
+        configFile: 'nightwatch.json',
     }));
 });
 
 
-gulp.task('ver-footer', function(done){
+gulp.task('ver-footer', function(done) {
     gulp.src(['js/app/section/footer.js'])
         .pipe(replace(/\%ver_replacement\%/g, targetDate))
-        .pipe(rename("js/app/section/footer-ver.js"))
+        .pipe(rename('js/app/section/footer-ver.js'))
         .pipe(gulp.dest('./'));
     done();
 });

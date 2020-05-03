@@ -1,23 +1,23 @@
-"use strict";
+'use strict';
 
-var React = require('react'),
-    LoadJSON = require('./../utils/mixins').LoadJSON,
-    SectionHeader = require('./../component/sectionheader'),
-    PureRenderMixin = require('react-addons-pure-render-mixin');
+const React = require('react');
+const LoadJSON = require('./../utils/mixins').LoadJSON;
+const SectionHeader = require('./../component/sectionheader');
+const PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var PropTypes = require('prop-types');
-var createReactClass = require('create-react-class');
+const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
-var Publication =createReactClass({
+const Publication =createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
         publication: PropTypes.object,
-        key: PropTypes.number
+        key: PropTypes.number,
     },
     getDefaultProps: function() {
         return {
             publication: {},
-            key: 0
+            key: 0,
         };
     },
     render: function() {
@@ -29,7 +29,7 @@ var Publication =createReactClass({
                 <div className="col-md-10">
                     <blockquote className={this.props.publication.hl}>
                         <p>
-                            “<a target="_blank" href={this.props.publication.link}>{this.props.publication.name}</a>”<br />
+                            “<a target="_blank" rel="noopener noreferrer" href={this.props.publication.link}>{this.props.publication.name}</a>”<br />
                             {this.props.publication.publication}<br />
                             <i dangerouslySetInnerHTML={{__html: this.props.publication.authors}} />
                         </p>
@@ -37,17 +37,17 @@ var Publication =createReactClass({
                 </div>
             </div>
         );
-    }
+    },
 });
 
-var PublicationsContainer = createReactClass({
+const PublicationsContainer = createReactClass({
     mixins: [LoadJSON],
     render: function() {
-        var publications = [];
+        const publications = [];
         this.state.data.forEach(function(publication, index) {
             publications.push(<Publication publication={publication} key={index} />);
         });
-        return(
+        return (
             <div id="region-publications">
                 <SectionHeader setID="publications" text="Publications" />
                 <hr />
@@ -55,7 +55,7 @@ var PublicationsContainer = createReactClass({
                 <br />
             </div>
         );
-    }
+    },
 });
 
 

@@ -1,33 +1,33 @@
-"use strict";
+'use strict';
 
-var React = require('react'),
-    LoadJSON = require('./../utils/mixins').LoadJSON,
-    SectionHeader = require('./../component/sectionheader');
+const React = require('react');
+const LoadJSON = require('./../utils/mixins').LoadJSON;
+const SectionHeader = require('./../component/sectionheader');
 
-var PropTypes = require('prop-types');
-var createReactClass = require('create-react-class');
+const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
-var Education = createReactClass({
+const Education = createReactClass({
     honors: [],
     propTypes: {
         education: PropTypes.object,
-        key: PropTypes.number
+        key: PropTypes.number,
     },
     getDefaultProps: function() {
         return {
             education: {},
-            key: 0
+            key: 0,
         };
     },
     shouldComponentUpdate: function() {
         // shouldComponentUpdate: function(nextProps, nextState)
         return false;
     },
-    componentWillMount: function() {
+    UNSAFE_componentWillMount: function() {
         if (this.props.education.honors) {
-            var that = this;
+            const that = this;
             this.props.education.honors.forEach(function(content) {
-                that.honors.push('<strong>Honors</strong>: <a target="_blank" href="' + content.link + '">' + content.title + '</a>');
+                that.honors.push('<strong>Honors</strong>: <a target="_blank" rel="noopener noreferrer" href="' + content.link + '">' + content.title + '</a>');
             });
         }
     },
@@ -39,7 +39,7 @@ var Education = createReactClass({
                 </div>
                 <div className="col-md-10">
                     <blockquote className={this.props.education.hl}>
-                        <p><strong>{this.props.education.degree}, <i>{this.props.education.school}</i></strong> - <a target="_blank" href="http://iisr.csie.ncu.edu.tw/">{this.props.education.lab}</a></p>
+                        <p><strong>{this.props.education.degree}, <i>{this.props.education.school}</i></strong> - <a target="_blank" rel="noopener noreferrer" href="http://iisr.csie.ncu.edu.tw/">{this.props.education.lab}</a></p>
                         <ol>
                             { this.props.education.honors && <li dangerouslySetInnerHTML={{__html: this.honors}} />}
                             { this.props.education.description && <li>{this.props.education.description}</li>}
@@ -48,17 +48,17 @@ var Education = createReactClass({
                 </div>
             </div>
         );
-    }
+    },
 });
 
-var EducationsContainer = createReactClass({
+const EducationsContainer = createReactClass({
     mixins: [LoadJSON],
     render: function() {
-        var educations = [];
+        const educations = [];
         this.state.data.forEach(function(education, index) {
             educations.push(<Education education={education} key={index} />);
         });
-        return(
+        return (
             <div id="region-education">
                 <SectionHeader setID="education" text="Education" />
                 <hr />
@@ -66,7 +66,7 @@ var EducationsContainer = createReactClass({
                 <br />
             </div>
         );
-    }
+    },
 });
 
 module.exports = EducationsContainer;

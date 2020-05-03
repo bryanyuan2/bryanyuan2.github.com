@@ -1,25 +1,25 @@
-"use strict";
+'use strict';
 
-var React = require('react'),
-    PureRenderMixin = require('react-addons-pure-render-mixin');
+const React = require('react');
+const PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var PropTypes = require('prop-types');
-var createReactClass = require('create-react-class');
+const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
 
-var awardsList = createReactClass({
+const awardsList = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        awards: PropTypes.array
+        awards: PropTypes.array,
     },
     getDefaultProps: function() {
         return {
-            awards: []
+            awards: [],
         };
     },
     render: function() {
-        var awards = [],
-            awards_content = "";
+        const awards = [];
+        let awardsContent = '';
 
         awards.push('Internal Awards');
 
@@ -28,13 +28,13 @@ var awardsList = createReactClass({
                 awards.push('<li>' + content + '</li>');
             });
         }
-        awards_content = awards.join(" ");
+        awardsContent = awards.join(' ');
         return (
             <div className="text-awards">
-                <div className="alert alert-info" dangerouslySetInnerHTML={{__html: awards_content}} />
+                <div className="alert alert-info" dangerouslySetInnerHTML={{__html: awardsContent}} />
             </div>
         );
-  }
+    },
 });
 
 module.exports = awardsList;

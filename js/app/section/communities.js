@@ -1,27 +1,27 @@
-"use strict";
+'use strict';
 
-var React = require('react'),
-    LoadJSON = require('./../utils/mixins').LoadJSON,
-    SectionHeader = require('./../component/sectionheader'),
-    PureRenderMixin = require('react-addons-pure-render-mixin');
+const React = require('react');
+const LoadJSON = require('./../utils/mixins').LoadJSON;
+const SectionHeader = require('./../component/sectionheader');
+const PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var PropTypes = require('prop-types');
-var createReactClass = require('create-react-class');
+const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
-var Community = createReactClass({
+const Community = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
         community: PropTypes.object,
-        key: PropTypes.number
+        key: PropTypes.number,
     },
     getDefaultProps: function() {
         return {
             community: {},
-            key: 0
+            key: 0,
         };
     },
-    render: function () {
-        var description = '';
+    render: function() {
+        let description = '';
         this.props.community.description.forEach(function(content) {
             description += '<span>' + content.text + '</span>';
         });
@@ -35,7 +35,7 @@ var Community = createReactClass({
 
                     <div className="col-md-8">
                         <blockquote className={this.props.community.hl}>
-                            <div className="text-title"><a target="_blank" href={this.props.community.link}>{this.props.community.name}</a></div>
+                            <div className="text-title"><a target="_blank" rel="noopener noreferrer" href={this.props.community.link}>{this.props.community.name}</a></div>
                             <div className="text-desc">{this.props.community.position}</div>
                             <ul className="text-desc">
                                 <div className="description" dangerouslySetInnerHTML={{__html: description}} />
@@ -49,13 +49,13 @@ var Community = createReactClass({
                 <br />
             </div>
         );
-    }
+    },
 });
 
-var CommunitiesContainer = createReactClass({
+const CommunitiesContainer = createReactClass({
     mixins: [LoadJSON],
     render: function() {
-        var communities = [];
+        const communities = [];
         this.state.data.forEach(function(community, index) {
             communities.push(<Community community={community} key={index} />);
         });
@@ -67,7 +67,7 @@ var CommunitiesContainer = createReactClass({
                 <br />
             </div>
         );
-    }
+    },
 });
 
 module.exports = CommunitiesContainer;

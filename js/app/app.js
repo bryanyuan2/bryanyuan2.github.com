@@ -1,58 +1,57 @@
 /** @jsx React.DOM */
 
-"use strict";
+'use strict';
 
 /* require */
-var React = require('react'),
-    ReactDOM = require('react-dom'),
-    ReactRouter = require('react-router'),
-    Router = ReactRouter.Router,
-    Route = ReactRouter.Route,
-    IndexRoute = require('react-router').IndexRoute,
-    createBrowserHistory = require('history').createBrowserHistory;
+const React = require('react');
+const ReactDOM = require('react-dom');
+const ReactRouter = require('react-router');
+// const Router = ReactRouter.Router;
+const Route = ReactRouter.Route;
+const IndexRoute = require('react-router').IndexRoute;
+const createBrowserHistory = require('history').createBrowserHistory;
 
-var PropTypes = require('prop-types');
-var createReactClass = require('create-react-class');
+const createReactClass = require('create-react-class');
 
 /* section */
-var CompHeader = require('./section/header'),
-    CompEducations = require('./section/educations'),
-    CompSkills = require('./section/skills'),
-    CompWorks = require('./section/works'),
-    CompAwards = require('./section/awards'),
-    CompProjects = require('./section/projects'),
-    CompCommunities = require('./section/communities'),
-    CompPublications = require('./section/publications'),
-    CompFooter = require('./section/footer-ver');
+const CompHeader = require('./section/header');
+const CompEducations = require('./section/educations');
+const CompSkills = require('./section/skills');
+const CompWorks = require('./section/works');
+const CompAwards = require('./section/awards');
+const CompProjects = require('./section/projects');
+const CompCommunities = require('./section/communities');
+const CompPublications = require('./section/publications');
+const CompFooter = require('./section/footer-ver');
 
-var App = createReactClass({
-  render: function () {
-    return (
-      <div>
-        <CompHeader url="asserts/data/commons.json" />
-        <div className="container">
-          <CompSkills url="asserts/data/skills.json" />
-          <CompWorks url="asserts/data/works.json" />
-          <CompAwards url="asserts/data/awards.json" />
-          <CompProjects url="asserts/data/projects.json" />
-          <CompCommunities url="asserts/data/communities.json" />
-          <CompPublications url="asserts/data/publications.json" />
-          <CompEducations url="asserts/data/educations.json" />
-          <CompFooter url="asserts/data/footer.json" />
-        </div>
-      </div>
-    );
-  }
+const App = createReactClass({
+    render: function() {
+        return (
+            <div>
+                <CompHeader url="asserts/data/commons.json" />
+                <div className="container">
+                    <CompSkills url="asserts/data/skills.json" />
+                    <CompWorks url="asserts/data/works.json" />
+                    <CompAwards url="asserts/data/awards.json" />
+                    <CompProjects url="asserts/data/projects.json" />
+                    <CompCommunities url="asserts/data/communities.json" />
+                    <CompPublications url="asserts/data/publications.json" />
+                    <CompEducations url="asserts/data/educations.json" />
+                    <CompFooter url="asserts/data/footer.json" />
+                </div>
+            </div>
+        );
+    },
 });
 
-var routes = (
-      <Route path='/'>
+const routes = (
+    <Route path='/'>
         <IndexRoute component={App} />
-      </Route>
+    </Route>
 );
 
 
-var browserHistory = createBrowserHistory();
+const browserHistory = createBrowserHistory();
 
 
 ReactDOM.render(<App />, document.getElementById('container'));

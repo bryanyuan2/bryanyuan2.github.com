@@ -1,18 +1,16 @@
-"use strict";
+'use strict';
 
-var React = require('react'),
-    PureRenderMixin = require('react-addons-pure-render-mixin');
+const React = require('react');
+const PureRenderMixin = require('react-addons-pure-render-mixin');
+const createReactClass = require('create-react-class');
 
-var PropTypes = require('prop-types');
-var createReactClass = require('create-react-class');
-
-var TeamworkContainer = createReactClass({
+const TeamworkContainer = createReactClass({
     mixins: [PureRenderMixin],
     render: function() {
         return (
             <span className="label label-info label-teamwork">Teamwork</span>
         );
-    }
+    },
 });
 
 module.exports = TeamworkContainer;
