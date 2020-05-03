@@ -58,19 +58,6 @@
     "speakerdeck": "https://speakerdeck.com/bryanyuan2/baidu-hackathon-taipei-2013-captain-1"
   },
   {
-    "hl": "hl-projects-opensource",
-    "name": "Chewing in the Cloud",
-    "date": "Aug 2010 - Dec 2010",
-    "from": "CHT Open Source Software Competition 2010",
-    "teamwork": true,
-    "description": [
-      {
-        "text": "Modified the priority of choosing Chinese words candidates based on Chewing Input Method."
-      }
-    ],
-    "github": "http://code.google.com/p/citc/"
-  },
-  {
     "hl": "hl-projects-hackathon hl-projects-opensource hl-projects-plurk",
     "name": "Go! Plurk",
     "link" : "http://goplurk.cse.tw/",
