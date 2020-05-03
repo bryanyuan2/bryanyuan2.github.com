@@ -12,7 +12,6 @@ const less = require('gulp-less');
 const cssmin = require('gulp-minify-css');
 const rename = require('gulp-rename');
 const nightwatch = require('gulp-nightwatch');
-const jshint = require('gulp-jshint');
 const react = require('gulp-react');
 const cache = require('gulp-cached');
 const flow = require('gulp-flowtype');
@@ -109,19 +108,6 @@ gulp.task('watch', function(done) {
     done();
 });
 
-gulp.task('jshint', function(done) {
-    return gulp.src(paths.js)
-        .pipe(cache('jshint'))
-        .pipe(react())
-        .on('error', function(err) {
-            console.error('JSX ERROR in ' + err.fileName);
-            console.error(err.message);
-            this.end();
-        })
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'));
-});
-
 gulp.task('typecheck', function(done) {
     return gulp.src(paths.app_js)
         .pipe(flow({
@@ -152,7 +138,7 @@ gulp.task('ver-footer', function(done) {
 });
 
 /* default */
-gulp.task('default', gulp.series('css', 'typecheck', 'jshint', 'ver-footer', 'js', 'connect', 'watch'));
+gulp.task('default', gulp.series('css', 'typecheck', 'ver-footer', 'js', 'connect', 'watch'));
 
 /* java -jar selenium-server-standalone-2.51.0.jar */
 gulp.task('test', gulp.series('nightwatch', function() {}));
