@@ -4,6 +4,11 @@ module.exports = {
     'commonjs': true,
     'es6': true,
   },
+  "settings": {
+    "react": {
+      "version": "16.13.1"
+    }
+  },
   'extends': [
     'plugin:react/recommended',
     'google',

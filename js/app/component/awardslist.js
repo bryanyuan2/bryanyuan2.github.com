@@ -2,10 +2,8 @@
 
 const React = require('react');
 const PureRenderMixin = require('react-addons-pure-render-mixin');
-
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
-
 
 const awardsList = createReactClass({
     mixins: [PureRenderMixin],

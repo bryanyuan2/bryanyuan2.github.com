@@ -5,11 +5,6 @@
 /* require */
 const React = require('react');
 const ReactDOM = require('react-dom');
-const ReactRouter = require('react-router');
-// const Router = ReactRouter.Router;
-const Route = ReactRouter.Route;
-const IndexRoute = require('react-router').IndexRoute;
-const createBrowserHistory = require('history').createBrowserHistory;
 
 const createReactClass = require('create-react-class');
 
@@ -43,15 +38,5 @@ const App = createReactClass({
         );
     },
 });
-
-const routes = (
-    <Route path='/'>
-        <IndexRoute component={App} />
-    </Route>
-);
-
-
-const browserHistory = createBrowserHistory();
-
 
 ReactDOM.render(<App />, document.getElementById('container'));
