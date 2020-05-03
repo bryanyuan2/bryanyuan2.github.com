@@ -34,7 +34,6 @@ const paths = {
     app_js: ['./js/app/app.js'],
     index: ['./index.html'],
 };
-
 const options = minimist(process.argv.slice(2), knownOptions);
 var knownOptions = {
     string: 'env',
@@ -110,7 +109,6 @@ gulp.task('watch', function(done) {
     done();
 });
 
-
 gulp.task('jshint', function(done) {
     return gulp.src(paths.js)
         .pipe(cache('jshint'))
@@ -145,7 +143,6 @@ gulp.task('nightwatch', function() {
     }));
 });
 
-
 gulp.task('ver-footer', function(done) {
     gulp.src(['js/app/section/footer.js'])
         .pipe(replace(/\%ver_replacement\%/g, targetDate))
@@ -153,7 +150,6 @@ gulp.task('ver-footer', function(done) {
         .pipe(gulp.dest('./'));
     done();
 });
-
 
 /* default */
 gulp.task('default', gulp.series('css', 'typecheck', 'jshint', 'ver-footer', 'js', 'connect', 'watch'));
