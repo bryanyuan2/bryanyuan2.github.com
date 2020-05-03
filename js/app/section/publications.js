@@ -5,11 +5,14 @@ var React = require('react'),
     SectionHeader = require('./../component/sectionheader'),
     PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var Publication = React.createClass({
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+var Publication =createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        publication: React.PropTypes.object,
-        key: React.PropTypes.number
+        publication: PropTypes.object,
+        key: PropTypes.number
     },
     getDefaultProps: function() {
         return {
@@ -37,7 +40,7 @@ var Publication = React.createClass({
     }
 });
 
-var PublicationsContainer = React.createClass({
+var PublicationsContainer = createReactClass({
     mixins: [LoadJSON],
     render: function() {
         var publications = [];

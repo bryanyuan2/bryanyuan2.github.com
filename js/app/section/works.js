@@ -7,10 +7,15 @@ var React = require('react'),
     SectionHeader = require('./../component/sectionheader'),
     PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var Work = React.createClass({
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+
+
+var Work = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        work: React.PropTypes.object
+        work: PropTypes.object
     },
     getDefaultProps: function() {
         return {
@@ -89,7 +94,7 @@ var Work = React.createClass({
     }
 });
 
-var WorksContainer = React.createClass({
+var WorksContainer = createReactClass({
     mixins: [LoadJSON],
     render: function() {
         var works = [];

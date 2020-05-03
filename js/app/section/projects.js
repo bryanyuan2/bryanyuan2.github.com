@@ -9,11 +9,14 @@ var React = require('react'),
     LoadJSON = require('./../utils/mixins').LoadJSON,
     PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var Project = React.createClass({
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+var Project = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        project: React.PropTypes.object,
-        key: React.PropTypes.number
+        project: PropTypes.object,
+        key: PropTypes.number
     },
     getDefaultProps: function() {
         return {
@@ -62,7 +65,7 @@ var Project = React.createClass({
     }
 });
 
-var ProjectsContainer = React.createClass({
+var ProjectsContainer = createReactClass({
     mixins: [LoadJSON],
     render: function() {
         var projects = [];

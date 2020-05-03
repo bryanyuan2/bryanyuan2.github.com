@@ -4,6 +4,10 @@ var React = require('react'),
     _ = require('lodash'),
     DirectDisplay = require('./directdisplay');
 
+
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
 var I18N_CONF = {
     zrp: {
         title: 'No result is found !',
@@ -15,9 +19,9 @@ var I18N_CONF = {
     }
 };
 
-var SearchResultBox = React.createClass({
+var SearchResultBox = createReactClass({
     propTypes: {
-        result: React.PropTypes.object
+        result: PropTypes.object
     },
     getDefaultProps: function() {
         return {
@@ -43,7 +47,7 @@ var SearchResultBox = React.createClass({
     }
 });
 
-var SearchResult = React.createClass({
+var SearchResult = createReactClass({
     getInitialState: function() {
         return {
             result: {},
@@ -51,14 +55,14 @@ var SearchResult = React.createClass({
         };
     },
     propTypes: {
-        query: React.PropTypes.string,
-        target: React.PropTypes.string,
-        intl: React.PropTypes.string,
-        tag: React.PropTypes.array,
-        wiki: React.PropTypes.string,
-        algo: React.PropTypes.object,
-        status: React.PropTypes.string,
-        key: React.PropTypes.number
+        query: PropTypes.string,
+        target: PropTypes.string,
+        intl: PropTypes.string,
+        tag: PropTypes.array,
+        wiki: PropTypes.string,
+        algo: PropTypes.object,
+        status: PropTypes.string,
+        key: PropTypes.number
     },
     getDefaultProps: function() {
         return {
@@ -111,10 +115,10 @@ var SearchResult = React.createClass({
     }
 });
 
-var ErrorHandler = React.createClass({
+var ErrorHandler = createReactClass({
     propTypes: {
-        query: React.PropTypes.string,
-        type: React.PropTypes.string
+        query: PropTypes.string,
+        type: PropTypes.string
     },
     getDefaultProps: function() {
         return {

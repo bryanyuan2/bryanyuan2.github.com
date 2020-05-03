@@ -5,10 +5,13 @@ var React = require('react'),
     SectionHeader = require('./../component/sectionheader'),
     PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var Skill = React.createClass({
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+var Skill = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        skill: React.PropTypes.object
+        skill: PropTypes.object
     },
     getDefaultProps: function() {
         return {
@@ -20,7 +23,7 @@ var Skill = React.createClass({
         this.props.skill.items.forEach(function(content) {
             items.push(content.name);
         });
-    
+
         return (
             <div className="data-skills row">
                 <div className="col-md-2 fs-16 text-date">
@@ -36,7 +39,7 @@ var Skill = React.createClass({
     }
 });
 
-var SkillsContainer = React.createClass({
+var SkillsContainer = createReactClass({
     mixins: [LoadJSON],
     render: function() {
         var skills = [];

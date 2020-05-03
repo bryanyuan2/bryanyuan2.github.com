@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     envify = require('envify/custom'),
     del = require('del'),
     reactify = require('reactify'),
+    babelify = require('babelify'),
     source = require('vinyl-source-stream'),
     uglify = require('gulp-uglify'),
     connect = require('gulp-connect'),
@@ -24,7 +25,7 @@ var gulp = require('gulp'),
 var paths = {
     css:['./asserts/css/src/*.less'],
     js: [ './js/app/*.js',
-          './js/app/components/*.js',
+          './js/app/component/*.js',
           './js/app/config/*.js',
           './js/app/search/*.js',
           './js/app/section/*.js',
@@ -46,10 +47,10 @@ var targetDate = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.g
 
 gulp.task('clean', function(done) {
     del(['./js/build/*.js'], done);
+    done();
 });
 
-gulp.task('js', ['clean'], function() {
-  
+gulp.task('js', gulp.series('clean', function(done) {
     var senv = 'production',
         isUglify = true;
 
@@ -61,15 +62,22 @@ gulp.task('js', ['clean'], function() {
     browserify(paths.app_js).transform(envify({
         NODE_ENV: senv
     }))
-    .transform(reactify)
+    browserify({
+        entries: paths.app_js,
+        debug: true,
+        transform: [reactify]
+    })
+    .transform(babelify)
     .bundle()
     .pipe(source('bundle.js'))
     //.pipe(gulpif(isUglify, streamify(uglify())))
     .pipe(gulp.dest('./js/build'))
     .pipe(notify("Gulp.js restarted"));
-});
 
-gulp.task('css', function () {
+    done();
+}));
+
+gulp.task('css', function (done) {
     gulp.src(paths.css)
         .pipe(less())
         .pipe(cssmin())
@@ -78,27 +86,32 @@ gulp.task('css', function () {
         }))
         .pipe(gulp.dest('./asserts/css/min/'))
         .pipe(connect.reload());
+    done();
 });
 
-gulp.task('html', function () {
+gulp.task('html', function (done) {
     gulp.src(paths.index)
         .pipe(connect.reload());
+    done();
 });
 
-gulp.task('connect', function() {
+gulp.task('connect', function(done) {
     connect.server({
         port: 3000,
         livereload: true
     });
+    done();
 });
 
-gulp.task('watch', function() {
-    gulp.watch(paths.index, ['html']);
-    gulp.watch(paths.css, ['css']);
-    gulp.watch(paths.js, ['js']);
+gulp.task('watch', function(done) {
+    gulp.watch(paths.index, gulp.series('html'));
+    gulp.watch(paths.css, gulp.series('css'));
+    gulp.watch(paths.js, gulp.series('js'));
+    done();
 });
 
-gulp.task('jshint', function() {
+
+gulp.task('jshint', function(done) {
     return gulp.src(paths.js)
             .pipe(cache('jshint'))
             .pipe(react())
@@ -111,7 +124,7 @@ gulp.task('jshint', function() {
             .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('typecheck', function() {
+gulp.task('typecheck', function(done) {
   return gulp.src(paths.app_js)
     .pipe(flow({
         all: false,
@@ -123,6 +136,7 @@ gulp.task('typecheck', function() {
     }))
     .pipe(react({ stripTypes: true }))
     // Strip Flow type annotations before compiling
+    done();
 });
 
 gulp.task('nightwatch', function() {
@@ -132,16 +146,17 @@ gulp.task('nightwatch', function() {
 });
 
 
-gulp.task('ver-footer', function(){
+gulp.task('ver-footer', function(done){
     gulp.src(['js/app/section/footer.js'])
         .pipe(replace(/\%ver_replacement\%/g, targetDate))
         .pipe(rename("js/app/section/footer-ver.js"))
         .pipe(gulp.dest('./'));
+    done();
 });
 
 
 /* default */
-gulp.task('default', ['css', 'typecheck', 'jshint', 'ver-footer', 'js', 'connect', 'watch']);
+gulp.task('default', gulp.series('css', 'typecheck', 'jshint', 'ver-footer', 'js', 'connect', 'watch'));
 
 /* java -jar selenium-server-standalone-2.51.0.jar */
-gulp.task('test', ['nightwatch']);
+gulp.task('test', gulp.series('nightwatch', function() {}));

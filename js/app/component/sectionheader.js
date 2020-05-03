@@ -3,11 +3,14 @@
 var React = require('react'),
     PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var SectionHeader = React.createClass({
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+var SectionHeader = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        setID: React.PropTypes.string,
-        text: React.PropTypes.string
+        setID: PropTypes.string,
+        text: PropTypes.string
     },
     getDefaultProps: function() {
         return {

@@ -1,3 +1,5 @@
+/** @jsx React.DOM */
+
 "use strict";
 
 /* require */
@@ -7,11 +9,13 @@ var React = require('react'),
     Router = ReactRouter.Router,
     Route = ReactRouter.Route,
     IndexRoute = require('react-router').IndexRoute,
-    browserHistory = require('react-router/lib/browserHistory');
+    createBrowserHistory = require('history').createBrowserHistory;
+
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
 
 /* section */
 var CompHeader = require('./section/header'),
-    CompNavInfo = require('./section/navinfo'),
     CompEducations = require('./section/educations'),
     CompSkills = require('./section/skills'),
     CompWorks = require('./section/works'),
@@ -21,13 +25,12 @@ var CompHeader = require('./section/header'),
     CompPublications = require('./section/publications'),
     CompFooter = require('./section/footer-ver');
 
-var App = React.createClass({
+var App = createReactClass({
   render: function () {
     return (
       <div>
         <CompHeader url="asserts/data/commons.json" />
         <div className="container">
-          <CompNavInfo url={["asserts/data/directdisplay.json", "asserts/data/contact.json"]} />
           <CompSkills url="asserts/data/skills.json" />
           <CompWorks url="asserts/data/works.json" />
           <CompAwards url="asserts/data/awards.json" />
@@ -48,4 +51,8 @@ var routes = (
       </Route>
 );
 
-ReactDOM.render(<Router history={browserHistory}>{routes}</Router>, document.getElementById('container'));
+
+var browserHistory = createBrowserHistory();
+
+
+ReactDOM.render(<App />, document.getElementById('container'));
