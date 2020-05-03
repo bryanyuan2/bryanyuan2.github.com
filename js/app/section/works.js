@@ -10,7 +10,6 @@ const PureRenderMixin = require('react-addons-pure-render-mixin');
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 
-
 const Work = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
@@ -34,10 +33,10 @@ const Work = createReactClass({
 
         this.props.work.corp.forEach(function(data) {
             if (data.name) {
-                name.push('<div className="text-experience">');
+                name.push('<div class="text-experience">');
                 name.push('<a target="_blank" rel="noopener noreferrer" href=' + data.url + '>' + data.name + '</a>');
                 if (data.position || data.org) {
-                    name.push('<span className="text-desc"> / ' + data.position + ', ' + data.org + '</span>');
+                    name.push('<span class="text-desc"> / ' + data.position + (data.org ? ', ' + data.org : '') + '</span>');
                 }
                 name.push('</div>');
             }
@@ -72,10 +71,10 @@ const Work = createReactClass({
             product.push('</div>');
         }
 
-        productContent = product.join(' ');
-        logoContent = logo.join(' ');
-        dateContent = date.join(' ');
-        nameContent = name.join(' ');
+        productContent = product.join('');
+        logoContent = logo.join('');
+        dateContent = date.join('');
+        nameContent = name.join('');
 
         return (
             <div className="data-experience row">
