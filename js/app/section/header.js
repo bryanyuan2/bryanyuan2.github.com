@@ -1,39 +1,39 @@
 /** @jsx React.DOM */
 
-"use strict";
+'use strict';
 
-var React = require('react'),
-    LoadJSON = require('./../utils/mixins').LoadJSON;
+const React = require('react');
+const LoadJSON = require('./../utils/mixins').LoadJSON;
 
-var PropTypes = require('prop-types');
-var createReactClass = require('create-react-class');
+const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
-var HeaderContainer = createReactClass({
+const HeaderContainer = createReactClass({
     mixins: [LoadJSON],
     propTypes: {
-        data: PropTypes.object
+        data: PropTypes.object,
     },
     getDefaultProps: function() {
         return {
-          data: {}
+            data: {},
         };
     },
     render: function() {
-        return(
+        return (
             <div id="region-header">
                 <div className="header-bg"></div>
                 <div className="jumbotron">
                     <h1 className="header-title">{this.state.data.title}</h1>
                 </div>
                 <div id="linkedin-nav">
-                <a target="_blank" href={this.state.data.linkedin}>
-                    <img src={this.state.data.linkedinImg} alt={this.state.data.linkedAlt} />
-                    <div className="test_content">{this.state.data.linkedText}</div>
-                </a>
-              </div>
+                    <a target="_blank" rel="noopener noreferrer" href={this.state.data.linkedin}>
+                        <img src={this.state.data.linkedinImg} alt={this.state.data.linkedAlt} />
+                        <div className="test_content">{this.state.data.linkedText}</div>
+                    </a>
+                </div>
             </div>
         );
-    }
+    },
 });
 
 module.exports = HeaderContainer;

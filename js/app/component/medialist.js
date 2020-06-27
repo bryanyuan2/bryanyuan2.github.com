@@ -1,38 +1,38 @@
-"use strict";
+'use strict';
 
-var React = require('react'),
-    PureRenderMixin = require('react-addons-pure-render-mixin');
+const React = require('react');
+const PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var PropTypes = require('prop-types');
-var createReactClass = require('create-react-class');
+const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
 
-var mediaList = createReactClass({
+const mediaList = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        media: PropTypes.array
+        media: PropTypes.array,
     },
     getDefaultProps: function() {
         return {
-            media: []
+            media: [],
         };
     },
     render: function() {
-        var media = [],
-            media_content = "";
+        const media = [];
+        let mediaContent = '';
 
         if (this.props.media) {
             this.props.media.forEach(function(content) {
-                media.push('<li><a target="_blank" href=' + content.link + '>' + content.title + ' - ' + content.source + '</a></li>');
-             });
+                media.push('<li><a target="_blank" rel="noopener noreferrer" href=' + content.link + '>' + content.title + ' - ' + content.source + '</a></li>');
+            });
         }
-        media_content = media.join(" ");
+        mediaContent = media.join(' ');
         return (
             <div className="text-media">
-                <div dangerouslySetInnerHTML={{__html: media_content}} />
+                <div dangerouslySetInnerHTML={{__html: mediaContent}} />
             </div>
         );
-  }
+    },
 });
 
 module.exports = mediaList;

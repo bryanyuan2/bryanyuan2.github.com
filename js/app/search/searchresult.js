@@ -1,57 +1,57 @@
-"use strict";
+'use strict';
 
-var React = require('react'),
-    _ = require('lodash'),
-    DirectDisplay = require('./directdisplay');
+const React = require('react');
+const _ = require('lodash');
+const DirectDisplay = require('./directdisplay');
 
 
-var PropTypes = require('prop-types');
-var createReactClass = require('create-react-class');
+const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
-var I18N_CONF = {
+const I18N_CONF = {
     zrp: {
         title: 'No result is found !',
-        hint: 'Please try it again or another query term'
+        hint: 'Please try it again or another query term',
     },
     error: {
         title: 'Sorry, we encountered API issue',
-        hint: 'Please try it again or another query term'
-    }
+        hint: 'Please try it again or another query term',
+    },
 };
 
-var SearchResultBox = createReactClass({
+const SearchResultBox = createReactClass({
     propTypes: {
-        result: PropTypes.object
+        result: PropTypes.object,
     },
     getDefaultProps: function() {
         return {
-            result: {}
+            result: {},
         };
     },
 
     render: function() {
-        var title = _.get(this.props, ['result', 'title'], ''),
-            url = _.get(this.props, ['result', 'url'], '#'),
-            description = _.get(this.props, ['result', 'description'], ''),
-            abstract = description ? description.substr(0, 64) + ' ...' : '',
-            media = _.get(this.props, ['result', 'media'], ''),
-            mediaUrl = _.get(this.props, ['result', 'mediaUrl'], '#');
+        const title = _.get(this.props, ['result', 'title'], '');
+        const url = _.get(this.props, ['result', 'url'], '#');
+        const description = _.get(this.props, ['result', 'description'], '');
+        const abstract = description ? description.substr(0, 64) + ' ...' : '';
+        const media = _.get(this.props, ['result', 'media'], '');
+        const mediaUrl = _.get(this.props, ['result', 'mediaUrl'], '#');
 
         return (
             <div className="search-item">
-                <span className="title"><a target="_blank" href={url}>{title}</a></span>
-                <span className="media"><a target="_blank" href={mediaUrl}>{media}</a></span>
+                <span className="title"><a target="_blank" rel="noopener noreferrer" href={url}>{title}</a></span>
+                <span className="media"><a target="_blank" rel="noopener noreferrer" href={mediaUrl}>{media}</a></span>
                 <span className="content">{abstract}</span>
             </div>
         );
-    }
+    },
 });
 
-var SearchResult = createReactClass({
+const SearchResult = createReactClass({
     getInitialState: function() {
         return {
             result: {},
-            searchAction: false
+            searchAction: false,
         };
     },
     propTypes: {
@@ -62,7 +62,7 @@ var SearchResult = createReactClass({
         wiki: PropTypes.string,
         algo: PropTypes.object,
         status: PropTypes.string,
-        key: PropTypes.number
+        key: PropTypes.number,
     },
     getDefaultProps: function() {
         return {
@@ -73,18 +73,18 @@ var SearchResult = createReactClass({
             wiki: '',
             algo: {},
             status: 'ok',
-            key: 0
+            key: 0,
         };
     },
-    componentWillReceiveProps: function(nextProps) {
+    UNSAFE_componentWillReceiveProps: function(nextProps) {
         this.setState({
             result: nextProps.algo,
-            searchAction: true
+            searchAction: true,
         });
     },
     render: function() {
-        var algo = [],
-            wiki = this.props.wiki;
+        const algo = [];
+        const wiki = this.props.wiki;
 
         // wiki
         if (wiki) {
@@ -112,23 +112,23 @@ var SearchResult = createReactClass({
         return (
             <div>{algo}</div>
         );
-    }
+    },
 });
 
-var ErrorHandler = createReactClass({
+const ErrorHandler = createReactClass({
     propTypes: {
         query: PropTypes.string,
-        type: PropTypes.string
+        type: PropTypes.string,
     },
     getDefaultProps: function() {
         return {
             query: 'default',
-            type: 'error'
+            type: 'error',
         };
     },
     render: function() {
-        var title = '',
-            hint = '';
+        let title = '';
+        let hint = '';
         if (this.props.type === 'zrp') {
             title = I18N_CONF.zrp.title;
             hint = I18N_CONF.zrp.hint;
@@ -143,7 +143,7 @@ var ErrorHandler = createReactClass({
                 <div className="search-hint">{hint}</div>
             </div>
         );
-    }
+    },
 });
 
 module.exports = SearchResult;

@@ -1,20 +1,20 @@
-"use strict";
+'use strict';
 
-var React = require('react'),
-    LoadJSON = require('./../utils/mixins').LoadJSON;
+const React = require('react');
+const LoadJSON = require('./../utils/mixins').LoadJSON;
 
-var PropTypes = require('prop-types');
-var createReactClass = require('create-react-class');
+const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
-var Pack = createReactClass({
+const Pack = createReactClass({
     propTypes: {
         items: PropTypes.object,
-        key: PropTypes.number
+        key: PropTypes.number,
     },
     getDefaultProps: function() {
         return {
             items: {},
-            key: 0
+            key: 0,
         };
     },
     shouldComponentUpdate: function() {
@@ -23,31 +23,31 @@ var Pack = createReactClass({
     },
     render: function() {
         return (
-            <a target="_blank" href={this.props.items.url}><img className="footer-img" src={this.props.items.img} /></a>
+            <a target="_blank" rel="noopener noreferrer" href={this.props.items.url}><img className="footer-img" src={this.props.items.img} /></a>
         );
-    }
+    },
 });
 
-var FooterContainer = createReactClass({
+const FooterContainer = createReactClass({
     mixins: [LoadJSON],
     propTypes: {
-        data: PropTypes.array
+        data: PropTypes.array,
     },
     render: function() {
-        var packages = [];
+        const packages = [];
         this.state.data.forEach(function(item, index) {
-          packages.push(<Pack items={item} key={index} />);
+            packages.push(<Pack items={item} key={index} />);
         });
-        return(
-          <div id='region-footer'>
+        return (
+            <div id='region-footer'>
                 <hr />
                 <span className='footer-ver'><i>Ver.%ver_replacement%</i>. </span>
-                Powered by 
+                Powered by
                 {packages}
                 <br />
-          </div>
+            </div>
         );
-    }
+    },
 });
 
 module.exports = FooterContainer;
