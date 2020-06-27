@@ -1,29 +1,82 @@
 [
   {
     "hl": "hl-work-experience-yahoo",
-    "corp": "Oath",
-    "alignCorp": "Yahoo!",
-    "url": "https://www.oath.com/",
-    "alignUrl": "http://tw.yahoo.com/",
-    "logo": [
-      "asserts/images/experience/oath_logo.png",
-      "asserts/images/experience/yahoo_logo.png"
+    "corp": [
+      {
+        "name": "Verizon Media",
+        "url": "https://www.verizonmedia.com/",
+        "logo": "asserts/images/experience/verizonmedia_logo.png",
+        "logoalt": "verizon media",
+        "date": "Feb 2019 - Present",
+        "org": "Search Engineering",
+        "position": "Senior Software Engineer",
+        "width": "128",
+        "height": "56"
+      },
+      {
+        "name": "Oath",
+        "url": "https://www.oath.com/",
+        "date": "Apr 2018 - Jan 2019",
+        "org": "Search Engineering",
+        "position": "Senior Software Engineer"
+      },
+      {
+        "name": "Oath",
+        "url": "https://www.oath.com/",
+        "logo": "asserts/images/experience/oath_logo.png",
+        "logoalt": "oath",
+        "date": "July 2017 - Mar 2018",
+        "org": "Search Engineering",
+        "position": "Software Engineer",
+        "width": "200",
+        "height": "56"
+      },
+      {
+        "name": "Yahoo!",
+        "url": "http://tw.yahoo.com/",
+        "logo": "asserts/images/experience/yahoo_logo.png",
+        "logoalt": "yahoo",
+        "date": "Sep 2014 - Jun 2017",
+        "org": "Search Engineering",
+        "position": "Software Engineer",
+        "width": "200",
+        "height": "56"
+      }
     ],
-    "width": "200",
-    "height": "56",
-    "date": "July 2017 - Present",
-    "alignDate": "Sep 2014 - Jun 2017",
-    "position": "Software Engineer",
-    "org": "Search Engineering",
     "experience": [
       {
-        "description": "Developer of Yahoo Web/Vertical Search for US and international markets, responsibility for quality, volume, ads monetization, and user experience on Yahoo search result page."
+        "title": "Web Search  (2015Q4 ~ Present) - Search Monetization and User Engagement",
+        "description": [
+          "Led and spearheaded engineering integration with Bing Search partnership; launched Bing driven content on Yahoo Search in 2019Q3 and increased the <i>Coverage 6.75%</i>; <i>Reformulation rate -0.37%</i>; <i>Direct Result Rate +645%</i>; <i>Abandonment Rate -31.15%</i> and neutral revenue impact.",
+          "Built Related-searches functionality which guides user to reach their search intent precisely in 2018Q3; drove <i>Searches per Login User: +1.43%</i>, <i>Revenue: +1.95%</i> and <i>Reformulation Rate: +4%</i>.",
+          "Drove unified semantic-classes framework to speed up A/B testing in 2017Q4; a pixel-perfect project with neutral metrics judgment which shipped a flexible, reliable and maintainable css framework on Yahoo Search.",
+          "Engaged Search FE engineering platform migration in 2015, 2017 and 2018 and developing search functionality under different programming languages and frameworks including PHP 5.6, PHP 7.1, YUI 3, vanilla js, Node.js, React, Redux etc. ",
+          "Developed Firefox Search UX with Mozilla partnership; shipped various features and functionality under a smooth and reliable process between Yahoo Search and Mozilla Search.",
+          "Boosted various advertising products (text ads, image ads and video ads), Knowledge Graph, search functionality promotion and whole page experience on Yahoo Search; Making search product with less abandonment rate and better UX."
+        ]
+      },
+      {
+        "title": "Web Search  (2015Q4 ~ Present) - Local Search",
+        "description": [
+          "FE owner of US local search experience on mobile; Built and renewed the modern local search design with better user experience which impacts ~10 million PV/day.",
+          "Proposed an intuitive design for local card overlay to reduce the action steps on Yahoo mobile search in 2018Q2. The new design not only drives significantly <i>CTR +16.79%</i> but enhances the user engagement <i>ong Dwell Time: +40.38%</i> and <i>Abandonment Rate: -5.34%</i>. Based on the successful experiment, we continually launched local menu UX on Yahoo mobile search in 2019Q3 which drove <i>Result Click Rate: +0.12%</i>, <i>Local Card CTR: +6.26%</i>, <i>Local Card Skip Rate: -7.39%</i>."
+        ]
+      },
+      {
+        "title": "iOS/Android Search SDK (2018Q4 ~ Present)",
+        "description": [
+          "Drove and rollout international iOS Search SDK release pipeline which leveraged the domain knowledge with search end-to-end integration.",
+          "Introduced and Established Search SDK QA process with Malaysia outsourcing QA team; Enforced and rollouted the QA process for TW/HK Search App development in 2019Q4."
+        ]
       }
     ],
     "awards": [
       "2015 Yahoo CEO Challenge Award",
       "2016 Yahoo Taiwan Bot Challenge 1st Place",
-      "2016 Yahoo Taiwan/Japan Joint Hackathon Best Remote Hack & Best Hacker Choice"
+      "2016 Yahoo Taiwan/Japan Joint Hackathon Best Remote Hack & Best Hacker Choice",
+      "2018 Yahoo Taiwan Search DD Hack Day Second Place",
+      "2018 Tech Pulse poster acceptance",
+      "2019 Best Internship Award / Project tech lead"
     ],
     "media": [
       {
@@ -57,24 +110,27 @@
   },
   {
     "hl": "hl-work-experience-tmi hl-work-experience",
-    "corp": "Taiwan Mobile Innovation",
-    "url": "http://tmi.vc/",
-    "logo": [
-      "asserts/images/experience/tmi_logo.png"
+    "corp": [
+      {
+        "name": "Taiwan Mobile Innovation",
+        "url": "http://tmi.vc/",
+        "logo": "asserts/images/experience/tmi_logo.png",
+        "logoalt": "iis",
+        "date": "July 2013 - Aug 2013",
+        "position": "Startups",
+        "org": "",
+        "positionurl": "",
+        "orgurl": "",
+        "width": "170",
+        "height": "90"
+      }
     ],
-    "width": "170",
-    "height": "90",
-    "date": "July 2013 - Aug 2013",
-    "position": "Startups",
-    "positionurl": "",
-    "org": "",
-    "orgurl": "",
     "experience": [
       {
-        "description": "Built synchronous mechanism for auction from Yahoo/eBay/Ruten to Facebook page, and integrated Facebook Insights API and embed.ly statistics in business report."
-      },
-      {
-        "description": "Served 90+ users within 19 active Facebook Pages and synced over 7000+ products for business marketing."
+        "description": [
+          "Built synchronous mechanism for auction from Yahoo/eBay/Ruten to Facebook page, and integrated Facebook Insights API and embed.ly statistics in business report.",
+          "Served 90+ users within 19 active Facebook Pages and synced over 7000+ products for business marketing."
+        ]
       }
     ],
     "media": [
@@ -104,46 +160,50 @@
   },
   {
     "hl": "hl-work-experience-yahoo",
-    "corp": "Yahoo!",
-    "url": "http://tw.yahoo.com/",
-    "logo": [
-      "asserts/images/experience/yahoo_logo.png"
+    "corp": [
+      {
+        "name": "Yahoo!",
+        "url": "http://tw.yahoo.com/",
+        "logo": "asserts/images/experience/yahoo_logo.png",
+        "logoalt": "iis",
+        "date": "July 2012 - Aug 2012",
+        "position": "Intern",
+        "org": "Search Engineering",
+        "width": "200",
+        "height": "56"
+      }
     ],
-    "width": "200",
-    "height": "56",
-    "date": "July 2012 - Aug 2012",
-    "position": "Intern",
-    "org": "Search Engineering",
     "experience": [
       {
-        "description": "Built content-based search suggestions from various corpus, and combined time-based queries recommendation mechanism for News, Movies and Answers verticals."
-      },
-      {
-        "description": "Adopted FP-growth association rules for candidate queries, constructed alternative search assist as bucket experiment."
+        "description": [
+          "Built content-based search suggestions from various corpus, and combined time-based queries recommendation mechanism for News, Movies and Answers verticals.",
+          "Adopted FP-growth association rules for candidate queries, constructed alternative search assist as bucket experiment."
+        ]
       }
     ]
   },
   {
     "hl": "hl-work-experience-sinica",
-    "corp": "Institute of Information Science, Academia Sinica",
-    "url": "http://www.iis.sinica.edu.tw/",
-    "logo": [
-      "asserts/images/experience/iis_sinica_logo.png"
+    "corp": [
+      {
+        "name": "Institute of Information Science, Academia Sinica",
+        "url": "http://www.iis.sinica.edu.tw/",
+        "logo": "asserts/images/experience/iis_sinica_logo.png",
+        "logoalt": "iis",
+        "date": "Feb 2009 - Aug 2011",
+        "org": "Search Engineering",
+        "position": "Software Engineer",
+        "width": "80",
+        "height": "80"
+      }
     ],
-    "width": "80",
-    "height": "80",
-    "date": "Feb 2009 - Aug 2011",
-    "position": "Intern",
-    "org": "Digital Archive Architecture Laboratory",
     "experience": [
       {
-        "description": "Contributed online image search application based on CCH (Contrast Context Histogram), established architectural feature-based search engine for Taiwan's historic buildings."
-      },
-      {
-        "description": "Assisted video streaming platform and transferred to Chinese Television System (CTS); adopted Kaltura video platform as editorial backend."
-      },
-      {
-        "description": "Built WASIGHT.COM, a DAVEART-liked social network for design academy students. Involved in frontend and backend system during development."
+        "description": [
+          "Contributed online image search application based on CCH (Contrast Context Histogram), established architectural feature-based search engine for Taiwan's historic buildings.",
+          "Assisted video streaming platform and transferred to Chinese Television System (CTS); adopted Kaltura video platform as editorial backend.",
+          "Built WASIGHT.COM, a DAVEART-liked social network for design academy students. Involved in frontend and backend system during development."
+        ]
       }
     ],
     "media": [

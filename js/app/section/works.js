@@ -10,7 +10,6 @@ const PureRenderMixin = require('react-addons-pure-render-mixin');
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 
-
 const Work = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
@@ -25,21 +24,42 @@ const Work = createReactClass({
         let description = '';
         const product = [];
         const logo = [];
+        const date = [];
+        const name = [];
         let productContent = '';
         let logoContent = '';
+        let dateContent = '';
+        let nameContent = '';
+
+        this.props.work.corp.forEach(function(data) {
+            if (data.name) {
+                name.push('<div class="text-experience">');
+                name.push('<a target="_blank" rel="noopener noreferrer" href=' + data.url + '>' + data.name + '</a>');
+                if (data.position || data.org) {
+                    name.push('<span class="text-desc"> / ' + data.position + (data.org ? ', ' + data.org : '') + '</span>');
+                }
+                name.push('</div>');
+            }
+            if (data.date) {
+                date.push('<p>' + data.date + '</p>');
+            }
+            if (data.logo) {
+                logo.push('<img id="' + data.name + '" width="' + data.width + '" height="' + data.height + '" src="' + data.logo + '" alt="' + data.logoalt + '" />');
+            }
+        });
+
         this.props.work.experience.forEach(function(content) {
-            if (content.items) {
-                if (content.description) {
+            if (content.title) {
+                description += '<div class="desc-title">' + content.title + '</div>';
+            }
+            if (content.description) {
+                if (Array.isArray(content.description)) {
+                    content.description.forEach(function(item) {
+                        description += '<span>' + item + '</span>';
+                    });
+                } else {
                     description += '<span>' + content.description + '</span>';
                 }
-
-                content.items.forEach(function(item) {
-                    if (item) {
-                        description += '<span class="sub-items">' + item + '</span>';
-                    }
-                });
-            } else if (content.description) {
-                description += '<span>' + content.description + '</span>';
             }
         });
 
@@ -51,31 +71,19 @@ const Work = createReactClass({
             product.push('</div>');
         }
 
-        if (this.props.work.logo) {
-            const self = this;
-            this.props.work.logo.forEach(function(data) {
-                logo.push('<img id="' + self.props.work.corp + '" width="' + self.props.work.width + '" height="' + self.props.work.height + '" src="' + data + '" alt="' + self.props.work.logoalt + '" />');
-            });
-        }
-
-        productContent = product.join(' ');
-        logoContent = logo.join(' ');
+        productContent = product.join('');
+        logoContent = logo.join('');
+        dateContent = date.join('');
+        nameContent = name.join('');
 
         return (
             <div className="data-experience row">
                 <div className="col-md-2 text-date">
-                    <p>{this.props.work.date}</p>
-                    <p>{this.props.work.alignDate}</p>
+                    <div dangerouslySetInnerHTML={{__html: dateContent}} />
                 </div>
                 <div className="col-md-8">
                     <blockquote className={this.props.work.hl} >
-                        <div className="text-experience">
-                            <a target="_blank" rel="noopener noreferrer" href={this.props.work.url}>{this.props.work.corp}</a>
-                        </div>
-                        <div className="text-experience">
-                            { this.props.work.alignCorp && <a target="_blank" rel="noopener noreferrer" href={this.props.work.alignUrl}>{this.props.work.alignCorp}</a> }
-                        </div>
-                        <div className="text-desc">{this.props.work.position}, {this.props.work.org}</div>
+                        <div dangerouslySetInnerHTML={{__html: nameContent}} />
                         <ul className="text-desc">
                             <div className="description" dangerouslySetInnerHTML={{__html: description}} />
                         </ul>
