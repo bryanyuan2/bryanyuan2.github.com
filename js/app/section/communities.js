@@ -5,11 +5,14 @@ var React = require('react'),
     SectionHeader = require('./../component/sectionheader'),
     PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var Community = React.createClass({
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+var Community = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        community: React.PropTypes.object,
-        key: React.PropTypes.number
+        community: PropTypes.object,
+        key: PropTypes.number
     },
     getDefaultProps: function() {
         return {
@@ -49,7 +52,7 @@ var Community = React.createClass({
     }
 });
 
-var CommunitiesContainer = React.createClass({
+var CommunitiesContainer = createReactClass({
     mixins: [LoadJSON],
     render: function() {
         var communities = [];

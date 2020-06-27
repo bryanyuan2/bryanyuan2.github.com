@@ -9,11 +9,14 @@ var React = require('react'),
     LoadJSON = require('./../utils/mixins').LoadJSON,
     PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var Award = React.createClass({
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+var Award = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        award: React.PropTypes.object,
-        key: React.PropTypes.number
+        award: PropTypes.object,
+        key: PropTypes.number
     },
     getDefaultProps: function() {
         return {
@@ -56,7 +59,7 @@ var Award = React.createClass({
     }
 });
 
-var AwardsContainer = React.createClass({
+var AwardsContainer = createReactClass({
     mixins: [LoadJSON],
     render: function() {
         var awards = [];

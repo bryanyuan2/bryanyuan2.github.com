@@ -3,10 +3,13 @@
 var React = require('react'),
     LoadJSON = require('./../utils/mixins').LoadJSON;
 
-var Pack = React.createClass({
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+var Pack = createReactClass({
     propTypes: {
-        items: React.PropTypes.object,
-        key: React.PropTypes.number
+        items: PropTypes.object,
+        key: PropTypes.number
     },
     getDefaultProps: function() {
         return {
@@ -25,10 +28,10 @@ var Pack = React.createClass({
     }
 });
 
-var FooterContainer = React.createClass({
+var FooterContainer = createReactClass({
     mixins: [LoadJSON],
     propTypes: {
-        data: React.PropTypes.array
+        data: PropTypes.array
     },
     render: function() {
         var packages = [];

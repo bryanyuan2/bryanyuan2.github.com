@@ -4,6 +4,10 @@ var React = require('react'),
     truncate = require('truncate'),
     $ = require('jquery');
 
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+
 var WIKI_CONST = {
     protocol: 'https',
     en: 'en.wikipedia.org',
@@ -31,12 +35,12 @@ var WIKI_URL = {
     zhDescUrl: WIKI_CONST.protocol + '://' + WIKI_CONST.en + '/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='
 };
 
-var DirectDisplay = React.createClass({
+var DirectDisplay = createReactClass({
     propTypes: {
-        target: React.PropTypes.string,
-        intl: React.PropTypes.string,
-        wiki: React.PropTypes.string,
-        tag: React.PropTypes.array
+        target: PropTypes.string,
+        intl: PropTypes.string,
+        wiki: PropTypes.string,
+        tag: PropTypes.array
     },
     tags: [],
     highlight: [],
@@ -135,10 +139,10 @@ var DirectDisplay = React.createClass({
     }
 });
 
-var DDtag = React.createClass({
+var DDtag = createReactClass({
     propTypes: {
-        text: React.PropTypes.array,
-        highlight: React.PropTypes.array
+        text: PropTypes.array,
+        highlight: PropTypes.array
     },
     handleClick: function(event) {
         var hlAry = this.props.highlight,

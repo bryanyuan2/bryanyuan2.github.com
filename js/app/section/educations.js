@@ -4,11 +4,14 @@ var React = require('react'),
     LoadJSON = require('./../utils/mixins').LoadJSON,
     SectionHeader = require('./../component/sectionheader');
 
-var Education = React.createClass({
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+var Education = createReactClass({
     honors: [],
     propTypes: {
-        education: React.PropTypes.object,
-        key: React.PropTypes.number
+        education: PropTypes.object,
+        key: PropTypes.number
     },
     getDefaultProps: function() {
         return {
@@ -48,7 +51,7 @@ var Education = React.createClass({
     }
 });
 
-var EducationsContainer = React.createClass({
+var EducationsContainer = createReactClass({
     mixins: [LoadJSON],
     render: function() {
         var educations = [];

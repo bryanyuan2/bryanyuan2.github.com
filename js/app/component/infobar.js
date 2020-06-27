@@ -3,10 +3,15 @@
 var React = require('react'),
     PureRenderMixin = require('react-addons-pure-render-mixin');
 
-var infoBar = React.createClass({
+
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+
+var infoBar = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        info: React.PropTypes.object
+        info: PropTypes.object
     },
     getDefaultProps: function() {
         return {

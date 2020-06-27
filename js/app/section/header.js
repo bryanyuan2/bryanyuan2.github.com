@@ -1,12 +1,17 @@
+/** @jsx React.DOM */
+
 "use strict";
 
 var React = require('react'),
     LoadJSON = require('./../utils/mixins').LoadJSON;
 
-var HeaderContainer = React.createClass({
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
+
+var HeaderContainer = createReactClass({
     mixins: [LoadJSON],
     propTypes: {
-        data: React.PropTypes.object
+        data: PropTypes.object
     },
     getDefaultProps: function() {
         return {
