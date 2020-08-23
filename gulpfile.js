@@ -7,7 +7,7 @@ const babelify = require('babelify');
 const source = require('vinyl-source-stream');
 const uglify = require('gulp-uglify');
 const connect = require('gulp-connect');
-// const streamify = require('gulp-streamify');
+const streamify = require('gulp-streamify');
 const less = require('gulp-less');
 const cssmin = require('gulp-minify-css');
 const rename = require('gulp-rename');
@@ -66,7 +66,7 @@ gulp.task('js', gulp.series('clean', function(done) {
         .transform(babelify)
         .bundle()
         .pipe(source('bundle.js'))
-        // .pipe(gulpif(isUglify, streamify(uglify())))
+        .pipe(gulpif(isUglify, streamify(uglify())))
         .pipe(gulp.dest('./js/build'))
         .pipe(notify('Gulp.js restarted'));
 
