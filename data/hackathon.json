@@ -1,0 +1,274 @@
+[
+  {
+    "hl": "hl-projects-hackathon",
+    "title": "LINE HACK 2018",
+    "organizer": "LINE",
+    "organizerUrl": "https://line.me/zh-hant/",
+    "image": {
+      "src": "asserts/images/projects/line.png",
+      "width": "280",
+      "height": "155",
+      "caption": "安安小妹"
+    },
+    "date": "Oct 2018",
+    "github": "https://github.com/bryanyuan2/LINE-Table",
+    "description": "placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder",
+    "press": [
+      {
+        "title": "首屆LINE HACK落幕 站在LINE的肩膀上新創需要擔心風險嗎？",
+        "link": "https://www.bnext.com.tw/article/50808/line-hack-2018",
+        "source": "數位時代"
+      },
+      {
+        "title": "【LINE HACK 2018】LINE在台首屆駭客松由「IQ智能戰隊」奪冠 下一站前進日本",
+        "link": "https://linecorp.com/zh-hant/pr/news/zh-hant/2018/2401",
+        "source": "LINE"
+      },
+      {
+        "title": "LINE HACK 2018 花絮",
+        "link": "https://www.youtube.com/watch?v=ljl5K-ohCzI",
+        "source": "LINE Taiwan"
+      }
+    ]
+  },
+  {
+    "hl": "hl-projects-hackathon",
+    "title": "Booking.com Taipei Hackathon 2017",
+    "organizer": "Booking.com",
+    "organizerUrl": "https://www.booking.com/",
+    "image": {
+      "src": "asserts/images/projects/booking.png",
+      "width": "280",
+      "height": "143",
+      "caption": "Hotel Boxing"
+    },
+    "github": "https://github.com/bryanyuan2/booking-com-hackathon",
+    "date": "Mar 2017",
+    "press": [
+      {
+        "title": "Booking.com goes to #TaipeiHacks",
+        "link": "https://www.youtube.com/watch?v=bI_bCR8pysQ",
+        "source": "Planet Booking"
+      }
+    ],
+    "description": "placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder"
+  },
+  {
+    "hl": "hl-projects-hackathon hl-projects-opensource",
+    "title": "GIT x Facebook 12小時 Hack for a Cause 公益黑客松",
+    "organizer": "Girls in Tech - Taiwan x Facebook",
+    "organizerUrl": "https://www.facebook.com/girlsintechtaiwan/",
+    "date": "Nov 2015",
+    "image": {
+      "src": "asserts/images/projects/opinionoted.jpg",
+      "width": "280",
+      "height": "145",
+      "caption": "Opinionoted"
+    },
+    "description": "Analyzed interested similarity between your posts and your friend's by fetching Facebook public timeline",
+    "press": [
+      {
+        "title": "FB x GIT Hack For A Cause 12小時公益黑客松",
+        "link": "https://github.com/bryanyuan2/FBxGIT/blob/master/README.md",
+        "source": "bryanyuan2"
+      }
+    ],
+    "github": "https://github.com/bryanyuan2/fb6likes"
+  },
+  {
+    "hl": "hl-projects-hackathon hl-projects-opensource hl-projects-opendata",
+    "title": "痞客邦黑客松: 2015 PIXNET HACKATHON",
+    "organizer": "PIXNET",
+    "organizerUrl": "https://www.pixnet.net/",
+    "date": "Aug 2015",
+    "image": {
+      "src": "asserts/images/projects/pixnet.jpg",
+      "width": "280",
+      "height": "145",
+      "caption": "歐噴。豆知識"
+    },
+    "press": [
+      {
+        "title": "2015 PIXNET HACKATHON 活動花絮",
+        "link": "https://pixnethackathon2015.events.pixnet.net/works2015.php",
+        "source": "PIXNET"
+      }
+    ],
+    "description": "Proposed adblocker-liked ads extension. User could select their interests open data topics and show knowledge overlap on ads.",
+    "github": "https://github.com/bryanyuan2/pixnet.hackathon.2015",
+    "speakerdeck": "https://speakerdeck.com/bryanyuan2/ou-pen-dou-zhi-shi-pixnet-hackathon-2015"
+  },
+  {
+    "hl": "hl-projects-hackathon hl-projects-opensource",
+    "title": "百度開放雲編程馬拉松：綠色生活 - 臺北賽區 - Baidu Captain Planet",
+    "organizer": "百度",
+    "organizerUrl": "https://www.baidu.com/",
+    "date": "July 2013",
+    "image": {
+      "src": "asserts/images/projects/baidu_captain_planet.jpg",
+      "width": "280",
+      "height": "145",
+      "caption": "百度地球超人"
+    },
+    "description": "Analyzed Facebook Checkins and customized compuating score for EPI (Environmental Pollution Index) based on Baidu App Engine.",
+    "github": "https://github.com/bryanyuan2/baidu.hackathon.taipei.2013",
+    "speakerdeck": "https://speakerdeck.com/bryanyuan2/baidu-hackathon-taipei-2013-captain-1",
+    "press": [
+      {
+        "title": "“百度开放云编程马拉松”台北赛区战报：9件作品及团队介绍",
+        "link": "https://www.infoq.cn/article/2013/07/baidu-cloud-hackathon-taipei",
+        "source": "InfoQ"
+      },
+      {
+        "title": "“百度开放云“飘”到台北新加坡编程马拉松席卷亚太",
+        "link": "https://m.qudong.com/pcarticle/149678",
+        "source": "驱动中国"
+      }
+    ]
+  },
+  {
+    "hl": "hl-awards-yahoo",
+    "date": "Nov 2013",
+    "title": "Yahoo! Hack Taiwan 2013",
+    "organizer": "Yahoo!",
+    "organizerUrl": "https://tw.yahoo.com/",
+    "award": "Yahoo! Hack Taiwan 2013 Second Place",
+    "image": {
+      "src": "asserts/images/awards/yataiko.jpg",
+      "url": "https://www.flickr.com/photos/bryanyuan2/10629301555/",
+      "width": "280",
+      "height": "140",
+      "caption": "Yataiko!"
+    },
+    "description": "Developed Taiko-liked chrome extension for Yahoo Mail, and integrated with gamification mechanism (56 teams, Over 200+ developers)",
+    "github": "https://github.com/bryanyuan2/yahoo.hack.taiwan.2013",
+    "youtube": "https://www.youtube.com/watch?v=ZmZ6lJ7gF9w",
+    "speakerdeck": "https://speakerdeck.com/bryanyuan2/ya-taiko-yahoo-hack-taiwan-2013",
+    "press": [
+      {
+        "title": "Yahoo Hack Taiwan: It’s a Wrap!",
+        "source": "YDN",
+        "link": "http://yahoodevelopers.tumblr.com/post/69592034200/yahoo-hack-taiwan-its-a-wrap"
+      },
+      {
+        "title": "2013 Yahoo Hack Taiwan展現「使用者經驗為核心」價值",
+        "source": "數位時代",
+        "link": "http://www.bnext.com.tw/article/view/id/29936"
+      },
+      {
+        "title": "2013 Yahoo Hack Taiwan展現「使用者經驗為核心」價值 開放技術 ＋「直覺、簡單、便利」設計 跨界開發玩創意",
+        "source": "中時電子報",
+        "link": "http://www.chinatimes.com/realtimenews/2013-Yahoo-Hack-Taiwan%E5%B1%95%E7%8F%BE%E3%80%8C%E4%BD%BF%E7%94%A8%E8%80%85%E7%B6%93%E9%A9%97%E7%82%BA%E6%A0%B8%E5%BF%83%E3%80%8D%E5%83%B9%E5%80%BC-%E9%96%8B%E6%94%BE%E6%8A%80%E8%A1%93-%EF%BC%8B%E3%80%8C%E7%9B%B4%E8%A6%BA%E3%80%81%E7%B0%A1%E5%96%AE%E3%80%81%E4%BE%BF%E5%88%A9%E3%80%8D%E8%A8%AD%E8%A8%88-%E8%B7%A8%E7%95%8C%E9%96%8B%E7%99%BC%E7%8E%A9%E5%89%B5%E6%84%8F-20131105002238-260412"
+      },
+      {
+        "title": "Yahoo Hack Taiwan 2013 圓滿落幕",
+        "source": "台灣創意工場",
+        "link": "http://tmi.vc/yahoo-hack-taiwan-2013-%E5%9C%93%E6%BB%BF%E8%90%BD%E5%B9%95/"
+      }
+    ]
+  },
+  {
+    "hl": "hl-awards-firefox",
+    "date": "Jan 2013",
+    "title": "Mozilla Firefox OS App Day 2013",
+    "organizer": "Mozilla",
+    "organizerUrl": "https://foundation.mozilla.org/en/",
+    "award": "Mozilla Firefox OS App Day 2013 Second Place",
+    "image": {
+      "src": "asserts/images/awards/battery_fox.jpg",
+      "width": "280",
+      "height": "140",
+      "caption": "Battery Fox"
+    },
+    "description": "Enhanced Firefox OS battery management Web App using Firefox OS Web APIs.",
+    "github": "https://github.com/bryanyuan2/battery.fox.firefox.os.app.day.2013",
+    "speakerdeck": "https://speakerdeck.com/bryanyuan2/battery-fox-mozilla-firefox-os-dev-day-2013",
+    "press": [
+      {
+        "title": "Firefox OS App Days 活動花絮",
+        "link": "http://blog.mozilla.com.tw/posts/1846/126-firefox-os-app-days-%E6%B4%BB%E5%8B%95%E8%8A%B1%E7%B5%AE",
+        "source": "Mozilla Firefox 訊息中心"
+      },
+      {
+        "title": "Firefox OS App Days 得獎專訪 – 第二名 Battery Fox",
+        "link": "http://blog.mozilla.com.tw/posts/1927/firefox-os-app-days-%E5%BE%97%E7%8D%8E%E5%B0%88%E8%A8%AA-%E7%AC%AC%E4%BA%8C%E5%90%8D-battery-fox",
+        "source": "Mozilla Taiwan"
+      }
+    ]
+  },
+  {
+    "hl": "hl-awards-yahoo",
+    "date": "Oct 2012",
+    "title": "Yahoo! Open Hack Day 2012",
+    "organizer": "Yahoo!",
+    "organizerUrl": "https://tw.yahoo.com/",
+    "award": "Yahoo! Open Hack Day 2012 Second Place & <br/>Yahoo! Open Hack Day 2012 The Most Potential Award",
+    "image": {
+      "src": "asserts/images/awards/yahook.jpg",
+      "width": "280",
+      "height": "140",
+      "caption": "Ya!hook"
+    },
+    "description": "Enriched information for Facebook Checkins and Events pages by using Yahoo! APIs and Taipei Open Data API. (40 teams, Over 200+ developers)",
+    "github": "https://github.com/bryanyuan2/yahook.yahoo.open.hack.day.2012",
+    "youtube": "https://www.youtube.com/watch?v=azaM_HHyBvE",
+    "press": [
+      {
+        "title": "Yahoo! Open Hack Taiwan 2012",
+        "link": "https://developer.yahoo.com/blogs/ydn/yahoo-open-hack-taiwan-2012-53921.html",
+        "source": "YDN"
+      },
+      {
+        "title": "Yahoo! Open Hack 【Ya!hook】獲TMI台灣創意工場50萬投資大獎",
+        "link": "http://tmi.vc/yahoo-open-hack-【yahook】獲tmi台灣創意工場50萬投資大獎/",
+        "source": "台灣創意工場"
+      },
+      {
+        "title": "唯一學生作品「Ya！hook」　成競賽最大贏家",
+        "link": "http://news.ltn.com.tw/news/life/breakingnews/716211",
+        "source": "自由時報"
+      },
+      {
+        "title": "「歪新聞」奪雅虎奇摩Open Hack冠軍，25萬元大獎入袋",
+        "link": "http://www.bnext.com.tw/article/view/id/25232",
+        "source": "數位時代"
+      },
+      {
+        "title": "2012 Yahoo!奇摩 Open Hack 獲獎作品發表會",
+        "link": "http://www.inside.com.tw/2012/10/30/2012-yahoo-kimo-open-hack-demo-show",
+        "source": "INSIDE"
+      }
+    ]
+  },
+  {
+    "hl": "hl-projects-hackathon hl-projects-opensource hl-projects-plurk",
+    "title": "Information Retrieval Final Project 網際網路資訊探勘與檢索期末專題",
+    "date": "Jun 2009 - Sep 2009",
+    "organizer": "元智大學資訊工程研究所",
+    "organizerUrl": "https://www.cse.yzu.edu.tw/",
+    "image": {
+      "src": "asserts/images/projects/goplurk.jpg",
+      "width": "280",
+      "height": "145",
+      "caption": "Go!Plurk"
+    },
+    "description": "Analyzed over 4000+ Plurk user accounts and classified topics based on Bayes classification.",
+    "press": [
+      {
+        "title": "GoPlurk! 噗浪「興趣分析機」，看看你是哪種噗浪人！",
+        "link": "https://briian.com/6331/goplurk.html",
+        "source": "重灌狂人"
+      },
+      {
+        "title": "元智資工系師生開發GO! Plurk 成績斐然",
+        "link": "http://web2.yzu.edu.tw/e_news/558/10_new02.html",
+        "source": "元智電子報"
+      },
+      {
+        "title": "「Go!Plurk」 分析你的噗浪興趣比例",
+        "link": "http://mag.udn.com/mag/digital/storypage.jsp?f_MAIN_ID=319&f_SUB_ID=2941&f_ART_ID=199431",
+        "source": "聯合新聞網"
+      }
+    ]
+  }
+]

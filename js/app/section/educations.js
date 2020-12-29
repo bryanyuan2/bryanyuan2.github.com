@@ -2,8 +2,7 @@
 
 const React = require('react');
 const LoadJSON = require('./../utils/mixins').LoadJSON;
-const SectionHeader = require('./../component/sectionheader');
-
+const Header = require('./../component/header');
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 
@@ -60,7 +59,7 @@ const EducationsContainer = createReactClass({
         });
         return (
             <div id="region-education">
-                <SectionHeader setID="education" text="Education" />
+                <Header setID="education" text="Education" />
                 <hr />
                 {educations}
                 <br />

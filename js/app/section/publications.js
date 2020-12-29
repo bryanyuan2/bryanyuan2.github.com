@@ -2,9 +2,8 @@
 
 const React = require('react');
 const LoadJSON = require('./../utils/mixins').LoadJSON;
-const SectionHeader = require('./../component/sectionheader');
+const Header = require('./../component/header');
 const PureRenderMixin = require('react-addons-pure-render-mixin');
-
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 
@@ -49,7 +48,7 @@ const PublicationsContainer = createReactClass({
         });
         return (
             <div id="region-publications">
-                <SectionHeader setID="publications" text="Publications" />
+                <Header setID="publications" text="Publications" />
                 <hr />
                 {publications}
                 <br />

@@ -7,7 +7,7 @@ const babelify = require('babelify');
 const source = require('vinyl-source-stream');
 const uglify = require('gulp-uglify');
 const connect = require('gulp-connect');
-// const streamify = require('gulp-streamify');
+const streamify = require('gulp-streamify');
 const less = require('gulp-less');
 const cssmin = require('gulp-minify-css');
 const rename = require('gulp-rename');
@@ -18,6 +18,7 @@ const replace = require('gulp-replace');
 const notify = require('gulp-notify');
 const minimist = require('minimist');
 const gulpif = require('gulp-if');
+const jsonlint = require("gulp-jsonlint");
 
 const paths = {
     css: ['./asserts/css/src/*.less'],
@@ -66,12 +67,21 @@ gulp.task('js', gulp.series('clean', function(done) {
         .transform(babelify)
         .bundle()
         .pipe(source('bundle.js'))
-        // .pipe(gulpif(isUglify, streamify(uglify())))
+        //.pipe(gulpif(isUglify, streamify(uglify())))
+        .pipe(streamify(uglify()))
         .pipe(gulp.dest('./js/build'))
         .pipe(notify('Gulp.js restarted'));
 
     done();
 }));
+
+gulp.task('jsonlint', function(done) {
+    gulp.src("./data/*.json")
+        .pipe(jsonlint())
+        .pipe(jsonlint.reporter());
+
+    done();
+});
 
 gulp.task('css', function(done) {
     gulp.src(paths.css)
@@ -117,7 +127,7 @@ gulp.task('typecheck', function(done) {
             abort: false,
         }))
         .pipe(react({stripTypes: true}));
-    // Strip Flow type annotations before compiling
+
     done();
 });
 
@@ -136,7 +146,7 @@ gulp.task('ver-footer', function(done) {
 });
 
 /* default */
-gulp.task('default', gulp.series('css', 'typecheck', 'ver-footer', 'js', 'connect', 'watch'));
+gulp.task('default', gulp.series('jsonlint', 'css', 'typecheck', 'ver-footer', 'js', 'connect', 'watch'));
 
 /* java -jar selenium-server-standalone-2.51.0.jar */
 gulp.task('test', gulp.series('nightwatch', function() {}));

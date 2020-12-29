@@ -2,9 +2,9 @@
 
 const React = require('react');
 const LoadJSON = require('./../utils/mixins').LoadJSON;
-const MediaList = require('./../component/medialist');
+const PressList = require('./../component/presslist');
 const AwardsList = require('./../component/awardslist');
-const SectionHeader = require('./../component/sectionheader');
+const Header = require('./../component/header');
 const PureRenderMixin = require('react-addons-pure-render-mixin');
 
 const PropTypes = require('prop-types');
@@ -33,7 +33,7 @@ const Work = createReactClass({
 
         this.props.work.corp.forEach(function(data) {
             if (data.name) {
-                name.push('<div class="text-experience">');
+                name.push('<div class="text-title-italic">');
                 name.push('<a target="_blank" rel="noopener noreferrer" href=' + data.url + '>' + data.name + '</a>');
                 if (data.position || data.org) {
                     name.push('<span class="text-desc"> / ' + data.position + (data.org ? ', ' + data.org : '') + '</span>');
@@ -50,15 +50,15 @@ const Work = createReactClass({
 
         this.props.work.experience.forEach(function(content) {
             if (content.title) {
-                description += '<div class="desc-title">' + content.title + '</div>';
+                description += '<div class="text-desc-title">' + content.title + '</div>';
             }
             if (content.description) {
                 if (Array.isArray(content.description)) {
                     content.description.forEach(function(item) {
-                        description += '<span>' + item + '</span>';
+                        description += '<span class="text-desc-list">' + item + '</span>';
                     });
                 } else {
-                    description += '<span>' + content.description + '</span>';
+                    description += '<span class="text-desc-list">' + content.description + '</span>';
                 }
             }
         });
@@ -85,15 +85,15 @@ const Work = createReactClass({
                     <blockquote className={this.props.work.hl} >
                         <div dangerouslySetInnerHTML={{__html: nameContent}} />
                         <ul className="text-desc">
-                            <div className="description" dangerouslySetInnerHTML={{__html: description}} />
+                            <div dangerouslySetInnerHTML={{__html: description}} />
                         </ul>
                         { this.props.work.awards && <AwardsList awards={this.props.work.awards} /> }
                         <br />
-                        { this.props.work.media && <MediaList media={this.props.work.media} /> }
+                        { this.props.work.media && <PressList media={this.props.work.media} /> }
                         <div dangerouslySetInnerHTML={{__html: productContent}} />
                     </blockquote>
                 </div>
-                <div className="col-md-2 text-img-pure">
+                <div className="col-md-2 img-nostyle">
                     <div dangerouslySetInnerHTML={{__html: logoContent}} />
                 </div>
             </div>
@@ -110,7 +110,7 @@ const WorksContainer = createReactClass({
         });
         return (
             <div id="region-experience">
-                <SectionHeader setID="experience" text="Work experience" />
+                <Header setID="experience" text="Work Experience" />
                 <hr />
                 {works}
                 <br />

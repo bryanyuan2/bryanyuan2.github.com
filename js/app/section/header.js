@@ -4,7 +4,6 @@
 
 const React = require('react');
 const LoadJSON = require('./../utils/mixins').LoadJSON;
-
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 

@@ -1,0 +1,126 @@
+@import "common.less";
+
+.text-hints:hover {
+    .text-corner;
+    border-color: @twitter-blue;
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 1px;
+    padding-right: 1px;
+    opacity: 0.6;
+}
+
+.text-press {
+    font-family: @ff-ref;
+    font-size: @fs-s;
+    font-style: italic;
+    width: 100%;
+    margin: 2px 0;
+    padding: 0 40px 12px 40px;
+    line-height: 1.45em;
+    position: relative;
+}
+
+.text-press:before {
+    display: block;
+    content: "\201C";
+    font-size: 60px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    color: #7A7A7A;
+}
+
+.text-corner (@radius: 6px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+.text-date {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.text-section {
+    font-size: @fs-m;
+    font-weight: bold;
+    padding-left: 12px;
+    border-left: 8px solid @twitter-blue;
+}
+
+.text-title {
+    font-size: @fs-m;
+    font-weight: bold;
+}
+
+.text-title-italic {
+    font-size: @fs-m;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text-desc {
+    font-size: @fs-ms;
+    list-style-type: disc;
+}
+
+.text-desc-title {
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 8px;
+    margin-left: -40px;
+}
+
+.text-subtitle-italic {
+    color: @twitter-blue;
+    font-size: @fs-ms;
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.text-svg-twitter-blue {
+    margin-right: 6px;
+    vertical-align: middle;
+    filter: invert(60%) sepia(11%) saturate(2690%) hue-rotate(172deg) brightness(105%) contrast(87%);
+}
+
+.text-awards {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.text-awards li {
+    font-style: italic;
+    margin-left: 24px;
+}
+
+.text-ref-set {
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+.text-ref-set .text-ref-title {
+    margin-left: 12px;
+    background-color: @bg-gray-light;
+    padding: 3px 6px 3px 6px;
+    .text-corner;
+}
+
+.text-ref-set .text-ref-icon {
+    margin-left: 12px;
+    border: 3px solid;
+    border-color: @bg-gray-dark;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+.text-desc-list {
+    display: list-item;
+    list-style-type: disc;
+}
+
+

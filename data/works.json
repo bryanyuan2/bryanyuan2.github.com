@@ -1,0 +1,235 @@
+[
+  {
+    "hl": "hl-work-experience-yahoo",
+    "corp": [
+      {
+        "name": "Verizon Media",
+        "url": "https://www.verizonmedia.com/",
+        "logo": "asserts/images/experience/verizonmedia_logo.png",
+        "logoalt": "verizon media",
+        "date": "Feb 2019 - Present",
+        "org": "Search Engineering",
+        "position": "Senior Software Engineer",
+        "width": "200",
+        "height": "56"
+      },
+      {
+        "name": "Oath",
+        "url": "https://www.oath.com/",
+        "date": "Apr 2018 - Jan 2019",
+        "org": "Search Engineering",
+        "position": "Senior Software Engineer"
+      },
+      {
+        "name": "Oath",
+        "url": "https://www.oath.com/",
+        "logo": "asserts/images/experience/oath_logo.png",
+        "logoalt": "oath",
+        "date": "July 2017 - Mar 2018",
+        "org": "Search Engineering",
+        "position": "Software Engineer",
+        "width": "200",
+        "height": "56"
+      },
+      {
+        "name": "Yahoo!",
+        "url": "http://tw.yahoo.com/",
+        "logo": "asserts/images/experience/yahoo_logo.png",
+        "logoalt": "yahoo",
+        "date": "Sep 2014 - Jun 2017",
+        "org": "Search Engineering",
+        "position": "Software Engineer",
+        "width": "200",
+        "height": "56"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Web Search  (2015Q4 ~ Present) - Search Monetization and User Engagement",
+        "description": [
+          "Led and spearheaded engineering integration with Microsoft Bing Search partnership; Coordinated with design, content analysis, product, and engineering from 2019 to 2020. Successfully launched Bing driven content which increased the Reformulation rate -0.37%; Direct Result Rate +645%; Abandonment Rate -31.15% and neutral revenue impact. As the result, enriched the search result with various data formats such as text/photo carousel, bullet list, tabular, and navigational tab-view.",
+          "Built Yahoo Masks Search FE in TW market during the COVID-19 outbreak period in 2020. Leveraged the existing search platform and integrated with the data API within 10 days. The user metrics show up the high engagement, coverage ~2.85% and CTR ~24.31% on mobile.",
+          "Built Related-searches functionality which guides user to reach their search intent precisely in 2018Q3; drove Searches per Login User: +1.43%, Revenue: +1.95% and Reformulation Rate: +4%.",
+          "Drove unified semantic-classes framework to speed up A/B testing in 2017Q4; a pixel-perfect project with neutral metrics judgment which shipped a flexible, reliable and maintainable css framework on Yahoo Search.",
+          "Engaged Search FE engineering platform migration in 2015, 2017, 2018, and developing search functionality under different programming languages and frameworks including PHP 5.6, PHP 7.1, YUI 3, vanilla js, Node.js, React, Redux etc.",
+          "Developed Firefox Search UX with Mozilla partnership; shipped various UI features and functionality under a smooth and reliable process between Yahoo Search and Mozilla Search."
+        ]
+      },
+      {
+        "title": "Web Search  (2015Q4 ~ Present) - Local Search",
+        "description": [
+          "FE owner of US local search experience on mobile; Built and renewed the modern local search design with a better user experience which impacts ~10 million PV/day.",
+          "Proposed an intuitive design for local card overlay to reduce the action steps on Yahoo mobile search in 2018Q2. The new design not only drives significantly CTR +16.79% but enhances the user engagement Long Dwell Time: +40.38% and Abandonment Rate: -5.34%. Based on the successful experiment, we continually launched local menu UX on Yahoo mobile search in 2019Q3 which drove Result Click Rate: +0.12%, Local Card CTR: +6.26%, Local Card Skip Rate: -7.39%."
+        ]
+      },
+      {
+        "title": "iOS/Android Search SDK (2018Q4 ~ Present)",
+        "description": [
+          "Drove and rollout international iOS Search SDK release pipeline which leveraged the domain knowledge with search end-to-end integration.",
+          "Introduced and Established Search SDK QA process with Malaysia outsourcing QA team; Enforced and rollouted the QA process for TW/HK Search App development in 2019Q4."
+        ]
+      }
+    ],
+    "awards": [
+      "2015 Yahoo CEO Challenge Award",
+      "2016 Yahoo Taiwan Bot Challenge 1st Place",
+      "2016 Yahoo Taiwan/Japan Joint Hackathon Best Remote Hack & Best Hacker Choice",
+      "2018 Yahoo Taiwan Search DD Hack Day Second Place",
+      "2018 Tech Pulse Poster Acceptance",
+      "2019 Best Internship Award / Project Tech Lead",
+      "2020 Tech Pulse Poster Acceptance & Best Poster Awards"
+    ],
+    "media": [
+      {
+        "title": "Mozilla switching default Firefox search engine to Yahoo",
+        "source": "The Next Web",
+        "link": "http://thenextweb.com/apps/2014/11/19/mozilla-switching-default-firefox-search-engine-yahoo"
+      },
+      {
+        "title": "Yahoo Will Soon Become The Default Search Engine In Firefox",
+        "source": "TechCrunch",
+        "link": "http://techcrunch.com/2014/11/19/mozilla-partners-with-yahoo-which-will-become-the-default-search-engine-in-firefox-next-month"
+      },
+      {
+        "title": "A New Yahoo Search Experience for Firefox Users in U.S.",
+        "source": "The Mozilla Blog",
+        "link": "https://blog.mozilla.org/blog/2015/11/11/a-new-yahoo-search-experience-for-firefox-users-in-u-s"
+      }
+    ],
+    "product": [
+      {
+        "title": "Yahoo Search",
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/yahoo.jpg",
+        "link": "https://search.yahoo.com/search?p=dr%20strange"
+      },
+      {
+        "title": "Mozilla Firefox Search",
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/monaco.jpg",
+        "link": "https://search.yahoo.com/yhs/search?p=big%20hero%206&ei=UTF-8&hspart=mozilla&hsimp=yhs-009&fr=chrf-yff44&type=yff44"
+      },
+      {
+        "title": "Yahoo Search (iOS)",
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/yahoo.jpg",
+        "link": "https://apps.apple.com/us/app/yahoo-search/id361071600"
+      }
+    ]
+  },
+  {
+    "hl": "hl-work-experience-tmi hl-work-experience",
+    "corp": [
+      {
+        "name": "Taiwan Mobile Innovation",
+        "url": "http://tmi.vc/",
+        "logo": "asserts/images/experience/tmi_logo.png",
+        "logoalt": "iis",
+        "date": "July 2013 - Aug 2013",
+        "position": "Startups",
+        "org": "",
+        "positionurl": "",
+        "orgurl": "",
+        "width": "170",
+        "height": "90"
+      }
+    ],
+    "experience": [
+      {
+        "description": [
+          "Built synchronous mechanism for auction from Yahoo/eBay/Ruten to Facebook page, and integrated Facebook Insights API and embed.ly statistics in business report.",
+          "Served 90+ users within 19 active Facebook Pages and synced over 7000+ products for business marketing."
+        ]
+      }
+    ],
+    "media": [
+      {
+        "title": "[Meet創業之星] 自動化同步新品，網路賣家行銷工具－Pagineer",
+        "source": "數位時代",
+        "link": "http://www.bnext.com.tw/article/view/id/29319"
+      },
+      {
+        "title": "Pagineer 團隊 讓你的網拍商品同步Facebook更容易!",
+        "source": "台灣創意工場",
+        "link": "http://tmi.vc/pagineer/"
+      },
+      {
+        "title": "[軟體出英雄] 鄭鈞元×陳柏宇×鐘冠傑──雅虎看好的校園新勢力",
+        "source": "數位時代雜誌第237期 201402",
+        "link": "http://www.bnext.com.tw/article/view/id/31106"
+      }
+    ],
+    "product": [
+      {
+        "title": "Pagineer",
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/pagineer.jpg",
+        "link": "http://pagineer.herokuapp.com/"
+      }
+    ]
+  },
+  {
+    "hl": "hl-work-experience-yahoo",
+    "corp": [
+      {
+        "name": "Yahoo!",
+        "url": "http://tw.yahoo.com/",
+        "logo": "asserts/images/experience/yahoo_logo.png",
+        "logoalt": "iis",
+        "date": "July 2012 - Aug 2012",
+        "position": "Intern",
+        "org": "Search Engineering",
+        "width": "200",
+        "height": "56"
+      }
+    ],
+    "experience": [
+      {
+        "description": [
+          "Built content-based search suggestions from various corpus, and combined time-based queries recommendation mechanism for News, Movies and Answers verticals.",
+          "Adopted FP-growth association rules for candidate queries, constructed alternative search assist as bucket experiment."
+        ]
+      }
+    ]
+  },
+  {
+    "hl": "hl-work-experience-sinica",
+    "corp": [
+      {
+        "name": "Institute of Information Science, Academia Sinica",
+        "url": "http://www.iis.sinica.edu.tw/",
+        "logo": "asserts/images/experience/iis_sinica_logo.png",
+        "logoalt": "iis",
+        "date": "Feb 2009 - Aug 2011",
+        "org": "Search Engineering",
+        "position": "Software Engineer",
+        "width": "80",
+        "height": "80"
+      }
+    ],
+    "experience": [
+      {
+        "description": [
+          "Contributed online image search application based on CCH (Contrast Context Histogram), established architectural feature-based search engine for Taiwan's historic buildings.",
+          "Assisted video streaming platform and transferred to Chinese Television System (CTS); adopted Kaltura video platform as editorial backend.",
+          "Built WASIGHT.COM, a DAVEART-liked social network for design academy students. Involved in frontend and backend system during development."
+        ]
+      }
+    ],
+    "media": [
+      {
+        "title": "影音與圖像的萬花筒：VCenter與iPicBox成果專訪",
+        "source": "數位典藏與學習電子報",
+        "link": "http://newsletter.teldap.tw/news/read_topstory.php?nid=3581&lid=384"
+      }
+    ],
+    "product": [
+      {
+        "title": "iPicBox",
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/ipicbox.jpg",
+        "link": "http://ipicbox.tw"
+      },
+      {
+        "title": "WA!SIGHT",
+        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/wasight.jpg",
+        "link": "http://wasight.tw"
+      }
+    ]
+  }
+]
