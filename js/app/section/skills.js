@@ -2,9 +2,8 @@
 
 const React = require('react');
 const LoadJSON = require('./../utils/mixins').LoadJSON;
-const SectionHeader = require('./../component/sectionheader');
+const Header = require('./../component/header');
 const PureRenderMixin = require('react-addons-pure-render-mixin');
-
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 
@@ -21,17 +20,17 @@ const Skill = createReactClass({
     render: function() {
         const items = [];
         this.props.skill.items.forEach(function(content) {
-            items.push(content.name);
+            items.push('<span class="text-hints">' +content.name + '</span>');
         });
 
         return (
             <div className="data-skills row">
-                <div className="col-md-2 fs-16 text-date">
+                <div className="col-md-2 fs-16">
                     <p>{this.props.skill.title}</p>
                 </div>
                 <div className="col-md-8 fs-16">
                     <blockquote className={this.props.skill.hl}>
-                        {items.join(', ')}
+                        <div dangerouslySetInnerHTML={{__html: items.join(', ')}} />
                     </blockquote>
                 </div>
             </div>
@@ -49,7 +48,7 @@ const SkillsContainer = createReactClass({
 
         return (
             <div id="region-skills">
-                <SectionHeader setID="skills" text="Skills" />
+                <Header setID="skills" text="Technical Keywords" />
                 <hr />
                 {skills}
                 <br />

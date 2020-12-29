@@ -10,11 +10,11 @@ const createReactClass = require('create-react-class');
 
 /* section */
 const CompHeader = require('./section/header');
+const CompSummary = require('./section/summary');
 const CompEducations = require('./section/educations');
 const CompSkills = require('./section/skills');
 const CompWorks = require('./section/works');
-const CompAwards = require('./section/awards');
-const CompProjects = require('./section/projects');
+const CompHackathon = require('./section/hackathon');
 const CompCommunities = require('./section/communities');
 const CompPublications = require('./section/publications');
 const CompFooter = require('./section/footer-ver');
@@ -23,16 +23,16 @@ const App = createReactClass({
     render: function() {
         return (
             <div>
-                <CompHeader url="asserts/data/commons.json" />
+                <CompHeader url="data/commons.json" />
                 <div className="container">
-                    <CompSkills url="asserts/data/skills.json" />
-                    <CompWorks url="asserts/data/works.json" />
-                    <CompAwards url="asserts/data/awards.json" />
-                    <CompProjects url="asserts/data/projects.json" />
-                    <CompCommunities url="asserts/data/communities.json" />
-                    <CompPublications url="asserts/data/publications.json" />
-                    <CompEducations url="asserts/data/educations.json" />
-                    <CompFooter url="asserts/data/footer.json" />
+                    <CompSummary url="data/summary.json" />
+                    <CompSkills url="data/skills.json" />
+                    <CompWorks url="data/works.json" />
+                    <CompHackathon url="data/hackathon.json" />
+                    <CompCommunities url="data/communities.json" />
+                    <CompPublications url="data/publications.json" />
+                    <CompEducations url="data/educations.json" />
+                    <CompFooter url="data/footer.json" />
                 </div>
             </div>
         );

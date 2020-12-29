@@ -1,0 +1,31 @@
+[
+  {
+    "hl": "hl-skills-frontend",
+    "title": "Programming Skills",
+    "items": [
+      { "name": "JavaScript" },
+      { "name": "React"  },
+      { "name": "HTML/CSS" },
+      { "name": "PHP" },
+      { "name": "Python" }
+    ]
+  },
+  {
+    "hl": "hl-skills-research",
+    "title": "Integration Skills",
+    "items": [
+      { "name": "CI/CD" },
+      { "name": "Large Scale Web Application Development" },
+      { "name": "Web performance tuning" }
+    ]
+  },
+  {
+    "hl": "hl-skills-research",
+    "title": "Research Interests",
+    "items": [
+      { "name": "Information Retrieval" },
+      { "name": "Data Mining" },
+      { "name": "Opinion Mining" }
+    ]
+  }
+]
