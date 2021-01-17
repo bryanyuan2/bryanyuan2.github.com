@@ -10,19 +10,9 @@
     "img": "asserts/images/tech/browserify.png"
   },
   {
-    "name": "bower",
-    "url": "http://bower.io/",
-    "img": "asserts/images/tech/bower.png"
-  },
-  {
     "name": "bootstrap",
     "url": "http://getbootstrap.com/",
     "img": "asserts/images/tech/bootstrap.png"
-  },
-  {
-    "name": "jquery",
-    "url": "https://jquery.com/",
-    "img": "asserts/images/tech/jquery.png"
   },
   {
     "name": "gulp",
@@ -60,19 +50,9 @@
     "img": "asserts/images/tech/travis.png"
   },
   {
-    "name": "mocha",
-    "url": "https://mochajs.org",
-    "img": "asserts/images/tech/mocha.png"
-  },
-  {
     "name": "chai",
     "url": "http://chaijs.com/",
     "img": "asserts/images/tech/chai.png"
-  },
-  {
-    "name": "phantomjs",
-    "url": "http://phantomjs.org/",
-    "img": "asserts/images/tech/phantomjs.png"
   },
   {
     "name": "coveralls",
