@@ -73,7 +73,7 @@ const AwardsContainer = createReactClass({
             awards.push(<Award award={award} key={index} />);
         });
         return (
-            <div id="region-awards">
+            <div id="region-hackathon">
                 <Header setID="awards" text="Hackathon Profiles & Awards" />
                 <hr />
                 {awards}

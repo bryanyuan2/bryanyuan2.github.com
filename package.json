@@ -7,7 +7,9 @@
     "dev": "gulp --env development",
     "prod": "gulp --env production",
     "lint": "eslint js/app/*.js js/app/*/*.js gulpfile.js",
-    "lint-fix": "eslint js/app/*.js js/app/*/*.js gulpfile.js --fix"
+    "lint-fix": "eslint js/app/*.js js/app/*/*.js gulpfile.js --fix",
+    "test": "jest",
+    "test-cov": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,14 @@
     "email": "bryanyuan2@gmail.com",
     "url": "bryanyuan2.github.io"
   },
+  "jest": {
+    "collectCoverage": true
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
+    "@testing-library/react": "^11.2.2",
     "browserify": "^16.5.1",
     "chai": "^4.2.0",
     "coveralls": "^3.0.11",
@@ -40,16 +46,15 @@
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.2",
+    "jest": "^26.6.3",
     "jquery": "~3.4.1",
     "jsdom": "^16.2.2",
-    "mocha": "^7.1.1",
-    "react-addons-test-utils": "^15.6.2",
-    "react-testutils-additions": "^16.0.2",
     "react-tools": "^0.13.3",
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.12.10",
     "babelify": "^10.0.0",
     "create-react-class": "^15.6.3",
     "envify": "^4.1.0",
@@ -62,6 +67,7 @@
     "react": "^16.13.1",
     "react-addons-pure-render-mixin": "^15.6.2",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^17.0.1",
     "truncate": "^2.1.0"
   }
 }

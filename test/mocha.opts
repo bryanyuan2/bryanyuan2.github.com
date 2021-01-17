@@ -1,2 +1,0 @@
---compilers .:test/utils/compiler.js
---require test/utils/dom.js
