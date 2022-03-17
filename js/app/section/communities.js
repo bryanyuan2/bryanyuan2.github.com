@@ -42,7 +42,7 @@ const Community = createReactClass({
                         </blockquote>
                     </div>
                     <div className="col-md-2 img-nostyle">
-                        <img src={this.props.community.image} alt={this.props.community.name} />
+                        <img src={this.props.community.image} alt={this.props.community.name} width={this.props.community.width} height={this.props.community.height} />
                     </div>
                 </div>
                 <br />

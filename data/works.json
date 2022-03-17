@@ -3,71 +3,64 @@
     "hl": "hl-work-experience-yahoo",
     "corp": [
       {
-        "name": "Verizon Media",
-        "url": "https://www.verizonmedia.com/",
-        "logo": "asserts/images/experience/verizonmedia_logo.png",
-        "logoalt": "verizon media",
-        "date": "Feb 2019 - Present",
+        "name": "Yahoo!",
+        "url": "http://tw.yahoo.com/",
+        "logo": "asserts/images/experience/yahoo_2020.png",
+        "logoalt": "yahoo",
+        "date": "Jan 2022 - Present",
         "org": "Search Engineering",
-        "position": "Senior Software Engineer",
-        "width": "200",
-        "height": "56"
-      },
-      {
-        "name": "Oath",
-        "url": "https://www.oath.com/",
-        "date": "Apr 2018 - Jan 2019",
-        "org": "Search Engineering",
-        "position": "Senior Software Engineer"
-      },
-      {
-        "name": "Oath",
-        "url": "https://www.oath.com/",
-        "logo": "asserts/images/experience/oath_logo.png",
-        "logoalt": "oath",
-        "date": "July 2017 - Mar 2018",
-        "org": "Search Engineering",
-        "position": "Software Engineer",
+        "position": "Lead Engineer",
         "width": "200",
         "height": "56"
       },
       {
         "name": "Yahoo!",
         "url": "http://tw.yahoo.com/",
-        "logo": "asserts/images/experience/yahoo_2020.png",
-        "logoalt": "yahoo",
-        "date": "Sep 2014 - Jun 2017",
+        "date": "Apr 2018 - Dec 2021",
+        "org": "Search Engineering",
+        "position": "Senior Software Engineer",
+        "width": "200",
+        "height": "56"
+      },
+      {
+        "name": "Yahoo!",
+        "url": "http://tw.yahoo.com/",
+        "date": "Sep 2014 - Mar 2018",
         "org": "Search Engineering",
         "position": "Software Engineer",
         "width": "200",
         "height": "56"
       }
     ],
+    "refer": {
+      "text": "<span class='work-refer-title'>(a.k.a. <i><strong>Oath</strong></i> 2017/7 - 2019/1, <i><strong>Verizon Media</strong></i> 2019/2 –2021/8)</span>"
+    },
     "experience": [
       {
-        "title": "Web Search  (2015Q4 ~ Present) - Search Monetization and User Engagement",
+        "title": "Led Global Yahoo Search FE integration with Microsoft Bing Search content partnership (40+ markets rollout). Coordinated with UX design, data content analysis, product strategy, and middleware integration from 2019 to 2020. Drove positive user engagement with a neutral revenue impact on Search UX."
+      },
+      {
+        "title": "Experienced in the FE product rollout for worldwide markets (40+ markets) including i18n and l10n."
+      },
+      {
+        "title": "Organized and Strengthened Yahoo APAC TW/HK Search Product, Content, and engineering in 2021 and 2022",
         "description": [
-          "Led and spearheaded engineering integration with Microsoft Bing Search partnership; Coordinated with design, content analysis, product, and engineering from 2019 to 2020. Successfully launched Bing driven content which increased the Reformulation rate -0.37%; Direct Result Rate +645%; Abandonment Rate -31.15% and neutral revenue impact. As the result, enriched the search result with various data formats such as text/photo carousel, bullet list, tabular, and navigational tab-view.",
-          "Built Yahoo Masks Search FE in TW market during the COVID-19 outbreak period in 2020. Leveraged the existing search platform and integrated with the data API within 10 days. The user metrics show up the high engagement, coverage ~2.85% and CTR ~24.31% on mobile.",
-          "Built Related-searches functionality which guides user to reach their search intent precisely in 2018Q3; drove Searches per Login User: +1.43%, Revenue: +1.95% and Reformulation Rate: +4%.",
-          "Drove unified semantic-classes framework to speed up A/B testing in 2017Q4; a pixel-perfect project with neutral metrics judgment which shipped a flexible, reliable and maintainable css framework on Yahoo Search.",
-          "Engaged Search FE engineering platform migration in 2015, 2017, 2018, and developing search functionality under different programming languages and frameworks including PHP 5.6, PHP 7.1, YUI 3, vanilla js, Node.js, React, Redux etc.",
-          "Developed Firefox Search UX with Mozilla partnership; shipped various UI features and functionality under a smooth and reliable process between Yahoo Search and Mozilla Search."
+          "Built Yahoo Masks Search and Yahoo Rapid Test Search in TW market during the COVID-19 outbreak period. Leveraged the existing search platform and integrated with the government open data API. Conducted the plan with cross-functional teams and departments including engineering, design, product, and content analysis.",
+          "Engineered and Executed the TW, HK product ads integration with Microsoft engineering, Yahoo Search (BE/FE engineering, business development, and product).",
+          "Drove Traditional Chinese query understanding improvement (6 months) for explicit local intent which increased 15% coverage for local search in TW market."
         ]
       },
       {
-        "title": "Web Search  (2015Q4 ~ Present) - Local Search",
-        "description": [
-          "FE owner of US local search experience on mobile; Built and renewed the modern local search design with a better user experience which impacts ~10 million PV/day.",
-          "Proposed an intuitive design for local card overlay to reduce the action steps on Yahoo mobile search in 2018Q2. The new design not only drives significantly CTR +16.79% but enhances the user engagement Long Dwell Time: +40.38% and Abandonment Rate: -5.34%. Based on the successful experiment, we continually launched local menu UX on Yahoo mobile search in 2019Q3 which drove Result Click Rate: +0.12%, Local Card CTR: +6.26%, Local Card Skip Rate: -7.39%."
-        ]
+        "title": "Drove unified semantic-classes framework in Search FE to speed up A/B testing in 2017Q4; A pixel-perfect project with neutral metrics judgment which shipped a flexible, reliable, and maintainable css framework on Yahoo Search."
       },
       {
-        "title": "iOS/Android Search SDK (2018Q4 ~ Present)",
-        "description": [
-          "Drove and rollout international iOS Search SDK release pipeline which leveraged the domain knowledge with search end-to-end integration.",
-          "Introduced and Established Search SDK QA process with Malaysia outsourcing QA team; Enforced and rollouted the QA process for TW/HK Search App development in 2019Q4."
-        ]
+        "title": "Engaged Global Search FE platform migration in 2015, 2017, 2018, and developed search functionality under different stacks, languages, and frameworks including PHP 5.6, PHP 7.1, YUI 3, Node.js, React, Redux."
+      },
+      {
+        "title": "Yahoo Local Search FE engineering owner on the mobile web; Involved in reflowing the modern intuitive design which reduces the action steps and it impacted ~10 million PV/day. "
+      },
+      {
+        "title": "Drove and rollout international iOS Search SDK release pipeline leveraged the domain knowledge with search end-to-end integration."
       }
     ],
     "awards": [
@@ -99,17 +92,17 @@
     "product": [
       {
         "title": "Yahoo Search",
-        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/yahoo.jpg",
+        "img": "asserts/images/works/yahoo.png",
         "link": "https://search.yahoo.com/search?p=dr%20strange"
       },
       {
         "title": "Mozilla Firefox Search",
-        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/monaco.jpg",
-        "link": "https://search.yahoo.com/yhs/search?p=big%20hero%206&ei=UTF-8&hspart=mozilla&hsimp=yhs-009&fr=chrf-yff44&type=yff44"
+        "img": "asserts/images/works/monaco.png",
+        "link": "https://search.yahoo.com/yhs/search?p=big%20hero%206&ei=UTF-8&hspart=mozilla&hsimp=yhs-009"
       },
       {
         "title": "Yahoo Search (iOS)",
-        "img": "https://raw.githubusercontent.com/bryanyuan2/bryanyuan2.github.com/master/asserts/images/works/yahoo.jpg",
+        "img": "asserts/images/works/yahoo.png",
         "link": "https://apps.apple.com/us/app/yahoo-search/id361071600"
       }
     ]
@@ -127,8 +120,8 @@
         "org": "",
         "positionurl": "",
         "orgurl": "",
-        "width": "170",
-        "height": "90"
+        "width": "200",
+        "height": "95"
       }
     ],
     "experience": [
@@ -170,8 +163,8 @@
       {
         "name": "Yahoo!",
         "url": "http://tw.yahoo.com/",
-        "logo": "asserts/images/experience/yahoo_logo.png",
-        "logoalt": "iis",
+        "logo": "asserts/images/experience/yahoo_2020.png",
+        "logoalt": "yahoo",
         "date": "July 2012 - Aug 2012",
         "position": "Intern",
         "org": "Search Engineering",
@@ -199,8 +192,8 @@
         "date": "Feb 2009 - Aug 2011",
         "org": "Search Engineering",
         "position": "Software Engineer",
-        "width": "80",
-        "height": "80"
+        "width": "120",
+        "height": "120"
       }
     ],
     "experience": [

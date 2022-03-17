@@ -25,7 +25,7 @@ const Summary = createReactClass({
         return (
             <div className="data-summary">
                 <div className="text-desc-list">
-                    <span dangerouslySetInnerHTML={{__html: this.props.summary.description}} />
+                    <span dangerouslySetInnerHTML={{__html: this.props.summary.text}} />
                 </div>
             </div>
         );
