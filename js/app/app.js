@@ -10,6 +10,7 @@ const createReactClass = require('create-react-class');
 
 /* section */
 const CompHeader = require('./section/header');
+const CompSearchBox = require('./section/searchbox');
 const CompSummary = require('./section/summary');
 const CompEducations = require('./section/educations');
 const CompSkills = require('./section/skills');
@@ -21,10 +22,17 @@ const CompFooter = require('./section/footer-ver');
 
 const App = createReactClass({
     render: function() {
+
+        var searchbox_fullrecall = {
+            "url": "data/searchbox.json",
+            "default": "data/searchbox-fullrecall.json"
+        };
+        
         return (
             <div>
                 <CompHeader url="data/commons.json" />
                 <div className="container">
+                    <CompSearchBox url={searchbox_fullrecall} />
                     <CompSummary url="data/summary.json" />
                     <CompSkills url="data/skills.json" />
                     <CompWorks url="data/works.json" />

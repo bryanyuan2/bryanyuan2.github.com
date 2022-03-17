@@ -20,13 +20,54 @@ const Work = createReactClass({
             work: {},
         };
     },
+    renderExperience: function(data) {
+        var output = '';
+
+        data.forEach(function(obj) {
+            if (obj.title) {
+                output += '<div class="text-desc-title">' + obj.title + '</div>';
+            }
+            if (obj.description) {
+                if (Array.isArray(obj.description)) {
+                    obj.description.forEach(function(item) {
+                        output += '<div class="text-desc-list">' + item + '</div>';
+                    });
+                } else {
+                    output += '<div class="text-desc-list">' + obj.description + '</div>';
+                }
+            }
+
+            if (obj.thumbnails) {
+                if (Array.isArray(obj.thumbnails)) {
+                    obj.thumbnails.forEach(function(item) {
+                        output += '<div class="col-md-4"><a href="' + item.src + '"><img src="' + item.src + '" src2="' + item.src + '"class="img-thumbnail" alt="' + item.alt + '" width="140" height="140"><div class="img-caption">' + item.desc + '</div></a></div>';
+                    });
+                }
+            }
+        });
+
+        return output;
+    },
+    renderProduct: function(data) {
+        const output = [];
+
+        if (data) {
+            output.push('<div class="text-ref-set">');
+            data.forEach(function(info) {
+                output.push('<a href="' + info.link + '" target="_blank" rel="noopener noreferrer"><img class="text-ref-icon" src=' + info.img + ' alt=' + info.title + '/>' + '<span class="text-ref-title">' + info.title + '</span>' + '</a>');
+            });
+            output.push('</div>');
+        }
+
+        return output.join('');
+    },
     render: function() {
         let description = '';
-        const product = [];
+        
         const logo = [];
         const date = [];
         const name = [];
-        let productContent = '';
+        let product = '';
         let logoContent = '';
         let dateContent = '';
         let nameContent = '';
@@ -48,30 +89,9 @@ const Work = createReactClass({
             }
         });
 
-        this.props.work.experience.forEach(function(content) {
-            if (content.title) {
-                description += '<div class="text-desc-title">' + content.title + '</div>';
-            }
-            if (content.description) {
-                if (Array.isArray(content.description)) {
-                    content.description.forEach(function(item) {
-                        description += '<span class="text-desc-list">' + item + '</span>';
-                    });
-                } else {
-                    description += '<span class="text-desc-list">' + content.description + '</span>';
-                }
-            }
-        });
-
-        if (this.props.work.product) {
-            product.push('<div class="text-ref-set">');
-            this.props.work.product.forEach(function(info) {
-                product.push('<a href="' + info.link + '" target="_blank" rel="noopener noreferrer"><img class="text-ref-icon" src=' + info.img + ' alt=' + info.title + '/>' + '<span class="text-ref-title">' + info.title + '</span>' + '</a>');
-            });
-            product.push('</div>');
-        }
-
-        productContent = product.join('');
+        description += this.renderExperience(this.props.work.experience);
+        product = this.renderProduct(this.props.work.product);
+        
         logoContent = logo.join('');
         dateContent = date.join('');
         nameContent = name.join('');
@@ -84,13 +104,14 @@ const Work = createReactClass({
                 <div className="col-md-8">
                     <blockquote className={this.props.work.hl} >
                         <div dangerouslySetInnerHTML={{__html: nameContent}} />
+                        { this.props.work.refer && <div dangerouslySetInnerHTML={{__html: this.props.work.refer.text}} /> }
                         <ul className="text-desc">
                             <div dangerouslySetInnerHTML={{__html: description}} />
                         </ul>
                         { this.props.work.awards && <AwardsList awards={this.props.work.awards} /> }
                         <br />
                         { this.props.work.media && <PressList media={this.props.work.media} /> }
-                        <div dangerouslySetInnerHTML={{__html: productContent}} />
+                        <div dangerouslySetInnerHTML={{__html: product}} />
                     </blockquote>
                 </div>
                 <div className="col-md-2 img-nostyle">
