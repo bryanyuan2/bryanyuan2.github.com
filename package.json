@@ -63,7 +63,7 @@
     "gulp-streamify": "^1.0.2",
     "lightbox2": "^2.11.3",
     "lodash": "^4.17.15",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-addons-pure-render-mixin": "^15.6.2",
