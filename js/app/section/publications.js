@@ -10,13 +10,11 @@ const createReactClass = require('create-react-class');
 const Publication =createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        publication: PropTypes.object,
-        key: PropTypes.number,
+        publication: PropTypes.object
     },
     getDefaultProps: function() {
         return {
-            publication: {},
-            key: 0,
+            publication: {}
         };
     },
     render: function() {
@@ -44,6 +42,8 @@ const PublicationsContainer = createReactClass({
     render: function() {
         const publications = [];
         this.state.data.forEach(function(publication, index) {
+            // need to keep key={index} to avoid the following warning
+            // warning: Each child in a list should have a unique "key" prop.
             publications.push(<Publication publication={publication} key={index} />);
         });
         return (

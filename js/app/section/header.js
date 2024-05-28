@@ -20,9 +20,8 @@ const HeaderContainer = createReactClass({
     render: function() {
         return (
             <div id="region-header">
-                <div className="header-bg"></div>
-                <div className="jumbotron">
-                    <h1 className="header-title">{this.state.data.title}</h1>
+                <div className="header-bg">
+                    <div className="header-title">{this.state.data.title}</div>
                 </div>
                 <div id="linkedin-nav">
                     <a target="_blank" rel="noopener noreferrer" href={this.state.data.linkedin}>

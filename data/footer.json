@@ -30,24 +30,9 @@
     "img": "asserts/images/tech/github.png"
   },
   {
-    "name": "nightwatch",
-    "url": "http://nightwatchjs.org/",
-    "img": "asserts/images/tech/nightwatch.png"
-  },
-  {
-    "name": "jshint",
-    "url": "http://jshint.com/",
-    "img": "asserts/images/tech/jshint.png"
-  },
-  {
     "name": "flowtype",
     "url": "http://flowtype.org/",
     "img": "asserts/images/tech/flowtype.png"
-  },
-  {
-    "name": "travis-ci",
-    "url": "http://travis-ci.org/",
-    "img": "asserts/images/tech/travis.png"
   },
   {
     "name": "chai",

@@ -7,8 +7,18 @@
         "url": "http://tw.yahoo.com/",
         "logo": "asserts/images/experience/yahoo_2020.png",
         "logoalt": "yahoo",
-        "date": "Jan 2022 - Present",
-        "org": "Search Engineering",
+        "date": "Mar 2023 - Present",
+        "org": "Global Search Engineering",
+        "position": "Manager",
+        "width": "200",
+        "height": "56"
+      },
+      {
+        "name": "Yahoo!",
+        "url": "http://tw.yahoo.com/",
+        "logoalt": "yahoo",
+        "date": "Jan 2022 - Feb 2023",
+        "org": "Global Search Engineering",
         "position": "Lead Engineer",
         "width": "200",
         "height": "56"
@@ -17,7 +27,7 @@
         "name": "Yahoo!",
         "url": "http://tw.yahoo.com/",
         "date": "Apr 2018 - Dec 2021",
-        "org": "Search Engineering",
+        "org": "Search and Gemini Engineering",
         "position": "Senior Software Engineer",
         "width": "200",
         "height": "56"
@@ -26,41 +36,47 @@
         "name": "Yahoo!",
         "url": "http://tw.yahoo.com/",
         "date": "Sep 2014 - Mar 2018",
-        "org": "Search Engineering",
+        "org": "Search and Gemini Engineering",
         "position": "Software Engineer",
         "width": "200",
         "height": "56"
       }
     ],
+    "photo": {
+      "src": "asserts/images/icons/flickr.png",
+      "url": "https://www.flickr.com/photos/cycheng-at-work",
+      "alt": "check cycheng at work",
+      "text": "check cycheng at work",
+      "width": 32,
+      "height": 32
+    },
     "refer": {
-      "text": "<span class='work-refer-title'>(a.k.a. <i><strong>Oath</strong></i> 2017/7 - 2019/1, <i><strong>Verizon Media</strong></i> 2019/2 –2021/8)</span>"
+      "text": "<span class='text-aka-title'>(a.k.a. <i><strong>Oath</strong></i> 2017/7 - 2019/1, <i><strong>Verizon Media</strong></i> 2019/2 –2021/8)</span>"
     },
     "experience": [
       {
-        "title": "Led Global Yahoo Search FE integration with Microsoft Bing Search content partnership (40+ markets rollout). Coordinated with UX design, data content analysis, product strategy, and middleware integration from 2019 to 2020. Drove positive user engagement with a neutral revenue impact on Search UX."
+        "title": "Coordinated cross-organization FE engineering and product communication between Yahoo! Search and Yahoo! Shopping."
       },
       {
-        "title": "Experienced in the FE product rollout for worldwide markets (40+ markets) including i18n and l10n."
+        "title": "Led Global Yahoo Search FE integration with Microsoft Bing Search content partnership. Coordinated with UX design, FE/middleware integration, i18n/l10n, and data analysis. Drove multiple projects with user engagement and positive revenue impact."
       },
       {
-        "title": "Organized and Strengthened Yahoo APAC TW/HK Search Product, Content, and engineering in 2021 and 2022",
-        "description": [
-          "Built Yahoo Masks Search and Yahoo Rapid Test Search in TW market during the COVID-19 outbreak period. Leveraged the existing search platform and integrated with the government open data API. Conducted the plan with cross-functional teams and departments including engineering, design, product, and content analysis.",
-          "Engineered and Executed the TW, HK product ads integration with Microsoft engineering, Yahoo Search (BE/FE engineering, business development, and product).",
-          "Drove Traditional Chinese query understanding improvement (6 months) for explicit local intent which increased 15% coverage for local search in TW market."
-        ]
+        "title": "Drove and led Yahoo! Search Front Page (SFP, search.yahoo.com) redesign and rollout with 40+ markets in 2022."
       },
       {
-        "title": "Drove unified semantic-classes framework in Search FE to speed up A/B testing in 2017Q4; A pixel-perfect project with neutral metrics judgment which shipped a flexible, reliable, and maintainable css framework on Yahoo Search."
+        "title": "Organized and Strengthened Yahoo APAC TW/HK Search Product, Content, and Engineering in 2021 and 2022. Built Yahoo Masks Search and Yahoo Rapid Test Search in TW market during the COVID-19 outbreak period. Leveraged the existing search platform and integrated with the government open data API. Conducted the plan with cross-functional teams including engineering, design, product, and content analysis."
       },
       {
-        "title": "Engaged Global Search FE platform migration in 2015, 2017, 2018, and developed search functionality under different stacks, languages, and frameworks including PHP 5.6, PHP 7.1, YUI 3, Node.js, React, Redux."
+        "title": "Drove unified semantic-classes framework in Search FE to speed up A/B testing in 2017Q4; A pixel-perfect project with neutral metrics judgment which shipped a flexible, reliable, and maintainable CSS framework on Yahoo Search."
       },
       {
-        "title": "Yahoo Local Search FE engineering owner on the mobile web; Involved in reflowing the modern intuitive design which reduces the action steps and it impacted ~10 million PV/day. "
+        "title": "Engaged in Global Search FE platform migration in 2015, 2017, 2018, and developed search functionality under different tech stacks, languages, and frameworks including/migrating PHP 5.6, PHP 7.1, YUI 3, Node.js, React, Redux, and vanilla Javascript."
       },
       {
-        "title": "Drove and rollout international iOS Search SDK release pipeline leveraged the domain knowledge with search end-to-end integration."
+        "title": "Yahoo Local Search FE engineering owner on the mobile web; Involved in reflowing the modern intuitive design which reduces the action steps and impacts ~10 million PV/day."
+      },
+      {
+        "title": "Drove and rolled out iOS/Android Search SDK (Native App) release pipeline and leveraged with search end-to-end CI-CD integration."
       }
     ],
     "awards": [
@@ -68,11 +84,22 @@
       "2016 Yahoo Taiwan Bot Challenge 1st Place",
       "2016 Yahoo Taiwan/Japan Joint Hackathon Best Remote Hack & Best Hacker Choice",
       "2018 Yahoo Taiwan Search DD Hack Day Second Place",
-      "2019 Best Internship Award / Project Tech Lead",
-      "2018 and 2020 Tech Pulse Poster Acceptance",
-      "2020 Tech Pulse Best Poster Awards"
+      "2019 Best Internship Award as Project Tech Lead",
+      "2022 Tech Pulse Talk Acceptance; 2018, 2020, 2022 Tech Pulse Poster Acceptance",
+      "2020 Tech Pulse Best Poster Awards",
+      "2022 Yahoo Search Awards"
     ],
     "media": [
+      {
+        "title": "與網友齊心抗疫，Yahoo奇摩旗下產品持續導入防疫新功能",
+        "source": "Yahoo!",
+        "link": "https://promo.campaign.yahoo.com.tw/corpblog/article.php?u=185e4608-84b4-441e-9145-b08c30433c0b"
+      },
+      {
+        "title": "New Yahoo Search experience to start rolling out in the first weeks of 2024",
+        "source": "Search Engine Land",
+        "link": "https://searchengineland.com/yahoo-search-to-start-rolling-out-in-the-first-weeks-of-2024-434729"
+      },
       {
         "title": "Mozilla switching default Firefox search engine to Yahoo",
         "source": "The Next Web",
@@ -93,7 +120,7 @@
       {
         "title": "Yahoo Search",
         "img": "asserts/images/works/yahoo.png",
-        "link": "https://search.yahoo.com/search?p=dr%20strange"
+        "link": "https://search.yahoo.com/search?p=what%20to%20watch"
       },
       {
         "title": "Mozilla Firefox Search",
@@ -101,9 +128,34 @@
         "link": "https://search.yahoo.com/yhs/search?p=big%20hero%206&ei=UTF-8&hspart=mozilla&hsimp=yhs-009"
       },
       {
-        "title": "Yahoo Search (iOS)",
+        "title": "Yahoo Search (Frontpage)",
+        "img": "asserts/images/works/yahoo.png",
+        "link": "https://search.yahoo.com"
+      },
+      {
+        "title": "Yahoo Search / 雅虎搜尋 (iOS)",
         "img": "asserts/images/works/yahoo.png",
         "link": "https://apps.apple.com/us/app/yahoo-search/id361071600"
+      },
+      {
+        "title": "Yahoo Search / 雅虎搜尋 (Android)",
+        "img": "asserts/images/works/yahoo.png",
+        "link": "https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.search&hl=zh_TW&gl=US"
+      },
+      {
+        "title": "Yahoo 奇摩 (TW)",
+        "img": "asserts/images/works/yahoo.png",
+        "link": "https://tw.yahoo.com/"
+      },
+      {
+        "title": "Yahoo 奇摩 (HK)",
+        "img": "asserts/images/works/yahoo.png",
+        "link": "https://hk.yahoo.com/"
+      },
+      {
+        "title": "Yahoo 奇摩字典搜尋",
+        "img": "asserts/images/works/yahoo.png",
+        "link": "https://tw.dictionary.search.yahoo.com/"
       }
     ]
   },
@@ -190,8 +242,8 @@
         "logo": "asserts/images/experience/iis_sinica_logo.png",
         "logoalt": "iis",
         "date": "Feb 2009 - Aug 2011",
-        "org": "Search Engineering",
-        "position": "Software Engineer",
+        "org": "DAAL (數位典藏技術發展組)",
+        "position": "Intern",
         "width": "120",
         "height": "120"
       }

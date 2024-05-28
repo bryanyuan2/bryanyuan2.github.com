@@ -8,13 +8,11 @@ const createReactClass = require('create-react-class');
 
 const Pack = createReactClass({
     propTypes: {
-        items: PropTypes.object,
-        key: PropTypes.number,
+        items: PropTypes.object
     },
     getDefaultProps: function() {
         return {
-            items: {},
-            key: 0,
+            items: {}
         };
     },
     shouldComponentUpdate: function() {
@@ -36,6 +34,8 @@ const FooterContainer = createReactClass({
     render: function() {
         const packages = [];
         this.state.data.forEach(function(item, index) {
+            // need to keep key={index} to avoid the following warning
+            // warning: Each child in a list should have a unique "key" prop.
             packages.push(<Pack items={item} key={index} />);
         });
         return (

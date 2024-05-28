@@ -40,7 +40,7 @@ const Work = createReactClass({
             if (obj.thumbnails) {
                 if (Array.isArray(obj.thumbnails)) {
                     obj.thumbnails.forEach(function(item) {
-                        output += '<div class="col-md-4"><a href="' + item.src + '"><img src="' + item.src + '" src2="' + item.src + '"class="img-thumbnail" alt="' + item.alt + '" width="140" height="140"><div class="img-caption">' + item.desc + '</div></a></div>';
+                        output += '<div class="col-md-4"><a href="' + item.src + '"><img src="' + item.src + '" src2="' + item.src + '" class="img-thumbnail" alt="' + item.alt + '" width="140" height="140"><div class="img-caption">' + item.desc + '</div></a></div>';
                     });
                 }
             }
@@ -52,11 +52,11 @@ const Work = createReactClass({
         const output = [];
 
         if (data) {
-            output.push('<div class="text-ref-set">');
+            output.push('<div class="text-ref-set"><ul>');
             data.forEach(function(info) {
-                output.push('<a href="' + info.link + '" target="_blank" rel="noopener noreferrer"><img class="text-ref-icon" src=' + info.img + ' alt=' + info.title + '/>' + '<span class="text-ref-title">' + info.title + '</span>' + '</a>');
+                output.push('<li><a href="' + info.link + '" target="_blank" rel="noopener noreferrer"><img class="text-ref-icon" src=' + info.img + ' alt=' + info.title + '/>' + '<span class="text-ref-title">' + info.title + '</span>' + '</a></li>');
             });
-            output.push('</div>');
+            output.push('</ul></div>');
         }
 
         return output.join('');
@@ -96,6 +96,11 @@ const Work = createReactClass({
         dateContent = date.join('');
         nameContent = name.join('');
 
+        var photo = '';
+        if (this.props.work.photo) {
+            photo = '<img src="' + this.props.work.photo.src + '" alt="' + this.props.work.photo.alt + '" width="' + this.props.work.photo.width + '" height="' + this.props.work.photo.height + '" /><a target="_blank" href="' + this.props.work.photo.url + '">' + this.props.work.photo.text + '</a>';
+        }
+
         return (
             <div className="data-experience row">
                 <div className="col-md-2 text-date">
@@ -108,9 +113,10 @@ const Work = createReactClass({
                         <ul className="text-desc">
                             <div dangerouslySetInnerHTML={{__html: description}} />
                         </ul>
+                        { this.props.work.photo && <div dangerouslySetInnerHTML={{__html: photo}} />}
                         { this.props.work.awards && <AwardsList awards={this.props.work.awards} /> }
                         <br />
-                        { this.props.work.media && <PressList media={this.props.work.media} /> }
+                        { this.props.work.media && <PressList press={this.props.work.media} /> }
                         <div dangerouslySetInnerHTML={{__html: product}} />
                     </blockquote>
                 </div>
@@ -127,7 +133,9 @@ const WorksContainer = createReactClass({
     render: function() {
         const works = [];
         this.state.data.forEach(function(work, index) {
-            works.push(<Work work={work} />);
+            // need to keep key={index} to avoid the following warning
+            // warning: Each child in a list should have a unique "key" prop.
+            works.push(<Work work={work} key={index} />);
         });
         return (
             <div id="region-experience">
