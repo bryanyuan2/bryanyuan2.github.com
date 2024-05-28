@@ -43,7 +43,9 @@ const SkillsContainer = createReactClass({
     render: function() {
         const skills = [];
         this.state.data.forEach(function(skill, index) {
-            skills.push(<Skill skill={skill} />);
+            // need to keep key={index} to avoid the following warning
+            // warning: Each child in a list should have a unique "key" prop.
+            skills.push(<Skill skill={skill} key={index} />);
         });
 
         return (

@@ -10,13 +10,11 @@ const createReactClass = require('create-react-class');
 const Community = createReactClass({
     mixins: [PureRenderMixin],
     propTypes: {
-        community: PropTypes.object,
-        key: PropTypes.number,
+        community: PropTypes.object
     },
     getDefaultProps: function() {
         return {
-            community: {},
-            key: 0,
+            community: {}
         };
     },
     render: function() {
@@ -56,6 +54,8 @@ const CommunitiesContainer = createReactClass({
     render: function() {
         const communities = [];
         this.state.data.forEach(function(community, index) {
+            // need to keep key={index} to avoid the following warning
+            // warning: Each child in a list should have a unique "key" prop.
             communities.push(<Community community={community} key={index} />);
         });
         return (

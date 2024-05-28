@@ -9,13 +9,11 @@ const createReactClass = require('create-react-class');
 const Education = createReactClass({
     honors: [],
     propTypes: {
-        education: PropTypes.object,
-        key: PropTypes.number,
+        education: PropTypes.object
     },
     getDefaultProps: function() {
         return {
-            education: {},
-            key: 0,
+            education: {}
         };
     },
     shouldComponentUpdate: function() {
@@ -55,6 +53,8 @@ const EducationsContainer = createReactClass({
     render: function() {
         const educations = [];
         this.state.data.forEach(function(education, index) {
+            // need to keep key={index} to avoid the following warning
+            // warning: Each child in a list should have a unique "key" prop.
             educations.push(<Education education={education} key={index} />);
         });
         return (

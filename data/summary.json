@@ -1,17 +1,19 @@
 [
   {
-    "text": "Led Yahoo Search FE with Microsoft Bing Search integration (2019, 2020, 2022). Experienced in A/B testing and a solid understanding of metrics analysis; Strong understanding of ADs monetization and UX interaction in the FE engineering domain."
+    "level": "People Management (1+ year)",
+    "items": [
+      "Led Yahoo! Search Front-End engineering team (10+ FTEs) and worked with Yahoo Search global team  (US, EMEA, APAC). Heading and managing the engineering team including Consumer Search, Local Search, and B2B to drive user engagement and revenue growth.",
+      "Built and shaped engineering culture by collaborating horizontally across the squads."
+    ]
   },
   {
-    "text": "Experienced and involved in building million PVs/day level products; Good at working with Product, Business Development, Design, QA, Sale planner, and Cross-functional engineering teams in different time zone."
-  },
-  {
-    "text": "Proficient in JavaScript and focus on mobile web development; Strong domain knowledge in CI/CD release process."
-  },
-  {
-    "text": "Over 40+ times as the FE engineering FTE/intern interviewer, experienced in mentoring engineers and interns."
-  },
-  {
-    "text": "High profiles of hackathon winner in the world-class competition (Second place of Yahoo Open Hack Day 2012 and 2013, The Most Potential Award of Yahoo Open Hack Day 2012; Second place of Mozilla Firefox OS App Day 2013); Creative hackathon player in the team in tier-1 company record (Facebook, Line, Booking.com, and Baidu)."
+    "level": "Individual Contributor (9+ years)",
+    "items": [
+      "Led Yahoo Search FE with Microsoft Bing Search integration (2019, 2020, 2022). Experienced in A/B testing and a solid understanding of metrics analysis; Strong understanding of monetization and UX interaction in the Search FE engineering domain.",
+      "Proficient in JavaScript and strong domain knowledge in building reliable CI/CD release pipelines.",
+      "Involved in cross-functional collaboration in building TW/HK Yahoo! Search Product Ads (PA) with Microsoft Bing Ads team (Beijing) in 2022; Driven and executed the integration engineering plan with a cross-functional team and spearheaded the working model and executed the goal from A/B testing to launch.",
+      "Lecturer in Yahoo! Taiwan Scrum training and also known as Certified Product Owner and Certified Scrum Master by Scrum Inc.",
+      "High profiles of hackathon winners in world-class competitions (Yahoo, Mozilla) and experienced in participating in diverse hackathon competitions (Facebook, Line, Booking.com, and Baidu)."
+    ]
   }
 ]
