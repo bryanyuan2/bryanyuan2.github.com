@@ -5,4 +5,4 @@
 
 - `npm install`
 - `npm install -g gulp`
-- `npm run go`
+- `npm run dev` || - `npm run prod`
