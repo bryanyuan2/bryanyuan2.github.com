@@ -68,7 +68,7 @@
     "react": "^16.13.1",
     "react-addons-pure-render-mixin": "^15.6.2",
     "react-dom": "^16.13.1",
-    "react-test-renderer": "^17.0.1",
+    "react-test-renderer": "^16.14.0",
     "truncate": "^2.1.0"
   }
 }
