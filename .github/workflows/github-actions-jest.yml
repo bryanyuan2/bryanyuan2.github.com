@@ -17,7 +17,6 @@ jobs:
         id: coverage
         with:
           textReportPath: './coverage/coverage-final.json'
-          srcBasePath: './utils'
       - name: add coverage comment to the PR
         uses: marocchino/sticky-pull-request-comment@v2
         with:
