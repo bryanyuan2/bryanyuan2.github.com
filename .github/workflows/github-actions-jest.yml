@@ -12,3 +12,13 @@ jobs:
           node-version: '20.x'
       - run: npm ci
       - run: npm test
+      - name: prepare coverage report in markdown
+        uses: fingerprintjs/action-coverage-report-md@v2
+        id: coverage
+        with:
+          textReportPath: './coverage/coverage-final.json'
+          srcBasePath: './utils'
+      - name: add coverage comment to the PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: ${{ steps.coverage.outputs.markdownReport }}
