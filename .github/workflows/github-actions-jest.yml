@@ -17,3 +17,4 @@ jobs:
         with:
           skip-step: install
           test-script: npm run test
+          coverage-file: ./coverage/coverage-final.json
