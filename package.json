@@ -21,7 +21,8 @@
     "url": "bryanyuan2.github.io"
   },
   "jest": {
-    "collectCoverage": true
+    "collectCoverage": true,
+    "coverageReporters": ["json"]
   },
   "license": "MIT",
   "devDependencies": {
