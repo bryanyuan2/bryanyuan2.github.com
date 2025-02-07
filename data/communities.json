@@ -2,7 +2,7 @@
   {
     "hl": "hl-communities-g0v",
     "name": "g0v Summit 2014",
-    "link": "http://summit.g0v.tw/",
+    "link": "https://summit.g0v.tw/2014/zh-TW/index.html",
     "date": "Nov 2014",
     "image": "asserts/images/community/comm_g0v.png",
     "width": "180",
@@ -10,7 +10,7 @@
     "position": "Program Assistant",
     "description": [
       {
-        "text": "Coordinated speaker and visiting scholar, arranged whole day event and multiple-track session."
+        "text": "Hosted and managed the meeting session for g0v Summit 2024."
       }
     ]
   },
@@ -25,7 +25,7 @@
     "position": "Attendee Team Lead 2012",
     "description": [
       {
-        "text": "Organized administration team of 8 members to host conference over 1000+ attendee, supervising registration, attendee analytics, and administrative functions by conducting online coordination meetings."
+        "text": "Led an 8-member administrative team to organize a conference with over 1,000 attendees, overseeing registration, attendee analytics, and administrative functions through online coordination meetings."
       }
     ]
   },
@@ -41,9 +41,6 @@
     "description": [
       {
         "text": "Localized addons.mozilla.org (AMO) and Firefox Sync in Traditional Chinese."
-      },
-      {
-        "text": "Conducted campus promotion and activities for Firefox 4 and arranged internal affairs-work."
       }
     ]
   }

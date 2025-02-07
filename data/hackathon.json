@@ -12,7 +12,7 @@
     },
     "date": "Oct 2018",
     "github": "https://github.com/bryanyuan2/LINE-Table",
-    "description": "Built \"長輩圖\" generator as a Line Bot. Keep calm and deliver Memes in an efficient way.",
+    "description": "Built a LINE Bot for generating \"長輩圖\" (elderly memes), creating and streamlining the meme in a seamless way.",
     "press": [
       {
         "title": "首屆LINE HACK落幕 站在LINE的肩膀上新創需要擔心風險嗎？",
@@ -51,7 +51,7 @@
         "source": "Planet Booking"
       }
     ],
-    "description": "Hotel Boxing is an auto-generated comparison chart that helps users to find their Hotels in different aspects by using the opinion mining approach."
+    "description": "Designed and implemented \"Hotel Boxing\" an auto-generated comparison chart utilizing opinion mining to help users based on price, reviews, and facilities etc."
   },
   {
     "hl": "hl-projects-hackathon hl-projects-opensource",
@@ -65,7 +65,7 @@
       "height": "145",
       "caption": "Opinionoted"
     },
-    "description": "Analyzed interested similarity between your posts and your friend's by fetching Facebook public timeline",
+    "description": "Analyzed interest similarity between Facebook users' and their friends' by retrieving public post from Facebook's timeline",
     "press": [
       {
         "title": "FB x GIT Hack For A Cause 12小時公益黑客松",
@@ -94,7 +94,7 @@
         "source": "PIXNET"
       }
     ],
-    "description": "Proposed adblocker-liked ads extension. User could select their interests open data topics and show knowledge overlap on ads.",
+    "description": "Proposed an ad-blocker-like browser extension that enables users to select topics of interest from open data and replaces ads with relevant knowledge-based Q&A.",
     "github": "https://github.com/bryanyuan2/pixnet.hackathon.2015",
     "speakerdeck": "https://speakerdeck.com/bryanyuan2/ou-pen-dou-zhi-shi-pixnet-hackathon-2015"
   },
@@ -110,7 +110,7 @@
       "height": "145",
       "caption": "百度地球超人"
     },
-    "description": "Analyzed Facebook Checkins and customized compuating score for EPI (Environmental Pollution Index) based on Baidu App Engine.",
+    "description": "Analyzed Facebook check-ins and developed a scoring system for the Environmental Pollution Index (EPI) using Baidu App Engine.",
     "github": "https://github.com/bryanyuan2/baidu.hackathon.taipei.2013",
     "speakerdeck": "https://speakerdeck.com/bryanyuan2/baidu-hackathon-taipei-2013-captain-1",
     "press": [
@@ -140,7 +140,7 @@
       "height": "140",
       "caption": "Yataiko!"
     },
-    "description": "Developed Taiko-liked chrome extension for Yahoo Mail, and integrated with gamification mechanism (56 teams, Over 200+ developers)",
+    "description": "Developed a Chrome extension for Yahoo Mail that helps users clean up spam using a Taiko-like gamification mechanism. The project was selected among 56 teams and over 200 developers.",
     "github": "https://github.com/bryanyuan2/yahoo.hack.taiwan.2013",
     "youtube": "https://www.youtube.com/watch?v=ZmZ6lJ7gF9w",
     "speakerdeck": "https://speakerdeck.com/bryanyuan2/ya-taiko-yahoo-hack-taiwan-2013",
@@ -180,7 +180,7 @@
       "height": "140",
       "caption": "Battery Fox"
     },
-    "description": "Enhanced Firefox OS battery management Web App using Firefox OS Web APIs.",
+    "description": "Developed a Chrome extension to enhance Firefox OS battery management by utilizing Firefox OS Web APIs within a gamification mechanism.",
     "github": "https://github.com/bryanyuan2/battery.fox.firefox.os.app.day.2013",
     "speakerdeck": "https://speakerdeck.com/bryanyuan2/battery-fox-mozilla-firefox-os-dev-day-2013",
     "press": [
