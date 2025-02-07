@@ -17,6 +17,7 @@ const CompWorks = require('./section/works');
 const CompHackathon = require('./section/hackathon');
 const CompCommunities = require('./section/communities');
 const CompPublications = require('./section/publications');
+const CompCertification = require('./section/certification');
 const CompFooter = require('./section/footer-ver');
 
 const App = createReactClass({
@@ -28,6 +29,7 @@ const App = createReactClass({
                     <CompSummary url="data/summary.json" />
                     <CompSkills url="data/skills.json" />
                     <CompWorks url="data/works.json" />
+                    <CompCertification url="data/certification.json" />
                     <CompHackathon url="data/hackathon.json" />
                     <CompCommunities url="data/communities.json" />
                     <CompPublications url="data/publications.json" />

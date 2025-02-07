@@ -1,0 +1,58 @@
+[
+  {
+    "hl": "hl-certification-scruminc",
+    "institution": "Agile Education",
+    "authority": "Scrum Inc.™",
+    "startDate": "Dec 2022",
+    "endDate": "Dec 2029",
+    "name": "Registered Product Owner™",
+    "link": "https://s3.amazonaws.com/scruminc-certs/RPO-6785822",
+    "certID": "RPO-6785822",
+    "alt": "Registered Product Owner™",
+    "image": "asserts/images/certification/scruminc.png",
+    "width": "120",
+    "height": "30"
+  },
+  {
+    "hl": "hl-certification-scruminc",
+    "institution": "Agile Education",
+    "authority": "Scrum Inc.™",
+    "startDate": "Dec 2022",
+    "endDate": "Dec 2029",
+    "name": "Registered Scrum Master™",
+    "link": "https://s3.amazonaws.com/scruminc-certs/RSM-1073004",
+    "certID": "RSM-1073004",
+    "alt": "Registered Scrum Master™",
+    "image": "asserts/images/certification/scruminc.png",
+    "width": "120",
+    "height": "30"
+  },
+  {
+    "hl": "hl-certification-coursera",
+    "institution": "Google",
+    "authority": "Coursera",
+    "startDate": "Feb 2025",
+    "endDate": "",
+    "name": "Google AI Essentials",
+    "link": "https://www.coursera.org/account/accomplishments/records/LC0PE7NLG4F3",
+    "certID": "LC0PE7NLG4F3",
+    "alt": "Google AI Essentials",
+    "image": "asserts/images/certification/coursera.png",
+    "width": "120",
+    "height": "68"
+  },
+  {
+    "hl": "hl-certification-coursera",
+    "institution": "Google",
+    "authority": "Coursera",
+    "startDate": "Feb 2025",
+    "endDate": "",
+    "name": "Google Project Management Professional Certificate",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/L2M39B5BUD9U",
+    "certID": "L2M39B5BUD9U",
+    "alt": "Google Project Management Professional Certificate",
+    "image": "asserts/images/certification/coursera.png",
+    "width": "120",
+    "height": "68"
+  }
+]
