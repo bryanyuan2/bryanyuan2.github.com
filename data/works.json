@@ -7,7 +7,7 @@
         "url": "http://tw.yahoo.com/",
         "logo": "asserts/images/experience/yahoo_2020.png",
         "logoalt": "yahoo",
-        "date": "Mar 2023 - Present",
+        "date": "Mar 2023 - Dec 2024",
         "org": "Global Search Engineering",
         "position": "Manager",
         "width": "200",
@@ -45,8 +45,8 @@
     "photo": {
       "src": "asserts/images/icons/flickr.png",
       "url": "https://www.flickr.com/photos/cycheng-at-work",
-      "alt": "check cycheng at work",
-      "text": "check cycheng at work",
+      "alt": "check Bryan Cheng (@cycheng) at work",
+      "text": "check Bryan Cheng (@cycheng) at work",
       "width": 32,
       "height": 32
     },
@@ -55,28 +55,25 @@
     },
     "experience": [
       {
-        "title": "Coordinated cross-organization FE engineering and product communication between Yahoo! Search and Yahoo! Shopping."
+        "title": "Coordinated cross-organizational collaboration between Yahoo! Search (search.yahoo.com) and Yahoo! Shopping (shopping.yahoo.com) across squads, leading the development and deployment of the unified revenue-sharing and exchange protocol (a.k.a. Vampire) for international search markets."
       },
       {
-        "title": "Led Global Yahoo Search FE integration with Microsoft Bing Search content partnership. Coordinated with UX design, FE/middleware integration, i18n/l10n, and data analysis. Drove multiple projects with user engagement and positive revenue impact."
+        "title": "Led the integration of Global Yahoo! rich search features with Microsoft Bing Search as part of a search-powered partnership for US and international markets. Managed and coordinated the end-to-end workflow, including front-end/middleware integration, i18n/l10n, data analysis, and launch planning."
       },
       {
-        "title": "Drove and led Yahoo! Search Front Page (SFP, search.yahoo.com) redesign and rollout with 40+ markets in 2022."
+        "title": "Drove and led the FE development of the Yahoo! Search Front Page redesign and rollout across 40+ markets in 2022. This project was executed in collaboration with the international Yahoo! homepage sunset and redirection plan for EMEA markets."
       },
       {
-        "title": "Organized and Strengthened Yahoo APAC TW/HK Search Product, Content, and Engineering in 2021 and 2022. Built Yahoo Masks Search and Yahoo Rapid Test Search in TW market during the COVID-19 outbreak period. Leveraged the existing search platform and integrated with the government open data API. Conducted the plan with cross-functional teams including engineering, design, product, and content analysis."
+        "title": "Organized and strengthened Yahoo! APAC TW/HK Search Product, Content, and Engineering in 2021 and 2022. Developed Yahoo! Masks Search and Yahoo! Rapid Test Search for the Taiwan market during the COVID-19 outbreak, leveraging the existing search platform and integrating government open data APIs. Coordinated efforts with cross-functional teams, including engineering, design, product, and content analysis."
       },
       {
-        "title": "Drove unified semantic-classes framework in Search FE to speed up A/B testing in 2017Q4; A pixel-perfect project with neutral metrics judgment which shipped a flexible, reliable, and maintainable CSS framework on Yahoo Search."
+        "title": "Led the implementation of a unified semantic-classes framework in Yahoo! Search FE to accelerate A/B testing in 2017. Delivered a pixel-perfect, metric-neutral CSS framework, enhancing flexibility, reliability, and maintainability in Yahoo! Search."
       },
       {
-        "title": "Engaged in Global Search FE platform migration in 2015, 2017, 2018, and developed search functionality under different tech stacks, languages, and frameworks including/migrating PHP 5.6, PHP 7.1, YUI 3, Node.js, React, Redux, and vanilla Javascript."
+        "title": "Contributed to multiple Global Search Front-End platform migrations in 2015, 2017, and 2018, developing search functionalities across diverse tech stacks, languages, and frameworks, including PHP 5.6, PHP 7.1, YUI 3, Node.js, React, Redux, and vanilla JavaScript."
       },
       {
-        "title": "Yahoo Local Search FE engineering owner on the mobile web; Involved in reflowing the modern intuitive design which reduces the action steps and impacts ~10 million PV/day."
-      },
-      {
-        "title": "Drove and rolled out iOS/Android Search SDK (Native App) release pipeline and leveraged with search end-to-end CI-CD integration."
+        "title": "Experienced in software engineering talent acquisition, conducting 50+ interviews to build and shape an engineering team with an open culture and a strong growth mindset."
       }
     ],
     "awards": [
@@ -91,14 +88,14 @@
     ],
     "media": [
       {
-        "title": "與網友齊心抗疫，Yahoo奇摩旗下產品持續導入防疫新功能",
-        "source": "Yahoo!",
-        "link": "https://promo.campaign.yahoo.com.tw/corpblog/article.php?u=185e4608-84b4-441e-9145-b08c30433c0b"
-      },
-      {
         "title": "New Yahoo Search experience to start rolling out in the first weeks of 2024",
         "source": "Search Engine Land",
         "link": "https://searchengineland.com/yahoo-search-to-start-rolling-out-in-the-first-weeks-of-2024-434729"
+      },
+      {
+        "title": "與網友齊心抗疫，Yahoo奇摩旗下產品持續導入防疫新功能",
+        "source": "Yahoo!",
+        "link": "https://promo.campaign.yahoo.com.tw/corpblog/article.php?u=185e4608-84b4-441e-9145-b08c30433c0b"
       },
       {
         "title": "Mozilla switching default Firefox search engine to Yahoo",
@@ -143,12 +140,12 @@
         "link": "https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.search&hl=zh_TW&gl=US"
       },
       {
-        "title": "Yahoo 奇摩 (TW)",
+        "title": "Yahoo 奇摩首頁 (台灣)",
         "img": "asserts/images/works/yahoo.png",
         "link": "https://tw.yahoo.com/"
       },
       {
-        "title": "Yahoo 奇摩 (HK)",
+        "title": "Yahoo 奇摩首頁 (香港)",
         "img": "asserts/images/works/yahoo.png",
         "link": "https://hk.yahoo.com/"
       },
@@ -179,8 +176,7 @@
     "experience": [
       {
         "description": [
-          "Built synchronous mechanism for auction from Yahoo/eBay/Ruten to Facebook page, and integrated Facebook Insights API and embed.ly statistics in business report.",
-          "Served 90+ users within 19 active Facebook Pages and synced over 7000+ products for business marketing."
+          "Developed a synchronous mechanism for auction listings from Yahoo, eBay, and Ruten to Facebook Pages, integrating Facebook Insights API and embed.ly statistics for business reporting."
         ]
       }
     ],
@@ -227,8 +223,8 @@
     "experience": [
       {
         "description": [
-          "Built content-based search suggestions from various corpus, and combined time-based queries recommendation mechanism for News, Movies and Answers verticals.",
-          "Adopted FP-growth association rules for candidate queries, constructed alternative search assist as bucket experiment."
+          "Developed content-based search suggestions using diverse corpora and implemented time-based query recommendation mechanisms for Yahoo! News, Yahoo! Movies, and Yahoo! Answers.",
+          "Applied FP-growth association rules to generate candidate queries and designed an alternative search assist through bucket experimentation."
         ]
       }
     ]
@@ -251,9 +247,9 @@
     "experience": [
       {
         "description": [
-          "Contributed online image search application based on CCH (Contrast Context Histogram), established architectural feature-based search engine for Taiwan's historic buildings.",
-          "Assisted video streaming platform and transferred to Chinese Television System (CTS); adopted Kaltura video platform as editorial backend.",
-          "Built WASIGHT.COM, a DAVEART-liked social network for design academy students. Involved in frontend and backend system during development."
+          "Developed an online image search application using Contrast Context Histogram (CCH) and built a feature-based search engine for Taiwan's historic buildings.",
+          "Assisted in the transition of a video streaming platform to the Chinese Television System (CTS), integrating the Kaltura video platform as the editorial backend.",
+          "Developed WASIGHT.COM, a social network similar to DAVEART for design academy students, contributing to FE and BE development."
         ]
       }
     ],
@@ -262,6 +258,11 @@
         "title": "影音與圖像的萬花筒：VCenter與iPicBox成果專訪",
         "source": "數位典藏與學習電子報",
         "link": "http://newsletter.teldap.tw/news/read_topstory.php?nid=3581&lid=384"
+      },
+      {
+        "title": "數位典藏技術發展組",
+        "source": "資訊科技創新研究中心",
+        "link": "https://daal.iis.sinica.edu.tw/Chinese/System/index.htm"
       }
     ],
     "product": [
