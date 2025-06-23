@@ -55,25 +55,22 @@
     },
     "experience": [
       {
-        "title": "Coordinated cross-organizational collaboration between Yahoo! Search (search.yahoo.com) and Yahoo! Shopping (shopping.yahoo.com) across squads, leading the development and deployment of the unified revenue-sharing and exchange protocol (a.k.a. Vampire) for international search markets."
+        "title": "Organized and strengthened Yahoo! APAC TW/HK Search Product, Content, and Engineering in 2021 and 2022. Developed Yahoo! Masks Search and Yahoo! Rapid Test Search during the COVID-19 outbreak, leveraging the existing search platform and integrating government open data APIs. Coordinated efforts with cross-functional teams, including engineering, design, product, and content analysis."
       },
       {
-        "title": "Led the integration of Global Yahoo! rich search features with Microsoft Bing Search as part of a search-powered partnership for US and international markets. Managed and coordinated the end-to-end workflow, including front-end/middleware integration, i18n/l10n, data analysis, and launch planning."
+        "title": "Led the implementation of a unified semantic-classes CSS framework in Yahoo! Search FE to accelerate A/B testing in 2017. Delivered a pixel-perfect, metric-neutral CSS framework, enhancing flexibility, reliability, and maintainability in Yahoo! Search."
       },
       {
-        "title": "Drove and led the FE development of the Yahoo! Search Front Page redesign and rollout across 40+ markets in 2022. This project was executed in collaboration with the international Yahoo! homepage sunset and redirection plan for EMEA markets."
+        "title": "Drove and led the FE development of the Yahoo! Search Front Page (search.yahoo.com) redesign and rollout across 40+ markets in 2022."
       },
       {
-        "title": "Organized and strengthened Yahoo! APAC TW/HK Search Product, Content, and Engineering in 2021 and 2022. Developed Yahoo! Masks Search and Yahoo! Rapid Test Search for the Taiwan market during the COVID-19 outbreak, leveraging the existing search platform and integrating government open data APIs. Coordinated efforts with cross-functional teams, including engineering, design, product, and content analysis."
+        "title": "Contributed to Yahoo! Search FE platform migrations in 2015, 2017, 2018, and 2020, developed and migrated search features and functionalities across diverse tech stacks and frameworks in various Yahoo! Search products (Yahoo! Web Search, Yahoo! Dictionary Search, Yahoo! Local Search), including PHP 5.6, PHP 7.1, YUI 3, Node.js, React (w/ Redux), and vanilla JavaScript."
       },
       {
-        "title": "Led the implementation of a unified semantic-classes framework in Yahoo! Search FE to accelerate A/B testing in 2017. Delivered a pixel-perfect, metric-neutral CSS framework, enhancing flexibility, reliability, and maintainability in Yahoo! Search."
+        "title": "FE ownership of Yahoo! Local Search Direct Display and Yahoo! Dictionary Search (雅虎奇摩字典); leading and driving the redesign and remodeling of the Search UX; impacting 10 million pageviews per day."
       },
       {
-        "title": "Contributed to multiple Global Search Front-End platform migrations in 2015, 2017, and 2018, developing search functionalities across diverse tech stacks, languages, and frameworks, including PHP 5.6, PHP 7.1, YUI 3, Node.js, React, Redux, and vanilla JavaScript."
-      },
-      {
-        "title": "Experienced in software engineering talent acquisition, conducting 50+ interviews to build and shape an engineering team with an open culture and a strong growth mindset."
+        "title": "Recognized with 2020 TechPulse Best Poster Award and 2022 Yahoo! Search Awards."
       }
     ],
     "awards": [
