@@ -9,13 +9,52 @@
         "logoalt": "yahoo",
         "date": "Mar 2023 - Dec 2024",
         "org": "Global Search Engineering",
-        "position": "Manager",
+        "position": "Engineering Manager",
         "width": "200",
         "height": "56"
+      }
+    ],
+    "photo": {
+      "src": "asserts/images/icons/flickr.png",
+      "url": "https://www.flickr.com/photos/cycheng-at-work",
+      "alt": "check Bryan Cheng (@cycheng) at work",
+      "text": "check Bryan Cheng (@cycheng) at work",
+      "width": 32,
+      "height": 32
+    },
+    "experience": [
+      {
+        "title": "Led the Yahoo! Search FE engineering team (10+ FTEs), collaborated cross-functionally with teams across Yahoo! - including Homepage, Media, and Commerce. To drive native and redirect traffic, increase user engagement, and grow revenue."
       },
+      {
+        "title": "Demonstrated strong adaptability and played a pivotal role in leading the transition to a new squad-based team structure. Drove cross-team collaboration across time zones to deliver practical solutions."
+      },
+      {
+        "title": "Conducted Scrum onboarding for new hires at Yahoo! Taiwan. Certified Product Owner and Certified Scrum Master by Scrum Inc."
+      }
+    ],
+    "media": [
+      {
+        "title": "New Yahoo Search experience to start rolling out in the first weeks of 2024",
+        "source": "Search Engine Land",
+        "link": "https://searchengineland.com/yahoo-search-to-start-rolling-out-in-the-first-weeks-of-2024-434729"
+      }
+    ],
+    "product": [
+      {
+        "title": "Yahoo Search",
+        "img": "asserts/images/works/yahoo.png",
+        "link": "https://search.yahoo.com/search?p=what%20to%20watch"
+      }
+    ]
+  },
+  {
+    "hl": "hl-work-experience-yahoo",
+    "corp": [
       {
         "name": "Yahoo!",
         "url": "http://tw.yahoo.com/",
+        "logo": "asserts/images/experience/yahoo_2020.png",
         "logoalt": "yahoo",
         "date": "Jan 2022 - Feb 2023",
         "org": "Global Search Engineering",
@@ -42,35 +81,24 @@
         "height": "56"
       }
     ],
-    "photo": {
-      "src": "asserts/images/icons/flickr.png",
-      "url": "https://www.flickr.com/photos/cycheng-at-work",
-      "alt": "check Bryan Cheng (@cycheng) at work",
-      "text": "check Bryan Cheng (@cycheng) at work",
-      "width": 32,
-      "height": 32
-    },
     "refer": {
       "text": "<span class='text-aka-title'>(a.k.a. <i><strong>Oath</strong></i> 2017/7 - 2019/1, <i><strong>Verizon Media</strong></i> 2019/2 –2021/8)</span>"
     },
     "experience": [
       {
-        "title": "Organized and strengthened Yahoo! APAC TW/HK Search Product, Content, and Engineering in 2021 and 2022. Developed Yahoo! Masks Search and Yahoo! Rapid Test Search during the COVID-19 outbreak, leveraging the existing search platform and integrating government open data APIs. Coordinated efforts with cross-functional teams, including engineering, design, product, and content analysis."
+        "title": "Orchestrated FE integration with Microsoft Bing Search partnership to launch new Search UI, features, and ads."
       },
       {
-        "title": "Led the implementation of a unified semantic-classes CSS framework in Yahoo! Search FE to accelerate A/B testing in 2017. Delivered a pixel-perfect, metric-neutral CSS framework, enhancing flexibility, reliability, and maintainability in Yahoo! Search."
+        "title": "Spearheaded Yahoo! Masks Search during the COVID-19 outbreak; integrated government open-data APIs in 2 weeks by coordinating with cross-functional teams."
       },
       {
-        "title": "Drove and led the FE development of the Yahoo! Search Front Page (search.yahoo.com) redesign and rollout across 40+ markets in 2022."
+        "title": "Proficient in JavaScript and PHP with deep expertise in building reliable CI/CD release pipelines across web and hybrid apps. Contributed to Yahoo! Search FE platform migrations across diverse tech stacks including PHP 5.6, PHP 7.1, YUI 3, Node.js, React (w/ Redux), and vanilla JavaScript."
       },
       {
-        "title": "Contributed to Yahoo! Search FE platform migrations in 2015, 2017, 2018, and 2020, developed and migrated search features and functionalities across diverse tech stacks and frameworks in various Yahoo! Search products (Yahoo! Web Search, Yahoo! Dictionary Search, Yahoo! Local Search), including PHP 5.6, PHP 7.1, YUI 3, Node.js, React (w/ Redux), and vanilla JavaScript."
+        "title": "Drove and launched the unified semantic CSS framework, accelerating A/B testing and enhancing flexibility, reliability, and maintainability."
       },
       {
-        "title": "FE ownership of Yahoo! Local Search Direct Display and Yahoo! Dictionary Search (雅虎奇摩字典); leading and driving the redesign and remodeling of the Search UX; impacting 10 million pageviews per day."
-      },
-      {
-        "title": "Recognized with 2020 TechPulse Best Poster Award and 2022 Yahoo! Search Awards."
+        "title": "Led the modernization of Yahoo! Search products, including Web, Local, and Dictionary Search."
       }
     ],
     "awards": [
@@ -84,11 +112,6 @@
       "2022 Yahoo Search Awards"
     ],
     "media": [
-      {
-        "title": "New Yahoo Search experience to start rolling out in the first weeks of 2024",
-        "source": "Search Engine Land",
-        "link": "https://searchengineland.com/yahoo-search-to-start-rolling-out-in-the-first-weeks-of-2024-434729"
-      },
       {
         "title": "與網友齊心抗疫，Yahoo奇摩旗下產品持續導入防疫新功能",
         "source": "Yahoo!",

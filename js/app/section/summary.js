@@ -22,7 +22,9 @@ const Summary = createReactClass({
     render: function() {
         var output = '';
 
-        output += '<div class="text-summary-title">' + this.props.summary.level + '</div>';
+        if (this.props.summary.level) {
+            output += '<div class="text-summary-title">' + this.props.summary.level + '</div>';
+        }
 
         this.props.summary.items.forEach(function(content) {
             output += ('<div class="text-summary">' + content + '</div>');

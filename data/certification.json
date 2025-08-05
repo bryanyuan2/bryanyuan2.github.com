@@ -28,6 +28,20 @@
     "height": "30"
   },
   {
+    "hl": "hl-certification-aws",
+    "institution": "Amazon Web Services (AWS)",
+    "authority": "Coursera",
+    "startDate": "Jul 2025",
+    "endDate": "",
+    "name": "AWS Cloud Solutions Architect",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/061WISA3SUWQ",
+    "certID": "061WISA3SUWQ",
+    "alt": "AWS Cloud Solutions Architect",
+    "image": "asserts/images/certification/aws.png",
+    "width": "120",
+    "height": "40"
+  },
+  {
     "hl": "hl-certification-coursera",
     "institution": "Google",
     "authority": "Coursera",
