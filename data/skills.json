@@ -3,21 +3,19 @@
     "hl": "hl-skills-frontend",
     "title": "People Management",
     "items": [
-      { "name": "Leadership" },
-      { "name": "Team Lead"  },
-      { "name": "Talent Growth" },
-      { "name": "Shaping Engineering Culture" },
-      { "name": "Cross-Team/Cross-Organization Communication and Collaboration" }
+      { "name": "People Leadership" },
+      { "name": ", Talent Growth & Development"  },
+      { "name": "Cross-Team Collaboration" }
     ]
   },
   {
     "hl": "hl-skills-research",
     "title": "Individual Contributor",
     "items": [
-      { "name": "Web Application FE Development" },
-      { "name": "Agile Development" },
-      { "name": "Hybrid App Development" },
-      { "name": "Continuous Integration/Continuous Delivery (CI/CD)" }
+      { "name": "Web and Hybrid App Development" },
+      { "name": "Search Domain Knowledge" },
+      { "name": "Continuous Integration/Continuous Delivery" },
+      { "name": "Kubernetes, and Microservices" }
     ]
   }
 ]
