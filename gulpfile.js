@@ -11,7 +11,6 @@ const streamify = require('gulp-streamify');
 const less = require('gulp-less');
 const cssmin = require('gulp-minify-css');
 const rename = require('gulp-rename');
-const nightwatch = require('gulp-nightwatch');
 const react = require('gulp-react');
 const flow = require('gulp-flowtype');
 const replace = require('gulp-replace');
@@ -131,12 +130,6 @@ gulp.task('typecheck', function(done) {
     done();
 });
 
-gulp.task('nightwatch', function() {
-    gulp.src('').pipe(nightwatch({
-        configFile: 'nightwatch.json',
-    }));
-});
-
 gulp.task('ver-footer', function(done) {
     gulp.src(['js/app/section/footer.js'])
         .pipe(replace(/\%ver_replacement\%/g, targetDate))
@@ -147,6 +140,3 @@ gulp.task('ver-footer', function(done) {
 
 /* default */
 gulp.task('default', gulp.series('jsonlint', 'css', 'typecheck', 'ver-footer', 'js', 'connect', 'watch'));
-
-/* java -jar selenium-server-standalone-2.51.0.jar */
-gulp.task('test', gulp.series('nightwatch', function() {}));
