@@ -1,4 +1,4 @@
-@import "common.less";
+@use "common.scss";
 
 #region-header {
     width: 100%;
@@ -11,7 +11,7 @@
 }
 
 #region-header .header-title {
-    color: @fs-c;
+    color: common.$fs-c;
     font-size: 28px;
     text-shadow: #444444 0 1px 1px;
     font-weight: bold;

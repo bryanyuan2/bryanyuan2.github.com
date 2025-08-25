@@ -1,8 +1,8 @@
-@import "common.less";
+@use "common.scss";
 
 body {
-    font-family: @ff-n;
-    font-size: @fs-ms;
+    font-family: common.$ff-n;
+    font-size: common.$fs-ms;
 }
 
 h2 {
@@ -40,8 +40,8 @@ blockquote {
 }
 
 #linkedin-nav {
-    background-color: @fs-c;
-    border: @bg-gray-dark solid 1px;
+    background-color: common.$fs-c;
+    border: common.$bg-gray-dark solid 1px;
     width: 160px;
     height: 80px;
     position: fixed;

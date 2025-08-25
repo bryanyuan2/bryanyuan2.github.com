@@ -8,8 +8,8 @@ const source = require('vinyl-source-stream');
 const uglify = require('gulp-uglify');
 const connect = require('gulp-connect');
 const streamify = require('gulp-streamify');
-const less = require('gulp-less');
-const cssmin = require('gulp-minify-css');
+const sass = require('gulp-sass')(require('sass'));
+const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const react = require('gulp-react');
 const flow = require('gulp-flowtype');
@@ -20,7 +20,7 @@ const gulpif = require('gulp-if');
 const jsonlint = require("gulp-jsonlint");
 
 const paths = {
-    css: ['./asserts/css/src/*.less'],
+    css: ['./asserts/css/src/*.scss'],
     js: ['./js/app/*.js',
         './js/app/component/*.js',
         './js/app/config/*.js',
@@ -84,8 +84,8 @@ gulp.task('jsonlint', function(done) {
 
 gulp.task('css', function(done) {
     gulp.src(paths.css)
-        .pipe(less())
-        .pipe(cssmin())
+        .pipe(sass())
+        .pipe(cleanCSS())
         .pipe(rename({
             suffix: '.min',
         }))
