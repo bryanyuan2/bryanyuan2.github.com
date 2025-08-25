@@ -1,14 +1,15 @@
-@import "common.less";
+@use "./common.scss";
 
-.text-corner (@radius: 6px) {
-    border-radius: @radius;
-    -webkit-border-radius: @radius;
-    -moz-border-radius: @radius;
+@mixin text-corner(
+    $radius: 6px){
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
 }
 
 .text-hints:hover {
-    .text-corner;
-    border-color: @twitter-blue;
+    @include text-corner;
+    border-color: common.$twitter-blue;
     border-width: 1px;
     border-style: solid;
     padding-left: 1px;
@@ -17,8 +18,8 @@
 }
 
 .text-press {
-    font-family: @ff-ref;
-    font-size: @fs-s;
+    font-family: common.$ff-ref;
+    font-size: common.$fs-s;
     font-style: italic;
     width: 100%;
     margin: 2px 0;
@@ -44,26 +45,26 @@
 }
 
 .text-section {
-    font-size: @fs-m;
+    font-size: common.$fs-m;
     font-weight: bold;
     padding-left: 12px;
-    border-left: 8px solid @twitter-blue;
+    border-left: 8px solid common.$twitter-blue;
     clear: both;
 }
 
 .text-title {
-    font-size: @fs-m;
+    font-size: common.$fs-m;
     font-weight: 400;
 }
 
 .text-title-italic {
-    font-size: @fs-m;
+    font-size: common.$fs-m;
     font-style: italic;
     font-weight: bold;
 }
 
 .text-desc {
-    font-size: @fs-ms;
+    font-size: common.$fs-ms;
     list-style-type: disc;
 }
 
@@ -77,8 +78,8 @@
 }
 
 .text-subtitle-italic {
-    color: @twitter-blue;
-    font-size: @fs-ms;
+    color: common.$twitter-blue;
+    font-size: common.$fs-ms;
     font-style: italic;
     text-decoration: underline;
     font-weight: bold;
@@ -115,15 +116,15 @@
 
 .text-ref-set .text-ref-title {
     margin-left: 12px;
-    background-color: @bg-gray-light;
+    background-color: common.$bg-gray-light;
     padding: 3px 6px 3px 6px;
-    .text-corner;
+    @include text-corner;
 }
 
 .text-ref-set .text-ref-icon {
     margin-left: 12px;
     border: 3px solid;
-    border-color: @bg-gray-dark;
+    border-color: common.$bg-gray-dark;
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -135,7 +136,7 @@
 }
 
 .text-summary-title {
-    font-size: @fs-ms;
+    font-size: common.$fs-ms;
     font-style: italic;
     font-weight: bold;
     margin-top: 12px;
@@ -151,7 +152,7 @@
 }
 
 .text-aka-title {
-    background-color: @bg-gray-light;
+    background-color: common.$bg-gray-light;
     padding: 3px 6px 3px 6px;
-    .text-corner;   
+    @include text-corner;
 }
