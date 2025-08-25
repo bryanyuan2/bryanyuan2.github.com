@@ -26,6 +26,7 @@ const App = () => {
                 <CompWorks url="data/works.json" />
                 <CompCertification url="data/certification.json" />
                 <CompHackathon url="data/hackathon.json" />
+                <CompCommunities url="data/communities.json" />
                 <CompPublications url="data/publications.json" />
                 <CompEducations url="data/educations.json" />
                 <CompFooter url="data/footer.json" />
