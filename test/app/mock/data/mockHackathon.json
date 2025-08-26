@@ -1,0 +1,8 @@
+{
+  "title": "Hackathon Profiles & Awards",
+  "id": "region-hackathon",
+  "awards": [
+    { "name": "Best Innovation", "year": 2023 },
+    { "name": "Top Developer", "year": 2024 }
+  ]
+}

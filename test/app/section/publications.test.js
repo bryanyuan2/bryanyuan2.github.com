@@ -3,23 +3,7 @@ import CompPublications from "./../../../js/app/section/publications.js";
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { expect } from 'chai';
 let reactTestRendererResult;
-
-const mockPublicationsJson = [
-  {
-    title: "Understanding React",
-    authors: "John Doe, Jane Smith",
-    journal: "React Journal",
-    year: "2024",
-    url: "http://example.com/understanding-react"
-  },
-  {
-    title: "Advanced JavaScript",
-    authors: "Alice Brown, Bob White",
-    journal: "JS Weekly",
-    year: "2023",
-    url: "http://example.com/advanced-javascript"
-  }
-];
+const mockPublicationsJson = '../mock/data/mockPublications.json';
 
 describe('##react-test-renderer## js/app/section/publications.js testing', function(){
   beforeEach(function(done){

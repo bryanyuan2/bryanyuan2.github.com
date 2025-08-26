@@ -3,15 +3,7 @@ import CompCertification from "./../../../js/app/section/certification.js";
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { expect } from 'chai';
 let reactTestRendererResult;
-
-const mockCertificationsJson = [
-  {
-    name: "AWS Certified Solutions Architect",
-    authority: "Amazon Web Services",
-    date: "2023",
-    description: "Earned certification for designing distributed systems on AWS."
-  }
-];
+const mockCertificationsJson = '../mock/data/mockCertifications.json';
 
 describe('##react-test-renderer## js/app/section/certification.js testing', function(){
   beforeEach(async function(){

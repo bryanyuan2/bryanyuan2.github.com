@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Understanding React",
+    "authors": "John Doe, Jane Smith",
+    "journal": "React Journal",
+    "year": "2024",
+    "url": "http://example.com/understanding-react"
+  },
+  {
+    "title": "Advanced JavaScript",
+    "authors": "Alice Brown, Bob White",
+    "journal": "JS Weekly",
+    "year": "2023",
+    "url": "http://example.com/advanced-javascript"
+  }
+]

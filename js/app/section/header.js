@@ -1,43 +1,35 @@
-'use strict';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-const React = require('react');
-const PropTypes = require('prop-types');
-const createReactClass = require('create-react-class');
+const HeaderContainer = ({ url }) => {
+    const [data, setData] = useState({});
 
-const HeaderContainer = createReactClass({
-    getInitialState: function() {
-        return {
-            data: [],
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch(url);
+            const data = await response.json();
+            setData(data);
         };
-    },
-    componentDidMount: async function() {
-        const response = await fetch(this.props.url);
-        const data = await response.json();
-        this.setState({ data: data });
-    },
-    propTypes: {
-        data: PropTypes.object,
-    },
-    getDefaultProps: function() {
-        return {
-            data: {},
-        };
-    },
-    render: function() {
-        return (
-            <div id="region-header">
-                <div className="header-bg">
-                    <div className="header-title">{this.state.data.title}</div>
-                </div>
-                <div id="linkedin-nav">
-                    <a target="_blank" rel="noopener noreferrer" href={this.state.data.linkedin}>
-                        <img src={this.state.data.linkedinImg} alt={this.state.data.linkedAlt} />
-                        <div className="test_content">{this.state.data.linkedText}</div>
-                    </a>
-                </div>
+        fetchData();
+    }, [url]);
+
+    return (
+        <div id="region-header">
+            <div className="header-bg">
+                <div className="header-title">{data.title}</div>
             </div>
-        );
-    },
-});
+            <div id="linkedin-nav">
+                <a target="_blank" rel="noopener noreferrer" href={data.linkedin}>
+                    <img src={data.linkedinImg} alt={data.linkedAlt} />
+                    <div className="test_content">{data.linkedText}</div>
+                </a>
+            </div>
+        </div>
+    );
+};
 
-module.exports = HeaderContainer;
+HeaderContainer.propTypes = {
+    url: PropTypes.string.isRequired,
+};
+
+export default HeaderContainer;

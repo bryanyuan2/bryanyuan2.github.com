@@ -3,21 +3,7 @@ import CompSkills from "./../../../js/app/section/skills.js";
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { expect } from 'chai';
 let reactTestRendererResult;
-
-const mockSkillsJson = [
-  {
-    category: "Programming Languages",
-    skills: ["JavaScript", "Python", "Java"]
-  },
-  {
-    category: "Frameworks & Libraries",
-    skills: ["React", "Node.js", "Express"]
-  },
-  {
-    category: "Tools & Platforms",
-    skills: ["Git", "Docker", "AWS"]
-  }
-];
+const mockSkillsJson = '../mock/data/mockSkills.json';
 
 describe('##react-test-renderer## js/app/section/skills.js testing', function(){
   beforeEach(async function(){

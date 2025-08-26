@@ -9,7 +9,8 @@
 | `test`          | Runs tests using Jest.                                                              |
 | `test-cov`      | Runs tests with coverage report using Jest.                                         |
 | `clean`         | Deletes all JavaScript files in the `./js/build/` directory.                        |
-| `jsonlint`      | Validates JSON files in the `./data/` directory.                                     |
+| `jsonlint:data` | Validates JSON files in the `./asserts/data/` directory.                                     |
+| `jsonlint:mockdata` | Validates mock JSON files in the `./test/app/mock/` directory.                   |
 | `build:dev:js`  | Bundles JavaScript files using Browserify with development environment settings.     |
 | `build:prod:js` | Bundles and minifies JavaScript files using Browserify and UglifyJS for production.  |
 | `build:css`     | Compiles SCSS files to compressed CSS using Sass.                                    |

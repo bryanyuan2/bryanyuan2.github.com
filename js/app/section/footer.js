@@ -1,57 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
-import createReactClass from 'create-react-class';
 
-const Pack = createReactClass({
-    propTypes: {
-        items: PropTypes.object
-    },
-    getDefaultProps: function() {
-        return {
-            items: {}
-        };
-    },
-    shouldComponentUpdate: function() {
-        // shouldComponentUpdate: function(nextProps, nextState)
-        return false;
-    },
-    render: function() {
-        return (
-            <a target="_blank" rel="noopener noreferrer" href={this.props.items.url}><img className="footer-img" src={this.props.items.img} /></a>
-        );
-    },
+const Pack = memo(({ items = {} }) => {
+    return (
+        <a target="_blank" rel="noopener noreferrer" href={items.url}>
+            <img className="footer-img" src={items.img} alt="footer item" />
+        </a>
+    );
 });
 
-const FooterContainer = createReactClass({
-    getInitialState: function() {
-        return {
-            data: [],
+Pack.propTypes = {
+    items: PropTypes.object,
+};
+
+const FooterContainer = ({ url }) => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch(url);
+            const data = await response.json();
+            setData(data);
         };
-    },
-    componentDidMount: async function() {
-        const response = await fetch(this.props.url);
-        const data = await response.json();
-        this.setState({ data: data });
-    },
-    propTypes: {
-        data: PropTypes.array,
-    },
-    render: function() {
-        const packages = [];
-        this.state.data.forEach(function(item, index) {
-            // need to keep key={index} to avoid the following warning
-            // warning: Each child in a list should have a unique "key" prop.
-            packages.push(<Pack items={item} key={index} />);
-        });
-        return (
-            <div id='region-footer'>
-                <hr />
-                Powered by
-                {packages}
-                <br />
-            </div>
-        );
-    },
-});
+        fetchData();
+    }, [url]);
+
+    return (
+        <div id="region-footer">
+            <hr />
+            Powered by
+            {data.map((item, index) => (
+                <Pack items={item} key={index} />
+            ))}
+            <br />
+        </div>
+    );
+};
+
+FooterContainer.propTypes = {
+    url: PropTypes.string.isRequired,
+};
 
 export default FooterContainer;

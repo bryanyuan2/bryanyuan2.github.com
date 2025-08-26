@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://example.com/package1",
+    "img": "https://example.com/image1.png"
+  },
+  {
+    "url": "https://example.com/package2",
+    "img": "https://example.com/image2.png"
+  },
+  {
+    "url": "https://example.com/package3",
+    "img": "https://example.com/image3.png"
+  }
+]

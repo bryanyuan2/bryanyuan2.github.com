@@ -3,17 +3,7 @@ import CompEducations from "./../../../js/app/section/educations.js";
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { expect } from 'chai';
 let reactTestRendererResult;
-
-const mockEducationsJson = [
-  {
-    school: "University A",
-    degree: "Bachelor of Science",
-    field: "Computer Science",
-    startDate: "2015",
-    endDate: "2019",
-    description: "Studied various computer science topics including algorithms, data structures, and software engineering."
-  }
-];
+const mockEducationsJson = '../mock/data/mockEducations.json';
 
 describe('##react-test-renderer## testing', function(){
 

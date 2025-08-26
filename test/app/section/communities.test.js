@@ -3,15 +3,7 @@ import CompCommunities from "./../../../js/app/section/communities.js";
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { expect } from 'chai';
 let reactTestRendererResult;
-
-const mockCommunitiesJson = [
-  {
-    name: "Community A",
-    role: "Contributor",
-    description: "Participated in open-source projects and community events.",
-    url: "http://example.com/community-a"
-  }
-];
+const mockCommunitiesJson = '../mock/data/mockCommunities.json';
 
 describe('##react-test-renderer## js/app/section/communities.js testing', function(){
   beforeEach(async function(){
