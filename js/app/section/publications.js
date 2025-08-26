@@ -1,12 +1,9 @@
 import React from 'react';
-import { LoadJSON } from './../utils/mixins';
 import Header from './../component/header';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
 
 const Publication =createReactClass({
-    mixins: [PureRenderMixin],
     propTypes: {
         publication: PropTypes.object
     },
@@ -36,7 +33,16 @@ const Publication =createReactClass({
 });
 
 const PublicationsContainer = createReactClass({
-    mixins: [LoadJSON],
+    getInitialState: function() {
+        return {
+            data: [],
+        };
+    },
+    componentDidMount: async function() {
+        const response = await fetch(this.props.url);
+        const data = await response.json();
+        this.setState({ data: data });
+    },
     render: function() {
         const publications = [];
         this.state.data.forEach(function(publication, index) {
@@ -54,6 +60,5 @@ const PublicationsContainer = createReactClass({
         );
     },
 });
-
 
 export default PublicationsContainer;

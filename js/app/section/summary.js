@@ -1,13 +1,9 @@
 const React = require('react');
 const Header = require('./../component/header');
-const _ = require('lodash');
-const LoadJSON = require('./../utils/mixins').LoadJSON;
-const PureRenderMixin = require('react-addons-pure-render-mixin');
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 
 const Summary = createReactClass({
-    mixins: [PureRenderMixin],
     propTypes: {
         summary: PropTypes.object
     },
@@ -37,7 +33,16 @@ const Summary = createReactClass({
 });
 
 const SummaryContainer = createReactClass({
-    mixins: [LoadJSON],
+    getInitialState: function() {
+        return {
+            data: [],
+        };
+    },
+    componentDidMount: async function() {
+        const response = await fetch(this.props.url);
+        const data = await response.json();
+        this.setState({ data: data });
+    },
     render: function() {
         const desc = [];
         this.state.data.forEach(function(summary, index) {

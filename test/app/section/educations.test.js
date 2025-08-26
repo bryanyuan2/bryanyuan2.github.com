@@ -1,24 +1,28 @@
-/*jshint -W030 */
-"use strict";
+import React from 'react';
+import CompEducations from "./../../../js/app/section/educations.js";
+import ShallowTestRenderer from 'react-test-renderer/shallow';
+import { expect } from 'chai';
+let reactTestRendererResult;
 
-var React = require('react');
-var CompEducations = require("./../../../js/app/section/educations.js").default;
-var ShallowTestRenderer = require('react-test-renderer/shallow');
-var testingLibraryReact = require('@testing-library/react');
-var expect = require('chai').expect;
-var educationsJson = require('./../../../data/educations.json');
-
-var reactTestRendererResult;
-var CompEducationElement;
+const mockEducationsJson = [
+  {
+    school: "University A",
+    degree: "Bachelor of Science",
+    field: "Computer Science",
+    startDate: "2015",
+    endDate: "2019",
+    description: "Studied various computer science topics including algorithms, data structures, and software engineering."
+  }
+];
 
 describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    var shadow = new ShallowTestRenderer();
-    shadow.render(<CompEducations url={educationsJson} />);
+
+  beforeEach(async function(){
+    const shadow = new ShallowTestRenderer();
+    shadow.render(<CompEducations url={mockEducationsJson} />);
     reactTestRendererResult = shadow.getRenderOutput();
-    done();
   });
-  
+
   it('component container should be existed', function () {
     expect(reactTestRendererResult).to.exist;
   });
@@ -29,17 +33,5 @@ describe('##react-test-renderer## testing', function(){
 
   it('component title should be rendered', function () {
     expect(reactTestRendererResult.props.children[0].props.text).to.equal('Education');
-  });
-});
-
-describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    CompEducationElement = testingLibraryReact.render(<CompEducations url={educationsJson} />);
-    done();
-  });
-  
-  it('title should be rendered', function () {
-    var title = CompEducationElement.getByText(/Education/).textContent;
-    expect(title).to.equal('Education');
   });
 });

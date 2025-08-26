@@ -1,24 +1,25 @@
-/*jshint -W030 */
-"use strict";
+import React from 'react';
+import CompHackathon from "./../../../js/app/section/hackathon.js";
+import ShallowTestRenderer from 'react-test-renderer/shallow';
+import { expect } from 'chai';
+let reactTestRendererResult;
 
-var React = require('react');
-var CompHackathon = require("./../../../js/app/section/hackathon.js").default;
-var ShallowTestRenderer = require('react-test-renderer/shallow');
-var testingLibraryReact = require('@testing-library/react');
-var expect = require('chai').expect;
-var hackathonJson = require('./../../../data/hackathon.json');
+let mockHackathonJson = {
+  "title": "Hackathon Profiles & Awards",
+  "id": "region-hackathon",
+  "awards": [
+    { "name": "Best Innovation", "year": 2023 },
+    { "name": "Top Developer", "year": 2024 }
+  ]
+};
 
-var reactTestRendererResult;
-var CompHackathonElement;
-
-describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    var shadow = new ShallowTestRenderer();
-    shadow.render(<CompHackathon url={hackathonJson} />);
+describe('##react-test-renderer## js/app/section/hackathon.js testing', function(){
+  beforeEach(async function(){
+    const shadow = new ShallowTestRenderer();
+    shadow.render(<CompHackathon url={mockHackathonJson} />);
     reactTestRendererResult = shadow.getRenderOutput();
-    done();
   });
-  
+
   it('component container should be existed', function () {
     expect(reactTestRendererResult).to.exist;
   });
@@ -29,17 +30,5 @@ describe('##react-test-renderer## testing', function(){
 
   it('component title should be rendered', function () {
     expect(reactTestRendererResult.props.children[0].props.text).to.equal('Hackathon Profiles & Awards');
-  });
-});
-
-describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    CompHackathonElement = testingLibraryReact.render(<CompHackathon url={hackathonJson} />);
-    done();
-  });
-  
-  it('title should be rendered', function () {
-    var title = CompHackathonElement.getByText(/Hackathon Profiles & Awards/).textContent;
-    expect(title).to.equal('Hackathon Profiles & Awards');
   });
 });

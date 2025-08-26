@@ -1,10 +1,8 @@
 import React from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
 
 const Header = createReactClass({
-    mixins: [PureRenderMixin],
     propTypes: {
         setID: PropTypes.string,
         text: PropTypes.string,

@@ -1,10 +1,20 @@
-import React from 'react';
-import { LoadJSON } from './../utils/mixins';
-import PropTypes from 'prop-types';
-import createReactClass from 'create-react-class';
+'use strict';
+
+const React = require('react');
+const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
 const HeaderContainer = createReactClass({
-    mixins: [LoadJSON],
+    getInitialState: function() {
+        return {
+            data: [],
+        };
+    },
+    componentDidMount: async function() {
+        const response = await fetch(this.props.url);
+        const data = await response.json();
+        this.setState({ data: data });
+    },
     propTypes: {
         data: PropTypes.object,
     },
@@ -30,4 +40,4 @@ const HeaderContainer = createReactClass({
     },
 });
 
-export default HeaderContainer;
+module.exports = HeaderContainer;

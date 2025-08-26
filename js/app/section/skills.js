@@ -1,12 +1,9 @@
 const React = require('react');
-const LoadJSON = require('./../utils/mixins').LoadJSON;
 const Header = require('./../component/header');
-const PureRenderMixin = require('react-addons-pure-render-mixin');
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 
 const Skill = createReactClass({
-    mixins: [PureRenderMixin],
     propTypes: {
         skill: PropTypes.object,
     },
@@ -37,7 +34,16 @@ const Skill = createReactClass({
 });
 
 const SkillsContainer = createReactClass({
-    mixins: [LoadJSON],
+    getInitialState: function() {
+        return {
+            data: [],
+        };
+    },
+    componentDidMount: async function() {
+        const response = await fetch(this.props.url);
+        const data = await response.json();
+        this.setState({ data: data });
+    },
     render: function() {
         const skills = [];
         this.state.data.forEach(function(skill, index) {

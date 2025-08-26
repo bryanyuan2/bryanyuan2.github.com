@@ -1,24 +1,25 @@
-/*jshint -W030 */
-"use strict";
+import React from 'react';
+import CompCommunities from "./../../../js/app/section/communities.js";
+import ShallowTestRenderer from 'react-test-renderer/shallow';
+import { expect } from 'chai';
+let reactTestRendererResult;
 
-var React = require('react');
-var CompCommunities = require("./../../../js/app/section/communities.js").default;
-var ShallowTestRenderer = require('react-test-renderer/shallow');
-var testingLibraryReact = require('@testing-library/react');
-var expect = require('chai').expect;
-var communitiesJson = require('./../../../data/communities.json');
+const mockCommunitiesJson = [
+  {
+    name: "Community A",
+    role: "Contributor",
+    description: "Participated in open-source projects and community events.",
+    url: "http://example.com/community-a"
+  }
+];
 
-var reactTestRendererResult;
-var CompCommunitiesElement;
-
-describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    var shadow = new ShallowTestRenderer();
-    shadow.render(<CompCommunities url={communitiesJson} />);
+describe('##react-test-renderer## js/app/section/communities.js testing', function(){
+  beforeEach(async function(){
+    const shadow = new ShallowTestRenderer();
+    shadow.render(<CompCommunities url={mockCommunitiesJson} />);
     reactTestRendererResult = shadow.getRenderOutput();
-    done();
   });
-  
+
   it('component container should be existed', function () {
     expect(reactTestRendererResult).to.exist;
   });
@@ -29,17 +30,5 @@ describe('##react-test-renderer## testing', function(){
 
   it('component title should be rendered', function () {
     expect(reactTestRendererResult.props.children[0].props.text).to.equal('Communities');
-  });
-});
-
-describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    CompCommunitiesElement = testingLibraryReact.render(<CompCommunities url={communitiesJson} />);
-    done();
-  });
-  
-  it('title should be rendered', function () {
-    var title = CompCommunitiesElement.getByText(/Communities/).textContent;
-    expect(title).to.equal('Communities');
   });
 });

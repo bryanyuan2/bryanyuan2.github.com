@@ -1,10 +1,8 @@
 import React from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
 
 const pressList = createReactClass({
-    mixins: [PureRenderMixin],
     propTypes: {
         press: PropTypes.array,
     },

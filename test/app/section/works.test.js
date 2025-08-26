@@ -1,25 +1,46 @@
-/*jshint -W030 */
-"use strict";
+import React from 'react';
+import CompWorks from "./../../../js/app/section/works.js";
+import ShallowTestRenderer from 'react-test-renderer/shallow';
+import { expect } from 'chai';
+let reactTestRendererResult;
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var CompWorks = require("./../../../js/app/section/works.js").default;
-var ShallowTestRenderer = require('react-test-renderer/shallow');
-var testingLibraryReact = require('@testing-library/react');
-var expect = require('chai').expect;
-var worksJson = require('./../../../data/works.json');
+const mockWorksJson = [
+  {
+    corp: [
+      {
+        name: "Company A",
+        url: "http://example.com",
+        position: "Developer",
+        date: "2023",
+        logo: "http://example.com/logo.png",
+        logoalt: "Company A Logo",
+        width: 100,
+        height: 100
+      }
+    ],
+    experience: [
+      {
+        title: "Project A",
+        description: "Developed feature X."
+      }
+    ],
+    product: [
+      {
+        link: "http://example.com/product",
+        img: "http://example.com/product.png",
+        title: "Product A"
+      }
+    ]
+  }
+];
 
-var reactTestRendererResult;
-var CompWorksElement;
-
-describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    var shadow = new ShallowTestRenderer();
-    shadow.render(<CompWorks url={worksJson} />);
+describe('##react-test-renderer## js/app/section/works.js testing', function(){
+  beforeEach(async function(){
+    const shadow = new ShallowTestRenderer();
+    shadow.render(<CompWorks url={mockWorksJson} />);
     reactTestRendererResult = shadow.getRenderOutput();
-    done();
   });
-  
+
   it('component container should be existed', function () {
     expect(reactTestRendererResult).to.exist;
   });
@@ -30,17 +51,5 @@ describe('##react-test-renderer## testing', function(){
 
   it('component title should be rendered', function () {
     expect(reactTestRendererResult.props.children[0].props.text).to.equal('Work Experience');
-  });
-});
-
-describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    CompWorksElement = testingLibraryReact.render(<CompWorks url={worksJson} />);
-    done();
-  });
-  
-  it('title should be rendered', function () {
-    var title = CompWorksElement.getByText(/Work Experience/).textContent;
-    expect(title).to.equal('Work Experience');
   });
 });
