@@ -5,9 +5,9 @@
     "organizer": "LINE",
     "organizerUrl": "https://line.me/zh-hant/",
     "image": {
-      "src": "asserts/images/projects/line.png",
+      "src": "asserts/images/projects/line_2018.png",
       "width": "280",
-      "height": "155",
+      "height": "158",
       "caption": "安安小妹"
     },
     "date": "Oct 2018",
@@ -37,12 +37,13 @@
     "organizer": "Booking.com",
     "organizerUrl": "https://www.booking.com/",
     "image": {
-      "src": "asserts/images/projects/booking.png",
+      "src": "asserts/images/projects/booking_2017.png",
       "width": "280",
-      "height": "143",
+      "height": "160",
       "caption": "Hotel Boxing"
     },
     "github": "https://github.com/bryanyuan2/booking-com-hackathon",
+    "speakerdeck": "https://speakerdeck.com/bryanyuan2/hotel-boxing-booking-dot-com-taipei-hackathon-2017",
     "date": "Mar 2017",
     "press": [
       {
@@ -60,9 +61,9 @@
     "organizerUrl": "https://www.facebook.com/girlsintechtaiwan/",
     "date": "Nov 2015",
     "image": {
-      "src": "asserts/images/projects/opinionoted.jpg",
+      "src": "asserts/images/projects/facebook_2015.png",
       "width": "280",
-      "height": "145",
+      "height": "180",
       "caption": "Opinionoted"
     },
     "description": "Analyzed interest similarity between Facebook users' and their friends' by retrieving public post from Facebook's timeline",
@@ -82,9 +83,9 @@
     "organizerUrl": "https://www.pixnet.net/",
     "date": "Aug 2015",
     "image": {
-      "src": "asserts/images/projects/pixnet.jpg",
+      "src": "asserts/images/projects/pixnet_2015.png",
       "width": "280",
-      "height": "145",
+      "height": "160",
       "caption": "歐噴。豆知識"
     },
     "press": [
@@ -105,9 +106,9 @@
     "organizerUrl": "https://www.baidu.com/",
     "date": "July 2013",
     "image": {
-      "src": "asserts/images/projects/baidu_captain_planet.jpg",
+      "src": "asserts/images/projects/baidu_2013.png",
       "width": "280",
-      "height": "145",
+      "height": "160",
       "caption": "百度地球超人"
     },
     "description": "Analyzed Facebook check-ins and developed a scoring system for the Environmental Pollution Index (EPI) using Baidu App Engine.",
@@ -134,7 +135,7 @@
     "organizerUrl": "https://tw.yahoo.com/",
     "award": "Yahoo! Hack Taiwan 2013 Second Place",
     "image": {
-      "src": "asserts/images/awards/yataiko.jpg",
+      "src": "asserts/images/projects/yahoo_2013.png",
       "url": "https://www.flickr.com/photos/bryanyuan2/10629301555/",
       "width": "280",
       "height": "140",
@@ -175,9 +176,9 @@
     "organizerUrl": "https://foundation.mozilla.org/en/",
     "award": "Mozilla Firefox OS App Day 2013 Second Place",
     "image": {
-      "src": "asserts/images/awards/battery_fox.jpg",
+      "src": "asserts/images/projects/firefox_2013.png",
       "width": "280",
-      "height": "140",
+      "height": "160",
       "caption": "Battery Fox"
     },
     "description": "Developed a Chrome extension to enhance Firefox OS battery management by utilizing Firefox OS Web APIs within a gamification mechanism.",
@@ -204,9 +205,9 @@
     "organizerUrl": "https://tw.yahoo.com/",
     "award": "Yahoo! Open Hack Day 2012 Second Place & <br/>Yahoo! Open Hack Day 2012 The Most Potential Award",
     "image": {
-      "src": "asserts/images/awards/yahook.jpg",
+      "src": "asserts/images/projects/yahoo_2012.png",
       "width": "280",
-      "height": "140",
+      "height": "136",
       "caption": "Ya!hook"
     },
     "description": "Enriched information for Facebook Checkins and Events pages by using Yahoo! APIs and Taipei Open Data API. (40 teams, Over 200+ developers)",

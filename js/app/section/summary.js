@@ -4,14 +4,9 @@ import PropTypes from 'prop-types';
 
 const Summary = ({summary = {}}) => {
     let output = '';
-
-    if (summary.level) {
-        output += `<div class="text-summary-title">${summary.level}</div>`;
+    if (summary.items) {
+        output += `<div class="text-summary">${summary.items}</div>`;
     }
-
-    summary.items?.forEach((content) => {
-        output += `<div class="text-summary">${content}</div>`;
-    });
 
     return (
         <div className="data-summary">
