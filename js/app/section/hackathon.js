@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import PressList from './../component/presslist';
 import InfoBar from './../component/infobar';
-import Header from './../component/header';
+import SectionHeader from './../component/section-header';
+
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -55,7 +56,7 @@ const AwardsContainer = ({url}) => {
 
     return (
         <div id="region-hackathon">
-            <Header setID="awards" text="Hackathon Profiles & Awards" />
+            <SectionHeader setID="awards" text="Hackathon Profiles & Awards" />
             <hr />
             {data.map((award, index) => (
                 <Award award={award} key={index} />

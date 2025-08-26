@@ -1,5 +1,5 @@
 import React, {useState, useEffect, memo} from 'react';
-import Header from './../component/header';
+import SectionHeader from './../component/section-header';
 import PropTypes from 'prop-types';
 
 const Community = memo(({community = {}}) => {
@@ -52,7 +52,7 @@ const CommunitiesContainer = ({url}) => {
 
     return (
         <div id="region-communities">
-            <Header setID="communities" text="Communities" />
+            <SectionHeader setID="communities" text="Communities" />
             <hr />
             {data.map((community, index) => (
                 <Community community={community} key={index} />

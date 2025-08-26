@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from './../component/header';
+import SectionHeader from './../component/section-header';
 import PropTypes from 'prop-types';
 
 const Education = ({ education = {} }) => {
@@ -43,7 +43,7 @@ const EducationsContainer = ({ url }) => {
 
     return (
         <div id="region-education">
-            <Header setID="education" text="Education" />
+            <SectionHeader setID="education" text="Education" />
             <hr />
             {data.map((education, index) => (
                 <Education education={education} key={index} />
