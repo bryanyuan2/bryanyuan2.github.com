@@ -1,66 +1,56 @@
-const React = require('react');
-const Header = require('./../component/header');
-const PropTypes = require('prop-types');
-const createReactClass = require('create-react-class');
+import React, { useState, useEffect } from 'react';
+import Header from './../component/header';
+import PropTypes from 'prop-types';
 
-const Skill = createReactClass({
-    propTypes: {
-        skill: PropTypes.object,
-    },
-    getDefaultProps: function() {
-        return {
-            skill: {},
-        };
-    },
-    render: function() {
-        const items = [];
-        this.props.skill.items.forEach(function(content) {
-            items.push('<span class="text-hints">' +content.name + '</span>');
-        });
+const Skill = ({ skill = {} }) => {
+    const items = skill.items?.map((content) => (
+        `<span class="text-hints">${content.name}</span>`
+    ));
 
-        return (
-            <div className="data-skills row">
-                <div className="col-md-2 fs-16">
-                    <p>{this.props.skill.title}</p>
-                </div>
-                <div className="col-md-8 fs-16">
-                    <blockquote className={this.props.skill.hl}>
-                        <div dangerouslySetInnerHTML={{__html: items.join(', ')}} />
-                    </blockquote>
-                </div>
+    return (
+        <div className="data-skills row">
+            <div className="col-md-2 fs-16">
+                <p>{skill.title}</p>
             </div>
-        );
-    },
-});
-
-const SkillsContainer = createReactClass({
-    getInitialState: function() {
-        return {
-            data: [],
-        };
-    },
-    componentDidMount: async function() {
-        const response = await fetch(this.props.url);
-        const data = await response.json();
-        this.setState({ data: data });
-    },
-    render: function() {
-        const skills = [];
-        this.state.data.forEach(function(skill, index) {
-            // need to keep key={index} to avoid the following warning
-            // warning: Each child in a list should have a unique "key" prop.
-            skills.push(<Skill skill={skill} key={index} />);
-        });
-
-        return (
-            <div id="region-skills">
-                <Header setID="skills" text="Technical Keywords" />
-                <hr />
-                {skills}
-                <br />
+            <div className="col-md-8 fs-16">
+                <blockquote className={skill.hl}>
+                    <div dangerouslySetInnerHTML={{ __html: items?.join(', ') }} />
+                </blockquote>
             </div>
-        );
-    },
-});
+        </div>
+    );
+};
+
+Skill.propTypes = {
+    skill: PropTypes.object,
+};
+
+const SkillsContainer = ({ url }) => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch(url);
+            const data = await response.json();
+            setData(data);
+        };
+        fetchData();
+    }, [url]);
+
+    return (
+        <div id="region-skills">
+            <Header setID="skills" text="Technical Keywords" />
+            <hr />
+            {data.map((skill, index) => (
+                <Skill skill={skill} key={index} />
+            ))}
+            <br />
+        </div>
+    );
+};
+
+SkillsContainer.propTypes = {
+    url: PropTypes.string.isRequired,
+};
 
 export default SkillsContainer;

@@ -3,15 +3,7 @@ import CompHackathon from "./../../../js/app/section/hackathon.js";
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { expect } from 'chai';
 let reactTestRendererResult;
-
-let mockHackathonJson = {
-  "title": "Hackathon Profiles & Awards",
-  "id": "region-hackathon",
-  "awards": [
-    { "name": "Best Innovation", "year": 2023 },
-    { "name": "Top Developer", "year": 2024 }
-  ]
-};
+const mockHackathonJson = '../mock/data/mockHackathon.json';
 
 describe('##react-test-renderer## js/app/section/hackathon.js testing', function(){
   beforeEach(async function(){

@@ -3,21 +3,7 @@ import CompSummary from "./../../../js/app/section/summary.js";
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { expect } from 'chai';
 let reactTestRendererResult;
-
-const mockSummaryJson = [
-  {
-    title: "Experienced Software Engineer",
-    description: "Over 10 years of experience in developing scalable web applications and services."
-  },
-  {
-    title: "Proficient in Modern Technologies",
-    description: "Expertise in React, Node.js, and cloud platforms like AWS and Azure."
-  },
-  {
-    title: "Strong Leadership Skills",
-    description: "Led multiple cross-functional teams to deliver high-quality products on time."
-  }
-];
+const mockSummaryJson = '../mock/data/mockSummary.json';
 
 describe('##react-test-renderer## js/app/section/summary.js testing', function(){
   beforeEach(function(done){
