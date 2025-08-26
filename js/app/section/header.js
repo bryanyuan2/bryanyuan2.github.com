@@ -1,9 +1,7 @@
-'use strict';
-
-const React = require('react');
-const LoadJSON = require('./../utils/mixins').LoadJSON;
-const PropTypes = require('prop-types');
-const createReactClass = require('create-react-class');
+import React from 'react';
+import { LoadJSON } from './../utils/mixins';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const HeaderContainer = createReactClass({
     mixins: [LoadJSON],
@@ -32,4 +30,4 @@ const HeaderContainer = createReactClass({
     },
 });
 
-module.exports = HeaderContainer;
+export default HeaderContainer;

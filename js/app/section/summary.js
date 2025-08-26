@@ -1,5 +1,3 @@
-'use strict';
-
 const React = require('react');
 const Header = require('./../component/header');
 const _ = require('lodash');
@@ -58,4 +56,4 @@ const SummaryContainer = createReactClass({
     },
 });
 
-module.exports = SummaryContainer;
+export default SummaryContainer;

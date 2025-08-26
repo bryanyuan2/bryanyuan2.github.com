@@ -1,9 +1,7 @@
-'use strict';
-
-const React = require('react');
-const PureRenderMixin = require('react-addons-pure-render-mixin');
-const PropTypes = require('prop-types');
-const createReactClass = require('create-react-class');
+import React from 'react';
+import { PureRenderMixin } from 'react-addons-pure-render-mixin';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const infoBar = createReactClass({
     mixins: [PureRenderMixin],

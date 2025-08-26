@@ -1,5 +1,3 @@
-'use strict';
-
 const React = require('react');
 const LoadJSON = require('./../utils/mixins').LoadJSON;
 const Header = require('./../component/header');
@@ -59,4 +57,4 @@ const SkillsContainer = createReactClass({
     },
 });
 
-module.exports = SkillsContainer;
+export default SkillsContainer;
