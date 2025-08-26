@@ -4,7 +4,7 @@ import InfoBar from './../component/infobar';
 import Header from './../component/header';
 import _ from 'lodash';
 import { LoadJSON } from './../utils/mixins';
-import { PureRenderMixin } from 'react-addons-pure-render-mixin';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
 

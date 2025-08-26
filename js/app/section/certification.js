@@ -1,7 +1,7 @@
 import React from 'react';
 import { LoadJSON } from './../utils/mixins';
 import Header from './../component/header';
-import { PureRenderMixin } from 'react-addons-pure-render-mixin';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
 
