@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Pack = memo(({ items = {} }) => {
     return (
         <a target="_blank" rel="noopener noreferrer" href={items.url}>
-            <img className="footer-img" src={items.img} alt="footer item" />
+            <img className="footer-img" width="auto" height="32" src={items.img} alt="footer item" />
         </a>
     );
 });

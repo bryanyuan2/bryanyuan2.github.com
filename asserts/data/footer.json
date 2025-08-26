@@ -10,14 +10,9 @@
     "img": "asserts/images/tech/browserify.png"
   },
   {
-    "name": "bootstrap",
-    "url": "http://getbootstrap.com/",
-    "img": "asserts/images/tech/bootstrap.png"
-  },
-  {
-    "name": "gulp",
-    "url": "http://gulpjs.com/",
-    "img": "asserts/images/tech/gulp.png"
+    "name": "browserify",
+    "url": "https://jestjs.io/",
+    "img": "asserts/images/tech/jest.png"
   },
   {
     "name": "npm",
@@ -30,9 +25,14 @@
     "img": "asserts/images/tech/github.png"
   },
   {
-    "name": "flowtype",
-    "url": "http://flowtype.org/",
-    "img": "asserts/images/tech/flowtype.png"
+    "name": "github action",
+    "url": "https://github.com/features/actions",
+    "img": "asserts/images/tech/github-action.png"
+  },
+  {
+    "name": "github copilot",
+    "url": "https://github.com/features/copilot",
+    "img": "asserts/images/tech/github-copilot.png"
   },
   {
     "name": "chai",
@@ -40,8 +40,8 @@
     "img": "asserts/images/tech/chai.png"
   },
   {
-    "name": "coveralls",
-    "url": "https://coveralls.io",
-    "img": "asserts/images/tech/coveralls.png"
+    "name": "sass",
+    "url": "https://sass-lang.com/",
+    "img": "asserts/images/tech/sass.png"
   }
 ]
