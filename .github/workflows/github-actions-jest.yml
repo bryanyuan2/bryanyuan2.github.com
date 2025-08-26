@@ -1,4 +1,4 @@
-name: run jest with coverage report
+name: run jest unittest
 run-name: ${{ github.actor }} is testing jest on GitHub Actions
 on:
   pull_request:
