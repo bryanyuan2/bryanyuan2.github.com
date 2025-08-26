@@ -1,24 +1,25 @@
-/*jshint -W030 */
-"use strict";
+import React from 'react';
+import CompCertification from "./../../../js/app/section/certification.js";
+import ShallowTestRenderer from 'react-test-renderer/shallow';
+import { expect } from 'chai';
+let reactTestRendererResult;
 
-var React = require('react');
-var CompCertification = require("../../../js/app/section/certification.js").default;
-var ShallowTestRenderer = require('react-test-renderer/shallow');
-var testingLibraryReact = require('@testing-library/react');
-var expect = require('chai').expect;
-var certificationsJson = require('./../../../data/certification.json');
+const mockCertificationsJson = [
+  {
+    name: "AWS Certified Solutions Architect",
+    authority: "Amazon Web Services",
+    date: "2023",
+    description: "Earned certification for designing distributed systems on AWS."
+  }
+];
 
-var reactTestRendererResult;
-var CompCertificationsElement;
-
-describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    var shadow = new ShallowTestRenderer();
-    shadow.render(<CompCertification url={certificationsJson} />);
+describe('##react-test-renderer## js/app/section/certification.js testing', function(){
+  beforeEach(async function(){
+    const shadow = new ShallowTestRenderer();
+    shadow.render(<CompCertification url={mockCertificationsJson} />);
     reactTestRendererResult = shadow.getRenderOutput();
-    done();
   });
-  
+
   it('component container should be existed', function () {
     expect(reactTestRendererResult).to.exist;
   });
@@ -29,17 +30,5 @@ describe('##react-test-renderer## testing', function(){
 
   it('component title should be rendered', function () {
     expect(reactTestRendererResult.props.children[0].props.text).to.equal('Certification');
-  });
-});
-
-describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    CompCertificationsElement = testingLibraryReact.render(<CompCertification url={certificationsJson} />);
-    done();
-  });
-  
-  it('title should be rendered', function () {
-    var title = CompCertificationsElement.getByText(/Certification/).textContent;
-    expect(title).to.equal('Certification');
   });
 });

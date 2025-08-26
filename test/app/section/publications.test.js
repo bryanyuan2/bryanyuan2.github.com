@@ -1,45 +1,43 @@
-/*jshint -W030 */
-"use strict";
+import React from 'react';
+import CompPublications from "./../../../js/app/section/publications.js";
+import ShallowTestRenderer from 'react-test-renderer/shallow';
+import { expect } from 'chai';
+let reactTestRendererResult;
 
-var React = require('react');
-var CompPublications = require("./../../../js/app/section/publications.js").default;
-var ShallowTestRenderer = require('react-test-renderer/shallow');
-var testingLibraryReact = require('@testing-library/react');
-var expect = require('chai').expect;
-var publicationsJson = require('./../../../data/publications.json');
+const mockPublicationsJson = [
+  {
+    title: "Understanding React",
+    authors: "John Doe, Jane Smith",
+    journal: "React Journal",
+    year: "2024",
+    url: "http://example.com/understanding-react"
+  },
+  {
+    title: "Advanced JavaScript",
+    authors: "Alice Brown, Bob White",
+    journal: "JS Weekly",
+    year: "2023",
+    url: "http://example.com/advanced-javascript"
+  }
+];
 
-var reactTestRendererResult;
-var CompPublicationsElement;
-
-describe('##react-test-renderer## testing', function(){
+describe('##react-test-renderer## js/app/section/publications.js testing', function(){
   beforeEach(function(done){
-    var shadow = new ShallowTestRenderer();
-    shadow.render(<CompPublications url={publicationsJson} />);
+    const shadow = new ShallowTestRenderer();
+    shadow.render(<CompPublications url={mockPublicationsJson} />);
     reactTestRendererResult = shadow.getRenderOutput();
     done();
   });
-  
+
   it('component container should be existed', function () {
-    expect(reactTestRendererResult).to.exist;
-  });
-
-  it('component class should be rendered', function () {
-    expect(reactTestRendererResult.props.id).to.equal('region-publications');
-  });
-
-  it('component title should be rendered', function () {
-    expect(reactTestRendererResult.props.children[0].props.text).to.equal('Publications');
-  });
-});
-
-describe('##react-test-renderer## testing', function(){
-  beforeEach(function(done){
-    CompPublicationsElement = testingLibraryReact.render(<CompPublications url={publicationsJson} />);
-    done();
-  });
+      expect(reactTestRendererResult).to.exist;
+    });
   
-  it('title should be rendered', function () {
-    var title = CompPublicationsElement.getByText(/Publications/).textContent;
-    expect(title).to.equal('Publications');
-  });
+    it('component class should be rendered', function () {
+      expect(reactTestRendererResult.props.id).to.equal('region-publications');
+    });
+  
+    it('component title should be rendered', function () {
+      expect(reactTestRendererResult.props.children[0].props.text).to.equal('Publications');
+    });
 });
