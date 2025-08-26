@@ -1,11 +1,9 @@
-'use strict';
-
-const React = require('react');
-const LoadJSON = require('./../utils/mixins').LoadJSON;
-const Header = require('./../component/header');
-const PureRenderMixin = require('react-addons-pure-render-mixin');
-const PropTypes = require('prop-types');
-const createReactClass = require('create-react-class');
+import React from 'react';
+import { LoadJSON } from './../utils/mixins';
+import Header from './../component/header';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const Community = createReactClass({
     mixins: [PureRenderMixin],
@@ -69,4 +67,5 @@ const CommunitiesContainer = createReactClass({
     },
 });
 
-module.exports = CommunitiesContainer;
+export default CommunitiesContainer;
+

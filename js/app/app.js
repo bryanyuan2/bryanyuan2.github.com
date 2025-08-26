@@ -1,20 +1,17 @@
-'use strict';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-/* require */
-const React = require('react');
-const ReactDOM = require('react-dom/client');
-
-/* section */
-const CompHeader = require('./section/header');
-const CompSummary = require('./section/summary');
-const CompEducations = require('./section/educations');
-const CompSkills = require('./section/skills');
-const CompWorks = require('./section/works');
-const CompHackathon = require('./section/hackathon');
-const CompCommunities = require('./section/communities');
-const CompPublications = require('./section/publications');
-const CompCertification = require('./section/certification');
-const CompFooter = require('./section/footer');
+/* section imports */
+import CompHeader from './section/header';
+import CompSummary from './section/summary';
+import CompEducations from './section/educations';
+import CompSkills from './section/skills';
+import CompWorks from './section/works';
+import CompHackathon from './section/hackathon';
+import CompCommunities from './section/communities';
+import CompPublications from './section/publications';
+import CompCertification from './section/certification';
+import CompFooter from './section/footer';
 
 const App = () => {
     return (

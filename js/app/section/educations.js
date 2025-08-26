@@ -1,10 +1,8 @@
-'use strict';
-
-const React = require('react');
-const LoadJSON = require('./../utils/mixins').LoadJSON;
-const Header = require('./../component/header');
-const PropTypes = require('prop-types');
-const createReactClass = require('create-react-class');
+import React from 'react';
+import { LoadJSON } from './../utils/mixins';
+import Header from './../component/header';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const Education = createReactClass({
     honors: [],
@@ -68,4 +66,4 @@ const EducationsContainer = createReactClass({
     },
 });
 
-module.exports = EducationsContainer;
+export default EducationsContainer;

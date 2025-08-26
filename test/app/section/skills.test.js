@@ -3,7 +3,7 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var CompSkills = require("./../../../js/app/section/skills.js");
+var CompSkills = require("./../../../js/app/section/skills.js").default;
 var ShallowTestRenderer = require('react-test-renderer/shallow');
 var testingLibraryReact = require('@testing-library/react');
 var expect = require('chai').expect;

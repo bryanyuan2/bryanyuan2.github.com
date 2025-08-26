@@ -1,5 +1,3 @@
-'use strict';
-
 const React = require('react');
 const LoadJSON = require('./../utils/mixins').LoadJSON;
 const PressList = require('./../component/presslist');
@@ -148,4 +146,4 @@ const WorksContainer = createReactClass({
     },
 });
 
-module.exports = WorksContainer;
+export default WorksContainer;

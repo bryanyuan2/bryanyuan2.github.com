@@ -2,8 +2,7 @@
 "use strict";
 
 var React = require('react');
-var ReactDOM = require('react-dom');
-var CompCommunities = require("./../../../js/app/section/communities.js");
+var CompCommunities = require("./../../../js/app/section/communities.js").default;
 var ShallowTestRenderer = require('react-test-renderer/shallow');
 var testingLibraryReact = require('@testing-library/react');
 var expect = require('chai').expect;

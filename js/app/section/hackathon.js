@@ -1,14 +1,12 @@
-'use strict';
-
-const React = require('react');
-const PressList = require('./../component/presslist');
-const InfoBar = require('./../component/infobar');
-const Header = require('./../component/header');
-const _ = require('lodash');
-const LoadJSON = require('./../utils/mixins').LoadJSON;
-const PureRenderMixin = require('react-addons-pure-render-mixin');
-const PropTypes = require('prop-types');
-const createReactClass = require('create-react-class');
+import React from 'react';
+import PressList from './../component/presslist';
+import InfoBar from './../component/infobar';
+import Header from './../component/header';
+import _ from 'lodash';
+import { LoadJSON } from './../utils/mixins';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const Award = createReactClass({
     mixins: [PureRenderMixin],
@@ -74,4 +72,4 @@ const AwardsContainer = createReactClass({
     },
 });
 
-module.exports = AwardsContainer;
+export default AwardsContainer;
