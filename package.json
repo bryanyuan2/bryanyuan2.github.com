@@ -39,37 +39,28 @@
     "@babel/core": "^7.11.1",
     "@babel/eslint-parser": "^7.28.0",
     "@babel/preset-env": "^7.11.0",
-    "@testing-library/react": "^16.3.0",
     "babel-eslint": "^10.1.0",
     "browserify": "^16.5.1",
     "chai": "^4.2.0",
-    "del": "^5.1.0",
     "depcheck": "^1.4.7",
     "eslint": "^8.0.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.19.0",
     "jest": "^26.6.3",
-    "jsdom": "^16.2.2",
     "jsonlint-cli": "^1.0.1",
     "live-server": "^1.2.2",
-    "react-tools": "^0.13.3",
     "rimraf": "^6.0.1",
     "sass": "^1.90.0",
-    "uglifyjs": "^2.4.11",
-    "vinyl-source-stream": "^2.0.0"
+    "uglifyjs": "^2.4.11"
   },
   "dependencies": {
     "@babel/preset-react": "^7.12.10",
     "babelify": "^10.0.0",
-    "create-react-class": "^15.6.3",
     "envify": "^4.1.0",
-    "lightbox2": "^2.11.3",
     "lodash": "^4.17.15",
-    "minimist": "^1.2.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-test-renderer": "^18.2.0",
-    "truncate": "^2.1.0"
+    "react-test-renderer": "^18.2.0"
   }
 }
