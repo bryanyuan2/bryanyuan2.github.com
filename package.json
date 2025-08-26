@@ -10,7 +10,7 @@
     "jsonlint:data": "jsonlint-cli './asserts/data/*.json'",
     "jsonlint:mockdata": "jsonlint-cli './test/app/mock/data/*.json'",
     "test": "npm run jsonlint:mockdata && jest",
-    "test-cov": "npm run jsonlint:mockdata && jest --coverage",
+    "test-cov": "jest --coverage",
     "build:dev:js": "NODE_ENV=production browserify ./js/app/app.js -t [ envify --NODE_ENV development ] -t babelify -o ./js/build/bundle.js",
     "build:prod:js": "NODE_ENV=production browserify ./js/app/app.js -t [ envify --NODE_ENV production ] -t babelify | uglifyjs -c -m -o ./js/build/bundle.js",
     "build:css": "sass ./asserts/css/src/app.scss ./asserts/css/min/app.min.css --style compressed",
