@@ -33,7 +33,7 @@ const App = () => {
 };
 
 ReactDOM.createRoot(document.getElementById('target')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+);

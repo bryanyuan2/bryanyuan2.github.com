@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import PressList from './../component/presslist';
 import AwardsList from './../component/awardslist';
 import Header from './../component/header';
 
-const Work = ({ work = {} }) => {
+const Work = ({work = {}}) => {
     const renderExperience = (data) => {
         return data.map((obj, index) => (
             <div key={index}>
@@ -107,7 +107,7 @@ Work.propTypes = {
     work: PropTypes.object,
 };
 
-const WorksContainer = ({ url }) => {
+const WorksContainer = ({url}) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {

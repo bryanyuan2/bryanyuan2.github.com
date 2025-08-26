@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from './../component/header';
 import PropTypes from 'prop-types';
 
-const Certification = ({ cert = {} }) => {
+const Certification = ({cert = {}}) => {
     return (
         <div>
             <div className="data-communities row">
@@ -29,7 +29,7 @@ Certification.propTypes = {
     cert: PropTypes.object,
 };
 
-const CertificationContainer = ({ url }) => {
+const CertificationContainer = ({url}) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
