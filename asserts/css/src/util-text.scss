@@ -144,10 +144,8 @@
 }
 
 .text-summary {
-    display: list-item;
-    list-style-type: disc;
-    list-style-position: inside;
-    font-weight: 400;
+    font-size: common.$fs-ms;
+    font-weight: 700;
     margin-top: 4px;
 }
 
