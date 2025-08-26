@@ -1,5 +1,5 @@
 import React from 'react';
-import CompHeader from "./../../../js/app/section/footer.js";
+import CompHeader from "./../../../js/app/section/header.js";
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { expect } from 'chai';
 let reactTestRendererResult;
