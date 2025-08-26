@@ -9,7 +9,7 @@ describe('##react-test-renderer## js/app/component/presslist.js testing', functi
     beforeEach(function() {
         const shadow = new ShallowTestRenderer();
         shadow.render(
-            <PressList press={[{link: 'https://example.com', title: 'Example Title', source: 'Example Source'}]} />
+            <PressList press={[{link: 'https://example.com', title: 'Example Title', source: 'Example Source'}]} />,
         );
         reactTestRendererResult = shadow.getRenderOutput();
     });

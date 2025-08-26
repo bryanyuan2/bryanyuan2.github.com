@@ -9,7 +9,7 @@ describe('##react-test-renderer## js/app/component/awardslist.js testing', funct
     beforeEach(function() {
         const shadow = new ShallowTestRenderer();
         shadow.render(
-            <AwardsList awards={["Award 1", "Award 2"]} />
+            <AwardsList awards={['Award 1', 'Award 2']} />,
         );
         reactTestRendererResult = shadow.getRenderOutput();
     });

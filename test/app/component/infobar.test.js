@@ -12,8 +12,8 @@ describe('##react-test-renderer## js/app/component/infobar.js testing', function
             <InfoBar info={{
                 github: 'https://github.com/example',
                 speakerdeck: 'https://speakerdeck.com/example',
-                youtube: 'https://youtube.com/example'
-            }} />
+                youtube: 'https://youtube.com/example',
+            }} />,
         );
         reactTestRendererResult = shadow.getRenderOutput();
     });
