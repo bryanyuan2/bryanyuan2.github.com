@@ -17,17 +17,19 @@ module.exports = {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
   },
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
     },
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2020,
   },
   "plugins": [
     "react",
   ],
   "rules": {
+    "require-jsdoc" : 0,
     "indent": ["warn", 4],
     "max-len": [
       "error", {

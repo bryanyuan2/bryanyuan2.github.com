@@ -9,6 +9,7 @@ const Pack = memo(({items = {}}) => {
     );
 });
 
+Pack.displayName = 'Pack';
 Pack.propTypes = {
     items: PropTypes.object,
 };

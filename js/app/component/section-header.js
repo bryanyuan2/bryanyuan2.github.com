@@ -1,24 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import createReactClass from 'create-react-class';
 
-const SectionHeader = createReactClass({
-    propTypes: {
+class SectionHeader extends React.Component {
+    static propTypes = {
         setID: PropTypes.string,
         text: PropTypes.string,
-    },
-    getDefaultProps: function() {
-        return {
-            setID: {},
-            text: '',
-        };
-    },
-    render: function() {
+    };
+
+    static defaultProps = {
+        setID: {},
+        text: '',
+    };
+
+    render() {
         const id = this.props.setID ? 'set-' + this.props.setID : 'set';
         return (
             <h2 className="text-section" id={id}>{this.props.text}</h2>
         );
-    },
-});
+    }
+}
 
-module.exports = SectionHeader;
+export default SectionHeader;
