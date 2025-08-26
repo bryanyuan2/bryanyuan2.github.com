@@ -43,5 +43,10 @@
     "name": "sass",
     "url": "https://sass-lang.com/",
     "img": "asserts/images/tech/sass.png"
+  },
+  {
+    "name": "eslint",
+    "url": "https://eslint.org/",
+    "img": "asserts/images/tech/eslint.png"
   }
 ]

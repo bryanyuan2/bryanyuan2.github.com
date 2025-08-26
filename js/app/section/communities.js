@@ -1,10 +1,10 @@
-import React, { useState, useEffect, memo } from 'react';
+import React, {useState, useEffect, memo} from 'react';
 import Header from './../component/header';
 import PropTypes from 'prop-types';
 
-const Community = memo(({ community = {} }) => {
+const Community = memo(({community = {}}) => {
     const description = community.description
-        .map(content => `<span class="text-desc-list">${content.text}</span>`)
+        .map((content) => `<span class="text-desc-list">${content.text}</span>`)
         .join('');
 
     return (
@@ -21,7 +21,7 @@ const Community = memo(({ community = {} }) => {
                         </div>
                         <div className="text-desc">{community.position}</div>
                         <ul className="text-desc">
-                            <div dangerouslySetInnerHTML={{ __html: description }} />
+                            <div dangerouslySetInnerHTML={{__html: description}} />
                         </ul>
                     </blockquote>
                 </div>
@@ -38,7 +38,7 @@ Community.propTypes = {
     community: PropTypes.object,
 };
 
-const CommunitiesContainer = ({ url }) => {
+const CommunitiesContainer = ({url}) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {

@@ -1,33 +1,33 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'commonjs': true,
-    'es6': true,
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
   },
   "settings": {
     "react": {
-      "version": "16.13.1"
+      "version": "18.2.0"
     }
   },
-  'extends': [
-    'plugin:react/recommended',
-    'google',
+  "extends": [
+    "plugin:react/recommended",
+    "google",
   ],
-  'globals': {
-    'Atomics': 'readonly',
-    'SharedArrayBuffer': 'readonly',
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
   },
-  'parserOptions': {
-    'sourceType': 'module',
-    'ecmaFeatures': {
-      'jsx': true,
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
     },
-    'ecmaVersion': 2018,
+    "ecmaVersion": 2018,
   },
-  'plugins': [
-    'react',
+  "plugins": [
+    "react",
   ],
-  'rules': {
+  "rules": {
     "indent": ["warn", 4],
     "max-len": [
       "error", {

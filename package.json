@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "clean": "rimraf ./js/build/*.js",
-    "eslint": "eslint './js/app/**/*.js'",
+    "eslint": "eslint './js/app/**/*.js' './test/app/**/*.js'",
+    "eslint-fix": "eslint './js/app/**/*.js' './test/app/**/*.js' --fix",
     "jsonlint:data": "jsonlint-cli './asserts/data/*.json'",
     "jsonlint:mockdata": "jsonlint-cli './test/app/mock/data/*.json'",
     "test": "npm run jsonlint:mockdata && jest",

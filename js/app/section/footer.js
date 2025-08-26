@@ -1,7 +1,7 @@
-import React, { useState, useEffect, memo } from 'react';
+import React, {useState, useEffect, memo} from 'react';
 import PropTypes from 'prop-types';
 
-const Pack = memo(({ items = {} }) => {
+const Pack = memo(({items = {}}) => {
     return (
         <a target="_blank" rel="noopener noreferrer" href={items.url}>
             <img className="footer-img" width="auto" height="32" src={items.img} alt="footer item" />
@@ -13,7 +13,7 @@ Pack.propTypes = {
     items: PropTypes.object,
 };
 
-const FooterContainer = ({ url }) => {
+const FooterContainer = ({url}) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
