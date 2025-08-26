@@ -1,15 +1,12 @@
 const React = require('react');
-const LoadJSON = require('./../utils/mixins').LoadJSON;
 const PressList = require('./../component/presslist');
 const AwardsList = require('./../component/awardslist');
 const Header = require('./../component/header');
-const PureRenderMixin = require('react-addons-pure-render-mixin');
 
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 
 const Work = createReactClass({
-    mixins: [PureRenderMixin],
     propTypes: {
         work: PropTypes.object,
     },
@@ -127,7 +124,17 @@ const Work = createReactClass({
 });
 
 const WorksContainer = createReactClass({
-    mixins: [LoadJSON],
+    getInitialState: function() {
+        return {
+            data: [],
+        };
+    },
+    componentDidMount: async function() {
+        const response = await fetch(this.props.url);
+        const data = await response.json();
+        this.setState({ data: data });
+    },
+
     render: function() {
         const works = [];
         this.state.data.forEach(function(work, index) {

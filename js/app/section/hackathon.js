@@ -3,13 +3,10 @@ import PressList from './../component/presslist';
 import InfoBar from './../component/infobar';
 import Header from './../component/header';
 import _ from 'lodash';
-import { LoadJSON } from './../utils/mixins';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
 
 const Award = createReactClass({
-    mixins: [PureRenderMixin],
     propTypes: {
         award: PropTypes.object
     },
@@ -53,7 +50,16 @@ const Award = createReactClass({
 });
 
 const AwardsContainer = createReactClass({
-    mixins: [LoadJSON],
+    getInitialState: function() {
+        return {
+            data: [],
+        };
+    },
+    componentDidMount: async function() {
+        const response = await fetch(this.props.url);
+        const data = await response.json();
+        this.setState({ data: data });
+    },
     render: function() {
         const awards = [];
         this.state.data.forEach(function(award, index) {

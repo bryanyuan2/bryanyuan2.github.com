@@ -1,12 +1,9 @@
 import React from 'react';
-import { LoadJSON } from './../utils/mixins';
 import Header from './../component/header';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
 
 const Certification = createReactClass({
-    mixins: [PureRenderMixin],
     propTypes: {
         cert: PropTypes.object
     },
@@ -41,11 +38,19 @@ const Certification = createReactClass({
 });
 
 const CertificationContainer = createReactClass({
-    mixins: [LoadJSON],
+    getInitialState: function() {
+        return {
+            data: [],
+        };
+    },
+    componentDidMount: async function() {
+        const response = await fetch(this.props.url);
+        const data = await response.json();
+        this.setState({ data: data });
+    },
     render: function() {
         const certification = [];
         this.state.data.forEach(function(cert, index) {
-            console.log('cert', cert);
             // need to keep key={index} to avoid the following warning
             // warning: Each child in a list should have a unique "key" prop.
             certification.push(<Certification cert={cert} key={index} />);

@@ -1,5 +1,4 @@
 import React from 'react';
-import { LoadJSON } from './../utils/mixins';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
 
@@ -24,7 +23,16 @@ const Pack = createReactClass({
 });
 
 const FooterContainer = createReactClass({
-    mixins: [LoadJSON],
+    getInitialState: function() {
+        return {
+            data: [],
+        };
+    },
+    componentDidMount: async function() {
+        const response = await fetch(this.props.url);
+        const data = await response.json();
+        this.setState({ data: data });
+    },
     propTypes: {
         data: PropTypes.array,
     },
