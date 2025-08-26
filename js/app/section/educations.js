@@ -18,10 +18,12 @@ const Education = ({education = {}}) => {
             <div className="col-md-10">
                 <blockquote className={education.hl}>
                     <p><strong>{education.degree}, <i>{education.school}</i></strong> - <a target="_blank" rel="noopener noreferrer" href="http://iisr.csie.ncu.edu.tw/">{education.lab}</a></p>
-                    <ol>
-                        {honors && <li dangerouslySetInnerHTML={{__html: honors.join('')}} />}
-                        {education.description && <li>{education.description}</li>}
-                    </ol>
+                    { education.description && (
+                        <ol>
+                            {honors && <li dangerouslySetInnerHTML={{__html: honors.join('')}} />}
+                            <li>{education.description}</li>
+                        </ol>
+                    )}
                 </blockquote>
             </div>
         </div>
