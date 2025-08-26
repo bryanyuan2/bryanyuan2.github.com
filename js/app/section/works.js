@@ -9,13 +9,6 @@ const Work = ({work = {}}) => {
         return data.map((obj, index) => (
             <div key={index}>
                 {obj.title && <div className="text-desc-title">{obj.title}</div>}
-                {obj.description && Array.isArray(obj.description) ? (
-                    obj.description.map((item, idx) => (
-                        <div className="text-desc-list" key={idx}>{item}</div>
-                    ))
-                ) : (
-                    <div className="text-desc-list">{obj.description}</div>
-                )}
                 {obj.thumbnails && Array.isArray(obj.thumbnails) && (
                     obj.thumbnails.map((item, idx) => (
                         <div className="col-md-4" key={idx}>
