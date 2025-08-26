@@ -1,0 +1,13 @@
+name: run jest coverage report (marketplace/actions/jest-coverage-report)
+run-name: ${{ github.actor }} is testing jest coverage on GitHub Actions (https://github.com/marketplace/actions/jest-coverage-report)
+on:
+  pull_request:
+    branches:
+      - master
+      - dev
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - uses: ArtiomTr/jest-coverage-report-action@v2
