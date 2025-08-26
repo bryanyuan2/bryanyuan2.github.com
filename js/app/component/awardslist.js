@@ -27,7 +27,7 @@ class AwardsList extends React.Component {
         awardsContent = awards.join(' ');
         return (
             <div className="text-awards">
-                <div className="alert alert-info" dangerouslySetInnerHTML={{ __html: awardsContent }} />
+                <div className="alert alert-info" dangerouslySetInnerHTML={{__html: awardsContent}} />
             </div>
         );
     }

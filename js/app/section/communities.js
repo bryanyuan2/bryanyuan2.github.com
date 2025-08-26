@@ -34,6 +34,7 @@ const Community = memo(({community = {}}) => {
     );
 });
 
+Community.displayName = 'Community';
 Community.propTypes = {
     community: PropTypes.object,
 };

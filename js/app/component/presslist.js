@@ -23,14 +23,14 @@ class PressList extends React.Component {
                     content.title +
                     ' - ' +
                     content.source +
-                    '</a></li>'
+                    '</a></li>',
                 );
             });
         }
         pressContent = press.join(' ');
         return (
             <div className="text-press">
-                <div dangerouslySetInnerHTML={{ __html: pressContent }} />
+                <div dangerouslySetInnerHTML={{__html: pressContent}} />
             </div>
         );
     }

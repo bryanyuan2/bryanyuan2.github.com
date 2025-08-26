@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import SectionHeader from './../component/section-header';
 import PropTypes from 'prop-types';
 
-const Skill = ({ skill = {} }) => {
+const Skill = ({skill = {}}) => {
     const items = skill.items?.map((content) => (
         `<span class="text-hints">${content.name}</span>`
     ));
@@ -14,7 +14,7 @@ const Skill = ({ skill = {} }) => {
             </div>
             <div className="col-md-8 fs-16">
                 <blockquote className={skill.hl}>
-                    <div dangerouslySetInnerHTML={{ __html: items?.join(', ') }} />
+                    <div dangerouslySetInnerHTML={{__html: items?.join(', ')}} />
                 </blockquote>
             </div>
         </div>
@@ -25,7 +25,7 @@ Skill.propTypes = {
     skill: PropTypes.object,
 };
 
-const SkillsContainer = ({ url }) => {
+const SkillsContainer = ({url}) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {

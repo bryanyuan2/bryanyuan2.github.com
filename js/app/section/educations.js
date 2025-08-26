@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import SectionHeader from './../component/section-header';
 import PropTypes from 'prop-types';
 
-const Education = ({ education = {} }) => {
-    const honors = education.honors?.map((content) => (
-        `<strong>Honors</strong>: <a target="_blank" rel="noopener noreferrer" href="${content.link}">${content.title}</a>`
-    ));
+const Education = ({education = {}}) => {
+    let honors = [];
+    if (education.honors) {
+        honors = education.honors.map((content) => (
+            `<strong>Honors</strong>: <a target="_blank" rel="noopener noreferrer" href="${content.link}">${content.title}</a>`
+        ));
+    }
 
     return (
         <div className="data-education row">
@@ -16,7 +19,7 @@ const Education = ({ education = {} }) => {
                 <blockquote className={education.hl}>
                     <p><strong>{education.degree}, <i>{education.school}</i></strong> - <a target="_blank" rel="noopener noreferrer" href="http://iisr.csie.ncu.edu.tw/">{education.lab}</a></p>
                     <ol>
-                        {honors && <li dangerouslySetInnerHTML={{ __html: honors.join('') }} />}
+                        {honors && <li dangerouslySetInnerHTML={{__html: honors.join('')}} />}
                         {education.description && <li>{education.description}</li>}
                     </ol>
                 </blockquote>
@@ -29,7 +32,7 @@ Education.propTypes = {
     education: PropTypes.object,
 };
 
-const EducationsContainer = ({ url }) => {
+const EducationsContainer = ({url}) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
