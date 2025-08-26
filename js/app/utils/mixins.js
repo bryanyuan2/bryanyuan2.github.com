@@ -1,7 +1,5 @@
 'use strict';
 
-const $ = require('jquery');
-
 const PropTypes = require('prop-types');
 
 const Mixins = {
@@ -18,28 +16,15 @@ const Mixins = {
                 dataSub: [],
             };
         },
-        loadData: function() {
-            const that = this;
+        loadData: async function() {
             if (typeof(this.props.url) === 'string') {
-                $.getJSON(this.props.url, function(data) {
-                    that.setState({data: data});
-                });
-            } else if (typeof(this.props.url) === 'object') {
-                const ajax = [];
-                for (const item in this.props.url) {
-                    if (this.props.url.hasOwnProperty(item)) {
-                        ajax.push($.getJSON(this.props.url[item]));
-                    }
-                }
-                $.when.apply($, ajax).then(function(data, subData, triData) {
-                    if (arguments.length === 1) {
-                        that.setState({data: data});
-                    } else if (arguments.length === 2) {
-                        that.setState({data: data, subData: subData});
-                    } else if (arguments.length === 3) {
-                        that.setState({data: data, subData: subData, triData: triData});
-                    }
-                });
+                const response = await fetch(this.props.url);
+                const data = await response.json();
+                this.setState({data: data});
+            } else if (Array.isArray(this.props.url)) {
+                const fetchPromises = this.props.url.map(url => fetch(url).then(res => res.json()));
+                const results = await Promise.all(fetchPromises);
+                this.setState({data: results[0]});
             }
         },
         componentDidMount: function() {
