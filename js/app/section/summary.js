@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from './../component/header';
+import SectionHeader from './../component/section-header';
 import PropTypes from 'prop-types';
 
 const Summary = ({ summary = {} }) => {
@@ -39,7 +39,7 @@ const SummaryContainer = ({ url }) => {
 
     return (
         <div id="region-summary">
-            <Header setID="desc" text="Summary of Qualifications" />
+            <SectionHeader setID="desc" text="Summary of Qualifications" />
             <hr />
             {data.map((summary, index) => (
                 <Summary summary={summary} key={index} />

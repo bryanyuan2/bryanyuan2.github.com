@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Header from './../component/header';
+import SectionHeader from './../component/section-header';
 import PropTypes from 'prop-types';
 
 const Publication = ({publication = {}}) => {
@@ -39,7 +39,7 @@ const PublicationsContainer = ({url}) => {
 
     return (
         <div id="region-publications">
-            <Header setID="publications" text="Publications" />
+            <SectionHeader setID="publications" text="Publications" />
             <hr />
             {data.map((publication, index) => (
                 <Publication publication={publication} key={index} />

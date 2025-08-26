@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Header from './../component/header';
+import SectionHeader from './../component/section-header';
 import PropTypes from 'prop-types';
 
 const Certification = ({cert = {}}) => {
@@ -43,7 +43,7 @@ const CertificationContainer = ({url}) => {
 
     return (
         <div id="region-certification">
-            <Header setID="certification" text="Certification" />
+            <SectionHeader setID="certification" text="Certification" />
             <hr />
             {data.map((cert, index) => (
                 <Certification cert={cert} key={index} />

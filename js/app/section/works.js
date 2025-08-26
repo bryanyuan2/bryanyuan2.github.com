@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import PressList from './../component/presslist';
 import AwardsList from './../component/awardslist';
-import Header from './../component/header';
+import SectionHeader from './../component/section-header';
 
 const Work = ({work = {}}) => {
     const renderExperience = (data) => {
@@ -121,7 +121,7 @@ const WorksContainer = ({url}) => {
 
     return (
         <div id="region-experience">
-            <Header setID="experience" text="Work Experience" />
+            <SectionHeader setID="experience" text="Work Experience" />
             <hr />
             {data.map((work, index) => (
                 <Work work={work} key={index} />

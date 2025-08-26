@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
 
-const Header = createReactClass({
+const SectionHeader = createReactClass({
     propTypes: {
         setID: PropTypes.string,
         text: PropTypes.string,
@@ -21,4 +21,4 @@ const Header = createReactClass({
     },
 });
 
-module.exports = Header;
+module.exports = SectionHeader;
