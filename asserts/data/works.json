@@ -195,9 +195,7 @@
     ],
     "experience": [
       {
-        "description": [
-          "Developed a synchronous mechanism for auction listings from Yahoo, eBay, and Ruten to Facebook Pages, integrating Facebook Insights API and embed.ly statistics for business reporting."
-        ]
+        "title": "Developed a synchronous mechanism for auction listings from Yahoo, eBay, and Ruten to Facebook Pages, integrating Facebook Insights API and embed.ly statistics for business reporting."
       }
     ],
     "media": [
@@ -242,10 +240,10 @@
     ],
     "experience": [
       {
-        "description": [
-          "Developed content-based search suggestions using diverse corpora and implemented time-based query recommendation mechanisms for Yahoo! News, Yahoo! Movies, and Yahoo! Answers.",
-          "Applied FP-growth association rules to generate candidate queries and designed an alternative search assist through bucket experimentation."
-        ]
+        "title": "Developed content-based search suggestions using diverse corpora and implemented time-based query recommendation mechanisms for Yahoo! News, Yahoo! Movies, and Yahoo! Answers."
+      },
+      {
+        "title": "Applied FP-growth association rules to generate candidate queries and designed an alternative search assist through bucket experimentation."
       }
     ]
   },
@@ -266,11 +264,13 @@
     ],
     "experience": [
       {
-        "description": [
-          "Developed an online image search application using Contrast Context Histogram (CCH) and built a feature-based search engine for Taiwan's historic buildings.",
-          "Assisted in the transition of a video streaming platform to the Chinese Television System (CTS), integrating the Kaltura video platform as the editorial backend.",
-          "Developed WASIGHT.COM, a social network similar to DAVEART for design academy students, contributing to FE and BE development."
-        ]
+        "title": "Developed an online image search application using Contrast Context Histogram (CCH) and built a feature-based search engine for Taiwan's historic buildings."
+      },
+      {
+        "title": "Assisted in the transition of a video streaming platform to the Chinese Television System (CTS), integrating the Kaltura video platform as the editorial backend."
+      },
+      {
+        "title": "Developed WASIGHT.COM, a social network similar to DAVEART for design academy students, contributing to FE and BE development."
       }
     ],
     "media": [

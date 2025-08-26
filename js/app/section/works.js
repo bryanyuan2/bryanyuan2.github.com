@@ -68,13 +68,16 @@ const Work = ({work = {}}) => {
                     <ul className="text-desc">
                         {renderExperience(work.experience)}
                     </ul>
-                    {work.photo && (
-                        <img
-                            src={work.photo.src}
-                            alt={work.photo.alt}
-                            width={work.photo.width}
-                            height={work.photo.height}
-                        />
+                    {work.photo && work.photo.src && (
+                        <a href={work.photo.url} target="_blank" rel="noopener noreferrer">
+                            <img
+                                src={work.photo.src}
+                                alt={work.photo.alt}
+                                width={work.photo.width}
+                                height={work.photo.height}
+                            />
+                            <span className="text-album">{work.photo.text}</span>
+                        </a>
                     )}
                     {work.awards && <AwardsList awards={work.awards} />}
                     {work.media && <PressList press={work.media} />}
@@ -83,13 +86,15 @@ const Work = ({work = {}}) => {
             </div>
             <div className="col-md-2 img-nostyle">
                 {work.corp.map((data, index) => (
-                    <img
-                        key={index}
-                        src={data.logo}
-                        alt={data.logoalt}
-                        width={data.width}
-                        height={data.height}
-                    />
+                    data.logo && (
+                        <img
+                            key={index}
+                            src={data.logo}
+                            alt={data.logoalt}
+                            width={data.width}
+                            height={data.height}
+                        />
+                    )
                 ))}
             </div>
         </div>
