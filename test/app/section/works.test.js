@@ -3,36 +3,7 @@ import CompWorks from "./../../../js/app/section/works.js";
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import { expect } from 'chai';
 let reactTestRendererResult;
-
-const mockWorksJson = [
-  {
-    corp: [
-      {
-        name: "Company A",
-        url: "http://example.com",
-        position: "Developer",
-        date: "2023",
-        logo: "http://example.com/logo.png",
-        logoalt: "Company A Logo",
-        width: 100,
-        height: 100
-      }
-    ],
-    experience: [
-      {
-        title: "Project A",
-        description: "Developed feature X."
-      }
-    ],
-    product: [
-      {
-        link: "http://example.com/product",
-        img: "http://example.com/product.png",
-        title: "Product A"
-      }
-    ]
-  }
-];
+const mockWorksJson = '../mock/data/mockWorks.json';
 
 describe('##react-test-renderer## js/app/section/works.js testing', function(){
   beforeEach(async function(){

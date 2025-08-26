@@ -1,0 +1,29 @@
+[
+  {
+    "corp": [
+      {
+        "name": "Company A",
+        "url": "http://example.com",
+        "position": "Developer",
+        "date": "2023",
+        "logo": "http://example.com/logo.png",
+        "logoalt": "Company A Logo",
+        "width": 100,
+        "height": 100
+      }
+    ],
+    "experience": [
+      {
+        "title": "Project A",
+        "description": "Developed feature X."
+      }
+    ],
+    "product": [
+      {
+        "link": "http://example.com/product",
+        "img": "http://example.com/product.png",
+        "title": "Product A"
+      }
+    ]
+  }
+]
