@@ -1,4 +1,4 @@
-@use "common.scss";
+@use "common" as common;
 
 .img-nostyle img {
     margin-bottom: 12px;
@@ -9,4 +9,43 @@
     padding-top: 4px;
     font-size: 14px;
     font-style: italic;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-more {
+    margin-bottom: 20px;
+}
+
+.photo-more img {
+    width: 28px;
+    height: 28px;
+}
+
+.photo-more a {
+    font-weight: 700;
+    font-size: common.$fs-m;
+}
+
+.photo-block {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    padding: 4px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.photo-block:hover {
+    > .img-thumbnail {
+        border-color: #000;
+    }
+    cursor: pointer;
+}
+
+.img-thumbnail {
+    height: 220px;
+    width: auto;
 }

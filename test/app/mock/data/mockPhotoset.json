@@ -1,0 +1,23 @@
+[
+  {
+    "src": "https://example.com/photo1.jpg",
+    "thumbnail": "https://example.com/photo1_thumb.jpg",
+    "alt": "Photo 1 description",
+    "width": 800,
+    "height": 600
+  },
+  {
+    "src": "https://example.com/photo2.jpg",
+    "thumbnail": "https://example.com/photo2_thumb.jpg",
+    "alt": "Photo 2 description",
+    "width": 1024,
+    "height": 768
+  },
+  {
+    "src": "https://example.com/photo3.jpg",
+    "thumbnail": "https://example.com/photo3_thumb.jpg",
+    "alt": "Photo 3 description",
+    "width": 640,
+    "height": 480
+  }
+]

@@ -1,7 +1,7 @@
-@use "common.scss";
-@use "util-image.scss";
-@use "util-text.scss";
-@use "util-block.scss";
-@use "header.scss";
-@use "layout.scss";
-@use "footer.scss";
+@use "common" as common;
+@use "util-image" as utilImage;
+@use "util-text" as utilText;
+@use "util-block" as utilBlock;
+@use "header" as header;
+@use "layout" as layout;
+@use "footer" as footer;

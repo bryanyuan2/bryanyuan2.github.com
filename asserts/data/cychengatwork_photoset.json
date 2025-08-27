@@ -1,0 +1,58 @@
+[
+  {
+    "src": "asserts/photos/cychengatwork/large/cycheng_hackathon.jpg",
+    "thumbnail": "asserts/photos/cychengatwork/thumbnail/cycheng_hackathon.jpg",
+    "alt": "2023 TW Office Hackathon Staff",
+    "data-lightbox": "cycheng_hackathon",
+    "width": 840,
+    "height": 630
+  },
+  {
+    "src": "asserts/photos/cychengatwork/large/cycheng_in_snv.jpg",
+    "thumbnail": "asserts/photos/cychengatwork/thumbnail/cycheng_in_snv.jpg",
+    "alt": "cycheng in Sunnyvale HQ",
+    "data-lightbox": "cycheng_in_snv",
+    "width": 840,
+    "height": 630
+  },
+  {
+    "src": "asserts/photos/cychengatwork/large/cycheng_team.jpg",
+    "thumbnail": "asserts/photos/cychengatwork/thumbnail/cycheng_team.jpg",
+    "alt": "cycheng with TW Search FE team",
+    "data-lightbox": "cycheng_team",
+    "width": 840,
+    "height": 473
+  },
+  {
+    "src": "asserts/photos/cychengatwork/large/cycheng_teambuilding1.jpg",
+    "thumbnail": "asserts/photos/cychengatwork/thumbnail/cycheng_teambuilding1.jpg",
+    "alt": "cycheng with TW Search FE team (team building)",
+    "data-lightbox": "cycheng_teambuilding1",
+    "width": 840,
+    "height": 630
+  },
+  {
+    "src": "asserts/photos/cychengatwork/large/cycheng_techpulse.jpg",
+    "thumbnail": "asserts/photos/cychengatwork/thumbnail/cycheng_techpulse.jpg",
+    "alt": "cycheng in 2023 TechPulse",
+    "data-lightbox": "cycheng_techpulse",
+    "width": 630,
+    "height": 840
+  },
+  {
+    "src": "asserts/photos/cychengatwork/large/cycheng_with_leaders.jpg",
+    "thumbnail": "asserts/photos/cychengatwork/thumbnail/cycheng_with_leaders.jpg",
+    "alt": "with leaders",
+    "data-lightbox": "cycheng_with_leaders",
+    "width": 630,
+    "height": 840
+  },
+  {
+    "src": "asserts/photos/cychengatwork/large/cycheng_office.jpg",
+    "thumbnail": "asserts/photos/cychengatwork/thumbnail/cycheng_office.jpg",
+    "alt": "TW Search team in the office",
+    "data-lightbox": "cycheng_with_leaders",
+    "width": 840,
+    "height": 630
+  }
+]
