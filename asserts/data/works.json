@@ -14,14 +14,6 @@
         "height": "56"
       }
     ],
-    "photo": {
-      "src": "asserts/images/icons/flickr.png",
-      "url": "https://www.flickr.com/photos/cycheng-at-work",
-      "alt": "check Bryan Cheng (@cycheng) at work",
-      "text": "check Bryan Cheng (@cycheng) at work",
-      "width": 32,
-      "height": 32
-    },
     "experience": [
       {
         "title": "Led the Yahoo! Search FE engineering team (10+ FTEs), collaborated cross-functionally with teams across Yahoo! - including Homepage, Media, and Commerce. To drive native and redirect traffic, increase user engagement, and grow revenue."
