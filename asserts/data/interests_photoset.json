@@ -1,0 +1,58 @@
+[
+  {
+    "src": "asserts/photos/photoset/large/muaythai_avatar.jpg",
+    "thumbnail": "asserts/photos/photoset/thumbnail/muaythai_avatar.jpg",
+    "alt": "2024 全國乙組泰拳錦標賽 avatar",
+    "data-lightbox": "muaythai_avatar",
+    "width": 840,
+    "height": 560
+  },
+  {
+    "src": "asserts/photos/photoset/large/muaythai_shot.jpg",
+    "thumbnail": "asserts/photos/photoset/thumbnail/muaythai_shot.jpg",
+    "alt": "2024 全國乙組泰拳錦標賽備賽鏡頭",
+    "data-lightbox": "muaythai_shot",
+    "width": 840,
+    "height": 560
+  },
+  {
+    "src": "asserts/photos/photoset/large/muaythai_fagroup1.jpg",
+    "thumbnail": "asserts/photos/photoset/thumbnail/muaythai_fagroup1.jpg",
+    "alt": "2025 F.A. GROUP Muay Thai with Kru King",
+    "data-lightbox": "muaythai_fagroup1",
+    "width": 630,
+    "height": 840
+  },
+  {
+    "src": "asserts/photos/photoset/large/muaythai_fagroup2.jpg",
+    "thumbnail": "asserts/photos/photoset/thumbnail/muaythai_fagroup2.jpg",
+    "alt": "2025 F.A. GROUP Muay Thai with Yothin",
+    "data-lightbox": "muaythai_fagroup2",
+    "width": 630,
+    "height": 840
+  },
+  {
+    "src": "asserts/photos/photoset/large/muaythai_fagroup3.jpg",
+    "thumbnail": "asserts/photos/photoset/thumbnail/muaythai_fagroup3.jpg",
+    "alt": "2025 F.A. GROUP Muay Thai with Kru Tom",
+    "data-lightbox": "muaythai_fagroup3",
+    "width": 630,
+    "height": 840
+  },
+  {
+    "src": "asserts/photos/photoset/large/muaythai_fight1.jpg",
+    "thumbnail": "asserts/photos/photoset/thumbnail/muaythai_fight1.jpg",
+    "alt": "2024 NGU/拳適能 Kickboxing 館際交流賽 1",
+    "data-lightbox": "muaythai_fight1",
+    "width": 840,
+    "height": 560
+  },
+  {
+    "src": "asserts/photos/photoset/large/muaythai_fight2.jpg",
+    "thumbnail": "asserts/photos/photoset/thumbnail/muaythai_fight2.jpg",
+    "alt": "2024 NGU/拳適能 Kickboxing 館際交流賽 2",
+    "data-lightbox": "muaythai_fight2",
+    "width": 840,
+    "height": 560
+  }
+]

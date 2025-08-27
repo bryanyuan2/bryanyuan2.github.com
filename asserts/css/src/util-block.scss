@@ -1,13 +1,7 @@
-@use "common.scss";
-
-@mixin text-corner($radius: 6px){
-    border-radius: $radius;
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-}
+@use "common" as common;
 
 .portfolio-block {
-    @include text-corner;
+    @include common.text-corner;
     height: 550px;
     overflow: hidden;
     overflow-y: scroll;

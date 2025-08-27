@@ -7,3 +7,13 @@ $ff-n: 'Open Sans', sans-serif;
 $ff-ref: Georgia, serif;
 $bg-gray-dark: #DCDCDC;
 $bg-gray-light: #F0F0F0;
+
+$color-white: #FFF;
+$color-gray-light: #888;
+$color-gray-dark: #7A7A7A;
+
+@mixin text-corner($radius: 6px) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}

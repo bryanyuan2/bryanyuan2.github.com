@@ -1,14 +1,7 @@
-@use "./common.scss";
-
-@mixin text-corner(
-    $radius: 6px){
-    border-radius: $radius;
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-}
+@use "common" as common;
 
 .text-hints:hover {
-    @include text-corner;
+    @include common.text-corner;
     border-color: common.$twitter-blue;
     border-width: 1px;
     border-style: solid;
@@ -35,7 +28,7 @@
     position: absolute;
     left: -10px;
     top: 0;
-    color: #7A7A7A;
+    color: common.$color-gray-dark;
 }
 
 .text-date {
@@ -118,7 +111,7 @@
     margin-left: 12px;
     background-color: common.$bg-gray-light;
     padding: 3px 6px 3px 6px;
-    @include text-corner;
+    @include common.text-corner;
 }
 
 .text-ref-set .text-ref-icon {
@@ -152,7 +145,7 @@
 .text-aka-title {
     background-color: common.$bg-gray-light;
     padding: 3px 6px 3px 6px;
-    @include text-corner;
+    @include common.text-corner;
 }
 
 .text-album {
