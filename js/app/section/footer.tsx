@@ -1,7 +1,13 @@
 import React, {useState, useEffect, memo} from 'react';
-import PropTypes from 'prop-types';
 
-const Pack = memo(({items = {}}) => {
+interface PackProps {
+    items: {
+        url?: string;
+        img?: string;
+    };
+}
+
+const Pack: React.FC<PackProps> = memo(({items = {}}) => {
     return (
         <a target="_blank" rel="noopener noreferrer" href={items.url}>
             <img className="footer-img" width="auto" height="32" src={items.img} alt="footer item" />
@@ -10,12 +16,13 @@ const Pack = memo(({items = {}}) => {
 });
 
 Pack.displayName = 'Pack';
-Pack.propTypes = {
-    items: PropTypes.object,
-};
 
-const FooterContainer = ({url}) => {
-    const [data, setData] = useState([]);
+interface FooterContainerProps {
+    url: string;
+}
+
+const FooterContainer: React.FC<FooterContainerProps> = ({url}) => {
+    const [data, setData] = useState<PackProps['items'][]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -36,10 +43,6 @@ const FooterContainer = ({url}) => {
             <br />
         </div>
     );
-};
-
-FooterContainer.propTypes = {
-    url: PropTypes.string.isRequired,
 };
 
 export default FooterContainer;

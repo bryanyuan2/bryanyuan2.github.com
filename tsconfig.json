@@ -3,17 +3,17 @@
     "target": "ESNext",
     "module": "ES6",
     "strict": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./js/build",
-    "rootDir": "./js/app",
+    "rootDir": "./",
     "allowJs": true,
     "checkJs": true,
     "moduleResolution": "node",
     "resolveJsonModule": true
   },
-  "include": ["./js/app/**/*"],
+  "include": ["./js/app/**/*", "./test/**/*"],
   "exclude": ["node_modules"]
 }

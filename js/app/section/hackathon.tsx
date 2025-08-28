@@ -4,21 +4,45 @@ import InfoBar from './../component/infobar.tsx';
 import SectionHeader from './../component/section-header.tsx';
 
 import _ from 'lodash';
-import PropTypes from 'prop-types';
 
-const Award = ({award = {}}) => {
+interface AwardProps {
+    award: {
+        title?: string;
+        organizer?: string;
+        organizerUrl?: string;
+        image?: {
+            width: number;
+            height: number;
+            src: string;
+            caption: string;
+        };
+        date?: string;
+        award?: string;
+        description?: string;
+        speakerdeck?: string;
+        youtube?: string;
+        github?: string;
+        press?: any;
+    };
+}
+
+const Award: React.FC<AwardProps> = ({award = {}}) => {
     const infobarAry = {
-        'speakerdeck': _.get(award, ['speakerdeck']),
-        'youtube': _.get(award, ['youtube']),
-        'github': _.get(award, ['github']),
+        speakerdeck: _.get(award, ['speakerdeck']),
+        youtube: _.get(award, ['youtube']),
+        github: _.get(award, ['github']),
     };
 
     const organizerHTML = award.title + (award.organizer ? ' / ' + '<a href="' + award.organizerUrl + '">' + award.organizer + '</a>' : '');
 
     return (
         <div className="portfolio-block col-xs-6 col-md-4">
-            <img width={award.image.width} height={award.image.height} className="img-thumbnail" src={award.image.src} alt="yataiko"/>
-            <div className="img-caption">{award.image.caption} / {award.date}</div>
+            {award.image && (
+                <>
+                    <img width={award.image.width} height={award.image.height} className="img-thumbnail" src={award.image.src} alt="yataiko"/>
+                    <div className="img-caption">{award.image.caption} / {award.date}</div>
+                </>
+            )}
             <div className="text-title" dangerouslySetInnerHTML={{__html: organizerHTML}} />
             {award.award && (
                 <div className="text-subtitle">
@@ -38,12 +62,12 @@ const Award = ({award = {}}) => {
     );
 };
 
-Award.propTypes = {
-    award: PropTypes.object,
-};
+interface AwardsContainerProps {
+    url: string;
+}
 
-const AwardsContainer = ({url}) => {
-    const [data, setData] = useState([]);
+const AwardsContainer: React.FC<AwardsContainerProps> = ({url}) => {
+    const [data, setData] = useState<AwardProps['award'][]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -64,10 +88,6 @@ const AwardsContainer = ({url}) => {
             <br />
         </div>
     );
-};
-
-AwardsContainer.propTypes = {
-    url: PropTypes.string.isRequired,
 };
 
 export default AwardsContainer;

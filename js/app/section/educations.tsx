@@ -1,9 +1,20 @@
 import React, {useState, useEffect} from 'react';
 import SectionHeader from './../component/section-header.tsx';
-import PropTypes from 'prop-types';
 
-const Education = ({education = {}}) => {
-    let honors = [];
+interface EducationProps {
+    education: {
+        date?: string;
+        hl?: string;
+        degree?: string;
+        school?: string;
+        lab?: string;
+        description?: string;
+        honors?: { link: string; title: string }[];
+    };
+}
+
+const Education: React.FC<EducationProps> = ({education = {}}) => {
+    let honors: string[] = [];
     if (education.honors) {
         honors = education.honors.map((content) => (
             `<strong>Honors</strong>: <a target="_blank" rel="noopener noreferrer" href="${content.link}">${content.title}</a>`
@@ -30,12 +41,12 @@ const Education = ({education = {}}) => {
     );
 };
 
-Education.propTypes = {
-    education: PropTypes.object,
-};
+interface EducationsContainerProps {
+    url: string;
+}
 
-const EducationsContainer = ({url}) => {
-    const [data, setData] = useState([]);
+const EducationsContainer: React.FC<EducationsContainerProps> = ({url}) => {
+    const [data, setData] = useState<EducationProps['education'][]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -56,10 +67,6 @@ const EducationsContainer = ({url}) => {
             <br />
         </div>
     );
-};
-
-EducationsContainer.propTypes = {
-    url: PropTypes.string.isRequired,
 };
 
 export default EducationsContainer;

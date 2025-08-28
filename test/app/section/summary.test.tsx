@@ -2,14 +2,16 @@ import React from 'react';
 import CompSummary from './../../../js/app/section/summary.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
-let reactTestRendererResult;
-const mockSummaryJson = '../mock/data/mockSummary.json';
+import {ReactTestRendererJSON} from 'react-test-renderer';
+
+let reactTestRendererResult: ReactTestRendererJSON | null;
+const mockSummaryJson: string = '../mock/data/mockSummary.json';
 
 describe('##react-test-renderer## js/app/section/summary.js testing', function() {
     beforeEach(function(done) {
         const shadow = new ShallowTestRenderer();
         shadow.render(<CompSummary url={mockSummaryJson} />);
-        reactTestRendererResult = shadow.getRenderOutput();
+        reactTestRendererResult = shadow.getRenderOutput() as ReactTestRendererJSON;
         done();
     });
 

@@ -2,14 +2,20 @@ import React from 'react';
 import CompHackathon from './../../../js/app/section/hackathon.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
-let reactTestRendererResult;
+
+interface HackathonProps {
+    id: string;
+    children: { props: { text: string } }[];
+}
+
+let reactTestRendererResult: React.ReactElement<HackathonProps>;
 const mockHackathonJson = '../mock/data/mockHackathon.json';
 
-describe('##react-test-renderer## js/app/section/hackathon.js testing', function() {
+describe('##react-test-renderer## js/app/section/hackathon.tsx testing', function() {
     beforeEach(async function() {
         const shadow = new ShallowTestRenderer();
         shadow.render(<CompHackathon url={mockHackathonJson} />);
-        reactTestRendererResult = shadow.getRenderOutput();
+        reactTestRendererResult = shadow.getRenderOutput() as React.ReactElement<HackathonProps>;
     });
 
     it('component container should be existed', function() {

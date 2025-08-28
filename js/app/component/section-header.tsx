@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-class SectionHeader extends React.Component {
-    static propTypes = {
-        setID: PropTypes.string,
-        text: PropTypes.string,
-    };
+interface SectionHeaderProps {
+    setID?: string;
+    text?: string;
+}
 
-    static defaultProps = {
-        setID: {},
+class SectionHeader extends React.Component<SectionHeaderProps> {
+    static defaultProps: Partial<SectionHeaderProps> = {
+        setID: '',
         text: '',
     };
 

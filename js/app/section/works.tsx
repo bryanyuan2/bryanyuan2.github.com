@@ -1,12 +1,50 @@
 import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
 import PressList from './../component/presslist.tsx';
 import AwardsList from './../component/awardslist.tsx';
 import SectionHeader from './../component/section-header.tsx';
 
-const Work = ({work = {}}) => {
-    const renderExperience = (data) => {
-        return data.map((obj, index) => (
+interface WorkProps {
+    work: {
+        corp?: Array<{
+            date?: string;
+            name?: string;
+            url?: string;
+            position?: string;
+            logo?: string;
+            logoalt?: string;
+            width?: number;
+            height?: number;
+        }>;
+        hl?: string;
+        experience?: Array<{
+            title?: string;
+            thumbnails?: Array<{
+                src: string;
+                alt: string;
+                desc?: string;
+            }>;
+        }>;
+        awards?: Array<{
+            title?: string;
+            year?: string;
+            description?: string;
+        }>;
+        media?: Array<{
+            type?: string;
+            url?: string;
+            title?: string;
+        }>;
+        product?: Array<{
+            link: string;
+            img: string;
+            title: string;
+        }>;
+    };
+}
+
+const Work: React.FC<WorkProps> = ({work = {}}) => {
+    const renderExperience = (data: WorkProps['work']['experience']) => {
+        return data?.map((obj, index) => (
             <div key={index}>
                 {obj.title && <div className="text-desc-title">{obj.title}</div>}
                 {obj.thumbnails && Array.isArray(obj.thumbnails) && (
@@ -29,11 +67,11 @@ const Work = ({work = {}}) => {
         ));
     };
 
-    const renderProduct = (data) => {
+    const renderProduct = (data: WorkProps['work']['product']) => {
         return (
             <div className="text-ref-set">
                 <ul>
-                    {data.map((info, index) => (
+                    {data?.map((info, index) => (
                         <li key={index}>
                             <a href={info.link} target="_blank" rel="noopener noreferrer">
                                 <img className="text-ref-icon" src={info.img} alt={info.title} />
@@ -49,13 +87,13 @@ const Work = ({work = {}}) => {
     return (
         <div className="data-experience row">
             <div className="col-md-2 text-date">
-                {work.corp.map((data, index) => (
+                {work.corp?.map((data, index) => (
                     <p key={index}>{data.date}</p>
                 ))}
             </div>
             <div className="col-md-8">
                 <blockquote className={work.hl}>
-                    {work.corp.map((data, index) => (
+                    {work.corp?.map((data, index) => (
                         <div key={index} className="text-title-italic">
                             <a href={data.url} target="_blank" rel="noopener noreferrer">
                                 {data.name}
@@ -74,7 +112,7 @@ const Work = ({work = {}}) => {
                 </blockquote>
             </div>
             <div className="col-md-2 img-nostyle">
-                {work.corp.map((data, index) => (
+                {work.corp?.map((data, index) => (
                     data.logo && (
                         <img
                             key={index}
@@ -90,12 +128,12 @@ const Work = ({work = {}}) => {
     );
 };
 
-Work.propTypes = {
-    work: PropTypes.object,
-};
+interface WorksContainerProps {
+    url: string;
+}
 
-const WorksContainer = ({url}) => {
-    const [data, setData] = useState([]);
+const WorksContainer: React.FC<WorksContainerProps> = ({url}) => {
+    const [data, setData] = useState<WorkProps['work'][]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -116,10 +154,6 @@ const WorksContainer = ({url}) => {
             <br />
         </div>
     );
-};
-
-WorksContainer.propTypes = {
-    url: PropTypes.string.isRequired,
 };
 
 export default WorksContainer;

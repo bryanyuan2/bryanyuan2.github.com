@@ -11,7 +11,7 @@ interface SkillProps {
     };
 }
 
-const Skill: FC<SkillProps> = ({skill = {}}) => {
+const Skill: React.FC<SkillProps> = ({skill = {}}) => {
     const items = skill.items?.map((content) => (
         `<span class="text-hints">${content.name}</span>`
     ));

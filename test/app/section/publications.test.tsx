@@ -1,15 +1,16 @@
-import React from 'react';
 import CompPublications from './../../../js/app/section/publications.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
-let reactTestRendererResult;
-const mockPublicationsJson = '../mock/data/mockPublications.json';
+import {ReactTestRendererJSON} from 'react-test-renderer';
+
+let reactTestRendererResult: ReactTestRendererJSON | null;
+const mockPublicationsJson: string = '../mock/data/mockPublications.json';
 
 describe('##react-test-renderer## js/app/section/publications.js testing', function() {
     beforeEach(function(done) {
         const shadow = new ShallowTestRenderer();
         shadow.render(<CompPublications url={mockPublicationsJson} />);
-        reactTestRendererResult = shadow.getRenderOutput();
+        reactTestRendererResult = shadow.getRenderOutput() as ReactTestRendererJSON;
         done();
     });
 

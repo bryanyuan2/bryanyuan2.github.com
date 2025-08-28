@@ -2,14 +2,20 @@ import React from 'react';
 import CompEducations from './../../../js/app/section/educations.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
-let reactTestRendererResult;
+
+interface EducationsProps {
+    id: string;
+    children: { props: { text: string } }[];
+}
+
+let reactTestRendererResult: React.ReactElement<EducationsProps>;
 const mockEducationsJson = '../mock/data/mockEducations.json';
 
 describe('##react-test-renderer## testing', function() {
     beforeEach(async function() {
         const shadow = new ShallowTestRenderer();
         shadow.render(<CompEducations url={mockEducationsJson} />);
-        reactTestRendererResult = shadow.getRenderOutput();
+        reactTestRendererResult = shadow.getRenderOutput() as React.ReactElement<EducationsProps>;
     });
 
     it('component container should be existed', function() {

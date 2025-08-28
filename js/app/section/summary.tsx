@@ -1,8 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import SectionHeader from './../component/section-header.tsx';
-import PropTypes from 'prop-types';
 
-const Summary = ({summary = {}}) => {
+interface SummaryProps {
+    summary: {
+        items?: string;
+    };
+}
+
+const Summary: React.FC<SummaryProps> = ({summary = {}}) => {
     let output = '';
     if (summary.items) {
         output += `<div class="text-summary">${summary.items}</div>`;
@@ -15,12 +20,12 @@ const Summary = ({summary = {}}) => {
     );
 };
 
-Summary.propTypes = {
-    summary: PropTypes.object,
-};
+interface SummaryContainerProps {
+    url: string;
+}
 
-const SummaryContainer = ({url}) => {
-    const [data, setData] = useState([]);
+const SummaryContainer: React.FC<SummaryContainerProps> = ({url}) => {
+    const [data, setData] = useState<SummaryProps['summary'][]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -42,10 +47,6 @@ const SummaryContainer = ({url}) => {
             <br />
         </div>
     );
-};
-
-SummaryContainer.propTypes = {
-    url: PropTypes.string.isRequired,
 };
 
 export default SummaryContainer;

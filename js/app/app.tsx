@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// Base URL for data paths
 const BASE_URL = 'asserts/data';
 
-/* section imports */
 import CompHeader from './section/header.tsx';
 import CompSummary from './section/summary.tsx';
 import CompEducations from './section/educations.tsx';

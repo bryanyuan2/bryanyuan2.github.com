@@ -2,8 +2,13 @@ import React from 'react';
 import AwardsList from './../../../js/app/component/awardslist.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
+import {ReactTestRendererJSON} from 'react-test-renderer';
 
-let reactTestRendererResult;
+interface AwardsListProps {
+    awards: string[];
+}
+
+let reactTestRendererResult: ReactTestRendererJSON | null;
 
 describe('##react-test-renderer## js/app/component/awardslist.js testing', function() {
     beforeEach(function() {
@@ -11,7 +16,7 @@ describe('##react-test-renderer## js/app/component/awardslist.js testing', funct
         shadow.render(
             <AwardsList awards={['Award 1', 'Award 2']} />,
         );
-        reactTestRendererResult = shadow.getRenderOutput();
+        reactTestRendererResult = shadow.getRenderOutput() as ReactTestRendererJSON;
     });
 
     it('component container should be existed', function() {

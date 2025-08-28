@@ -1,9 +1,22 @@
 import React, {useState, useEffect, memo} from 'react';
 import SectionHeader from './../component/section-header.tsx';
-import PropTypes from 'prop-types';
 
-const Community = memo(({community = {}}) => {
-    const description = community.description
+interface CommunityProps {
+    community: {
+        date?: string;
+        hl?: string;
+        link?: string;
+        name?: string;
+        position?: string;
+        description?: { text: string }[];
+        image?: string;
+        width?: number;
+        height?: number;
+    };
+}
+
+const Community: React.FC<CommunityProps> = memo(({community = {}}) => {
+    const description = (community.description || [])
         .map((content) => `<span class="text-desc-list">${content.text}</span>`)
         .join('');
 
@@ -35,12 +48,13 @@ const Community = memo(({community = {}}) => {
 });
 
 Community.displayName = 'Community';
-Community.propTypes = {
-    community: PropTypes.object,
-};
 
-const CommunitiesContainer = ({url}) => {
-    const [data, setData] = useState([]);
+interface CommunitiesContainerProps {
+    url: string;
+}
+
+const CommunitiesContainer: React.FC<CommunitiesContainerProps> = ({url}) => {
+    const [data, setData] = useState<CommunityProps['community'][]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -61,10 +75,6 @@ const CommunitiesContainer = ({url}) => {
             <br />
         </div>
     );
-};
-
-CommunitiesContainer.propTypes = {
-    url: PropTypes.string.isRequired,
 };
 
 export default CommunitiesContainer;

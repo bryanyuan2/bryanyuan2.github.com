@@ -2,8 +2,17 @@ import React from 'react';
 import InfoBar from './../../../js/app/component/infobar.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
+import {ReactTestRendererJSON} from 'react-test-renderer';
 
-let reactTestRendererResult;
+interface InfoBarProps {
+    info: {
+        github: string;
+        speakerdeck: string;
+        youtube: string;
+    };
+}
+
+let reactTestRendererResult: ReactTestRendererJSON | null;
 
 describe('##react-test-renderer## js/app/component/infobar.js testing', function() {
     beforeEach(function() {
@@ -15,7 +24,7 @@ describe('##react-test-renderer## js/app/component/infobar.js testing', function
                 youtube: 'https://youtube.com/example',
             }} />,
         );
-        reactTestRendererResult = shadow.getRenderOutput();
+        reactTestRendererResult = shadow.getRenderOutput() as ReactTestRendererJSON;
     });
 
     it('component container should be existed', function() {

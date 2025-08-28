@@ -1,8 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import SectionHeader from './../component/section-header.tsx';
-import PropTypes from 'prop-types';
 
-const Publication = ({publication = {}}) => {
+interface PublicationProps {
+    publication: {
+        date?: string;
+        hl?: string;
+        link?: string;
+        name?: string;
+        publication?: string;
+        authors?: string;
+    };
+}
+
+const Publication: FC<PublicationProps> = ({publication = {}}) => {
     return (
         <div className="data-publications row">
             <div className="col-md-2 text-date">
@@ -13,7 +23,7 @@ const Publication = ({publication = {}}) => {
                     <p>
                         “<a target="_blank" rel="noopener noreferrer" href={publication.link}>{publication.name}</a>”<br />
                         {publication.publication}<br />
-                        <i dangerouslySetInnerHTML={{__html: publication.authors}} />
+                        {publication.authors && <i dangerouslySetInnerHTML={{__html: publication.authors}} />}
                     </p>
                 </blockquote>
             </div>
@@ -21,12 +31,12 @@ const Publication = ({publication = {}}) => {
     );
 };
 
-Publication.propTypes = {
-    publication: PropTypes.object,
-};
+interface PublicationsContainerProps {
+    url: string;
+}
 
-const PublicationsContainer = ({url}) => {
-    const [data, setData] = useState([]);
+const PublicationsContainer: FC<PublicationsContainerProps> = ({url}) => {
+    const [data, setData] = useState<PublicationProps['publication'][]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -47,10 +57,6 @@ const PublicationsContainer = ({url}) => {
             <br />
         </div>
     );
-};
-
-PublicationsContainer.propTypes = {
-    url: PropTypes.string.isRequired,
 };
 
 export default PublicationsContainer;

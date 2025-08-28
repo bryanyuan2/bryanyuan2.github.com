@@ -2,14 +2,25 @@ import React from 'react';
 import CompCommunities from './../../../js/app/section/communities.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
-let reactTestRendererResult;
-const mockCommunitiesJson = '../mock/data/mockCommunities.json';
 
-describe('##react-test-renderer## js/app/section/communities.js testing', function() {
+interface CommunitiesProps {
+    url: string;
+    id?: string;
+    children?: {
+        props: {
+            text: string;
+        };
+    }[];
+}
+
+let reactTestRendererResult: React.ReactElement<CommunitiesProps>;
+const mockCommunitiesJson: string = '../mock/data/mockCommunities.json';
+
+describe('##react-test-renderer## js/app/section/communities.tsx testing', function() {
     beforeEach(async function() {
         const shadow = new ShallowTestRenderer();
         shadow.render(<CompCommunities url={mockCommunitiesJson} />);
-        reactTestRendererResult = shadow.getRenderOutput();
+        reactTestRendererResult = shadow.getRenderOutput() as React.ReactElement<CommunitiesProps>;
     });
 
     it('component container should be existed', function() {
@@ -21,6 +32,6 @@ describe('##react-test-renderer## js/app/section/communities.js testing', functi
     });
 
     it('component title should be rendered', function() {
-        expect(reactTestRendererResult.props.children[0].props.text).to.equal('Communities');
+        expect(reactTestRendererResult.props.children?.[0].props.text).to.equal('Communities');
     });
 });

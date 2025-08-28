@@ -1,17 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-class PressList extends React.Component {
-    static propTypes = {
-        press: PropTypes.array,
-    };
+interface PressListProps {
+    press?: Array<{
+        link: string;
+        title: string;
+        source: string;
+    }>;
+}
 
-    static defaultProps = {
+class PressList extends React.Component<PressListProps> {
+    static defaultProps: Partial<PressListProps> = {
         press: [],
     };
 
     render() {
-        const press = [];
+        const press: string[] = [];
         let pressContent = '';
 
         if (this.props.press) {
