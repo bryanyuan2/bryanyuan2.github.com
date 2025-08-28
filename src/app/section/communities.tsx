@@ -1,9 +1,22 @@
-import React, {useState, useEffect, memo} from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import SectionHeader from './../component/section-header.tsx';
-import PropTypes from 'prop-types';
 
-const Community = memo(({community = {}}) => {
-    const description = community.description
+interface CommunityProps {
+    community: {
+        date?: string;
+        hl?: string;
+        link?: string;
+        name?: string;
+        position?: string;
+        description?: { text: string }[];
+        image?: string;
+        width?: number;
+        height?: number;
+    };
+}
+
+const Community: React.FC<CommunityProps> = memo(({ community = {} }) => {
+    const description = (community.description || [])
         .map((content) => `<span class="text-desc-list">${content.text}</span>`)
         .join('');
 
@@ -17,16 +30,31 @@ const Community = memo(({community = {}}) => {
                 <div className="col-md-8">
                     <blockquote className={community.hl}>
                         <div className="text-title">
-                            <a target="_blank" rel="noopener noreferrer" href={community.link}>{community.name}</a>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={community.link}
+                            >
+                                {community.name}
+                            </a>
                         </div>
                         <div className="text-desc">{community.position}</div>
                         <ul className="text-desc">
-                            <div dangerouslySetInnerHTML={{__html: description}} />
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: description
+                                }}
+                            />
                         </ul>
                     </blockquote>
                 </div>
                 <div className="col-md-2 img-nostyle">
-                    <img src={community.image} alt={community.name} width={community.width} height={community.height} />
+                    <img
+                        src={community.image}
+                        alt={community.name}
+                        width={community.width}
+                        height={community.height}
+                    />
                 </div>
             </div>
             <br />
@@ -35,12 +63,13 @@ const Community = memo(({community = {}}) => {
 });
 
 Community.displayName = 'Community';
-Community.propTypes = {
-    community: PropTypes.object,
-};
 
-const CommunitiesContainer = ({url}) => {
-    const [data, setData] = useState([]);
+interface CommunitiesContainerProps {
+    url: string;
+}
+
+const CommunitiesContainer: React.FC<CommunitiesContainerProps> = ({ url }) => {
+    const [data, setData] = useState<CommunityProps['community'][]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -63,9 +92,4 @@ const CommunitiesContainer = ({url}) => {
     );
 };
 
-CommunitiesContainer.propTypes = {
-    url: PropTypes.string.isRequired,
-};
-
 export default CommunitiesContainer;
-

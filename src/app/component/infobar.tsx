@@ -1,19 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-class InfoBar extends React.Component {
-    static propTypes = {
-        info: PropTypes.object,
+interface InfoBarProps {
+    info: {
+        github?: string;
+        speakerdeck?: string;
+        youtube?: string;
     };
+}
 
-    static defaultProps = {
-        info: {},
+class InfoBar extends React.Component<InfoBarProps> {
+    static defaultProps: Partial<InfoBarProps> = {
+        info: {}
     };
 
     render() {
         return (
             <div className="btn-block-group">
-                {this.props.info.github && (
+                {this.props.info?.github && (
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -24,7 +27,7 @@ class InfoBar extends React.Component {
                         github
                     </a>
                 )}
-                {this.props.info.speakerdeck && (
+                {this.props.info?.speakerdeck && (
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -35,7 +38,7 @@ class InfoBar extends React.Component {
                         speakerdeck
                     </a>
                 )}
-                {this.props.info.youtube && (
+                {this.props.info?.youtube && (
                     <a
                         target="_blank"
                         rel="noopener noreferrer"

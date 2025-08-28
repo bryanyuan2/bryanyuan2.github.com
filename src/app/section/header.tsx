@@ -1,8 +1,19 @@
-import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 
-const HeaderContainer = ({url}) => {
-    const [data, setData] = useState({});
+interface HeaderData {
+    title?: string;
+    linkedin?: string;
+    linkedinImg?: string;
+    linkedAlt?: string;
+    linkedText?: string;
+}
+
+interface HeaderContainerProps {
+    url: string;
+}
+
+const HeaderContainer: React.FC<HeaderContainerProps> = ({ url }) => {
+    const [data, setData] = useState<HeaderData>({});
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,17 +30,17 @@ const HeaderContainer = ({url}) => {
                 <div className="header-title">{data.title}</div>
             </div>
             <div id="linkedin-nav">
-                <a target="_blank" rel="noopener noreferrer" href={data.linkedin}>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={data.linkedin}
+                >
                     <img src={data.linkedinImg} alt={data.linkedAlt} />
                     <div className="test_content">{data.linkedText}</div>
                 </a>
             </div>
         </div>
     );
-};
-
-HeaderContainer.propTypes = {
-    url: PropTypes.string.isRequired,
 };
 
 export default HeaderContainer;

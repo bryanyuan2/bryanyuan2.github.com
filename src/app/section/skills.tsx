@@ -1,4 +1,4 @@
-import React, {useState, useEffect, FC} from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import SectionHeader from './../component/section-header.tsx';
 
 interface SkillProps {
@@ -11,10 +11,10 @@ interface SkillProps {
     };
 }
 
-const Skill: FC<SkillProps> = ({skill = {}}) => {
-    const items = skill.items?.map((content) => (
-        `<span class="text-hints">${content.name}</span>`
-    ));
+const Skill: React.FC<SkillProps> = ({ skill = {} }) => {
+    const items = skill.items?.map(
+        (content) => `<span class="text-hints">${content.name}</span>`
+    );
 
     return (
         <div className="data-skills row">
@@ -23,7 +23,11 @@ const Skill: FC<SkillProps> = ({skill = {}}) => {
             </div>
             <div className="col-md-8 fs-16">
                 <blockquote className={skill.hl}>
-                    <div dangerouslySetInnerHTML={{__html: items?.join(', ') || ''}} />
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: items?.join(', ') || ''
+                        }}
+                    />
                 </blockquote>
             </div>
         </div>
@@ -34,7 +38,7 @@ interface SkillsContainerProps {
     url: string;
 }
 
-const SkillsContainer: FC<SkillsContainerProps> = ({url}) => {
+const SkillsContainer: FC<SkillsContainerProps> = ({ url }) => {
     const [data, setData] = useState<Array<SkillProps['skill']>>([]);
 
     useEffect(() => {

@@ -1,27 +1,20 @@
 import React from 'react';
-import CompPublications from './../../../js/app/section/publications.tsx';
-import ShallowTestRenderer from 'react-test-renderer/shallow';
-import {expect} from 'chai';
-let reactTestRendererResult;
-const mockPublicationsJson = '../mock/data/mockPublications.json';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import CompPublications from './../../../src/app/section/publications.tsx';
+const mockPublicationsJson: string = '../mock/data/mockPublications.json';
 
-describe('##react-test-renderer## js/app/section/publications.js testing', function() {
-    beforeEach(function(done) {
-        const shadow = new ShallowTestRenderer();
-        shadow.render(<CompPublications url={mockPublicationsJson} />);
-        reactTestRendererResult = shadow.getRenderOutput();
-        done();
+describe('## js/app/section/publications.js testing', () => {
+    it('should render the component container', () => {
+        const { container } = render(
+            <CompPublications url={mockPublicationsJson} />
+        );
+        const regionID = container.querySelector('#region-publications');
+        expect(regionID).toBeInTheDocument();
     });
 
-    it('component container should be existed', function() {
-        expect(reactTestRendererResult).to.exist;
-    });
-
-    it('component class should be rendered', function() {
-        expect(reactTestRendererResult.props.id).to.equal('region-publications');
-    });
-
-    it('component title should be rendered', function() {
-        expect(reactTestRendererResult.props.children[0].props.text).to.equal('Publications');
+    it('should render the component title', () => {
+        render(<CompPublications url={mockPublicationsJson} />);
+        expect(screen.getByText('Publications')).toBeInTheDocument();
     });
 });

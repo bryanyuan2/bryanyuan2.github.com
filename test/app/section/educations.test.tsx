@@ -1,26 +1,20 @@
 import React from 'react';
-import CompEducations from './../../../js/app/section/educations.tsx';
-import ShallowTestRenderer from 'react-test-renderer/shallow';
-import {expect} from 'chai';
-let reactTestRendererResult;
-const mockEducationsJson = '../mock/data/mockEducations.json';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import CompEducations from './../../../src/app/section/educations.tsx';
+const mockEducationsJson: string = '../mock/data/mockEducations.json';
 
-describe('##react-test-renderer## testing', function() {
-    beforeEach(async function() {
-        const shadow = new ShallowTestRenderer();
-        shadow.render(<CompEducations url={mockEducationsJson} />);
-        reactTestRendererResult = shadow.getRenderOutput();
+describe('## js/app/section/educations.js testing', () => {
+    it('should render the component container', () => {
+        const { container } = render(
+            <CompEducations url={mockEducationsJson} />
+        );
+        const regionID = container.querySelector('#region-education');
+        expect(regionID).toBeInTheDocument();
     });
 
-    it('component container should be existed', function() {
-        expect(reactTestRendererResult).to.exist;
-    });
-
-    it('component class should be rendered', function() {
-        expect(reactTestRendererResult.props.id).to.equal('region-education');
-    });
-
-    it('component title should be rendered', function() {
-        expect(reactTestRendererResult.props.children[0].props.text).to.equal('Education');
+    it('should render the component title', () => {
+        render(<CompEducations url={mockEducationsJson} />);
+        expect(screen.getByText('Education')).toBeInTheDocument();
     });
 });

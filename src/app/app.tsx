@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// Base URL for data paths
 const BASE_URL = 'asserts/data';
 
-/* section imports */
 import CompHeader from './section/header.tsx';
 import CompSummary from './section/summary.tsx';
 import CompEducations from './section/educations.tsx';
 import CompSkills from './section/skills.tsx';
-import CompWorks from './section/works.tsx';
+import CompExperience from './section/experience.tsx';
 import CompHackathon from './section/hackathon.tsx';
 import CompCommunities from './section/communities.tsx';
 import CompPublications from './section/publications.tsx';
@@ -24,7 +22,7 @@ const App: React.FC = () => {
             <div className="container">
                 <CompSummary url={`${BASE_URL}/summary.json`} />
                 <CompSkills url={`${BASE_URL}/skills.json`} />
-                <CompWorks url={`${BASE_URL}/works.json`} />
+                <CompExperience url={`${BASE_URL}/experience.json`} />
                 <CompPhotoset
                     url={`${BASE_URL}/cychengatwork_photoset.json`}
                     setID="cychengatwork"
@@ -52,5 +50,5 @@ const App: React.FC = () => {
 ReactDOM.createRoot(document.getElementById('target')!).render(
     <React.StrictMode>
         <App />
-    </React.StrictMode>,
+    </React.StrictMode>
 );

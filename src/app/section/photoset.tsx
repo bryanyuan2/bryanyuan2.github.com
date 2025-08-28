@@ -1,9 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import SectionHeader from './../component/section-header.tsx';
-import PropTypes from 'prop-types';
 import lightbox from 'lightbox2';
 
-const Photo = ({photo = {}}) => {
+interface PhotoProps {
+    photo: {
+        src?: string;
+        alt?: string;
+        width?: number;
+        height?: number;
+        thumbnail?: string;
+    };
+}
+
+const Photo: React.FC<PhotoProps> = ({ photo = {} }) => {
     return (
         <a
             href={photo.src}
@@ -14,7 +23,7 @@ const Photo = ({photo = {}}) => {
         >
             <div className="photo-block">
                 <img
-                    className='img-thumbnail'
+                    className="img-thumbnail"
                     src={photo.thumbnail}
                     alt={photo.alt}
                 />
@@ -23,12 +32,24 @@ const Photo = ({photo = {}}) => {
     );
 };
 
-Photo.propTypes = {
-    photo: PropTypes.object,
-};
+interface PhotosetContainerProps {
+    url: string;
+    sectionID?: string;
+    text?: string;
+    moreURL?: string;
+    moreText?: string;
+    moreImg?: string;
+}
 
-const PhotosetContainer = ({url, sectionID, text, moreURL, moreText, moreImg}) => {
-    const [data, setData] = useState([]);
+const PhotosetContainer: React.FC<PhotosetContainerProps> = ({
+    url,
+    sectionID,
+    text,
+    moreURL,
+    moreText,
+    moreImg
+}) => {
+    const [data, setData] = useState<PhotoProps['photo'][]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -43,7 +64,7 @@ const PhotosetContainer = ({url, sectionID, text, moreURL, moreText, moreImg}) =
     useEffect(() => {
         lightbox.option({
             resizeDuration: 180,
-            wrapAround: true,
+            wrapAround: true
         });
     }, []);
 
@@ -54,13 +75,23 @@ const PhotosetContainer = ({url, sectionID, text, moreURL, moreText, moreImg}) =
             <div>
                 <div className="photo-gallery">
                     {data.map((photo, index) => (
-                        <Photo photo={{...photo}} key={index} />
+                        <Photo photo={{ ...photo }} key={index} />
                     ))}
                 </div>
                 {moreURL && moreText && (
                     <div className="photo-more">
-                        <a href={moreURL} target="_blank" rel="noopener noreferrer">
-                            {moreImg && <img className="morelink" src={moreImg} alt={moreText} />}
+                        <a
+                            href={moreURL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {moreImg && (
+                                <img
+                                    className="morelink"
+                                    src={moreImg}
+                                    alt={moreText}
+                                />
+                            )}
                             {moreText}
                         </a>
                     </div>
@@ -68,15 +99,6 @@ const PhotosetContainer = ({url, sectionID, text, moreURL, moreText, moreImg}) =
             </div>
         </div>
     );
-};
-
-PhotosetContainer.propTypes = {
-    url: PropTypes.string.isRequired,
-    sectionID: PropTypes.string,
-    text: PropTypes.string,
-    moreURL: PropTypes.string,
-    moreText: PropTypes.string,
-    moreImg: PropTypes.string,
 };
 
 export default PhotosetContainer;
