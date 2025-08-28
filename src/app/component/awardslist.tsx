@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface AwardsListProps {
-    awards: any;
+    awards: Array<string>;
 }
 
 class AwardsList extends React.Component<AwardsListProps> {

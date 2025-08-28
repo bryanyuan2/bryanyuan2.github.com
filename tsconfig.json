@@ -16,6 +16,6 @@
     "allowImportingTsExtensions": true,
     "typeRoots": ["./node_modules/@types", "./types"]
   },
-  "include": ["./js/app/**/*", "./test/**/*"],
+  "include": ["./src/app/**/*", "./test/**/*"],
   "exclude": ["node_modules"]
 }
