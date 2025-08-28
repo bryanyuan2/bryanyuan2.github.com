@@ -1,23 +1,55 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import SectionHeader from './../component/section-header.tsx';
-import PropTypes from 'prop-types';
 
-const Certification = ({cert = {}}) => {
+interface CertificationProps {
+    cert: {
+        startDate?: string;
+        endDate?: string;
+        hl?: string;
+        link?: string;
+        name?: string;
+        institution?: string;
+        authority?: string;
+        image?: string;
+        alt?: string;
+        width?: number;
+        height?: number;
+    };
+}
+
+const Certification: React.FC<CertificationProps> = ({ cert = {} }) => {
     return (
         <div>
             <div className="data-communities row">
                 <div className="col-md-2 text-date">
-                    <p>{cert.startDate} - {cert.endDate}</p>
+                    <p>
+                        {cert.startDate} - {cert.endDate}
+                    </p>
                 </div>
 
                 <div className="col-md-8">
                     <blockquote className={cert.hl}>
-                        <div className="text-title"><a target="_blank" rel="noopener noreferrer" href={cert.link}>{cert.name}</a></div>
-                        <div className="text-desc">{cert.institution}, {cert.authority}</div>
+                        <div className="text-title">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={cert.link}
+                            >
+                                {cert.name}
+                            </a>
+                        </div>
+                        <div className="text-desc">
+                            {cert.institution}, {cert.authority}
+                        </div>
                     </blockquote>
                 </div>
                 <div className="col-md-2 img-nostyle">
-                    <img src={cert.image} alt={cert.alt} width={cert.width} height={cert.height} />
+                    <img
+                        src={cert.image}
+                        alt={cert.alt}
+                        width={cert.width}
+                        height={cert.height}
+                    />
                 </div>
             </div>
             <br />
@@ -25,12 +57,12 @@ const Certification = ({cert = {}}) => {
     );
 };
 
-Certification.propTypes = {
-    cert: PropTypes.object,
-};
+interface CertificationContainerProps {
+    url: string;
+}
 
-const CertificationContainer = ({url}) => {
-    const [data, setData] = useState([]);
+const CertificationContainer: React.FC<CertificationContainerProps> = ({ url }) => {
+    const [data, setData] = useState<CertificationProps['cert'][]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -51,10 +83,6 @@ const CertificationContainer = ({url}) => {
             <br />
         </div>
     );
-};
-
-CertificationContainer.propTypes = {
-    url: PropTypes.string.isRequired,
 };
 
 export default CertificationContainer;

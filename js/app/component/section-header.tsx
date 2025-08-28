@@ -8,13 +8,15 @@ interface SectionHeaderProps {
 class SectionHeader extends React.Component<SectionHeaderProps> {
     static defaultProps: Partial<SectionHeaderProps> = {
         setID: '',
-        text: '',
+        text: ''
     };
 
     render() {
         const id = this.props.setID ? 'set-' + this.props.setID : 'set';
         return (
-            <h2 className="text-section" id={id}>{this.props.text}</h2>
+            <h2 className="text-section" id={id}>
+                {this.props.text}
+            </h2>
         );
     }
 }

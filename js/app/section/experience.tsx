@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import PressList from './../component/presslist.tsx';
-import AwardsList from './../component/awardslist.tsx';
-import SectionHeader from './../component/section-header.tsx';
+import React, { useState, useEffect } from 'react';
+import PressList from '../component/presslist.tsx';
+import AwardsList from '../component/awardslist.tsx';
+import SectionHeader from '../component/section-header.tsx';
 
 interface WorkProps {
     work: {
@@ -42,12 +42,15 @@ interface WorkProps {
     };
 }
 
-const Work: React.FC<WorkProps> = ({work = {}}) => {
+const Work: React.FC<WorkProps> = ({ work = {} }) => {
     const renderExperience = (data: WorkProps['work']['experience']) => {
         return data?.map((obj, index) => (
             <div key={index}>
-                {obj.title && <div className="text-desc-title">{obj.title}</div>}
-                {obj.thumbnails && Array.isArray(obj.thumbnails) && (
+                {obj.title && (
+                    <div className="text-desc-title">{obj.title}</div>
+                )}
+                {obj.thumbnails &&
+                    Array.isArray(obj.thumbnails) &&
                     obj.thumbnails.map((item, idx) => (
                         <div className="col-md-4" key={idx}>
                             <a href={item.src}>
@@ -61,8 +64,7 @@ const Work: React.FC<WorkProps> = ({work = {}}) => {
                                 <div className="img-caption">{item.desc}</div>
                             </a>
                         </div>
-                    ))
-                )}
+                    ))}
             </div>
         ));
     };
@@ -73,9 +75,19 @@ const Work: React.FC<WorkProps> = ({work = {}}) => {
                 <ul>
                     {data?.map((info, index) => (
                         <li key={index}>
-                            <a href={info.link} target="_blank" rel="noopener noreferrer">
-                                <img className="text-ref-icon" src={info.img} alt={info.title} />
-                                <span className="text-ref-title">{info.title}</span>
+                            <a
+                                href={info.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    className="text-ref-icon"
+                                    src={info.img}
+                                    alt={info.title}
+                                />
+                                <span className="text-ref-title">
+                                    {info.title}
+                                </span>
                             </a>
                         </li>
                     ))}
@@ -95,11 +107,18 @@ const Work: React.FC<WorkProps> = ({work = {}}) => {
                 <blockquote className={work.hl}>
                     {work.corp?.map((data, index) => (
                         <div key={index} className="text-title-italic">
-                            <a href={data.url} target="_blank" rel="noopener noreferrer">
+                            <a
+                                href={data.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 {data.name}
                             </a>
                             {data.position && (
-                                <span className="text-desc"> / {data.position}</span>
+                                <span className="text-desc">
+                                    {' '}
+                                    / {data.position}
+                                </span>
                             )}
                         </div>
                     ))}
@@ -107,22 +126,31 @@ const Work: React.FC<WorkProps> = ({work = {}}) => {
                         {renderExperience(work.experience)}
                     </ul>
                     {work.awards && <AwardsList awards={work.awards} />}
-                    {work.media && <PressList press={work.media} />}
+                    {work.media && (
+                        <PressList
+                            press={work.media.map((item) => ({
+                                link: item.url || '',
+                                title: item.title || '',
+                                source: item.type || ''
+                            }))}
+                        />
+                    )}
                     {work.product && renderProduct(work.product)}
                 </blockquote>
             </div>
             <div className="col-md-2 img-nostyle">
-                {work.corp?.map((data, index) => (
-                    data.logo && (
-                        <img
-                            key={index}
-                            src={data.logo}
-                            alt={data.logoalt}
-                            width={data.width}
-                            height={data.height}
-                        />
-                    )
-                ))}
+                {work.corp?.map(
+                    (data, index) =>
+                        data.logo && (
+                            <img
+                                key={index}
+                                src={data.logo}
+                                alt={data.logoalt}
+                                width={data.width}
+                                height={data.height}
+                            />
+                        )
+                )}
             </div>
         </div>
     );
@@ -132,7 +160,7 @@ interface WorksContainerProps {
     url: string;
 }
 
-const WorksContainer: React.FC<WorksContainerProps> = ({url}) => {
+const WorksContainer: React.FC<WorksContainerProps> = ({ url }) => {
     const [data, setData] = useState<WorkProps['work'][]>([]);
 
     useEffect(() => {

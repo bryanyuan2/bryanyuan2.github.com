@@ -12,7 +12,9 @@
     "allowJs": true,
     "checkJs": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "typeRoots": ["./node_modules/@types", "./types"]
   },
   "include": ["./js/app/**/*", "./test/**/*"],
   "exclude": ["node_modules"]

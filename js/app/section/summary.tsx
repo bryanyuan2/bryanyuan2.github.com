@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import SectionHeader from './../component/section-header.tsx';
 
 interface SummaryProps {
@@ -7,7 +7,7 @@ interface SummaryProps {
     };
 }
 
-const Summary: React.FC<SummaryProps> = ({summary = {}}) => {
+const Summary: React.FC<SummaryProps> = ({ summary = {} }) => {
     let output = '';
     if (summary.items) {
         output += `<div class="text-summary">${summary.items}</div>`;
@@ -15,7 +15,7 @@ const Summary: React.FC<SummaryProps> = ({summary = {}}) => {
 
     return (
         <div className="data-summary">
-            <div dangerouslySetInnerHTML={{__html: output}} />
+            <div dangerouslySetInnerHTML={{ __html: output }} />
         </div>
     );
 };
@@ -24,7 +24,7 @@ interface SummaryContainerProps {
     url: string;
 }
 
-const SummaryContainer: React.FC<SummaryContainerProps> = ({url}) => {
+const SummaryContainer: React.FC<SummaryContainerProps> = ({ url }) => {
     const [data, setData] = useState<SummaryProps['summary'][]>([]);
 
     useEffect(() => {

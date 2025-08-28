@@ -1,23 +1,14 @@
 import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import CompFooter from './../../../js/app/section/footer.tsx';
-import ShallowTestRenderer from 'react-test-renderer/shallow';
-import {expect} from 'chai';
+const mockFooterJson: string = '../mock/data/mockFooter.json';
 
-interface FooterProps {
-    id: string;
-}
+describe('## js/app/section/footer.js testing', () => {
 
-let reactTestRendererResult: React.ReactElement<FooterProps>;
-const mockFooterJson = '../mock/data/mockFooter.json';
-
-describe('##react-test-renderer## js/app/section/footer.tsx testing', function() {
-    beforeEach(async function() {
-        const shadow = new ShallowTestRenderer();
-        shadow.render(<CompFooter url={mockFooterJson} />);
-        reactTestRendererResult = shadow.getRenderOutput() as React.ReactElement<FooterProps>;
-    });
-
-    it('component container should be existed', function() {
-        expect(reactTestRendererResult).to.exist;
+    it('should render the component container', () => {
+        const { container } = render(<CompFooter url={mockFooterJson} />);
+        const regionID = container.querySelector('#region-footer');
+        expect(regionID).toBeInTheDocument();
     });
 });

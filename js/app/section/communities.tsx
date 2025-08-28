@@ -1,4 +1,4 @@
-import React, {useState, useEffect, memo} from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import SectionHeader from './../component/section-header.tsx';
 
 interface CommunityProps {
@@ -15,7 +15,7 @@ interface CommunityProps {
     };
 }
 
-const Community: React.FC<CommunityProps> = memo(({community = {}}) => {
+const Community: React.FC<CommunityProps> = memo(({ community = {} }) => {
     const description = (community.description || [])
         .map((content) => `<span class="text-desc-list">${content.text}</span>`)
         .join('');
@@ -30,16 +30,31 @@ const Community: React.FC<CommunityProps> = memo(({community = {}}) => {
                 <div className="col-md-8">
                     <blockquote className={community.hl}>
                         <div className="text-title">
-                            <a target="_blank" rel="noopener noreferrer" href={community.link}>{community.name}</a>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={community.link}
+                            >
+                                {community.name}
+                            </a>
                         </div>
                         <div className="text-desc">{community.position}</div>
                         <ul className="text-desc">
-                            <div dangerouslySetInnerHTML={{__html: description}} />
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: description
+                                }}
+                            />
                         </ul>
                     </blockquote>
                 </div>
                 <div className="col-md-2 img-nostyle">
-                    <img src={community.image} alt={community.name} width={community.width} height={community.height} />
+                    <img
+                        src={community.image}
+                        alt={community.name}
+                        width={community.width}
+                        height={community.height}
+                    />
                 </div>
             </div>
             <br />
@@ -53,7 +68,7 @@ interface CommunitiesContainerProps {
     url: string;
 }
 
-const CommunitiesContainer: React.FC<CommunitiesContainerProps> = ({url}) => {
+const CommunitiesContainer: React.FC<CommunitiesContainerProps> = ({ url }) => {
     const [data, setData] = useState<CommunityProps['community'][]>([]);
 
     useEffect(() => {
@@ -78,4 +93,3 @@ const CommunitiesContainer: React.FC<CommunitiesContainerProps> = ({url}) => {
 };
 
 export default CommunitiesContainer;
-

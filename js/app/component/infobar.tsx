@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface InfoBarProps {
-    info?: {
+    info: {
         github?: string;
         speakerdeck?: string;
         youtube?: string;
@@ -10,7 +10,7 @@ interface InfoBarProps {
 
 class InfoBar extends React.Component<InfoBarProps> {
     static defaultProps: Partial<InfoBarProps> = {
-        info: {},
+        info: {}
     };
 
     render() {

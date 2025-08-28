@@ -1,4 +1,4 @@
-import React, {useState, useEffect, memo} from 'react';
+import React, { useState, useEffect, memo } from 'react';
 
 interface PackProps {
     items: {
@@ -7,10 +7,16 @@ interface PackProps {
     };
 }
 
-const Pack: React.FC<PackProps> = memo(({items = {}}) => {
+const Pack: React.FC<PackProps> = memo(({ items = {} }) => {
     return (
         <a target="_blank" rel="noopener noreferrer" href={items.url}>
-            <img className="footer-img" width="auto" height="32" src={items.img} alt="footer item" />
+            <img
+                className="footer-img"
+                width="auto"
+                height="32"
+                src={items.img}
+                alt="footer item"
+            />
         </a>
     );
 });
@@ -21,7 +27,7 @@ interface FooterContainerProps {
     url: string;
 }
 
-const FooterContainer: React.FC<FooterContainerProps> = ({url}) => {
+const FooterContainer: React.FC<FooterContainerProps> = ({ url }) => {
     const [data, setData] = useState<PackProps['items'][]>([]);
 
     useEffect(() => {

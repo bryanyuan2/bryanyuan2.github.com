@@ -39,7 +39,7 @@ module.exports = {
       }
     },
     {
-      files: ["**/*.js","**/*.jsx"],
+      files: ["./js/**/*.js", "./test/**/*.js"],
       parser: "@babel/eslint-parser",
       rules: {
       }
@@ -50,21 +50,17 @@ module.exports = {
     "react",
     "react-hooks",
     "jsx-a11y",
-    "import"
+    "import",
+    "chai-friendly"
   ],
   "rules": {
     "require-jsdoc": 0,
     "indent": "off", // disable native indent setting and use @typescript-eslint/indent instead
+    "@typescript-eslint/indent": "off",
     "react/prop-types": "off",
-    "@typescript-eslint/indent": [
-      "warn", 4
-    ],
-    "max-len": [
-        "error", {
-            "code": 160,
-            "ignoreStrings": true
-        }
-    ],
+    "@typescript-eslint/no-unused-expressions": "off",
+    "chai-friendly/no-unused-expressions": "error",
+    "react/react-in-jsx-scope": "off"
   },
   "globals": {
     "Atomics": "readonly",

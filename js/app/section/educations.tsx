@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import SectionHeader from './../component/section-header.tsx';
 
 interface EducationProps {
@@ -13,12 +13,13 @@ interface EducationProps {
     };
 }
 
-const Education: React.FC<EducationProps> = ({education = {}}) => {
+const Education: React.FC<EducationProps> = ({ education = {} }) => {
     let honors: string[] = [];
     if (education.honors) {
-        honors = education.honors.map((content) => (
-            `<strong>Honors</strong>: <a target="_blank" rel="noopener noreferrer" href="${content.link}">${content.title}</a>`
-        ));
+        honors = education.honors.map(
+            (content) =>
+                `<strong>Honors</strong>: <a target="_blank" rel="noopener noreferrer" href="${content.link}">${content.title}</a>`
+        );
     }
 
     return (
@@ -28,10 +29,28 @@ const Education: React.FC<EducationProps> = ({education = {}}) => {
             </div>
             <div className="col-md-10">
                 <blockquote className={education.hl}>
-                    <p><strong>{education.degree}, <i>{education.school}</i></strong> - <a target="_blank" rel="noopener noreferrer" href="http://iisr.csie.ncu.edu.tw/">{education.lab}</a></p>
-                    { education.description && (
+                    <p>
+                        <strong>
+                            {education.degree}, <i>{education.school}</i>
+                        </strong>{' '}
+                        -{' '}
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="http://iisr.csie.ncu.edu.tw/"
+                        >
+                            {education.lab}
+                        </a>
+                    </p>
+                    {education.description && (
                         <ol>
-                            {honors && <li dangerouslySetInnerHTML={{__html: honors.join('')}} />}
+                            {honors && (
+                                <li
+                                    dangerouslySetInnerHTML={{
+                                        __html: honors.join('')
+                                    }}
+                                />
+                            )}
                             <li>{education.description}</li>
                         </ol>
                     )}
@@ -45,7 +64,7 @@ interface EducationsContainerProps {
     url: string;
 }
 
-const EducationsContainer: React.FC<EducationsContainerProps> = ({url}) => {
+const EducationsContainer: React.FC<EducationsContainerProps> = ({ url }) => {
     const [data, setData] = useState<EducationProps['education'][]>([]);
 
     useEffect(() => {

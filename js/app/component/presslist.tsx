@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface PressListProps {
-    press?: Array<{
+    press: Array<{
         link: string;
         title: string;
         source: string;
@@ -10,7 +10,7 @@ interface PressListProps {
 
 class PressList extends React.Component<PressListProps> {
     static defaultProps: Partial<PressListProps> = {
-        press: [],
+        press: []
     };
 
     render() {
@@ -21,19 +21,19 @@ class PressList extends React.Component<PressListProps> {
             this.props.press.forEach((content) => {
                 press.push(
                     '<li><a target="_blank" rel="noopener noreferrer" href=' +
-                    content.link +
-                    '>' +
-                    content.title +
-                    ' - ' +
-                    content.source +
-                    '</a></li>',
+                        content.link +
+                        '>' +
+                        content.title +
+                        ' - ' +
+                        content.source +
+                        '</a></li>'
                 );
             });
         }
         pressContent = press.join(' ');
         return (
             <div className="text-press">
-                <div dangerouslySetInnerHTML={{__html: pressContent}} />
+                <div dangerouslySetInnerHTML={{ __html: pressContent }} />
             </div>
         );
     }

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface HeaderData {
     title?: string;
@@ -12,7 +12,7 @@ interface HeaderContainerProps {
     url: string;
 }
 
-const HeaderContainer: React.FC<HeaderContainerProps> = ({url}) => {
+const HeaderContainer: React.FC<HeaderContainerProps> = ({ url }) => {
     const [data, setData] = useState<HeaderData>({});
 
     useEffect(() => {
@@ -30,7 +30,11 @@ const HeaderContainer: React.FC<HeaderContainerProps> = ({url}) => {
                 <div className="header-title">{data.title}</div>
             </div>
             <div id="linkedin-nav">
-                <a target="_blank" rel="noopener noreferrer" href={data.linkedin}>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={data.linkedin}
+                >
                     <img src={data.linkedinImg} alt={data.linkedAlt} />
                     <div className="test_content">{data.linkedText}</div>
                 </a>

@@ -1,30 +1,27 @@
 import React from 'react';
 import AwardsList from './../../../js/app/component/awardslist.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
-import {expect} from 'chai';
-import {ReactTestRendererJSON} from 'react-test-renderer';
-
-interface AwardsListProps {
-    awards: string[];
-}
+import { expect } from 'chai';
+import { ReactTestRendererJSON } from 'react-test-renderer';
 
 let reactTestRendererResult: ReactTestRendererJSON | null;
 
-describe('##react-test-renderer## js/app/component/awardslist.js testing', function() {
-    beforeEach(function() {
+describe('##react-test-renderer## js/app/component/awardslist.js testing', function () {
+    beforeEach(function () {
         const shadow = new ShallowTestRenderer();
-        shadow.render(
-            <AwardsList awards={['Award 1', 'Award 2']} />,
-        );
-        reactTestRendererResult = shadow.getRenderOutput() as ReactTestRendererJSON;
+        shadow.render(<AwardsList awards={['Award 1', 'Award 2']} />);
+        reactTestRendererResult =
+            shadow.getRenderOutput() as ReactTestRendererJSON;
     });
 
-    it('component container should be existed', function() {
+    it('component container should be existed', function () {
         expect(reactTestRendererResult).to.exist;
     });
 
-    it('should render the correct awards content', function() {
-        const renderedHtml = reactTestRendererResult.props.children.props.dangerouslySetInnerHTML.__html;
+    it('should render the correct awards content', function () {
+        const renderedHtml =
+            reactTestRendererResult.props.children.props.dangerouslySetInnerHTML
+                .__html;
         expect(renderedHtml).to.include('Award 1');
         expect(renderedHtml).to.include('Award 2');
         expect(renderedHtml).to.include('Internal Awards');

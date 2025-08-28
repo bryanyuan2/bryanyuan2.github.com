@@ -1,37 +1,19 @@
 import React from 'react';
-import CompCommunities from './../../../js/app/section/communities.tsx';
-import ShallowTestRenderer from 'react-test-renderer/shallow';
-import {expect} from 'chai';
-
-interface CommunitiesProps {
-    url: string;
-    id?: string;
-    children?: {
-        props: {
-            text: string;
-        };
-    }[];
-}
-
-let reactTestRendererResult: React.ReactElement<CommunitiesProps>;
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import CompCertification from './../../../js/app/section/communities.tsx';
 const mockCommunitiesJson: string = '../mock/data/mockCommunities.json';
 
-describe('##react-test-renderer## js/app/section/communities.tsx testing', function() {
-    beforeEach(async function() {
-        const shadow = new ShallowTestRenderer();
-        shadow.render(<CompCommunities url={mockCommunitiesJson} />);
-        reactTestRendererResult = shadow.getRenderOutput() as React.ReactElement<CommunitiesProps>;
+describe('## js/app/section/communities.js testing', () => {
+
+    it('should render the component container', () => {
+        const { container } = render(<CompCertification url={mockCommunitiesJson} />);
+        const regionID = container.querySelector('#region-communities');
+        expect(regionID).toBeInTheDocument();
     });
 
-    it('component container should be existed', function() {
-        expect(reactTestRendererResult).to.exist;
-    });
-
-    it('component class should be rendered', function() {
-        expect(reactTestRendererResult.props.id).to.equal('region-communities');
-    });
-
-    it('component title should be rendered', function() {
-        expect(reactTestRendererResult.props.children?.[0].props.text).to.equal('Communities');
+    it('should render the component title', () => {
+        render(<CompCertification url={mockCommunitiesJson} />);
+        expect(screen.getByText('Communities')).toBeInTheDocument();
     });
 });
