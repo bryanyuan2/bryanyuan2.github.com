@@ -1,5 +1,5 @@
 import React from 'react';
-import CompHackathon from './../../../js/app/section/hackathon.js';
+import CompHackathon from './../../../js/app/section/hackathon.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
 let reactTestRendererResult;

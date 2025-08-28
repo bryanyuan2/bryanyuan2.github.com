@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotosetContainer from './../../../js/app/section/photoset.js';
+import PhotosetContainer from './../../../js/app/section/photoset.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
 let reactTestRendererResult;

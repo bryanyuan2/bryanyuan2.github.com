@@ -1,15 +1,15 @@
 import React from 'react';
-import AwardsList from './../../../js/app/component/awardslist.js';
+import PressList from './../../../js/app/component/presslist.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
 
 let reactTestRendererResult;
 
-describe('##react-test-renderer## js/app/component/awardslist.js testing', function() {
+describe('##react-test-renderer## js/app/component/presslist.js testing', function() {
     beforeEach(function() {
         const shadow = new ShallowTestRenderer();
         shadow.render(
-            <AwardsList awards={['Award 1', 'Award 2']} />,
+            <PressList press={[{link: 'https://example.com', title: 'Example Title', source: 'Example Source'}]} />,
         );
         reactTestRendererResult = shadow.getRenderOutput();
     });
@@ -18,10 +18,10 @@ describe('##react-test-renderer## js/app/component/awardslist.js testing', funct
         expect(reactTestRendererResult).to.exist;
     });
 
-    it('should render the correct awards content', function() {
+    it('should render the correct press content', function() {
         const renderedHtml = reactTestRendererResult.props.children.props.dangerouslySetInnerHTML.__html;
-        expect(renderedHtml).to.include('Award 1');
-        expect(renderedHtml).to.include('Award 2');
-        expect(renderedHtml).to.include('Internal Awards');
+        expect(renderedHtml).to.include('Example Title');
+        expect(renderedHtml).to.include('Example Source');
+        expect(renderedHtml).to.include('https://example.com');
     });
 });

@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import PressList from './../component/presslist';
-import AwardsList from './../component/awardslist';
-import SectionHeader from './../component/section-header';
+import PressList from './../component/presslist.tsx';
+import AwardsList from './../component/awardslist.tsx';
+import SectionHeader from './../component/section-header.tsx';
 
 const Work = ({work = {}}) => {
     const renderExperience = (data) => {

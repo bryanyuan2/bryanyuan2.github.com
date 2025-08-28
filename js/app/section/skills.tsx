@@ -1,8 +1,17 @@
-import React, {useState, useEffect} from 'react';
-import SectionHeader from './../component/section-header';
-import PropTypes from 'prop-types';
+import React, {useState, useEffect, FC} from 'react';
+import SectionHeader from './../component/section-header.tsx';
 
-const Skill = ({skill = {}}) => {
+interface SkillProps {
+    skill?: {
+        title?: string;
+        hl?: string;
+        items?: Array<{
+            name: string;
+        }>;
+    };
+}
+
+const Skill: FC<SkillProps> = ({skill = {}}) => {
     const items = skill.items?.map((content) => (
         `<span class="text-hints">${content.name}</span>`
     ));
@@ -14,19 +23,19 @@ const Skill = ({skill = {}}) => {
             </div>
             <div className="col-md-8 fs-16">
                 <blockquote className={skill.hl}>
-                    <div dangerouslySetInnerHTML={{__html: items?.join(', ')}} />
+                    <div dangerouslySetInnerHTML={{__html: items?.join(', ') || ''}} />
                 </blockquote>
             </div>
         </div>
     );
 };
 
-Skill.propTypes = {
-    skill: PropTypes.object,
-};
+interface SkillsContainerProps {
+    url: string;
+}
 
-const SkillsContainer = ({url}) => {
-    const [data, setData] = useState([]);
+const SkillsContainer: FC<SkillsContainerProps> = ({url}) => {
+    const [data, setData] = useState<Array<SkillProps['skill']>>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -47,10 +56,6 @@ const SkillsContainer = ({url}) => {
             <br />
         </div>
     );
-};
-
-SkillsContainer.propTypes = {
-    url: PropTypes.string.isRequired,
 };
 
 export default SkillsContainer;

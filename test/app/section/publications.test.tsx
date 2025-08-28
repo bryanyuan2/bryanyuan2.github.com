@@ -1,5 +1,5 @@
 import React from 'react';
-import CompPublications from './../../../js/app/section/publications.js';
+import CompPublications from './../../../js/app/section/publications.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
 let reactTestRendererResult;

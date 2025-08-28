@@ -1,14 +1,14 @@
 import React from 'react';
-import CompWorks from './../../../js/app/section/works.js';
+import CompCertification from './../../../js/app/section/certification.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
 let reactTestRendererResult;
-const mockWorksJson = '../mock/data/mockWorks.json';
+const mockCertificationsJson = '../mock/data/mockCertifications.json';
 
-describe('##react-test-renderer## js/app/section/works.js testing', function() {
+describe('##react-test-renderer## js/app/section/certification.js testing', function() {
     beforeEach(async function() {
         const shadow = new ShallowTestRenderer();
-        shadow.render(<CompWorks url={mockWorksJson} />);
+        shadow.render(<CompCertification url={mockCertificationsJson} />);
         reactTestRendererResult = shadow.getRenderOutput();
     });
 
@@ -17,10 +17,10 @@ describe('##react-test-renderer## js/app/section/works.js testing', function() {
     });
 
     it('component class should be rendered', function() {
-        expect(reactTestRendererResult.props.id).to.equal('region-experience');
+        expect(reactTestRendererResult.props.id).to.equal('region-certification');
     });
 
     it('component title should be rendered', function() {
-        expect(reactTestRendererResult.props.children[0].props.text).to.equal('Work Experience');
+        expect(reactTestRendererResult.props.children[0].props.text).to.equal('Certification');
     });
 });

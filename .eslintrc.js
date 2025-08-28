@@ -10,6 +10,8 @@ module.exports = {
     }
   },
   "extends": [
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "google",
   ],
@@ -17,15 +19,17 @@ module.exports = {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
   },
-  "parser": "@babel/eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "sourceType": "module",
+    "allowImportExportEverywhere": true,
     "ecmaFeatures": {
-      "jsx": true,
+      "jsx": true
     },
     "ecmaVersion": 2020,
   },
   "plugins": [
+    "@typescript-eslint",
     "react",
   ],
   "rules": {
