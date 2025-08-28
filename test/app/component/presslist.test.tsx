@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import PressList from './../../../js/app/component/presslist.tsx';
+import PressList from './../../../src/app/component/presslist.tsx';
 
 const mockPressList = [
     {
@@ -13,9 +13,7 @@ const mockPressList = [
 
 describe('## js/app/component/presslist.js testing', () => {
     it('should render the component elements', () => {
-        render(
-            <PressList press={mockPressList} />
-        );
+        render(<PressList press={mockPressList} />);
 
         const linkElement = screen.getByRole('link', {});
         expect(linkElement).toBeInTheDocument();

@@ -21,13 +21,11 @@ interface WorkProps {
             thumbnails?: Array<{
                 src: string;
                 alt: string;
-                desc?: string;
+                desc: string;
             }>;
         }>;
         awards?: Array<{
-            title?: string;
-            year?: string;
-            description?: string;
+            title?: string
         }>;
         media?: Array<{
             type?: string;

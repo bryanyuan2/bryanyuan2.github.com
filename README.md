@@ -8,7 +8,7 @@
 |------------------|--------------------------------------------------------------------------------------|
 | `test`          | Runs tests using Jest.                                                              |
 | `test-cov`      | Runs tests with coverage report using Jest.                                         |
-| `clean`         | Deletes all JavaScript files in the `./js/build/` directory.                        |
+| `clean`         | Deletes all JavaScript files in the `./src/build/` directory.                        |
 | `eslint`        | Runs ESLint to check for linting issues in TypeScript files.                        |
 | `eslint-fix`    | Runs ESLint and automatically fixes linting issues in TypeScript files.             |
 | `jsonlint:data` | Validates JSON files in the `./asserts/data/` directory.                            |

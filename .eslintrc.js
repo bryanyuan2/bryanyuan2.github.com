@@ -30,7 +30,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["./js/**/*.tsx", "./test/**/*.tsx"],
+      files: ["./src/**/*.tsx", "./test/**/*.tsx"],
       parser: "@typescript-eslint/parser",
       parserOptions: { 
         project: "./tsconfig.json" 
@@ -39,7 +39,7 @@ module.exports = {
       }
     },
     {
-      files: ["./js/**/*.js", "./test/**/*.js"],
+      files: ["./src/**/*.js", "./test/**/*.js"],
       parser: "@babel/eslint-parser",
       rules: {
       }

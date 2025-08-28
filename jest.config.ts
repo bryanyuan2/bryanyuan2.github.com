@@ -7,8 +7,8 @@ module.exports = {
         "<rootDir>/test/app/**/*.test.(tsx|ts|js)"
     ],
     "collectCoverageFrom": [
-        "<rootDir>/js/app/**/*.(tsx|ts|js)",
-        "!<rootDir>/js/app/app.tsx"
+        "<rootDir>/src/app/**/*.(tsx|ts|js)",
+        "!<rootDir>/src/app/app.tsx"
     ],
     "coveragePathIgnorePatterns": [
         "node_modules"
