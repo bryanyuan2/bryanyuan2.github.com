@@ -61,7 +61,9 @@ interface CertificationContainerProps {
     url: string;
 }
 
-const CertificationContainer: React.FC<CertificationContainerProps> = ({ url }) => {
+const CertificationContainer: React.FC<CertificationContainerProps> = ({
+    url
+}) => {
     const [data, setData] = useState<CertificationProps['cert'][]>([]);
 
     useEffect(() => {

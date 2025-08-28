@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CompFooter from './../../../src/app/section/footer.tsx';
 const mockFooterJson: string = '../mock/data/mockFooter.json';

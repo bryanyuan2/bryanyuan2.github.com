@@ -25,7 +25,7 @@ interface WorkProps {
             }>;
         }>;
         awards?: Array<{
-            title?: string
+            title?: string;
         }>;
         media?: Array<{
             type?: string;

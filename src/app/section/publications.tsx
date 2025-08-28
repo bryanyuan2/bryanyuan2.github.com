@@ -51,7 +51,9 @@ interface PublicationsContainerProps {
     url: string;
 }
 
-const PublicationsContainer: React.FC<PublicationsContainerProps> = ({ url }) => {
+const PublicationsContainer: React.FC<PublicationsContainerProps> = ({
+    url
+}) => {
     const [data, setData] = useState<PublicationProps['publication'][]>([]);
 
     useEffect(() => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CompHeader from './../../../src/app/section/header.tsx';
 const mockHeaderJson: string = '../mock/data/mockHeader.json';

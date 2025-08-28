@@ -1,12 +1,12 @@
 import React from 'react';
 
 interface AwardsListProps {
-    awardsAry: string[];
+    awards: any;
 }
 
 class AwardsList extends React.Component<AwardsListProps> {
     static defaultProps: Partial<AwardsListProps> = {
-        awardsAry: {}
+        awards: []
     };
 
     render() {
@@ -19,8 +19,8 @@ class AwardsList extends React.Component<AwardsListProps> {
 
         awards.push(icon + '<strong>Internal Awards</strong>');
 
-        if (this.props.awardsAry) {
-            this.props.awardsAry.forEach((content: string) => {
+        if (this.props.awards) {
+            this.props.awards.forEach((content: string) => {
                 awards.push('<li>' + content + '</li>');
             });
         }
