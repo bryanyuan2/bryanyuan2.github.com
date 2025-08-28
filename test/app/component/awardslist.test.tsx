@@ -1,29 +1,15 @@
 import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import AwardsList from './../../../js/app/component/awardslist.tsx';
-import ShallowTestRenderer from 'react-test-renderer/shallow';
-import { expect } from 'chai';
-import { ReactTestRendererJSON } from 'react-test-renderer';
 
-let reactTestRendererResult: ReactTestRendererJSON | null;
+describe('## js/app/component/awardslist.js testing', () => {
+    const mockAwards = [ 'Award 1', 'Award 2' ];
 
-describe('##react-test-renderer## js/app/component/awardslist.js testing', function () {
-    beforeEach(function () {
-        const shadow = new ShallowTestRenderer();
-        shadow.render(<AwardsList awards={['Award 1', 'Award 2']} />);
-        reactTestRendererResult =
-            shadow.getRenderOutput() as ReactTestRendererJSON;
-    });
-
-    it('component container should be existed', function () {
-        expect(reactTestRendererResult).to.exist;
-    });
-
-    it('should render the correct awards content', function () {
-        const renderedHtml =
-            reactTestRendererResult.props.children.props.dangerouslySetInnerHTML
-                .__html;
-        expect(renderedHtml).to.include('Award 1');
-        expect(renderedHtml).to.include('Award 2');
-        expect(renderedHtml).to.include('Internal Awards');
+    it('should render the component elements', () => {
+        render(<AwardsList awards={mockAwards} />);
+        expect(screen.getByText('Internal Awards')).toBeInTheDocument();
+        expect(screen.getByText('Award 1')).toBeInTheDocument();
+        expect(screen.getByText('Award 2')).toBeInTheDocument();
     });
 });

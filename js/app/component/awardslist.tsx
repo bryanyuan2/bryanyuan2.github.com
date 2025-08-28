@@ -1,11 +1,7 @@
 import React from 'react';
 
 interface AwardsListProps {
-    awards: Array<{
-        title?: string;
-        year?: string;
-        description?: string;
-    }>;
+    awards: string[]
 }
 
 class AwardsList extends React.Component<AwardsListProps> {

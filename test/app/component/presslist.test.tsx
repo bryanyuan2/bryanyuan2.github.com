@@ -1,39 +1,26 @@
 import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import PressList from './../../../js/app/component/presslist.tsx';
-import ShallowTestRenderer from 'react-test-renderer/shallow';
-import { expect } from 'chai';
-import { ReactTestRendererJSON } from 'react-test-renderer';
 
-let reactTestRendererResult: ReactTestRendererJSON | null;
+const mockPressList = [
+    {
+        link: 'https://example.com',
+        title: 'Example Title',
+        source: 'Example Source'
+    }
+];
 
-describe('##react-test-renderer## js/app/component/presslist.js testing', function () {
-    beforeEach(function () {
-        const shadow = new ShallowTestRenderer();
-        shadow.render(
-            <PressList
-                press={[
-                    {
-                        link: 'https://example.com',
-                        title: 'Example Title',
-                        source: 'Example Source'
-                    }
-                ]}
-            />
+describe('## js/app/component/presslist.js testing', () => {
+    it('should render the component elements', () => {
+        render(
+            <PressList press={mockPressList} />
         );
-        reactTestRendererResult =
-            shadow.getRenderOutput() as ReactTestRendererJSON;
-    });
 
-    it('component container should be existed', function () {
-        expect(reactTestRendererResult).to.exist;
-    });
-
-    it('should render the correct press content', function () {
-        const renderedHtml =
-            reactTestRendererResult.props.children.props.dangerouslySetInnerHTML
-                .__html;
-        expect(renderedHtml).to.include('Example Title');
-        expect(renderedHtml).to.include('Example Source');
-        expect(renderedHtml).to.include('https://example.com');
+        const linkElement = screen.getByRole('link', {});
+        expect(linkElement).toBeInTheDocument();
+        expect(linkElement).toHaveAttribute('href', 'https://example.com');
+        expect(linkElement).toHaveAttribute('target', '_blank');
+        expect(linkElement).toHaveAttribute('rel', 'noopener noreferrer');
     });
 });

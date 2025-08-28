@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import PressList from '../component/presslist.tsx';
-import AwardsList from '../component/awardslist.tsx';
-import SectionHeader from '../component/section-header.tsx';
+import PressList from './../component/presslist.tsx';
+import AwardsList from './../component/awardslist.tsx';
+import SectionHeader from './../component/section-header.tsx';
 
 interface WorkProps {
     work: {
