@@ -28,12 +28,7 @@
     "email": "bryanyuan2@gmail.com",
     "url": "https://bryanyuan2.github.io"
   },
-  "jest": {
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json"
-    ]
-  },
+  "jest": "./jest.config.ts",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.28.3",
