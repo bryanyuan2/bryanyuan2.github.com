@@ -5,19 +5,19 @@ import ReactDOM from 'react-dom/client';
 const BASE_URL = 'asserts/data';
 
 /* section imports */
-import CompHeader from './section/header';
-import CompSummary from './section/summary';
-import CompEducations from './section/educations';
-import CompSkills from './section/skills';
-import CompWorks from './section/works';
-import CompHackathon from './section/hackathon';
-import CompCommunities from './section/communities';
-import CompPublications from './section/publications';
-import CompCertification from './section/certification';
-import CompFooter from './section/footer';
-import CompPhotoset from './section/photoset';
+import CompHeader from './section/header.tsx';
+import CompSummary from './section/summary.tsx';
+import CompEducations from './section/educations.tsx';
+import CompSkills from './section/skills.tsx';
+import CompWorks from './section/works.tsx';
+import CompHackathon from './section/hackathon.tsx';
+import CompCommunities from './section/communities.tsx';
+import CompPublications from './section/publications.tsx';
+import CompCertification from './section/certification.tsx';
+import CompFooter from './section/footer.tsx';
+import CompPhotoset from './section/photoset.tsx';
 
-const App = () => {
+const App: React.FC = () => {
     return (
         <div>
             <CompHeader url={`${BASE_URL}/commons.json`} />
@@ -49,7 +49,7 @@ const App = () => {
     );
 };
 
-ReactDOM.createRoot(document.getElementById('target')).render(
+ReactDOM.createRoot(document.getElementById('target')!).render(
     <React.StrictMode>
         <App />
     </React.StrictMode>,

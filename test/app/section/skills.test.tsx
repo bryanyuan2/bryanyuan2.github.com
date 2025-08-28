@@ -1,14 +1,14 @@
 import React from 'react';
-import CompCommunities from './../../../js/app/section/communities.js';
+import CompSkills from './../../../js/app/section/skills.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
 let reactTestRendererResult;
-const mockCommunitiesJson = '../mock/data/mockCommunities.json';
+const mockSkillsJson = '../mock/data/mockSkills.json';
 
-describe('##react-test-renderer## js/app/section/communities.js testing', function() {
+describe('##react-test-renderer## js/app/section/skills.js testing', function() {
     beforeEach(async function() {
         const shadow = new ShallowTestRenderer();
-        shadow.render(<CompCommunities url={mockCommunitiesJson} />);
+        shadow.render(<CompSkills url={mockSkillsJson} />);
         reactTestRendererResult = shadow.getRenderOutput();
     });
 
@@ -17,10 +17,10 @@ describe('##react-test-renderer## js/app/section/communities.js testing', functi
     });
 
     it('component class should be rendered', function() {
-        expect(reactTestRendererResult.props.id).to.equal('region-communities');
+        expect(reactTestRendererResult.props.id).to.equal('region-skills');
     });
 
     it('component title should be rendered', function() {
-        expect(reactTestRendererResult.props.children[0].props.text).to.equal('Communities');
+        expect(reactTestRendererResult.props.children[0].props.text).to.equal('Technical Keywords');
     });
 });

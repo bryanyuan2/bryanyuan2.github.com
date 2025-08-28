@@ -1,16 +1,15 @@
 import React from 'react';
-import CompSummary from './../../../js/app/section/summary.js';
+import CompCommunities from './../../../js/app/section/communities.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
 let reactTestRendererResult;
-const mockSummaryJson = '../mock/data/mockSummary.json';
+const mockCommunitiesJson = '../mock/data/mockCommunities.json';
 
-describe('##react-test-renderer## js/app/section/summary.js testing', function() {
-    beforeEach(function(done) {
+describe('##react-test-renderer## js/app/section/communities.js testing', function() {
+    beforeEach(async function() {
         const shadow = new ShallowTestRenderer();
-        shadow.render(<CompSummary url={mockSummaryJson} />);
+        shadow.render(<CompCommunities url={mockCommunitiesJson} />);
         reactTestRendererResult = shadow.getRenderOutput();
-        done();
     });
 
     it('component container should be existed', function() {
@@ -18,10 +17,10 @@ describe('##react-test-renderer## js/app/section/summary.js testing', function()
     });
 
     it('component class should be rendered', function() {
-        expect(reactTestRendererResult.props.id).to.equal('region-summary');
+        expect(reactTestRendererResult.props.id).to.equal('region-communities');
     });
 
     it('component title should be rendered', function() {
-        expect(reactTestRendererResult.props.children[0].props.text).to.equal('Summary of Qualifications');
+        expect(reactTestRendererResult.props.children[0].props.text).to.equal('Communities');
     });
 });

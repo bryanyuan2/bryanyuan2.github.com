@@ -1,5 +1,5 @@
 import React, {useState, useEffect, memo} from 'react';
-import SectionHeader from './../component/section-header';
+import SectionHeader from './../component/section-header.tsx';
 import PropTypes from 'prop-types';
 
 const Community = memo(({community = {}}) => {

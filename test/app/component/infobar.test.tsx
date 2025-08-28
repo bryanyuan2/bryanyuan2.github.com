@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoBar from './../../../js/app/component/infobar.js';
+import InfoBar from './../../../js/app/component/infobar.tsx';
 import ShallowTestRenderer from 'react-test-renderer/shallow';
 import {expect} from 'chai';
 

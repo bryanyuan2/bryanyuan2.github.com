@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import PressList from './../component/presslist';
-import InfoBar from './../component/infobar';
-import SectionHeader from './../component/section-header';
+import PressList from './../component/presslist.tsx';
+import InfoBar from './../component/infobar.tsx';
+import SectionHeader from './../component/section-header.tsx';
 
 import _ from 'lodash';
 import PropTypes from 'prop-types';
