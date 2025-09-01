@@ -8,8 +8,6 @@ This project provides multiple ways to run the CV website. Choose the method tha
 
 ## Method 1: Traditional Node.js Development
 
-Install dependencies and run the development server with live reload:
-
 ```bash
 # Install all dependencies
 npm install
@@ -18,15 +16,7 @@ npm install
 npm run start:prod
 ```
 
-This will:
-- Validate JSON data files
-- Compile SCSS to CSS
-- Bundle TypeScript/React code for production
-- Start a live server on http://localhost:3000
-
 ## Method 2: Automated Docker Setup (Recommended)
-
-Use the intelligent startup script that automatically detects your environment:
 
 ```bash
 # Make the script executable (first time only)
@@ -36,15 +26,7 @@ chmod +x start-docker.sh
 npm run docker:start
 ```
 
-This script will:
-- Check if Docker and Docker Compose are installed
-- Automatically choose between Docker Compose or plain Docker
-- Build the image and start the container
-- Display management commands for easy control
-
-## Method 3: Docker Compose (Production Ready)
-
-Use Docker Compose for a complete containerized solution:
+## Method 3: Docker Compose
 
 ```bash
 # Start services in detached mode
@@ -57,36 +39,15 @@ docker-compose logs
 docker-compose down
 ```
 
-Benefits:
-- Easy container management
-- Automatic restart policies
-- Production-ready configuration
-
 ## Method 4: Manual Docker Build and Run
-
-Build and run the Docker container manually for full control:
 
 ```bash
 # Build the Docker image and run the container
 npm run docker:build && npm run docker:run
-
-# Alternative: Manual Docker commands
-docker build -t bryanyuan2-cv .
-docker run -d -p 8080:80 --name bryanyuan2-cv bryanyuan2-cv
 ```
-
-This method provides:
-- Full control over the build process
-- Detailed build output for debugging
-- Custom container configuration options
-
----
 
 **All Docker methods serve the website on http://localhost:8080**  
 **Node.js method serves the website on http://localhost:3000**
-
-For detailed Docker setup and troubleshooting, see [DOCKER_README.md](./DOCKER_README.md)
-
 
 # Usage
 - Below is a list of available npm scripts and their descriptions:
@@ -107,7 +68,7 @@ For detailed Docker setup and troubleshooting, see [DOCKER_README.md](./DOCKER_R
 | `build:prod:ts` | Bundles TypeScript files using Browserify for production, then minifies with UglifyJS.  |
 | `start:dev`     | Runs JSON validation, builds CSS and TypeScript in development mode, and starts the server with watch mode. |
 | `start:prod`    | Runs JSON validation, builds CSS and TypeScript in production mode, and starts the server. |
-| **🐳 Docker Scripts** | |
+| **Docker Scripts** | |
 | `docker:build`  | Builds the Docker image.                                                            |
 | `docker:run`    | Runs the Docker container on port 8080.                                             |
 | `docker:start`  | Runs the automated Docker setup script.                                             |
