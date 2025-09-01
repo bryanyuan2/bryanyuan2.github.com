@@ -56,6 +56,7 @@ const Work: React.FC<WorkProps> = ({ work = {} }) => {
                                     className="img-thumbnail"
                                     width="140"
                                     height="140"
+                                    loading="lazy"
                                 />
                                 <div className="img-caption">{item.desc}</div>
                             </a>
@@ -80,6 +81,7 @@ const Work: React.FC<WorkProps> = ({ work = {} }) => {
                                     className="text-ref-icon"
                                     src={info.img}
                                     alt={info.title}
+                                    loading="lazy"
                                 />
                                 <span className="text-ref-title">
                                     {info.title}
@@ -144,6 +146,7 @@ const Work: React.FC<WorkProps> = ({ work = {} }) => {
                                 alt={data.logoalt}
                                 width={data.width}
                                 height={data.height}
+                                loading="lazy"
                             />
                         )
                 )}
