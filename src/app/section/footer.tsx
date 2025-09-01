@@ -16,6 +16,7 @@ const Pack: React.FC<PackProps> = memo(({ items = {} }) => {
                 height="32"
                 src={items.img}
                 alt="footer item"
+                loading="lazy"
             />
         </a>
     );

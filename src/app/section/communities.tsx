@@ -54,6 +54,7 @@ const Community: React.FC<CommunityProps> = memo(({ community = {} }) => {
                         alt={community.name}
                         width={community.width}
                         height={community.height}
+                        loading="lazy"
                     />
                 </div>
             </div>

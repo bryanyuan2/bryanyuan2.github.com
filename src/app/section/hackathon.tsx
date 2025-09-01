@@ -58,6 +58,7 @@ const Award: React.FC<AwardProps> = ({ award = {} }) => {
                         className="img-thumbnail"
                         src={award.image.src}
                         alt="yataiko"
+                        loading="lazy"
                     />
                     <div className="img-caption">
                         {award.image.caption} / {award.date}

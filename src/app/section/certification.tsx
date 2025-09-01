@@ -49,6 +49,7 @@ const Certification: React.FC<CertificationProps> = ({ cert = {} }) => {
                         alt={cert.alt}
                         width={cert.width}
                         height={cert.height}
+                        loading="lazy"
                     />
                 </div>
             </div>

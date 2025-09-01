@@ -26,6 +26,7 @@ const Photo: React.FC<PhotoProps> = ({ photo = {} }) => {
                     className="img-thumbnail"
                     src={photo.thumbnail}
                     alt={photo.alt}
+                    loading="lazy"
                 />
             </div>
         </a>
@@ -90,6 +91,7 @@ const PhotosetContainer: React.FC<PhotosetContainerProps> = ({
                                     className="morelink"
                                     src={moreImg}
                                     alt={moreText}
+                                    loading="lazy"
                                 />
                             )}
                             {moreText}
