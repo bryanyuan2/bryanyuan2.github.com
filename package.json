@@ -13,11 +13,17 @@
     "test-cov": "jest --config jest.config.ts --coverage",
     "build:css": "sass ./asserts/css/src/app.scss ./asserts/css/min/app.min.css --style compressed",
     "connect": "live-server --port=3000 --watch=./ --no-browser",
-    "watch:dev": "nodemon --watch './index.html' --watch './asserts/css/src/*.scss' --watch './src/app/**/*.js' --exec \"npm run build:dev:js && npm run build:css\"",
+    "watch:dev": "nodemon --watch './index.html' --watch './asserts/css/src/*.scss' --watch './src/app/**/*.js' --exec \"npm run build:dev:ts && npm run build:css\"",
     "build:dev:ts": "NODE_ENV=development browserify ./src/app/app.tsx -t [ babelify --extensions .tsx ] -o ./src/build/bundle.js",
-    "build:prod:ts": "NODE_ENV=production browserify ./src/app/app.tsx -t [ babelify --extensions .tsx ] | uglifyjs -c -m -o ./src/build/bundle.js",
+    "build:prod:ts": "NODE_ENV=production browserify ./src/app/app.tsx -t [ babelify --extensions .tsx ] -o ./src/build/bundle.js && uglifyjs ./src/build/bundle.js -c -m -o ./src/build/bundle.js",
     "start:dev": "npm run jsonlint:data && npm run build:css && npm run build:dev:ts && npm run connect && npm run watch:dev",
-    "start:prod": "npm run jsonlint:data && npm run build:css && npm run build:prod:ts && npm run connect"
+    "start:prod": "npm run jsonlint:data && npm run build:css && npm run build:prod:ts && npm run connect",
+    "docker:build": "docker build -t bryanyuan2-cv .",
+    "docker:run": "docker run -p 8080:80 bryanyuan2-cv",
+    "docker:start": "./start-docker.sh",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs"
   },
   "repository": {
     "type": "git",
