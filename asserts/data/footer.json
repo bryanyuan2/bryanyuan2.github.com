@@ -48,5 +48,15 @@
     "name": "eslint",
     "url": "https://eslint.org/",
     "img": "asserts/images/tech/eslint.png"
+  },
+  {
+    "name": "bootstrap",
+    "url": "https://getbootstrap.com/",
+    "img": "asserts/images/tech/bootstrap.png"
+  },
+  {
+    "name": "docker",
+    "url": "https://www.docker.com/",
+    "img": "asserts/images/tech/docker.png"
   }
 ]

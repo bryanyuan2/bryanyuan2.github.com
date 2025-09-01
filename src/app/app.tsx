@@ -29,7 +29,7 @@ const App: React.FC = () => {
                     text="Bryan Cheng (@cycheng) at Work"
                     moreURL="https://www.flickr.com/photos/cycheng-at-work/"
                     moreImg="asserts/images/icons/flickr.png"
-                    moreText="check more on Flickr (@cycheng-at-work)"
+                    moreText="check more photos on Flickr (@cycheng-at-work)"
                 />
                 <CompCertification url={`${BASE_URL}/certification.json`} />
                 <CompHackathon url={`${BASE_URL}/hackathon.json`} />
