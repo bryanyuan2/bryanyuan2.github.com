@@ -1,0 +1,14 @@
+# docker
+docker-build.log
+
+# node.js
+node_modules/
+npm-debug.log*
+
+# build output
+src/build/
+coverage/
+
+# OS related files
+.DS_Store
+Thumbs.db

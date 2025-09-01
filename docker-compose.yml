@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  bryanyuan2-cv:
+    build: .
+    ports:
+      - "8080:80"
+    container_name: bryanyuan2-cv
+    restart: unless-stopped
