@@ -23,7 +23,7 @@ const Photo: React.FC<PhotoProps> = ({ photo = {} }) => {
         >
             <div className="photo-block">
                 <img
-                    className="img-thumbnail"
+                    className="img-thumbnail photo-thumbnail"
                     src={photo.thumbnail}
                     alt={photo.alt}
                     loading="lazy"

@@ -2,14 +2,7 @@
 
 .portfolio-block {
     @include common.text-corner;
-    height: 550px;
     overflow: hidden;
     overflow-y: scroll;
-    margin-bottom: 12px;
-    padding: 18px 12px 18px 12px;
-}
-
-.portfolio-block:hover {
-    background-color: common.$bg-gray-light;
-    cursor: pointer;
+    padding-bottom: 12px;
 }

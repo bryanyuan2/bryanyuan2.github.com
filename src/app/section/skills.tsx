@@ -21,7 +21,7 @@ const Skill: React.FC<SkillProps> = ({ skill = {} }) => {
             <div className="col-md-2 fs-16">
                 <p>{skill.title}</p>
             </div>
-            <div className="col-md-8 fs-16">
+            <div className="col-md-10 fs-16">
                 <blockquote className={skill.hl}>
                     <div
                         dangerouslySetInnerHTML={{
