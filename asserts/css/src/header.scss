@@ -6,6 +6,9 @@
 
 #region-header .header-bg {
     height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(65,0,147,1) 50%, rgba(123,0,153,1) 100%);
 }
@@ -15,6 +18,5 @@
     font-size: 28px;
     text-shadow: #444444 0 1px 1px;
     font-weight: bold;
-    line-height: 90px;
     text-align: center;
 }

@@ -49,7 +49,8 @@ const Award: React.FC<AwardProps> = ({ award = {} }) => {
             : '');
 
     return (
-        <div className="portfolio-block col-xs-6 col-md-4">
+        <div className="portfolio-block">
+        <div className="col-md-4">
             {award.image && (
                 <>
                     <img
@@ -65,6 +66,8 @@ const Award: React.FC<AwardProps> = ({ award = {} }) => {
                     </div>
                 </>
             )}
+        </div>
+        <div className='col-md-8'>
             <div
                 className="text-title"
                 dangerouslySetInnerHTML={{ __html: organizerHTML }}
@@ -93,6 +96,7 @@ const Award: React.FC<AwardProps> = ({ award = {} }) => {
             <InfoBar info={infobarAry} />
             <br />
             {award.press && <PressList press={award.press} />}
+        </div>
         </div>
     );
 };
