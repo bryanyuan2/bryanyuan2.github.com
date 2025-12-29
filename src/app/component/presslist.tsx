@@ -17,9 +17,9 @@ const PressList: React.FC<PressListProps> = ({ press = [] }) => {
                 '<li><a target="_blank" rel="noopener noreferrer" href=' +
                     content.link +
                     '>' +
-                    content.title +
+                    '<strong>' + content.title + '</strong>' +
                     ' - ' +
-                    content.source +
+                    '<i>' + content.source + '</i>' +
                     '</a></li>'
             );
         });
