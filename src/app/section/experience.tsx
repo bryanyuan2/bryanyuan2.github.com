@@ -26,8 +26,8 @@ interface WorkProps {
         }>;
         awards?: Array<string>;
         media?: Array<{
-            type?: string;
-            url?: string;
+            source?: string;
+            link?: string;
             title?: string;
         }>;
         product?: Array<{
@@ -127,9 +127,9 @@ const Work: React.FC<WorkProps> = ({ work = {} }) => {
                     {work.media && (
                         <PressList
                             press={work.media.map((item) => ({
-                                link: item.url || '',
+                                link: item.link || '',
                                 title: item.title || '',
-                                source: item.type || ''
+                                source: item.source || ''
                             }))}
                         />
                     )}
