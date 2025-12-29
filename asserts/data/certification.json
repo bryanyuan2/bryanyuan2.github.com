@@ -68,5 +68,47 @@
     "image": "asserts/images/certification/coursera.png",
     "width": "120",
     "height": "68"
+  },
+  {
+    "hl": "hl-certification-coursera",
+    "institution": "北京大學",
+    "authority": "Coursera",
+    "startDate": "Oct 2025",
+    "endDate": "",
+    "name": "Management Communication 管理沟通",
+    "link": "https://www.coursera.org/account/accomplishments/verify/0I80AVIZCHS5",
+    "certID": "0I80AVIZCHS5",
+    "alt": "Management Communication 管理沟通",
+    "image": "asserts/images/certification/coursera.png",
+    "width": "120",
+    "height": "68"
+  },
+  {
+    "hl": "hl-certification-coursera",
+    "institution": "Google",
+    "authority": "Coursera",
+    "startDate": "Dec 2025",
+    "endDate": "",
+    "name": "Google Cybersecurity Specialization",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/H1S08K60KZ3P",
+    "certID": "H1S08K60KZ3P",
+    "alt": "Google Cybersecurity Specialization",
+    "image": "asserts/images/certification/coursera.png",
+    "width": "120",
+    "height": "68"
+  },
+  {
+    "hl": "hl-certification-coursera",
+    "institution": "國立臺灣大學",
+    "authority": "Coursera",
+    "startDate": "Dec 2025",
+    "endDate": "",
+    "name": "賽局與產業競爭策略 (Game Theory and Business Strategy)",
+    "link": "https://www.coursera.org/account/accomplishments/verify/Q9XY4YQY2ZNZ",
+    "certID": "Q9XY4YQY2ZNZ",
+    "alt": "賽局與產業競爭策略 (Game Theory and Business Strategy)",
+    "image": "asserts/images/certification/coursera.png",
+    "width": "120",
+    "height": "68"
   }
 ]

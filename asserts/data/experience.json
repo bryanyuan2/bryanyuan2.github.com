@@ -7,6 +7,27 @@
         "url": "http://tw.yahoo.com/",
         "logo": "asserts/images/experience/yahoo_2020.png",
         "logoalt": "yahoo",
+        "date": "Nov 2025 - Now",
+        "org": "Media Engineering",
+        "position": "Sr. Engineering Manager",
+        "width": "200",
+        "height": "56"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Led the TW/HK search engineering scrum (FE+BE), driving higher user engagement and search revenue growth through Yahoo! Media product initiatives."
+      }
+    ]
+  },
+  {
+    "hl": "hl-work-experience-yahoo",
+    "corp": [
+      {
+        "name": "Yahoo!",
+        "url": "http://tw.yahoo.com/",
+        "logo": "asserts/images/experience/yahoo_2020.png",
+        "logoalt": "yahoo",
         "date": "Mar 2023 - Dec 2024",
         "org": "Global Search Engineering",
         "position": "Engineering Manager",
