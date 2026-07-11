@@ -5,7 +5,8 @@
   "linkedAlt" : "bryanyuan2's Linkedin",
   "linkedText" : "Go to Linkedin",
   "linkedinImg" : "asserts/images/icons/linkedin_nav.png",
-  "avatar" : "asserts/images/common/bryanyuan2_2014.jpg",
+  "avatar" : "asserts/images/avatar/avatar-2026.png",
+  "searchBoxPlaceholder" : "Finding keywords?",
   "githubPage": "https://bryanyuan2.github.io/",
   "gitcafePage": "https://bryanyuan2.github.io/"
 }

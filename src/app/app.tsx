@@ -21,7 +21,7 @@ const App: React.FC = () => {
         <div>
             <CompHeader url={`${BASE_URL}/commons.json`} />
             <div className="container">
-                <CompSearchbox />
+                <CompSearchbox url={`${BASE_URL}/commons.json`} />
                 <CompSummary url={`${BASE_URL}/summary.json`} />
                 <CompSkills url={`${BASE_URL}/skills.json`} />
                 <CompExperience url={`${BASE_URL}/experience.json`} />
