@@ -1,20 +1,23 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CompEducations from './../../../src/app/section/educations.tsx';
 const mockEducationsJson: string = '../mock/data/mockEducations.json';
 
 describe('## js/app/section/educations.js testing', () => {
-    it('should render the component container', () => {
+    it('should render the component container', async () => {
         const { container } = render(
             <CompEducations url={mockEducationsJson} />
         );
-        const regionID = container.querySelector('#region-education');
-        expect(regionID).toBeInTheDocument();
+        await waitFor(() => {
+            expect(
+                container.querySelector('#region-education')
+            ).toBeInTheDocument();
+        });
     });
 
-    it('should render the component title', () => {
+    it('should render the component title', async () => {
         render(<CompEducations url={mockEducationsJson} />);
-        expect(screen.getByText('Education')).toBeInTheDocument();
+        expect(await screen.findByText('Education')).toBeInTheDocument();
     });
 });

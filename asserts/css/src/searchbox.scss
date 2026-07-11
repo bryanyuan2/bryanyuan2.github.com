@@ -2,12 +2,23 @@
 
 .searchbox-wrapper {
     display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 24px;
     margin: 24px 0;
 }
 
+.searchbox-avatar {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #e3e3e3;
+    object-fit: cover;
+}
+
 .searchbox-input {
-    width: 100%;
+    flex: 1;
     max-width: 960px;
     padding: 20px 40px;
     font-family: common.$ff-n;

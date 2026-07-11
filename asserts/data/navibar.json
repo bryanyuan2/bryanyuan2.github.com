@@ -1,0 +1,11 @@
+[
+  { "id": "desc", "text": "Summary of Qualifications" },
+  { "id": "skills", "text": "Technical Keywords" },
+  { "id": "experience", "text": "Work Experience" },
+  { "id": "certification", "text": "Certification" },
+  { "id": "awards", "text": "Hackathon Profiles & Awards" },
+  { "id": "communities", "text": "Communities" },
+  { "id": "publications", "text": "Publications" },
+  { "id": "education", "text": "Education" },
+  { "id": "gallery", "text": "Interests in Muay Thai" }
+]

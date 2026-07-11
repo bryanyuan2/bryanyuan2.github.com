@@ -90,8 +90,28 @@ function clearHighlights(root: HTMLElement): void {
     });
 }
 
-const Searchbox: React.FC = () => {
+interface SearchboxData {
+    title?: string;
+    avatar?: string;
+    searchBoxPlaceholder?: string;
+}
+
+interface SearchboxProps {
+    url: string;
+}
+
+const Searchbox: React.FC<SearchboxProps> = ({ url }) => {
     const [keyword, setKeyword] = useState('');
+    const [data, setData] = useState<SearchboxData>({});
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch(url);
+            const data = await response.json();
+            setData(data);
+        };
+        fetchData();
+    }, [url]);
 
     useEffect(() => {
         const roots = getSearchableRoots();
@@ -106,11 +126,18 @@ const Searchbox: React.FC = () => {
     return (
         <div id="region-searchbox">
             <div className="searchbox-wrapper">
+                {data.avatar && (
+                    <img
+                        className="searchbox-avatar"
+                        src={data.avatar}
+                        alt={data.title}
+                    />
+                )}
                 <input
                     type="text"
                     className="searchbox-input"
-                    placeholder="在這邊找關鍵字"
-                    aria-label="在這邊找關鍵字"
+                    placeholder={data.searchBoxPlaceholder}
+                    aria-label={data.searchBoxPlaceholder}
                     value={keyword}
                     onChange={(event) => setKeyword(event.target.value)}
                 />

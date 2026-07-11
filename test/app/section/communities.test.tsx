@@ -1,20 +1,23 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CompCertification from './../../../src/app/section/communities.tsx';
 const mockCommunitiesJson: string = '../mock/data/mockCommunities.json';
 
 describe('## js/app/section/communities.js testing', () => {
-    it('should render the component container', () => {
+    it('should render the component container', async () => {
         const { container } = render(
             <CompCertification url={mockCommunitiesJson} />
         );
-        const regionID = container.querySelector('#region-communities');
-        expect(regionID).toBeInTheDocument();
+        await waitFor(() => {
+            expect(
+                container.querySelector('#region-communities')
+            ).toBeInTheDocument();
+        });
     });
 
-    it('should render the component title', () => {
+    it('should render the component title', async () => {
         render(<CompCertification url={mockCommunitiesJson} />);
-        expect(screen.getByText('Communities')).toBeInTheDocument();
+        expect(await screen.findByText('Communities')).toBeInTheDocument();
     });
 });

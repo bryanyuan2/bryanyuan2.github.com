@@ -1,4 +1,5 @@
 @use "common" as common;
+@use "navibar" as navibar;
 
 body {
     font-family: common.$ff-n;
@@ -19,6 +20,7 @@ blockquote {
 
 .container {
     margin-top: 24px;
+    margin-left: navibar.$navibar-width;
 }
 
 #linkedin-nav {
