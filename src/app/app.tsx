@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 const BASE_URL = 'asserts/data';
 
+import CompNavibar from './section/navibar.tsx';
 import CompHeader from './section/header.tsx';
 import CompSummary from './section/summary.tsx';
 import CompSearchbox from './section/searchbox.tsx';
@@ -19,6 +20,7 @@ import CompPhotoset from './section/photoset.tsx';
 const App: React.FC = () => {
     return (
         <div>
+            <CompNavibar url={`${BASE_URL}/navibar.json`} />
             <CompHeader url={`${BASE_URL}/commons.json`} />
             <div className="container">
                 <CompSearchbox url={`${BASE_URL}/commons.json`} />

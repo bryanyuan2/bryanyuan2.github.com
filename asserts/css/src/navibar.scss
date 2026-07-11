@@ -1,0 +1,39 @@
+@use "common" as common;
+
+$navibar-width: 200px;
+
+#region-navibar {
+    position: fixed;
+    top: calc(common.$header-height + 90px);
+    left: 0;
+    width: $navibar-width;
+    height: calc(100vh - #{common.$header-height});
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.navibar-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 16px;
+    list-style: none;
+}
+
+.navibar-item {
+    margin-bottom: 16px;
+}
+
+.navibar-link {
+    color: #000000;
+    font-size: common.$fs-s;
+    text-decoration: none;
+}
+
+.navibar-link:hover {
+    color: common.$twitter-blue;
+}
+
+.navibar-link-active {
+    font-weight: 700;
+}
