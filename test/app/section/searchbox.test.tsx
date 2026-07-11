@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CompSearchbox from './../../../src/app/section/searchbox.tsx';
 
@@ -7,10 +7,13 @@ const PLACEHOLDER = '在這邊找關鍵字';
 const mockCommonsJson: string = '../mock/data/mockHeader.json';
 
 describe('## js/app/section/searchbox.js testing', () => {
-    it('should render the component container', () => {
+    it('should render the component container', async () => {
         const { container } = render(<CompSearchbox url={mockCommonsJson} />);
-        const regionID = container.querySelector('#region-searchbox');
-        expect(regionID).toBeInTheDocument();
+        await waitFor(() => {
+            expect(
+                container.querySelector('#region-searchbox')
+            ).toBeInTheDocument();
+        });
     });
 
     it('should render the input with the expected placeholder', async () => {

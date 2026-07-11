@@ -1,20 +1,23 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CompHackathon from './../../../src/app/section/hackathon.tsx';
 const mockHackathonJson: string = '../mock/data/mockHackathon.json';
 
 describe('## js/app/section/hackathon.js testing', () => {
-    it('should render the component container', () => {
+    it('should render the component container', async () => {
         const { container } = render(<CompHackathon url={mockHackathonJson} />);
-        const regionID = container.querySelector('#region-hackathon');
-        expect(regionID).toBeInTheDocument();
+        await waitFor(() => {
+            expect(
+                container.querySelector('#region-hackathon')
+            ).toBeInTheDocument();
+        });
     });
 
-    it('should render the component title', () => {
+    it('should render the component title', async () => {
         render(<CompHackathon url={mockHackathonJson} />);
         expect(
-            screen.getByText('Hackathon Profiles & Awards')
+            await screen.findByText('Hackathon Profiles & Awards')
         ).toBeInTheDocument();
     });
 });

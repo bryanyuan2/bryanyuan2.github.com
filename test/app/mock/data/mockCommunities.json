@@ -1,8 +1,12 @@
 [
   {
     "name": "Community A",
-    "role": "Contributor",
-    "description": "Participated in open-source projects and community events.",
-    "url": "http://example.com/community-a"
+    "position": "Contributor",
+    "description": [
+      {
+        "text": "Participated in open-source projects and community events."
+      }
+    ],
+    "link": "http://example.com/community-a"
   }
 ]
