@@ -22,6 +22,30 @@ const Navibar: React.FC<NavibarProps> = ({ url }) => {
         fetchData();
     }, [url]);
 
+    useEffect(() => {
+        if (data.length === 0 || typeof IntersectionObserver === 'undefined') {
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveId(entry.target.id.replace(/^set-/, ''));
+                    }
+                });
+            },
+            { rootMargin: '0px 0px -70% 0px' }
+        );
+
+        const sections = data
+            .map((item) => document.getElementById(`set-${item.id}`))
+            .filter((el): el is HTMLElement => el !== null);
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, [data]);
+
     return (
         <div id="region-navibar">
             <nav className="navibar-wrapper">
@@ -35,7 +59,6 @@ const Navibar: React.FC<NavibarProps> = ({ url }) => {
                                         : 'navibar-link'
                                 }
                                 href={`#set-${item.id}`}
-                                onClick={() => setActiveId(item.id)}
                             >
                                 {item.text}
                             </a>
