@@ -5,6 +5,7 @@ const BASE_URL = 'asserts/data';
 
 import CompHeader from './section/header.tsx';
 import CompSummary from './section/summary.tsx';
+import CompSearchbox from './section/searchbox.tsx';
 import CompEducations from './section/educations.tsx';
 import CompSkills from './section/skills.tsx';
 import CompExperience from './section/experience.tsx';
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         <div>
             <CompHeader url={`${BASE_URL}/commons.json`} />
             <div className="container">
+                <CompSearchbox />
                 <CompSummary url={`${BASE_URL}/summary.json`} />
                 <CompSkills url={`${BASE_URL}/skills.json`} />
                 <CompExperience url={`${BASE_URL}/experience.json`} />
